@@ -1,0 +1,196 @@
+/-
+Copyright (c) 2026 Adam Benenson. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Adam Benenson
+-/
+import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpTrajectory
+import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedStationaryOccupation
+
+/-!
+# Normalized uniformized finite-state Markov trajectories
+
+This module constructs the actual infinite timed trajectory underlying finite-state
+uniformization. Every dwell is drawn from the same exponential clock, and every next state is
+drawn from the normalized uniformized transition PMF, including its explicit virtual self-event.
+The Ionescu--Tulcea tape is an exact probability measure.
+
+The tape is not the physical jump law. Its stopped histories may contain virtual self-events; a
+later measurable deletion map and pushforward theorem must recover the canonical reduced physical
+law.
+
+## Main Results
+
+- `finiteStateUniformizedTimedStepKernel`: one normalized virtual timed step.
+- `finiteStateUniformizedTapeMeasure`: normalized infinite uniformized tape.
+- `instIsProbabilityMeasureFiniteStateUniformizedTapeMeasure`: exact tape normalization.
+-/
+
+namespace FiniteMarkovProcesses.Probability
+
+open MeasureTheory ProbabilityTheory
+open scoped ENNReal NNReal ProbabilityTheory
+
+universe u
+
+variable {State : Type u} [Fintype State] [DecidableEq State] [MeasurableSpace State]
+  [MeasurableSingletonClass State]
+
+/-- State-independent exponential holding-time measure for the strictly positive uniformization
+clock. -/
+noncomputable def finiteStateUniformizedHoldingTimeMeasure
+    (generator : FiniteStateMarkovGenerator State) : Measure ℝ :=
+  expMeasure generator.uniformizationRate
+
+/-- The common strictly positive uniformization clock has a normalized exponential holding-time
+law. -/
+noncomputable instance instIsProbabilityMeasureFiniteStateUniformizedHoldingTimeMeasure
+    (generator : FiniteStateMarkovGenerator State) :
+    IsProbabilityMeasure (finiteStateUniformizedHoldingTimeMeasure generator) := by
+  unfold finiteStateUniformizedHoldingTimeMeasure
+  exact isProbabilityMeasure_expMeasure <| by
+    exact_mod_cast generator.uniformizationRate_pos
+
+omit [DecidableEq State] [MeasurableSpace State] [MeasurableSingletonClass State] in
+/-- Every uniformized holding duration is strictly positive almost surely. -/
+theorem ae_positive_finiteStateUniformizedHoldingTimeMeasure
+    (generator : FiniteStateMarkovGenerator State) :
+    ∀ᵐ wait ∂finiteStateUniformizedHoldingTimeMeasure generator, 0 < wait := by
+  unfold finiteStateUniformizedHoldingTimeMeasure
+  exact ae_positive_expMeasure <| by
+    exact_mod_cast generator.uniformizationRate_pos
+
+/-- State-indexed kernel of the common uniformized holding-time law. -/
+noncomputable def finiteStateUniformizedHoldingTimeKernel
+    (generator : FiniteStateMarkovGenerator State) : Kernel State ℝ :=
+  Kernel.ofFunOfCountable fun _ ↦ finiteStateUniformizedHoldingTimeMeasure generator
+
+/-- The state-independent uniformized holding-time law is a probability kernel. -/
+noncomputable instance instIsMarkovKernelFiniteStateUniformizedHoldingTimeKernel
+    (generator : FiniteStateMarkovGenerator State) :
+    IsMarkovKernel (finiteStateUniformizedHoldingTimeKernel generator) := by
+  refine ⟨fun state ↦ ?_⟩
+  change IsProbabilityMeasure (finiteStateUniformizedHoldingTimeMeasure generator)
+  infer_instance
+
+/-- Markov kernel of uniformized virtual-event destinations. -/
+noncomputable def finiteStateUniformizedTransitionKernel
+    (generator : FiniteStateMarkovGenerator State) : Kernel State State :=
+  Kernel.ofFunOfCountable fun state ↦
+    (generator.uniformizedTransitionPMF state).toMeasure
+
+/-- Every normalized uniformized transition PMF gives a probability destination kernel. -/
+noncomputable instance instIsMarkovKernelFiniteStateUniformizedTransitionKernel
+    (generator : FiniteStateMarkovGenerator State) :
+    IsMarkovKernel (finiteStateUniformizedTransitionKernel generator) := by
+  refine ⟨fun state ↦ ?_⟩
+  change IsProbabilityMeasure (generator.uniformizedTransitionPMF state).toMeasure
+  infer_instance
+
+/-- One uniformized timed step: draw a possibly virtual next state and then an independent wait
+from the common exponential clock. -/
+noncomputable def finiteStateUniformizedTimedStepKernel
+    (generator : FiniteStateMarkovGenerator State) : Kernel State (State × ℝ) :=
+  finiteStateUniformizedTransitionKernel generator ⊗ₖ
+    (finiteStateUniformizedHoldingTimeKernel generator).comap Prod.snd measurable_snd
+
+/-- The destination and common-clock holding-time product defines a probability timed-step
+kernel. -/
+noncomputable instance instIsMarkovKernelFiniteStateUniformizedTimedStepKernel
+    (generator : FiniteStateMarkovGenerator State) :
+    IsMarkovKernel (finiteStateUniformizedTimedStepKernel generator) := by
+  unfold finiteStateUniformizedTimedStepKernel
+  infer_instance
+
+/-- Every wait generated by one uniformized timed step is strictly positive almost surely. -/
+theorem ae_positive_finiteStateUniformizedTimedStepKernel
+    (generator : FiniteStateMarkovGenerator State) (state : State) :
+    ∀ᵐ timedState ∂finiteStateUniformizedTimedStepKernel generator state,
+      0 < timedState.2 := by
+  rw [finiteStateUniformizedTimedStepKernel]
+  apply Kernel.ae_compProd_of_ae_ae (measurable_const.lt measurable_snd).setOf
+  filter_upwards with target
+  change ∀ᵐ wait ∂finiteStateUniformizedHoldingTimeKernel generator target, 0 < wait
+  exact ae_positive_finiteStateUniformizedHoldingTimeMeasure generator
+
+/-- History-dependent Ionescu--Tulcea step kernel, depending only on the current state. -/
+noncomputable def finiteStateUniformizedTrajectoryStepKernel
+    (generator : FiniteStateMarkovGenerator State) (n : ℕ) :
+    Kernel ((i : Finset.Iic n) → State × ℝ) (State × ℝ) :=
+  (finiteStateUniformizedTimedStepKernel generator).comap
+    (finiteTimedTrajectoryCurrentState n) (measurable_finiteTimedTrajectoryCurrentState n)
+
+/-- Reading the current state from a finite timed history preserves timed-step kernel
+normalization. -/
+noncomputable instance instIsMarkovKernelFiniteStateUniformizedTrajectoryStepKernel
+    (generator : FiniteStateMarkovGenerator State) (n : ℕ) :
+    IsMarkovKernel (finiteStateUniformizedTrajectoryStepKernel generator n) := by
+  unfold finiteStateUniformizedTrajectoryStepKernel
+  infer_instance
+
+/-- Joint initial-state and first uniform-clock holding-time measure. -/
+noncomputable def finiteStateUniformizedInitialTimedStateMeasure
+    (initial : PMF State) (generator : FiniteStateMarkovGenerator State) :
+    Measure (State × ℝ) :=
+  initial.toMeasure ⊗ₘ finiteStateUniformizedHoldingTimeKernel generator
+
+/-- The supplied initial PMF and common-clock holding-time kernel give a normalized joint
+measure. -/
+noncomputable instance instIsProbabilityMeasureFiniteStateUniformizedInitialTimedStateMeasure
+    (initial : PMF State) (generator : FiniteStateMarkovGenerator State) :
+    IsProbabilityMeasure (finiteStateUniformizedInitialTimedStateMeasure initial generator) := by
+  unfold finiteStateUniformizedInitialTimedStateMeasure
+  infer_instance
+
+omit [DecidableEq State] in
+/-- The first uniform-clock holding duration is strictly positive almost surely. -/
+theorem ae_positive_finiteStateUniformizedInitialTimedStateMeasure
+    (initial : PMF State) (generator : FiniteStateMarkovGenerator State) :
+    ∀ᵐ timedState ∂finiteStateUniformizedInitialTimedStateMeasure initial generator,
+      0 < timedState.2 := by
+  rw [finiteStateUniformizedInitialTimedStateMeasure]
+  apply Measure.ae_compProd_of_ae_ae (measurable_const.lt measurable_snd).setOf
+  filter_upwards with state
+  exact ae_positive_finiteStateUniformizedHoldingTimeMeasure generator
+
+/-- Initial singleton trajectory measure for the uniformized Ionescu--Tulcea construction. -/
+noncomputable def finiteStateUniformizedTrajectorySeedMeasure
+    (initial : PMF State) (generator : FiniteStateMarkovGenerator State) :
+    Measure ((i : Finset.Iic 0) → State × ℝ) :=
+  (finiteStateUniformizedInitialTimedStateMeasure initial generator).map
+    finiteStateMarkovJumpTrajectorySeed
+
+/-- The measurable singleton-trajectory embedding preserves the initial timed-state probability
+law. -/
+noncomputable instance instIsProbabilityMeasureFiniteStateUniformizedTrajectorySeedMeasure
+    (initial : PMF State) (generator : FiniteStateMarkovGenerator State) :
+    IsProbabilityMeasure (finiteStateUniformizedTrajectorySeedMeasure initial generator) := by
+  unfold finiteStateUniformizedTrajectorySeedMeasure
+  exact (Measure.isProbabilityMeasure_map_iff
+    measurable_finiteStateMarkovJumpTrajectorySeed.aemeasurable).2 inferInstance
+
+/-- Normalized infinite timed uniformization tape. Coordinate `n` stores the state occupied during
+the `n`th common-clock dwell and the duration of that dwell. Repeated adjacent states are retained
+as virtual self-events. -/
+noncomputable def finiteStateUniformizedTapeMeasure
+    (initial : PMF State) (generator : FiniteStateMarkovGenerator State) :
+    Measure (ℕ → State × ℝ) :=
+  Kernel.traj (X := fun _ ↦ State × ℝ)
+      (finiteStateUniformizedTrajectoryStepKernel generator) 0 ∘ₘ
+    finiteStateUniformizedTrajectorySeedMeasure initial generator
+
+/-- The Ionescu–Tulcea trajectory law with the normalized seed is a probability measure on the
+whole tape. -/
+noncomputable instance instIsProbabilityMeasureFiniteStateUniformizedTapeMeasure
+    (initial : PMF State) (generator : FiniteStateMarkovGenerator State) :
+    IsProbabilityMeasure (finiteStateUniformizedTapeMeasure initial generator) := by
+  unfold finiteStateUniformizedTapeMeasure
+  infer_instance
+
+/-- Exact normalization of the infinite uniformized tape. -/
+@[simp 1100]
+theorem finiteStateUniformizedTapeMeasure_univ
+    (initial : PMF State) (generator : FiniteStateMarkovGenerator State) :
+    finiteStateUniformizedTapeMeasure initial generator Set.univ = 1 :=
+  measure_univ
+
+end FiniteMarkovProcesses.Probability
