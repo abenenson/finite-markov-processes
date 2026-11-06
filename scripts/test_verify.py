@@ -413,6 +413,47 @@ class ResumeControls(unittest.TestCase):
             self.assertTrue(passed['stages'][0]['reused'])
             self.assertTrue(all(stage['status'] == 'passed' for stage in passed['stages']))
 
+    def test_all_source_lints_run_after_failure_but_audit_and_pass_are_blocked(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root, evidence = Path(temp) / 'repo', Path(temp) / 'evidence'
+            fixture_repository(root)
+            second = root / 'FixtureSecond.lean'
+            second.write_text(
+                '/- Copyright (c) 2026 Adam Benenson. -/\n/-! Second fixture -/\n'
+                'namespace FixtureSecond\ntheorem identity : True := by trivial\n'
+                'end FixtureSecond\n')
+            config_path = root / 'verification.json'
+            config = json.loads(config_path.read_text())
+            config['source_files'].append('FixtureSecond.lean')
+            config['declarations'].append('FixtureSecond.identity')
+            config['audit_imports'].append('FixtureSecond')
+            config_path.write_text(json.dumps(config))
+            calls = []
+
+            def first_lint_fails(command, **kwargs):
+                calls.append(command)
+                if command[-1].endswith('/Fixture.lean'):
+                    return SimpleNamespace(returncode=0, stdout=json.dumps(
+                        {'severity': 'error', 'data': 'synthetic first-source lint failure'}))
+                return self.success(command, **kwargs)
+
+            with self.assertRaisesRegex(AssertionError, 'Full-source lint failed for: Fixture.lean'):
+                self.invocation(root, evidence, first_lint_fails)
+            self.assertTrue(any(command[-1].endswith('/FixtureSecond.lean') for command in calls))
+            self.assertFalse(any(command[-1].endswith('axioms.lean') for command in calls))
+            self.assertFalse((evidence / 'axioms.lean').exists())
+            record = json.loads((evidence / 'qualification.json').read_text())
+            self.assertEqual(record['status'], 'failed')
+            self.assertEqual([(stage['name'], stage['status']) for stage in record['stages']],
+                             [('exact-build', 'passed'), ('lint-Fixture.lean', 'failed'),
+                              ('lint-FixtureSecond.lean', 'passed')])
+            self.assertEqual([failure['source'] for failure in record['lint_failures']],
+                             ['Fixture.lean'])
+            self.assertIn('synthetic first-source lint failure',
+                          record['lint_failures'][0]['failure'])
+            self.assertEqual(record['axioms'], {})
+            self.assertNotIn('full_linter_count', record)
+
     def test_zero_exit_semantically_incomplete_lint_never_becomes_passed(self):
         with tempfile.TemporaryDirectory() as temp:
             root, evidence = Path(temp) / 'repo', Path(temp) / 'evidence'
