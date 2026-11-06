@@ -262,6 +262,19 @@ class LintHeaderControls(unittest.TestCase):
         self.assertIn('/- between commands -/', result)
         self.assertIn('-- keep this comment', result)
 
+    def test_special_trailing_module_comment_keeps_its_original_attachment(self):
+        source = ('module -- deprecated_module: ignore\n'
+                  'public import Mathlib.Data.Bool.Basic\n')
+        result = verify.lint_source(source)
+        self.assertTrue(result.startswith('module -- deprecated_module: ignore\nimport '))
+        self.assertEqual(verify.imported_modules(result),
+                         ['Mathlib.Tactic.Linter.Lint', 'Mathlib.Data.Bool.Basic'])
+
+    def test_eof_module_header_gets_a_separate_import_line(self):
+        source = 'module -- trailing comment without a final newline'
+        self.assertEqual(verify.lint_source(source),
+                         source + '\nimport Mathlib.Tactic.Linter.Lint\n')
+
     def test_prelude_alone_remains_before_linter_import(self):
         source = '/- comment -/\nprelude\nimport Init.Prelude\n'
         self.assertEqual(verify.uncomment(verify.lint_source(source)).split(),
