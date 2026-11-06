@@ -12,7 +12,8 @@ The contribution here is extraction and proof assembly, with the source assumpti
 
 Import `FiniteMarkovProcesses.PathLargeDeviations` for the three path-LDP constructors
 and the original-IID exponential confidence estimate. Import
-`FiniteMarkovProcesses.EffectiveEvolution` for the complete-rate zero-set classification.
+`FiniteMarkovProcesses.EffectiveEvolution` for the complete-rate zero-set classification, and
+`FiniteMarkovProcesses.QuantitativeBounds` for dynamic-rate stability and probability-bound tools.
 [The theorem map](theorem-map.md) names the declarations and separates assumptions from
 proved outputs. [The examples](../FiniteMarkovProcessesExamples/PathLargeDeviations.lean) exercise the public APIs.
 
@@ -138,11 +139,74 @@ mean. This finite-particle estimate concerns the strong-L1 component of the hybr
 not a metric for every vague-derivative test. The deterministic zero-set theorem does not
 supply this estimate, and an LDP alone is not this explicit finite-sample bound.
 
+## Dynamic-rate stability with initial error retained
+
+`FiniteMarkovProcesses.QuantitativeBounds` includes the quantitative extension of the zero-set
+classification. Let `Q` be a generator on a finite decidable state type, `T > 0`, and `L ≥ 0`
+satisfy `escapeRate(x) ≤ L` for every state. Put `B = T L`. Suppose the original dynamic rate of
+an arbitrary hybrid path `p` is at most `ofReal(epsilon)`, with `epsilon ≥ 0`. This finite budget
+first implies admissibility, including the absolutely continuous derivative conditions.
+
+For an admissible reference `q` having the same generator flow, define
+
+```text
+delta = sum_x |rho_p(0,x) - rho_q(0,x)|
+R = epsilon + sqrt(epsilon^2 + 4 B epsilon).
+```
+
+The reference may be the existing actual mean path after its generator-flow property has been
+proved. The generic theorem accepts any admissible same-generator-flow reference and retains
+its actual initial-density difference. It proves:
+
+| Quantity | Bound |
+| --- | --- |
+| Integrated raw flow residual `integral sum_(x!=y) |j_xy-rho_x Qxy|` | `R` |
+| Density L1 distance at each `0 ≤ t < T` | `delta + 2R` |
+| Integrated ordered-flow distance and cumulative-flow L1 distance at each `0 ≤ t < T` | `B delta + (1+2B)R` |
+| Recovered terminal-left density distance | `delta + 2R` |
+| Recovered terminal-left cumulative-flow distance | `B delta + (1+2B)R` |
+| Sum of carried signed derivative-difference total variations | `3[B delta + (1+2B)R]` |
+| Strong-L1 distance of the density/cumulative-flow projections | `T[(1+B)delta + (3+2B)R]` |
+
+No irreducibility, strictly positive rates, or competitor-flow cutoff is required. Zero reference
+channels retain their extended cost. With matching initial density, `delta=0`; matching initial
+density and zero dynamic budget recover literal equality of the full hybrid paths. An arbitrary
+supplied initial cost does not provide a budget-dependent estimate of `delta`. A complete-rate
+budget controls initial error only when a separate initial-cost estimate has been proved. The scalar normalized-vector Hellinger
+bound is available for such compositions.
+
+These are deterministic statements about finite-rate paths. They do not apply a finite-action
+premise to every finite-particle observation, and their derivative-variation conclusion is not a
+particle derivative-TV concentration theorem.
+
+## Eventual probability bounds and all-N confidence
+
+`LargeDeviationConcentration` proves that an existing LDP closed upper bound and a pointwise
+rate gap `e` on a closed event imply its scaled-log limsup is at most `-e`. For event probabilities
+at most one, strictly positive speeds, and a real exponent `a < e`, the log-limsup bound gives
+an eventual actual-mass inequality `P_n(event) ≤ exp(-speed(n) a)`. Positive `a` and divergent
+speed give decay. The cutoff is existential; the theorem supplies no all-N inequality or
+computable particle threshold. Its normalized finite-prefix control shows why a limsup alone
+cannot provide such a threshold.
+
+`PoissonRateBudgetCoercivity` bounds `R(epsilon,B)` by `2(1+B)sqrt(epsilon)` for
+`0 ≤ epsilon ≤ 1` and `B ≥ 0`. For positive `C,r`, its radius budget
+`min(1,(r/(2C))^2)` is positive and ensures `C sqrt(budget) ≤ r/2`. These are scalar tools for
+proving a rate gap; they do not identify a positive deviation-event gap for an arbitrary supplied
+initial cost. A concrete probability application must supply that separation and the actual law.
+
+The original-IID Chernoff theorem above is a separate **all-N strong-L1 path-event bound** with
+a supplied admissible tilt. It controls the entire density/cumulative-flow L1 projection, rather
+than only finitely chosen tests. It does not control a norm of the full hybrid carrier,
+instantaneous flow, or derivative total variation. This generic API does not add a radius-only
+optimized envelope, an executable rational confidence-budget function, or a comparison with a
+source-specific older LDP gap.
+
 ## Validation status
 
-The 193 path/evolution modules were extracted after checking every source SHA256 against
-`source-plan.json` and independently against the pinned Git blobs; their imports match the planned rewritten graph with no unresolved planned
-local dependency. Proof text differs only by the declared namespace/module rewrites and line
+The 193 path/evolution modules and five quantitative-bound modules were extracted after checking
+every source SHA256 against `source-plan.json` and independently against the pinned Git blobs.
+Their imports match the planned rewritten graph with no unresolved planned local dependency. Proof text differs only by the declared namespace/module rewrites and line
 wrapping, including the public `MeasureDiscrimination.ProductDiscrimination` dependency.
 Public mathematical comments replace source-specific terminology and construction chronology.
 No new theorem premise, axiom, or proof placeholder was introduced. This static provenance check
