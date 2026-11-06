@@ -593,7 +593,19 @@
         "Mathlib.MeasureTheory.Measure.WithDensityFinite",
         "FiniteMarkovProcesses.MeasureTheory.Measure.MapWithDensity",
         "FiniteMarkovProcesses.Probability.FiniteJumpHistory"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "documentation_metadata",
+          "description": "Document rate fields and generated generator extensionality lemmas without changing their types."
+        },
+        {
+          "kind": "signature_generalization",
+          "declaration": "FiniteMarkovProcesses.Probability.finiteStateMarkovJumpDensityENNReal_embedJumpTimes",
+          "description": "Remove its unused MeasurableSpace State instance binder; retain the same conclusion and rfl proof."
+        }
+      ],
+      "emitted_sha256": "1e93a6414f987384e8984e9ec6d34d9d587ecefdcdf36645e3d46bc123081db7"
     },
     "MathlibExtensions.Probability.FiniteStateMarkovJumpPrefixLaw": {
       "owner": "ctmc",
@@ -3623,6 +3635,7 @@
     "OmegaFlow.PathSpace prefix becomes FiniteMarkovProcesses.PathSpace",
     "Relative-entropy module paths shortened to FiniteMarkovProcesses.RelativeEntropy; logical declaration namespace retained",
     "External ProductDiscrimination uses public MeasureDiscrimination definitions",
-    "Whitespace and module documentation may be reformatted without proof-token changes"
+    "Whitespace and module documentation may be reformatted without proof-token changes",
+    "Any signature adaptations are listed explicitly on their source module record."
   ]
 }

@@ -8,5 +8,6 @@ import FiniteMarkovProcesses.Sanov
 import FiniteMarkovProcesses.ProbabilityVectorInterop
 import FiniteMarkovProcesses.PathLargeDeviations
 import FiniteMarkovProcesses.EffectiveEvolution
+import FiniteMarkovProcesses.QuantitativeBounds
 
 /-! Public import surface for finite-state Markov processes. -/
