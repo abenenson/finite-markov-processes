@@ -92,6 +92,41 @@ These are deterministic zero-set and uniqueness results. A probability estimate 
 own source law and probability theorem. An empty initial zero set yields no zero path; this map
 does not classify positive-cost minimizers in that case.
 
+## Quantitative bounds: deterministic and eventual
+
+Import `FiniteMarkovProcesses.QuantitativeBounds` for these five generic modules and the
+existing original-IID all-N strong-L1 estimate. The deterministic state context is only finite
+decidable state; measurable-state and stationarity hypotheses are not required. Fix `T > 0`,
+`epsilon ≥ 0`, `L ≥ 0`, and a generator with every escape rate at most `L`. The reference `q`
+is an admissible representation path with that generator flow. Write `B=T L`,
+`delta=sum_x |rho_p(0,x)-rho_q(0,x)|`, and `R=epsilon+sqrt(epsilon^2+4B epsilon)`.
+
+| Declaration and module | Additional premises | Precise conclusion |
+| --- | --- | --- |
+| [`sum_abs_sub_le_two_mul_sqrt_of_rengerExtendedPoissonRateCost_le`](../FiniteMarkovProcesses/RelativeEntropy/PoissonRateHellinger.lean) | Finite nonnegative vectors, each total mass one; summed extended Poisson cost at most `ofReal(epsilon)`; `epsilon ≥ 0` | Their L1 distance is at most `2 sqrt(epsilon)`. No initial-cost identification is assumed implicitly. |
+| `poissonRateBudgetModulus` in the same module | Real arguments | Defines the residual modulus `epsilon+sqrt(epsilon^2+4B epsilon)`; accompanying lemmas retain their nonnegative-budget hypotheses. |
+| [`sum_abs_rengerDirectionalFlowHybridBVDensityValue_sub_le_initial_add_residual`](../FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVFlowStability.lean) | Both paths admissible; reference generator flow; `0 ≤ t < T` | Density L1 error is at most actual initial error plus twice the integrated raw flow residual. |
+| [`rengerDirectionalFlowHybridBVIntegratedFlowResidual_le_of_dynamicRate_le`](../FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVRateStability.lean) | Arbitrary full-carrier `p` with dynamic rate at most `ofReal(epsilon)`; escape bound and nonnegativity as above | Derives admissibility and residual at most `R`; it does not assume competitor-flow boundedness. |
+| `norm_rengerDirectionalFlowHybridBVToL1Path_sub_le_initial_add_rateModulus` in the same module | Same budget and an admissible same-generator-flow reference | Strong-L1 projection error at most `T[(1+B)delta+(3+2B)R]`. Initial error remains explicit. |
+| `sum_rengerDirectionalFlowHybridBVDerivativeDifferenceVariation_le_initial_add_rateModulus` in the same module | Same hypotheses | Sum of actual signed derivative-difference variations at most `3[B delta+(1+2B)R]`; a deterministic finite-rate conclusion. |
+| `rengerDirectionalFlowHybridBVPath_eq_of_dynamicRate_le_zero_initialDensity` in the same module | Zero dynamic budget and equal initial density | Literal full-hybrid equality, with zero escape allowed. |
+| [`poissonRateBudgetModulus_le_mul_sqrt`](../FiniteMarkovProcesses/RelativeEntropy/PoissonRateBudgetCoercivity.lean) | `0 ≤ epsilon ≤ 1`, `B ≥ 0` | `R(epsilon,B) ≤ 2(1+B)sqrt(epsilon)`. |
+| `mul_sqrt_poissonRateRadiusBudget_le` in the same module | Positive constant `C` and radius `r` | For `budget=min(1,(r/(2C))^2)`, `C sqrt(budget) ≤ r/2`; positivity and unit bound are proved separately. |
+| [`HasLargeDeviationUpperBound.limsup_le_neg_of_isClosed_of_le_rate`](../FiniteMarkovProcesses/RelativeEntropy/LargeDeviationConcentration.lean) | An existing LDP upper bound; a closed event; its pointwise rate at least an extended nonnegative level | Derives the corresponding log-limsup event bound. It assumes the upper bound, rather than proving an LDP for arbitrary laws. |
+| `eventually_probability_le_exp_of_limsup_log_div_le` in the same module | Probabilities at most one; strictly positive speeds; log-limsup at most `-e`; real `a<e` | Eventual mass at most `exp(-speed*a)`, with an existential cutoff. Positive `a` and divergent speed give decay. |
+| `finitePrefixEventLaw_not_forall_le_exp` in the same module | Positive exponent; normalized Boolean finite-prefix family defined there | Refutes an all-index exponential bound despite log-limsup bottom. |
+
+The rate-stability module also bounds density and cumulative flow on `[0,T)`, integrated
+ordered-flow error, and recovered terminal-left density and flow traces. Their exact formulas
+appear in the path guide. A complete-rate budget does not give budget-dependent control of
+`delta` for an arbitrary supplied initial cost without a separate initial-cost estimate. No deterministic finite-rate hypothesis is imposed samplewise
+on microscopic empirical paths by these results.
+
+The existing original-IID theorem remains distinct: it proves an **all-N strong-L1 path-event
+Chernoff bound** with a supplied capped tilt, arbitrary initial PMF, and its actual unconditional
+mean. None of the five added modules supplies a generic executable confidence budget, optimizes
+the tilt into a new radius-only envelope, or proves particle derivative-TV concentration.
+
 ## Probability bound and endpoint bridge
 
 | Declaration | Hypotheses | Precise output |

@@ -289,7 +289,12 @@
       "MathlibExtensions.Probability.PoissonCountExactSecondMoment",
       "MathlibExtensions.Probability.PoissonCountExponentialTail",
       "MathlibExtensions.Probability.PoissonCountSecondMomentBound",
-      "MathlibExtensions.Probability.PoissonDominatedCenteredExponential"
+      "MathlibExtensions.Probability.PoissonDominatedCenteredExponential",
+      "MathlibExtensions.InformationTheory.RelativeEntropy.LargeDeviationConcentration",
+      "MathlibExtensions.InformationTheory.RelativeEntropy.PoissonRateBudgetCoercivity",
+      "MathlibExtensions.InformationTheory.RelativeEntropy.PoissonRateHellinger",
+      "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVFlowStability",
+      "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVRateStability"
     ]
   },
   "modules": {
@@ -3552,6 +3557,64 @@
       "imports": [
         "FiniteMarkovProcesses.Probability.PoissonCountExponentialTail",
         "Mathlib.Analysis.Complex.Exponential"
+      ]
+    },
+    "MathlibExtensions.InformationTheory.RelativeEntropy.LargeDeviationConcentration": {
+      "owner": "ldp",
+      "source_path": "MathlibExtensions/InformationTheory/RelativeEntropy/LargeDeviationConcentration.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.LargeDeviationConcentration",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/LargeDeviationConcentration.lean",
+      "source_sha256": "d9a8f4a8b51e9ac9541e3d048549859bd54180f9dba6218860268188b259b02e",
+      "imports": [
+        "FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation",
+        "Mathlib.Data.EReal.Inv",
+        "Mathlib.MeasureTheory.MeasurableSpace.Instances",
+        "Mathlib.MeasureTheory.Measure.Dirac.Basic"
+      ]
+    },
+    "MathlibExtensions.InformationTheory.RelativeEntropy.PoissonRateBudgetCoercivity": {
+      "owner": "ldp",
+      "source_path": "MathlibExtensions/InformationTheory/RelativeEntropy/PoissonRateBudgetCoercivity.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.PoissonRateBudgetCoercivity",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/PoissonRateBudgetCoercivity.lean",
+      "source_sha256": "5212b9ed0117e847366139edf777bca321a074b96f8d952754a00aad34fe0145",
+      "imports": [
+        "FiniteMarkovProcesses.RelativeEntropy.PoissonRateHellinger"
+      ]
+    },
+    "MathlibExtensions.InformationTheory.RelativeEntropy.PoissonRateHellinger": {
+      "owner": "ldp",
+      "source_path": "MathlibExtensions/InformationTheory/RelativeEntropy/PoissonRateHellinger.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.PoissonRateHellinger",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/PoissonRateHellinger.lean",
+      "source_sha256": "a2a7ea1afdd28ab054bc99788d143b752c66638f48779c5bbd1edadde5e2488c",
+      "imports": [
+        "FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.Analysis.SpecialFunctions.Sqrt"
+      ]
+    },
+    "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVFlowStability": {
+      "owner": "ldp",
+      "source_path": "MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVFlowStability.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFlowStability",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVFlowStability.lean",
+      "source_sha256": "7d587418ee665131868f7923d0a07e43e15e5fff9912d37a359bb20f3f1a8b66",
+      "imports": [
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVForwardUniqueness",
+        "FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Stability"
+      ]
+    },
+    "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVRateStability": {
+      "owner": "ldp",
+      "source_path": "MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVRateStability.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateStability",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVRateStability.lean",
+      "source_sha256": "c9db3730d6dbe0511dc4b8b6f442920520803021267112fcba49ee4e56595dae",
+      "imports": [
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFlowStability",
+        "FiniteMarkovProcesses.RelativeEntropy.PoissonRateHellinger",
+        "Mathlib.Algebra.QuadraticDiscriminant"
       ]
     }
   },
