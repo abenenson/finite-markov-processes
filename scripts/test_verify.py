@@ -32,6 +32,19 @@ def fixture_repository(root):
 
 
 class VerificationControls(unittest.TestCase):
+    def test_scalar_named_constant_is_not_an_assumption_command(self):
+        verify.check_no_assumption_commands(
+            'theorem bound (constant : Real) :\n'
+            '  constant * Real.sqrt 2 <= 1 := by\n  assumption\n')
+
+    def test_assumption_commands_remain_rejected(self):
+        for command in ['axiom claim : False', 'constant claim : False',
+                        'public axiom claim : False', 'private constant claim : False',
+                        'constant\n  claim : False', 'constant «claim--quoted» : False',
+                        '@[simp]\npublic constant «claim» : False']:
+            with self.subTest(command=command), self.assertRaises(AssertionError):
+                verify.check_no_assumption_commands(command)
+
     def test_clean_plain_and_json_information(self):
         verify.check_diagnostics('Build completed successfully.\n')
         verify.check_diagnostics(json.dumps({'severity': 'information', 'data': 'checked'}),
