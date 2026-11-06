@@ -7,9 +7,13 @@ their explicit densities with normalized generative constructions. The planned
 upper layers formalize finite-alphabet Sanov bounds, density/flux path large
 deviations, zero-action evolution, and quantitative particle confidence.
 
-This is an extraction under verification. Source preparation and a successful
-build are separate milestones; the qualification reports record which exact
-sources have passed builds, full source lint, and transitive axiom checks.
+The CTMC core is qualified: **69 source files**, all **16 source linters**, and
+**964 named transitive axiom audits** passed on the pinned toolchain.
+[Hosted verification](https://github.com/abenenson/finite-markov-processes/actions/runs/42307270548)
+and [permanent source-hash evidence](docs/qualification/v0.1.0/qualification.json)
+identify the exact checked inputs. The
+[upper-layer candidate](https://github.com/abenenson/finite-markov-processes/pull/1)
+remains separate until its complete verification passes.
 
 ## Continuous-time jump processes
 
@@ -37,9 +41,9 @@ and chart identification are retained where needed. See
 
 The supported pair is Lean **4.34.1** and Mathlib
 **`d13f23b723b8a846827a245b89c10fc7d3f11612`**. Public dependencies use exact
-commit pins. The finite-simplex interface composes with
+commit pins. Pinned public dependencies include
 [`finite-markov-kernels`](https://github.com/abenenson/finite-markov-kernels),
-and product-measure transport uses
+and
 [`measure-discrimination`](https://github.com/abenenson/measure-discrimination).
 
 ```sh
@@ -50,7 +54,7 @@ python3 scripts/verify.py
 
 The verifier inventories every authored Lean file, clears its compiled artifacts
 before the initial build, runs all 16 source linters, and audits each explicit
-named public declaration's transitive axioms. It admits only `propext`,
+named public top-level declaration's transitive axioms. It admits only `propext`,
 `Classical.choice`, and `Quot.sound`. It does not claim to enumerate every
 anonymous or generated declaration independently.
 
@@ -69,4 +73,5 @@ uses the method of types. No mathematical priority claim is made.
 The package contains generic mathematics. It does not assert empirical validity
 for a physical model. [The extraction plan](source-plan.json) records the exact
 source revision, original module paths and hashes, public dependencies, and
-module ownership. [Apache-2.0](LICENSE); see [NOTICE](NOTICE).
+module ownership. The plan also records proposed upper-layer extractions;
+`verification.json` is the complete shipped-source inventory. [Apache-2.0](LICENSE); see [NOTICE](NOTICE).
