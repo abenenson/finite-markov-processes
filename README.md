@@ -42,12 +42,18 @@ Focused entry points keep the mathematical layers explicit:
 | `FiniteMarkovProcesses.Sanov` | Finite-alphabet closed upper/open lower bounds and a good KL rate; the reference density is strictly positive, while empirical targets may lie on the boundary. |
 | `FiniteMarkovProcesses.ProbabilityVectorInterop` | Coordinate-preserving equivalence and homeomorphism with the public probability-vector API, including equality of canonical PMFs. |
 | `FiniteMarkovProcesses.PathLargeDeviations` | Renger density/flux path bounds for specified initial regimes; the general initial-law theorem assumes an initial LDP and boundary continuity. |
-| `FiniteMarkovProcesses.EffectiveEvolution` | Complete-rate zeros are exactly Markov mean evolutions from the supplied initial zero set; observable particle confidence bounds remain separate probabilistic results. |
+| `FiniteMarkovProcesses.EffectiveEvolution` | Complete-rate zeros are exactly Markov mean evolutions from the supplied initial zero set; all-N strong-L1 particle bounds remain separate probabilistic results. |
+| `FiniteMarkovProcesses.QuantitativeBounds` | Dynamic-rate stability with explicit initial-density error, rate-gap coercivity, and eventual LDP concentration. |
 
 General initial mixtures have independent jump dynamics conditional on the
 initial configuration. The invariant-IID corollary uses actual IID initialized
 histories. The supplied initial cost determines the zero family; uniqueness of
 its initial zero is an additional condition.
+
+The all-N Chernoff estimate controls density and cumulative-flow paths in strong
+L1 distance from their actual unconditional mean, using a supplied admissible
+tilt. The deterministic stability estimates retain the initial-density error;
+an arbitrary initial cost does not control that error automatically.
 
 See [the theorem and premise map](docs/theorem-map.md),
 [the path large-deviation guide](docs/path-large-deviations.md),
@@ -71,7 +77,7 @@ python3 scripts/verify.py
 
 The verifier inventories every authored Lean file, clears its compiled artifacts
 before the initial build, runs all 16 source linters, and audits each explicit
-named public declaration's transitive axioms. It admits only `propext`,
+named public top-level declaration's transitive axioms. It admits only `propext`,
 `Classical.choice`, and `Quot.sound`. It does not claim to enumerate every
 anonymous or generated declaration independently.
 
