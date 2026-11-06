@@ -386,7 +386,6 @@ def main():
     assert not args.resume or args.evidence_dir, '--resume requires --evidence-dir'
     root = Path(__file__).resolve().parent.parent
     config_path = root / 'verification.json'
-    config = json.loads(config_path.read_text())
     stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
     evidence = (args.evidence_dir or root / 'verification-artifacts' / stamp).resolve()
     previous = None
@@ -400,6 +399,7 @@ def main():
     runner = EvidenceRunner(root, evidence, record)
     # Do not overwrite existing evidence before deciding whether its identity matches.
     try:
+        config = json.loads(config_path.read_text())
         assert previous is None or previous.get('identity'), \
             'Prior evidence has no qualified input identity'
         actual_sources = {str(path.relative_to(root)) for path in root.rglob('*.lean')

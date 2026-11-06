@@ -498,6 +498,17 @@ class ResumeControls(unittest.TestCase):
             record = json.loads((evidence / 'qualification.json').read_text())
             self.assertEqual(record['status'], 'rejected')
 
+    def test_malformed_config_invalidates_prior_top_level_passed_status(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root, evidence = Path(temp) / 'repo', Path(temp) / 'evidence'
+            fixture_repository(root)
+            self.invocation(root, evidence, self.success)
+            (root / 'verification.json').write_text('{broken')
+            with self.assertRaises(json.JSONDecodeError):
+                self.invocation(root, evidence, self.success, resume=True)
+            record = json.loads((evidence / 'qualification.json').read_text())
+            self.assertEqual(record['status'], 'rejected')
+
     def test_compiler_identity_always_rechecked(self):
         with tempfile.TemporaryDirectory() as temp:
             root, evidence = Path(temp) / 'repo', Path(temp) / 'evidence'
