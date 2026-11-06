@@ -215,6 +215,64 @@ class VerificationControls(unittest.TestCase):
             self.assertIn('synthetic exact-build failure', record['failure'])
 
 
+class LintHeaderControls(unittest.TestCase):
+    def test_ordinary_header_prepends_linter_and_keeps_public_import(self):
+        source = ('/-! Header mentioning module -/\n'
+                  'public import Mathlib.Data.Bool.Basic\nnamespace Example\nend Example\n')
+        result = verify.lint_source(source)
+        self.assertTrue(result.startswith('import Mathlib.Tactic.Linter.Lint\n'))
+        self.assertTrue(result.endswith(source))
+        self.assertEqual(verify.imported_modules(result),
+                         ['Mathlib.Tactic.Linter.Lint', 'Mathlib.Data.Bool.Basic'])
+
+    def test_module_header_remains_first_and_comments_are_preserved(self):
+        source = ('/-! Leading header, module in comments is not a command. -/\n'
+                  'module -- trailing module comment\n'
+                  'public import Mathlib.Data.Bool.Basic\n')
+        result = verify.lint_source(source)
+        self.assertEqual(verify.uncomment(result).split(),
+                         ['module', 'import', 'Mathlib.Tactic.Linter.Lint',
+                          'public', 'import', 'Mathlib.Data.Bool.Basic'])
+        self.assertIn('/-! Leading header, module in comments is not a command. -/', result)
+        self.assertIn('-- trailing module comment', result)
+        self.assertEqual(verify.imported_modules(result),
+                         ['Mathlib.Tactic.Linter.Lint', 'Mathlib.Data.Bool.Basic'])
+
+    def test_multiline_comment_after_module_does_not_absorb_linter_import(self):
+        source = 'module /- comment with\ninternal newline -/\nimport Mathlib.Data.Nat.Basic\n'
+        result = verify.lint_source(source)
+        self.assertEqual(verify.imported_modules(result),
+                         ['Mathlib.Tactic.Linter.Lint', 'Mathlib.Data.Nat.Basic'])
+        self.assertIn('/- comment with\ninternal newline -/', result)
+
+    def test_module_in_string_or_comment_does_not_change_header_placement(self):
+        for source in ['/- module -/\npublic import Mathlib.Data.Bool.Basic\n',
+                       'def text := "module"\n']:
+            result = verify.lint_source(source)
+            self.assertEqual(result, 'import Mathlib.Tactic.Linter.Lint\n' + source)
+
+    def test_module_and_prelude_both_precede_all_imports(self):
+        source = ('/- Copyright with /- nested module -/ comment -/\nmodule\n'
+                  '/- between commands -/\nprelude -- keep this comment\n'
+                  'public import Init.Prelude\n')
+        result = verify.lint_source(source)
+        self.assertEqual(verify.uncomment(result).split(),
+                         ['module', 'prelude', 'import', 'Mathlib.Tactic.Linter.Lint',
+                          'public', 'import', 'Init.Prelude'])
+        self.assertIn('/- between commands -/', result)
+        self.assertIn('-- keep this comment', result)
+
+    def test_prelude_alone_remains_before_linter_import(self):
+        source = '/- comment -/\nprelude\nimport Init.Prelude\n'
+        self.assertEqual(verify.uncomment(verify.lint_source(source)).split(),
+                         ['prelude', 'import', 'Mathlib.Tactic.Linter.Lint',
+                          'import', 'Init.Prelude'])
+
+    def test_nonstandalone_module_header_fails_closed(self):
+        with self.assertRaisesRegex(AssertionError, 'Unsupported module header'):
+            verify.lint_source('module unsupported\n')
+
+
 class PrimeAndLineExceptionControls(unittest.TestCase):
     def test_prime_declarations_remain_distinct(self):
         source = ("namespace Example'\nnoncomputable section\n"
@@ -414,6 +472,18 @@ class ResumeControls(unittest.TestCase):
                     self.invocation(root, evidence, self.success, resume=True)
                 record = json.loads((evidence / 'qualification.json').read_text())
                 self.assertEqual(record['status'], 'rejected')
+
+    def test_missing_resume_identity_invalidates_stale_passed_status(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root, evidence = Path(temp) / 'repo', Path(temp) / 'evidence'
+            fixture_repository(root)
+            evidence.mkdir()
+            (evidence / 'qualification.json').write_text(json.dumps(
+                {'status': 'passed', 'stages': []}))
+            with self.assertRaisesRegex(AssertionError, 'no qualified input identity'):
+                self.invocation(root, evidence, self.success, resume=True)
+            record = json.loads((evidence / 'qualification.json').read_text())
+            self.assertEqual(record['status'], 'rejected')
 
     def test_compiler_identity_always_rechecked(self):
         with tempfile.TemporaryDirectory() as temp:
