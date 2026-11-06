@@ -29,13 +29,18 @@ def toProbabilityVector (density : FiniteStateProbabilityDensity State) :
     FiniteMarkovKernels.ProbabilityVector State where
   prob := density.realWeight
   nonneg state := (density.weight state).coe_nonneg
-  sum_eq_one := by exact_mod_cast density.sum_weight
+  sum_eq_one := by
+    change (∑ state, (density.weight state : ℝ)) = 1
+    exact_mod_cast density.sum_weight
 
 /-- Regard a public probability vector as a typed empirical density with the same coordinates. -/
 def ofProbabilityVector (law : FiniteMarkovKernels.ProbabilityVector State) :
     FiniteStateProbabilityDensity State where
   weight state := ⟨law state, law.nonneg state⟩
-  sum_weight := by exact_mod_cast law.sum_eq_one
+  sum_weight := by
+    apply NNReal.eq
+    rw [NNReal.coe_sum]
+    exact law.sum_eq_one
 
 /-- Conversion to a real probability vector preserves each coordinate. -/
 @[simp]

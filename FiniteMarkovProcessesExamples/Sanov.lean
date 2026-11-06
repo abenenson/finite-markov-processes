@@ -64,7 +64,7 @@ example (n : ℕ) :
 /-- A concrete boundary count type: every observation is `true`. -/
 def allTrueType (n : ℕ) : FiniteIIDPositiveEmpiricalType Bool n where
   count state := if state then ⟨n + 1, Nat.lt_succ_self _⟩ else 0
-  sum_count := by simp [Fintype.sum_bool]
+  sum_count := by simp
 
 /-- Its normalized count vector lies on the closed-simplex boundary. -/
 example (n : ℕ) : (allTrueType n).probabilityDensity.IsOnLowerBoundary := by
