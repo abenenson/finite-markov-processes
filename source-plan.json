@@ -438,7 +438,9 @@
       "target_module": "FiniteMarkovProcesses.Order.Interval.Finset.Gaps",
       "target_path": "FiniteMarkovProcesses/Order/Interval/Finset/Gaps.lean",
       "source_sha256": "7da40c2517ef83876c0f6d85fe299114aabf1ad12eeca672e7877cc5ec0c3f67",
-      "imports": []
+      "imports": [
+        "Mathlib.Order.Interval.Finset.Gaps"
+      ]
     },
     "MathlibExtensions.Probability.CumulativeWaitTimes": {
       "owner": "ctmc",
