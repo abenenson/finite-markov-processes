@@ -298,8 +298,8 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.ExponentialWaitingTime": {
       "owner": "ctmc",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/ExponentialWaitingTime.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.ExponentialWaitingTime",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/ExponentialWaitingTime.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.ExponentialWaitingTime",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/ExponentialWaitingTime.lean",
       "source_sha256": "e70a5a50330e0b512c2096f250d55cfffbf92521f11ba644c15828198b296244",
       "imports": [
         "Mathlib.InformationTheory.KullbackLeibler.Basic",
@@ -311,8 +311,8 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteRateChannelFisherResponse": {
       "owner": "ctmc",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteRateChannelFisherResponse.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteRateChannelFisherResponse",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteRateChannelFisherResponse.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteRateChannelFisherResponse",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteRateChannelFisherResponse.lean",
       "source_sha256": "d356a6022ef8c93e569b7e38e49b5e98e84bc1da7979db9d65e9403e7acfc33e",
       "imports": [
         "Mathlib.Algebra.Order.BigOperators.Group.Finset",
@@ -323,8 +323,8 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpAction": {
       "owner": "ctmc",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpAction.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpAction",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpAction.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpAction",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpAction.lean",
       "source_sha256": "46e3d6063e84e2ee1638a268c7033b2682c5797a2c06598f8bd0f2b2dcbe4b86",
       "imports": [
         "Mathlib.Analysis.SpecialFunctions.Log.Basic",
@@ -334,44 +334,44 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpFluctuation": {
       "owner": "ctmc",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpFluctuation.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpFluctuation",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpFluctuation.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpFluctuation",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpFluctuation.lean",
       "source_sha256": "2b5e59a7b74c3e13567115eba06740a67b41f1504f273d2249c0ef9d75ad89de",
       "imports": [
         "Mathlib.InformationTheory.KullbackLeibler.Basic",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpRadonNikodym"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpRadonNikodym"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpRadonNikodym": {
       "owner": "ctmc",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpRadonNikodym.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpRadonNikodym",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpRadonNikodym.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpRadonNikodym",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpRadonNikodym.lean",
       "source_sha256": "0bee57890802f5ae862eb4c900b6c4997e768872022ec1784f401a1dd5fafb25",
       "imports": [
         "Mathlib.MeasureTheory.Measure.LogLikelihoodRatio",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpAction"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpAction"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovTrajectoryFisherResponse": {
       "owner": "ctmc",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovTrajectoryFisherResponse.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovTrajectoryFisherResponse",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovTrajectoryFisherResponse.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovTrajectoryFisherResponse",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovTrajectoryFisherResponse.lean",
       "source_sha256": "8cf2391133ab71ce759d958d11de7f0e712f18632bf9e6db3da4e11d6b44f03a",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteRateChannelFisherResponse",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovTrajectoryRelativeEntropy"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteRateChannelFisherResponse",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovTrajectoryRelativeEntropy"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovTrajectoryRelativeEntropy": {
       "owner": "ctmc",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovTrajectoryRelativeEntropy.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovTrajectoryRelativeEntropy",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovTrajectoryRelativeEntropy.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovTrajectoryRelativeEntropy",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovTrajectoryRelativeEntropy.lean",
       "source_sha256": "ff9b87da46d7016dc01cd510c8ae6872b605cb059abbe1beb23799adcf2c365e",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpFluctuation",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpFluctuation",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovStationaryAdditiveExpectation"
       ]
     },
@@ -664,7 +664,7 @@
         "Mathlib.Probability.Kernel.Composition.MeasureCompProd",
         "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
         "Mathlib.Probability.ProbabilityMassFunction.Constructions",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.ExponentialWaitingTime",
+        "FiniteMarkovProcesses.RelativeEntropy.ExponentialWaitingTime",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpLaw"
       ]
     },
@@ -1043,43 +1043,43 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.BidirectionalPoissonAction": {
       "owner": "sanov",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/BidirectionalPoissonAction.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.BidirectionalPoissonAction",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/BidirectionalPoissonAction.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonAction",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/BidirectionalPoissonAction.lean",
       "source_sha256": "e2c0ed36beadcb9ae22ef41fcfff8a68affed286a63c3cb5dc4e6782e1cd0dfb",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.PoissonRateDiscrimination"
+        "FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.BidirectionalPoissonCurrentContraction": {
       "owner": "sanov",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/BidirectionalPoissonCurrentContraction.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.BidirectionalPoissonCurrentContraction",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/BidirectionalPoissonCurrentContraction.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonCurrentContraction",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/BidirectionalPoissonCurrentContraction.lean",
       "source_sha256": "9c93512d1bb666a171d599fa7362719bb7994a854c61c1d6b291cf9d6d5baca5",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.BidirectionalPoissonForceReactivity",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.BidirectionalPoissonPathAction"
+        "FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonForceReactivity",
+        "FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonPathAction"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.BidirectionalPoissonForceReactivity": {
       "owner": "sanov",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/BidirectionalPoissonForceReactivity.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.BidirectionalPoissonForceReactivity",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/BidirectionalPoissonForceReactivity.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonForceReactivity",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/BidirectionalPoissonForceReactivity.lean",
       "source_sha256": "1702892ac80d13dc188b8601c37ef32a5649ab41a2f518bd9dfb33d622be10e0",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.BidirectionalPoissonAction"
+        "FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonAction"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.BidirectionalPoissonPathAction": {
       "owner": "sanov",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/BidirectionalPoissonPathAction.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.BidirectionalPoissonPathAction",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/BidirectionalPoissonPathAction.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonPathAction",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/BidirectionalPoissonPathAction.lean",
       "source_sha256": "732b935ef83a99218dd86d703a9c843df4ed1eed547536bbb4221ad7e6918b6b",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.BidirectionalPoissonAction",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.PoissonMeasureDiscrimination",
+        "FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonAction",
+        "FiniteMarkovProcesses.RelativeEntropy.PoissonMeasureDiscrimination",
         "MeasureDiscrimination.ProductDiscrimination",
         "FiniteMarkovProcesses.Probability.DrivenPoissonCycleHistory",
         "FiniteMarkovProcesses.Probability.PoissonCountExpectation"
@@ -1088,8 +1088,8 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.CountablePMF": {
       "owner": "sanov",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/CountablePMF.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.CountablePMF",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/CountablePMF.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.CountablePMF",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/CountablePMF.lean",
       "source_sha256": "30a385e2d0711749659549f54a86780711dd3c5fce764c0dfb589b29a08292aa",
       "imports": [
         "Mathlib.InformationTheory.KullbackLeibler.Basic",
@@ -1099,41 +1099,41 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.DensityFluxLargeDeviationRepresentation": {
       "owner": "sanov",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/DensityFluxLargeDeviationRepresentation.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.DensityFluxLargeDeviationRepresentation",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/DensityFluxLargeDeviationRepresentation.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/DensityFluxLargeDeviationRepresentation.lean",
       "source_sha256": "1b16c1b7167c82fb577e8eb9586593ba0acf80f9db5c5f6424e870cd2863c1e5",
       "imports": [
         "Mathlib.Analysis.SpecialFunctions.Log.ENNRealLog",
         "Mathlib.Order.LiminfLimsup",
         "Mathlib.Probability.Independence.Basic",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteOrientedPoissonGraphDynamics"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteOrientedPoissonGraphDynamics"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteBidirectionalPoissonCurrentContraction": {
       "owner": "sanov",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteBidirectionalPoissonCurrentContraction.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteBidirectionalPoissonCurrentContraction",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteBidirectionalPoissonCurrentContraction.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteBidirectionalPoissonCurrentContraction",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteBidirectionalPoissonCurrentContraction.lean",
       "source_sha256": "f604ffbd1a1c9385faed7e7ac5b47d6794ccb69f4684270acbaac2a946267e72",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.BidirectionalPoissonCurrentContraction"
+        "FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonCurrentContraction"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteOrientedPoissonGraphDynamics": {
       "owner": "sanov",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteOrientedPoissonGraphDynamics.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteOrientedPoissonGraphDynamics",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteOrientedPoissonGraphDynamics.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteOrientedPoissonGraphDynamics",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteOrientedPoissonGraphDynamics.lean",
       "source_sha256": "cb088be9a1f93fe4b339fd84150e993dcda2125f624de18b81ae4b1bbd8b159d",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteBidirectionalPoissonCurrentContraction"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteBidirectionalPoissonCurrentContraction"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateProbabilityDensity": {
       "owner": "sanov",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateProbabilityDensity.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateProbabilityDensity",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateProbabilityDensity.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensity",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateProbabilityDensity.lean",
       "source_sha256": "02bd17abaff144c678928fc6c3cbdc70a048d17d6de8b450c18f6cfc3a3c57fe",
       "imports": [
         "Mathlib.Probability.ProbabilityMassFunction.Constructions",
@@ -1144,23 +1144,23 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateProbabilityDensityRelativeEntropy": {
       "owner": "sanov",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateProbabilityDensityRelativeEntropy.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateProbabilityDensityRelativeEntropy",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateProbabilityDensityRelativeEntropy.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensityRelativeEntropy",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateProbabilityDensityRelativeEntropy.lean",
       "source_sha256": "584a2da2567a81a460b6a01f61f3622f915c44ce78c3f2ae850a6c15a9717bac",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateProbabilityDensity",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.PoissonRateDiscrimination"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensity",
+        "FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.PoissonMeasureDiscrimination": {
       "owner": "sanov",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/PoissonMeasureDiscrimination.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.PoissonMeasureDiscrimination",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/PoissonMeasureDiscrimination.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.PoissonMeasureDiscrimination",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/PoissonMeasureDiscrimination.lean",
       "source_sha256": "21e7b93b66fb387696f3bbbc70d18f393085f842f71a41e21db1b4eb46a219ad",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.CountablePMF",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.PoissonRateDiscrimination",
+        "FiniteMarkovProcesses.RelativeEntropy.CountablePMF",
+        "FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination",
         "FiniteMarkovProcesses.Probability.PoissonContactHistory",
         "FiniteMarkovProcesses.Probability.PoissonCountExpectation"
       ]
@@ -1168,8 +1168,8 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.PoissonRateDiscrimination": {
       "owner": "sanov",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/PoissonRateDiscrimination.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.PoissonRateDiscrimination",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/PoissonRateDiscrimination.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/PoissonRateDiscrimination.lean",
       "source_sha256": "98c3209d7f68c00cfd96c6eb30c3a870d27e19229b94a6060ae0ad682c97d242",
       "imports": [
         "Mathlib.InformationTheory.KullbackLeibler.KLFun"
@@ -1197,7 +1197,7 @@
       "imports": [
         "Mathlib.MeasureTheory.MeasurableSpace.CountablyGenerated",
         "Mathlib.MeasureTheory.Measure.FiniteMeasurePi",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateProbabilityDensity"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensity"
       ]
     },
     "MathlibExtensions.Probability.FiniteIIDEmpiricalProbabilityDensityExponentialBound": {
@@ -1218,7 +1218,7 @@
       "source_sha256": "8ab4484bc9a15a04575a0a8bb897ac87dd454aaad3a0630afe8236fd867f9639",
       "imports": [
         "Mathlib.Analysis.Asymptotics.ExpGrowth",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.DensityFluxLargeDeviationRepresentation",
+        "FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation",
         "FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityExponentialBound",
         "FiniteMarkovProcesses.Probability.FiniteStateProbabilityDensityEmpiricalApproximation"
       ]
@@ -1245,7 +1245,7 @@
       "target_path": "FiniteMarkovProcesses/Probability/FiniteIIDPositiveEmpiricalTypeExponentialBound.lean",
       "source_sha256": "5fea5e54b1fe27866ad5a6152004d6b8f4e67e25163f565c9858931ee8d6f157",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateProbabilityDensityRelativeEntropy",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensityRelativeEntropy",
         "FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalTypeLaw"
       ]
     },
@@ -1550,8 +1550,8 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.CommonBaseDensityAction": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/CommonBaseDensityAction.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.CommonBaseDensityAction",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/CommonBaseDensityAction.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.CommonBaseDensityAction",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/CommonBaseDensityAction.lean",
       "source_sha256": "f6e616eac5766ef8a7575f59090bd64684b6ff1cfcbd5c797f2e92682919f744",
       "imports": [
         "Mathlib.InformationTheory.KullbackLeibler.Basic",
@@ -1561,46 +1561,46 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteEmpiricalTypeInitialAtomLargeDeviation": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteEmpiricalTypeInitialAtomLargeDeviation.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteEmpiricalTypeInitialAtomLargeDeviation",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteEmpiricalTypeInitialAtomLargeDeviation.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteEmpiricalTypeInitialAtomLargeDeviation",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteEmpiricalTypeInitialAtomLargeDeviation.lean",
       "source_sha256": "b984f648ae7132e1f9b838f063e76868a21ac4dc0ead38ccf24d580709a1c3e8",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteEmpiricalTypeInitialAtomSelection",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteEmpiricalTypeInitialAtomSelection",
         "FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityLargeDeviation"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteEmpiricalTypeInitialAtomSelection": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteEmpiricalTypeInitialAtomSelection.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteEmpiricalTypeInitialAtomSelection",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteEmpiricalTypeInitialAtomSelection.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteEmpiricalTypeInitialAtomSelection",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteEmpiricalTypeInitialAtomSelection.lean",
       "source_sha256": "e64ae5ff2301f5bc51f15c17e6ff3b9663806de21760a77d5552ff470dc244da",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpRengerEmpiricalInitialSource"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpRengerEmpiricalInitialSource"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteJumpHistoryRengerHybridBVSourceSupport": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteJumpHistoryRengerHybridBVSourceSupport.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteJumpHistoryRengerHybridBVSourceSupport",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteJumpHistoryRengerHybridBVSourceSupport.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteJumpHistoryRengerHybridBVSourceSupport",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteJumpHistoryRengerHybridBVSourceSupport.lean",
       "source_sha256": "caf688d96683584fc4962c64d41e0f2455bad6d7c8164c0bd3dc4f9e5ef3f843",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVSourceKinematicSupport",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceKinematicSupport",
         "FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservation"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateJumpDirectionalFlowLDPBoundary.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateJumpDirectionalFlowLDPBoundary.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateJumpDirectionalFlowLDPBoundary.lean",
       "source_sha256": "9557d15cc0394a03892d57fae284df57faa851499fa27053cbbb8c3df0cecb04",
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1DerivativeTopology",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.DensityFluxLargeDeviationRepresentation",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateProbabilityDensity",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.PoissonRateDiscrimination",
+        "FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensity",
+        "FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination",
         "FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityLargeDeviation",
         "FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalTypeLaw",
         "FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowEndpointConvention",
@@ -1613,46 +1613,46 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovInvariantIIDInitialLDP": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovInvariantIIDInitialLDP.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovInvariantIIDInitialLDP",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovInvariantIIDInitialLDP.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovInvariantIIDInitialLDP",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovInvariantIIDInitialLDP.lean",
       "source_sha256": "cb0ed11bb7023ec325fdb40ba1190008cee132c7b5eeb7c41e08d91e9f489abf",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary",
         "FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityLargeDeviation"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVCompleteRate.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVCompleteRate.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpHybridBVCompleteRate.lean",
       "source_sha256": "5fbd70a880a5dccbcc3f80c1ac02532a97a2ec9143e3a84de22e9674babe1ae3",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVConditionalUpperBound": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVConditionalUpperBound.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVConditionalUpperBound",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVConditionalUpperBound.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVConditionalUpperBound",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpHybridBVConditionalUpperBound.lean",
       "source_sha256": "698e1fe492974eb6c3979fc671c8c7be747de5a33dfd9191103a4c5dc6df9645",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.DensityFluxLargeDeviationRepresentation",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVExponentialBound",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVExtendedDualSupport",
+        "FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVExponentialBound",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVExtendedDualSupport",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpHybridBVCompactContainment"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVDualEvaluation": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVDualEvaluation.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVDualEvaluation",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVDualEvaluation.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDualEvaluation",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpHybridBVDualEvaluation.lean",
       "source_sha256": "3542e990df9fe91acb6a858da81ee3412b10b6a257bda003ad23856ceee23683",
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1PathWeightedCoordinateIntegral",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate",
         "FiniteMarkovProcesses.MeasureTheory.Integral.OfRealIntegral",
         "FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureWithDensityPairing"
       ]
@@ -1660,36 +1660,36 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVDynamicRate.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVDynamicRate.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpHybridBVDynamicRate.lean",
       "source_sha256": "fcdf0213ab8dc59013b59a41476e06bbde069500be84b5a9f380342e7857900b",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary",
         "FiniteMarkovProcesses.Probability.FiniteJumpHistoryHybridBVObservation"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVExponentialBound": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVExponentialBound.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVExponentialBound",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVExponentialBound.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVExponentialBound",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpHybridBVExponentialBound.lean",
       "source_sha256": "41c2431db2d33ca04a82de2e18fad76c2bbaaabaddafadcc0ea8c004975f449e",
       "imports": [
         "Mathlib.Probability.Independence.Integration",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVExponentialMoment",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVFiniteChannelDual",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVExponentialMoment",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialHybridBVObservation"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVExponentialMoment": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVExponentialMoment.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVExponentialMoment",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVExponentialMoment.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVExponentialMoment",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpHybridBVExponentialMoment.lean",
       "source_sha256": "f01f7400b2b3ccbc46c0defb5d7b2baec60ea840d817e775288c9e41c34942c8",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVDualEvaluation",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVTilt",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDualEvaluation",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVTilt",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovExponentialTimeTiltHistoryDensity",
         "FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservationMeasurability"
       ]
@@ -1697,24 +1697,24 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVJointClosedUpperBound": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVJointClosedUpperBound.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVJointClosedUpperBound",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVJointClosedUpperBound.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVJointClosedUpperBound",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpHybridBVJointClosedUpperBound.lean",
       "source_sha256": "0c37c63045e88e01dd2d3fdb5b31b6e8b19e6d45865faa0d4697f9a9124cafd4",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVJointUpperBound",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpRengerEmpiricalInitialSource"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVJointUpperBound",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpRengerEmpiricalInitialSource"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVJointUpperBound": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVJointUpperBound.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVJointUpperBound",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVJointUpperBound.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVJointUpperBound",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpHybridBVJointUpperBound.lean",
       "source_sha256": "d111cf7f76e35f521ec65b109da6a20aa2ef380c8cd5e00c53688a56d4ade370",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVSourceSupportedUpperBound",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRateSublevelCompactness",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVSourceSupportedUpperBound",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateSublevelCompactness",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpConservationInitialDensity",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpRandomEmpiricalTypeHybridBVCompactContainment",
         "Mathlib.Topology.ShrinkingLemma"
@@ -1723,25 +1723,25 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVSourceSupportedUpperBound": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVSourceSupportedUpperBound.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVSourceSupportedUpperBound",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVSourceSupportedUpperBound.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVSourceSupportedUpperBound",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpHybridBVSourceSupportedUpperBound.lean",
       "source_sha256": "106fc70e486c0ff4b1f83cf687683e1ced9dd1437e39fcc35d961a1ec6c57395",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteJumpHistoryRengerHybridBVSourceSupport",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVConditionalUpperBound",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVSourceSupportClassification",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteJumpHistoryRengerHybridBVSourceSupport",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVConditionalUpperBound",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceSupportClassification",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpInitialBoundaryHybridBVControl"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVTilt": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVTilt.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVTilt",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpHybridBVTilt.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVTilt",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpHybridBVTilt.lean",
       "source_sha256": "e90c965f17501beff584360ff687b6c29d1c81181d3ce27787437e3d545a4b69",
       "imports": [
         "Mathlib.Topology.ContinuousMap.BoundedCompactlySupported",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovExponentialTimeTilt",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovUniformizedHistoryLaw"
       ]
@@ -1749,30 +1749,30 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpRengerEmpiricalInitialSource": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpRengerEmpiricalInitialSource.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpRengerEmpiricalInitialSource",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovJumpRengerEmpiricalInitialSource.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpRengerEmpiricalInitialSource",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpRengerEmpiricalInitialSource.lean",
       "source_sha256": "763b544fe08c60271da0cc4d1daf7972c83464d51e12aebb92d8ed18d11f00ba",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpRandomEmpiricalTypeHybridBVObservation"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateMarkovMeanHybridBVRepresentationPath": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateMarkovMeanHybridBVRepresentationPath.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovMeanHybridBVRepresentationPath",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateMarkovMeanHybridBVRepresentationPath.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovMeanHybridBVRepresentationPath",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovMeanHybridBVRepresentationPath.lean",
       "source_sha256": "d1fc88b2e93f9f1513d32e959aa68538ab9c6bf049b6932b508622fa48eba44f",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRepresentationDomain",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanHybridBVPath"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateTimeDependentMarkovJumpAction": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateTimeDependentMarkovJumpAction.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateTimeDependentMarkovJumpAction",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateTimeDependentMarkovJumpAction.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpAction",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateTimeDependentMarkovJumpAction.lean",
       "source_sha256": "bd78393737082b649c4825e685fb8afaa0915990c94e6d1ae1ffe6c1e264799d",
       "imports": [
         "Mathlib.Analysis.SpecialFunctions.Log.Basic",
@@ -1782,12 +1782,12 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateTimeDependentMarkovJumpActionExpectation": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateTimeDependentMarkovJumpActionExpectation.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateTimeDependentMarkovJumpActionExpectation",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateTimeDependentMarkovJumpActionExpectation.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpActionExpectation",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateTimeDependentMarkovJumpActionExpectation.lean",
       "source_sha256": "471fcd2934ea68bb02be7c8a99d18996393a29cb38a5da9290ebaf409f890b83",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateTimeDependentMarkovJumpAction",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpAction",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovDirectionalFlowExpectation",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovOccupationExpectation"
       ]
@@ -1795,44 +1795,44 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateTimeDependentMarkovJumpRadonNikodym": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/FiniteStateTimeDependentMarkovJumpRadonNikodym.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateTimeDependentMarkovJumpRadonNikodym",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/FiniteStateTimeDependentMarkovJumpRadonNikodym.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpRadonNikodym",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/FiniteStateTimeDependentMarkovJumpRadonNikodym.lean",
       "source_sha256": "58691452f15d8b7feec644047a0ea70175a6c0fd010ad61715019ed9b64d6873",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.CommonBaseDensityAction",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateTimeDependentMarkovJumpAction"
+        "FiniteMarkovProcesses.RelativeEntropy.CommonBaseDensityAction",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpAction"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.PoissonMeasureContinuousDualSingularity": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/PoissonMeasureContinuousDualSingularity.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.PoissonMeasureContinuousDualSingularity",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/PoissonMeasureContinuousDualSingularity.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.PoissonMeasureContinuousDualSingularity",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/PoissonMeasureContinuousDualSingularity.lean",
       "source_sha256": "47175de67627b1fcd0bb8550979a7d56f78f9caac070f27051e4175f70b29964",
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteOpenIntervalContinuousTestDense",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVDualEvaluation",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerExtendedPoissonDuality"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDualEvaluation",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerDirectionalFlowZeroRate": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerDirectionalFlowZeroRate.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerDirectionalFlowZeroRate",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerDirectionalFlowZeroRate.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerDirectionalFlowZeroRate",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerDirectionalFlowZeroRate.lean",
       "source_sha256": "8536fdc85b775adf7843759357870f59fc4a4cfaeef1577d89765dd4c6e30e77",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerExtendedPoissonDuality": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerExtendedPoissonDuality.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerExtendedPoissonDuality",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerExtendedPoissonDuality.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerExtendedPoissonDuality.lean",
       "source_sha256": "487a09ee0b988b7282814c3dfdc61bc48d0e053f5c239ed0b5a5f12ed13ad7e7",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate",
         "Mathlib.Analysis.Calculus.MeanValue",
         "Mathlib.Analysis.SpecialFunctions.ExpDeriv"
       ]
@@ -1840,104 +1840,104 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVBoundaryTrace": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVBoundaryTrace.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVBoundaryTrace",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVBoundaryTrace.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVBoundaryTrace",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVBoundaryTrace.lean",
       "source_sha256": "1467f654135e0039721b282a28cbe892ceae7cd546cc863e1fcb572526cbac82",
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVTerminalTrace",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVEventCoercivity"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVEventCoercivity"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVCompleteRateCompactness": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVCompleteRateCompactness.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVCompleteRateCompactness",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVCompleteRateCompactness.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVCompleteRateCompactness",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVCompleteRateCompactness.lean",
       "source_sha256": "ddba9f5900314a3dcc264d9af7d595b7b0cba44eba08315a76da5cd5b76d93ee",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovInvariantIIDInitialLDP",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRateSublevelCompactness"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovInvariantIIDInitialLDP",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateSublevelCompactness"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVConservationInitialDensity": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVConservationInitialDensity.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVConservationInitialDensity",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVConservationInitialDensity.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVConservationInitialDensity",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVConservationInitialDensity.lean",
       "source_sha256": "da1226b43937d9562f7fa4f7391760fe9e9a565fbb8958a71932846036b494ce",
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1PathWeightedCoordinateIntegral",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteJumpHistoryRengerHybridBVSourceSupport",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVKinematicClosure",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteJumpHistoryRengerHybridBVSourceSupport",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVKinematicClosure",
         "FiniteMarkovProcesses.MeasureTheory.VectorMeasure.FiniteIntervalVagueSignedMeasureBoundaryCutoff"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVConvexCombinationRate": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVConvexCombinationRate.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVConvexCombinationRate",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVConvexCombinationRate.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVConvexCombinationRate",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVConvexCombinationRate.lean",
       "source_sha256": "285243adcef7bc56443cc790174b6d9e668b666408917aa8d976696f9e89d2b9",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVConvexCombinationRepresentationPath",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerExtendedPoissonDuality",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVFiniteChannelDual"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVConvexCombinationRepresentationPath",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVConvexCombinationRepresentationPath": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVConvexCombinationRepresentationPath.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVConvexCombinationRepresentationPath",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVConvexCombinationRepresentationPath.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVConvexCombinationRepresentationPath",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVConvexCombinationRepresentationPath.lean",
       "source_sha256": "bcb49c6bc3166464342128d52b03a086acc67f57cdd3aed17dac77d5896ed875",
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVLinearCombination",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVCorollaryFourSixteenLargeDeviationRepresentation": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVCorollaryFourSixteenLargeDeviationRepresentation.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVCorollaryFourSixteenLargeDeviationRepresentation",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVCorollaryFourSixteenLargeDeviationRepresentation.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVCorollaryFourSixteenLargeDeviationRepresentation",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVCorollaryFourSixteenLargeDeviationRepresentation.lean",
       "source_sha256": "0128d79cc88972b019b4ded626d8764064387beaddb9f4ff943fc0f2bd989a2b",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoLargeDeviationRepresentation",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVCorollaryFourSixteenOpenLowerBound"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoLargeDeviationRepresentation",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVCorollaryFourSixteenOpenLowerBound"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVCorollaryFourSixteenOpenLowerBound": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVCorollaryFourSixteenOpenLowerBound.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVCorollaryFourSixteenOpenLowerBound",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVCorollaryFourSixteenOpenLowerBound.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVCorollaryFourSixteenOpenLowerBound",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVCorollaryFourSixteenOpenLowerBound.lean",
       "source_sha256": "3c690f0a31261b2b7a52538ba11e5e18c0f0e8e261ba2677e4e6ba52555a61b4",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoOpenLowerBound",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovInvariantIIDInitialLDP",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoOpenLowerBound",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovInvariantIIDInitialLDP",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpIIDHybridBVObservationTransport"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVCumulativeFlowTranslation": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVCumulativeFlowTranslation.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVCumulativeFlowTranslation",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVCumulativeFlowTranslation.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVCumulativeFlowTranslation",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVCumulativeFlowTranslation.lean",
       "source_sha256": "2435b3263cc28cc8e2ae0707eafa1debbb4ec91a8d4c8ac95ed200eeb5e832cd",
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVConstantTranslation",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVDualEvaluation"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDualEvaluation"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVDualRepresentation": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVDualRepresentation.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVDualRepresentation",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVDualRepresentation.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVDualRepresentation",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVDualRepresentation.lean",
       "source_sha256": "c93487eb133aeccbb31455ea00fd2dfe8145efabfd1e71b4ab07bc99e278288f",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerExtendedPoissonDuality",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality",
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteOpenIntervalContinuousTestDense",
         "FiniteMarkovProcesses.MeasureTheory.Integral.OfRealIntegral",
         "Mathlib.Analysis.Convex.Jensen",
@@ -1950,68 +1950,68 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVEventCoercivity": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVEventCoercivity.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVEventCoercivity",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVEventCoercivity.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVEventCoercivity",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVEventCoercivity.lean",
       "source_sha256": "f661ae14dc5adb321fe6172c07545e1e1a76e4e974bd780a7246a1b758d59170",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRateCoercivity",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRepresentationDomain"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateCoercivity",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVExtendedDualSupport": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVExtendedDualSupport.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVExtendedDualSupport",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVExtendedDualSupport.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVExtendedDualSupport",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVExtendedDualSupport.lean",
       "source_sha256": "900d98540ef21cb6849c348b6b38886a4e13b3f88590ceb29291927cbfdae5ae",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.PoissonMeasureContinuousDualSingularity",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVFiniteChannelDual",
+        "FiniteMarkovProcesses.RelativeEntropy.PoissonMeasureContinuousDualSingularity",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual",
         "FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasurePositiveClosure"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVFiniteChannelDual": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVFiniteChannelDual.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVFiniteChannelDual",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVFiniteChannelDual.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVFiniteChannelDual.lean",
       "source_sha256": "8aba8545efc9a35caa40673dc03c25cde93a259bc6f952306f64e1f0b1e43d5b",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVDualRepresentation",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRepresentationDomain",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVDualRepresentation",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain",
         "Mathlib.Basic.ENNReal.BigOperators"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVForwardUniqueness": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVForwardUniqueness.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVForwardUniqueness",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVForwardUniqueness.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVForwardUniqueness",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVForwardUniqueness.lean",
       "source_sha256": "66c27e7e83145af0dbee8fa04a48c9ec9990c625826dad3343cb26e608772eaa",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerDirectionalFlowZeroRate",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTargetForwardEquation",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerDirectionalFlowZeroRate",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTargetForwardEquation",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovForwardUniqueness"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVKinematicClosure": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVKinematicClosure.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVKinematicClosure",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVKinematicClosure.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVKinematicClosure",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVKinematicClosure.lean",
       "source_sha256": "60a30df49c40e62cfaec66b0aa2ef832c80274629601d2f95b33554ef02f1598",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVValueConstraintClosure"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVValueConstraintClosure"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVOrderedFlowMeasureClosure": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVOrderedFlowMeasureClosure.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVOrderedFlowMeasureClosure",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVOrderedFlowMeasureClosure.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVOrderedFlowMeasureClosure",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVOrderedFlowMeasureClosure.lean",
       "source_sha256": "e36b3c7c0451d93d1fae0b4b26578ee7e5b107050da6cc32d70076e5d01f0dab",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVKinematicClosure",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVKinematicClosure",
         "FiniteMarkovProcesses.MeasureTheory.VectorMeasure.FiniteIntervalVagueSignedMeasureBoundaryCutoff",
         "FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation",
         "FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureAbsoluteContinuityClosure"
@@ -2020,55 +2020,55 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetActionConvergence": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetActionConvergence.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetActionConvergence",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetActionConvergence.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetActionConvergence",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetActionConvergence.lean",
       "source_sha256": "ca667a7a2fb13dea2915857963615ff1e42481a9754038743b3a0005b1287587",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetGeneratedFlowActionConvergence",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetActionThreshold"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetGeneratedFlowActionConvergence",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetActionThreshold"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetActionExpectation": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetActionExpectation.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetActionExpectation",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetActionExpectation.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetActionExpectation",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetActionExpectation.lean",
       "source_sha256": "ed9b28f4d15c9b2688ae44064672f3d7351b06c52251b1a3503ec63abcf56e4a",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateTimeDependentMarkovJumpActionExpectation",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTargetActionBound",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpActionExpectation",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTargetActionBound",
         "Mathlib.InformationTheory.KullbackLeibler.Basic"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetActionThreshold": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetActionThreshold.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetActionThreshold",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetActionThreshold.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetActionThreshold",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetActionThreshold.lean",
       "source_sha256": "ed272bb9217f572e0c099f393c6111559389a8fde9b83fbed60fec5f396d4333",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetGeneratedFlowActionConvergence"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetGeneratedFlowActionConvergence"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetDensityErrorConvergence": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetDensityErrorConvergence.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetDensityErrorConvergence",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetDensityErrorConvergence.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetDensityErrorConvergence",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetDensityErrorConvergence.lean",
       "source_sha256": "055c0b4939b2440900615e6ad0c3028eb1ba8610d81c317db1f721f028818700",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetFlowDefectStability"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetFlowDefectStability"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetFlowDefectStability": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetFlowDefectStability.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetFlowDefectStability",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetFlowDefectStability.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetFlowDefectStability",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetFlowDefectStability.lean",
       "source_sha256": "143d0283b9add8ca6924c526bba7431707755eabcbcdf0ecc7ab857f09baddd9",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTruncatedTargetDynamicRateRecovery",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetDynamicRateRecovery",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Stability",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovForwardDerivative"
       ]
@@ -2076,12 +2076,12 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetGeneratedFlowActionConvergence": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetGeneratedFlowActionConvergence.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetGeneratedFlowActionConvergence",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetGeneratedFlowActionConvergence.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetGeneratedFlowActionConvergence",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetGeneratedFlowActionConvergence.lean",
       "source_sha256": "4f11a224fa56c945a11462c626daaad4654839c08a81a0015da4ac5f8694cb1a",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetActionExpectation",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanConvergence",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetActionExpectation",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanConvergence",
         "FiniteMarkovProcesses.MeasureTheory.Integral.OfRealIntegral",
         "Mathlib.MeasureTheory.Integral.Lebesgue.Add",
         "Mathlib.MeasureTheory.Integral.Lebesgue.DominatedConvergence"
@@ -2090,101 +2090,101 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetGirsanov": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetGirsanov.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetGirsanov",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetGirsanov.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetGirsanov",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetGirsanov.lean",
       "source_sha256": "3a9c10639b05fb6b23c41f20262b08fbc50ec36575220e39ce4f23dee556e4f9",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateTimeDependentMarkovJumpRadonNikodym",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpRadonNikodym",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetOpenSetConcentration": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetOpenSetConcentration.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetOpenSetConcentration",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetOpenSetConcentration.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetOpenSetConcentration",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetOpenSetConcentration.lean",
       "source_sha256": "175f27475a60355da76c0714e681c5988d1e948c0f84965029172384a6a70b51",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanConvergence",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanConvergence",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovRoundedInitialMeanConvergence"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetRegularization": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetRegularization.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetRegularization",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetRegularization.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetRegularization",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetRegularization.lean",
       "source_sha256": "3452edcc9762a7c0bac689d829428f490344ade37ba94b45130cc26f4c142581",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTruncatedTargetRate"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetRate"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceFlowConvergence": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetSourceFlowConvergence.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceFlowConvergence",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetSourceFlowConvergence.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceFlowConvergence",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetSourceFlowConvergence.lean",
       "source_sha256": "ca116f91d2e7c77a62d2ef76bb30caa5f6dec89c0799ec578dd39fb74d7779cb",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanStability",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbedRate",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanStability",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbedRate",
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVVanishingVariation"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetSourceMean.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetSourceMean.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetSourceMean.lean",
       "source_sha256": "77f1f638af5ddff25aee0a0e48c0eb8ddc38b8d7222c9327db2dc7427efc2143",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateProbabilityDensity",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetRegularization",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTargetForwardEquation",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensity",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetRegularization",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTargetForwardEquation",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovForwardEquation"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanConvergence": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetSourceMeanConvergence.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanConvergence",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetSourceMeanConvergence.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanConvergence",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetSourceMeanConvergence.lean",
       "source_sha256": "5459653ba183874fcb78f4783c720b08604ddd6cd00b70a0fb3291eee3dc3075",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceFlowConvergence",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanPathConvergence"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceFlowConvergence",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanPathConvergence"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanPathConvergence": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetSourceMeanPathConvergence.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanPathConvergence",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetSourceMeanPathConvergence.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanPathConvergence",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetSourceMeanPathConvergence.lean",
       "source_sha256": "db1a8cf159b47b2b98da47e1e8a0dd1f2a9c7f756d250935d38e0764e209d02d",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceFlowConvergence"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceFlowConvergence"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanStability": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetSourceMeanStability.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanStability",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVPositiveTargetSourceMeanStability.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanStability",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetSourceMeanStability.lean",
       "source_sha256": "50d203654f728e4776805c242526f9c3bad3e5e3dfa4fd0c5f3358bb3a761d35",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetFlowDefectStability",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetDensityErrorConvergence"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetFlowDefectStability",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetDensityErrorConvergence"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVRateCoercivity": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVRateCoercivity.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRateCoercivity",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVRateCoercivity.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateCoercivity",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVRateCoercivity.lean",
       "source_sha256": "316f962396559cec3164d577e89c34c96976972b8fc09b2a77218ae5e04f96bc",
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCoerciveEnvelope",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate",
         "FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation",
         "Mathlib.MeasureTheory.Integral.Lebesgue.Add"
       ]
@@ -2192,130 +2192,130 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVRateSublevelCompactness": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVRateSublevelCompactness.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRateSublevelCompactness",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVRateSublevelCompactness.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateSublevelCompactness",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVRateSublevelCompactness.lean",
       "source_sha256": "0585e77d9c08cf5077cd7c4c1894174b84e6b0a67bb5fb25ad65924033fa049f",
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVSequentialCompactness",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVFiniteChannelDual",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVOrderedFlowMeasureClosure",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRateCoercivity",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVOrderedFlowMeasureClosure",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateCoercivity",
         "Mathlib.Topology.Sequences"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVReferenceEvolutionPath": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVReferenceEvolutionPath.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVReferenceEvolutionPath",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVReferenceEvolutionPath.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPath",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVReferenceEvolutionPath.lean",
       "source_sha256": "344c3f6510119c07b0e51eb1f4c439ed73cffdb762b77ecafdadea55196b5b21",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbation",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbation",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanHybridBVPath"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbation": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVReferenceEvolutionPerturbation.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbation",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVReferenceEvolutionPerturbation.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbation",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVReferenceEvolutionPerturbation.lean",
       "source_sha256": "8a981bfb0a145fe065f51792f0965e4b78e67b6e258d6b2af5d42ca4026ab1be",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovForwardDerivative"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbedPath": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVReferenceEvolutionPerturbedPath.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbedPath",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVReferenceEvolutionPerturbedPath.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbedPath",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVReferenceEvolutionPerturbedPath.lean",
       "source_sha256": "065474267408ffddf260b80ba5428a7f5a9a0c43d1e610be7faf8c8b9d1cd253",
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVLinearCombination",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVReferenceEvolutionPath"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPath"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbedRate": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVReferenceEvolutionPerturbedRate.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbedRate",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVReferenceEvolutionPerturbedRate.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbedRate",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVReferenceEvolutionPerturbedRate.lean",
       "source_sha256": "67428932fe321e75083c7000865fd6b89be89e942cbec85e942d2b788ef78bb4",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerExtendedPoissonDuality",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVFiniteChannelDual",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbedPath"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbedPath"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVRegularizedOpenLowerEstimate": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVRegularizedOpenLowerEstimate.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRegularizedOpenLowerEstimate",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVRegularizedOpenLowerEstimate.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRegularizedOpenLowerEstimate",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVRegularizedOpenLowerEstimate.lean",
       "source_sha256": "7b77f1804423a88ed85ce87ae94dc7e4718417df5c36a291f89c76aa9378a0ab",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRoundedInitialActionConcentration",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetActionConvergence",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRoundedInitialActionConcentration",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetActionConvergence",
         "FiniteMarkovProcesses.Probability.ExponentialFailureMassLogLiminf",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialHybridBVObservation",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.DensityFluxLargeDeviationRepresentation"
+        "FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVRepresentationDomain": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVRepresentationDomain.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRepresentationDomain",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVRepresentationDomain.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVRepresentationDomain.lean",
       "source_sha256": "7c680df3e1fc5133fec01efafa2fd13e82cfee722cb07808502f8fb8b91d95ee",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVCumulativeFlowTranslation"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVCumulativeFlowTranslation"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVRoundedInitialActionConcentration": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVRoundedInitialActionConcentration.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRoundedInitialActionConcentration",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVRoundedInitialActionConcentration.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRoundedInitialActionConcentration",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVRoundedInitialActionConcentration.lean",
       "source_sha256": "1b8452327051a7e99b223ff4fd28ce5921d2524f69dd60ca281528e638fd7fd6",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetOpenSetConcentration",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetActionExpectation",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetOpenSetConcentration",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetActionExpectation",
         "Mathlib.MeasureTheory.Measure.Real"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVSourceKinematicSupport": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVSourceKinematicSupport.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVSourceKinematicSupport",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVSourceKinematicSupport.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceKinematicSupport",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVSourceKinematicSupport.lean",
       "source_sha256": "2d9e4941f27c3c1d985691435213e61636d20280c29a18d794f94ce7dcb9659a",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVKinematicClosure",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVKinematicClosure",
         "FiniteMarkovProcesses.MeasureTheory.VectorMeasure.FiniteIntervalVagueSignedMeasureBoundaryCutoff"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVSourceSupportClassification": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVSourceSupportClassification.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVSourceSupportClassification",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVSourceSupportClassification.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceSupportClassification",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVSourceSupportClassification.lean",
       "source_sha256": "76fb9c68c22ba2c0795cf4c0168fa5c91cf76b163e354007e5d132d2ef8bd513",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVExtendedDualSupport",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVSourceKinematicSupport",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVExtendedDualSupport",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceKinematicSupport",
         "FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTargetActionBound": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVTargetActionBound.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTargetActionBound",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVTargetActionBound.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTargetActionBound",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTargetActionBound.lean",
       "source_sha256": "f44f4310e158d759510dcb9b26dc1eb3dccdee339f2f48fbf6dd0cb2a07b9dce",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.TimeDependentMarkovJumpReplicaRadonNikodym",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVPositiveTargetGirsanov",
+        "FiniteMarkovProcesses.RelativeEntropy.TimeDependentMarkovJumpReplicaRadonNikodym",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetGirsanov",
         "FiniteMarkovProcesses.Probability.FiniteJumpHistoryReplicaJumpCount",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCountMoment",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalTestConcentration"
@@ -2324,11 +2324,11 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTargetForwardEquation": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVTargetForwardEquation.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTargetForwardEquation",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVTargetForwardEquation.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTargetForwardEquation",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTargetForwardEquation.lean",
       "source_sha256": "64f68b3700bf86fcd42892bbb4750f9a0708f78be6998d8abede1a2c37f6bda2",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTruncatedTargetRate",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetRate",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Dissipation",
         "Mathlib.MeasureTheory.Integral.IntervalIntegral.LebesgueDifferentiationThm"
       ]
@@ -2336,149 +2336,149 @@
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourOneLargeDeviationRepresentation": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVTheoremFourOneLargeDeviationRepresentation.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourOneLargeDeviationRepresentation",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVTheoremFourOneLargeDeviationRepresentation.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourOneLargeDeviationRepresentation",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTheoremFourOneLargeDeviationRepresentation.lean",
       "source_sha256": "26bd9b7c1446419a07f4357bc653b9e5e5050d939b59ede445a2b9d5731a7e00",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoLargeDeviationRepresentation",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourOneOpenLowerBound",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoLargeDeviationRepresentation",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourOneOpenLowerBound",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialPermutation"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourOneOpenLowerBound": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVTheoremFourOneOpenLowerBound.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourOneOpenLowerBound",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVTheoremFourOneOpenLowerBound.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourOneOpenLowerBound",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTheoremFourOneOpenLowerBound.lean",
       "source_sha256": "94e1bbab1270c5831f552d4df1879a38721f1a296b2d0fd98bf22b6d66cc17ed",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRegularizedOpenLowerEstimate",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVCompleteRateCompactness"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRegularizedOpenLowerEstimate",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVCompleteRateCompactness"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoBoundaryOpenLowerBound": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVTheoremFourTwoBoundaryOpenLowerBound.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoBoundaryOpenLowerBound",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVTheoremFourTwoBoundaryOpenLowerBound.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoBoundaryOpenLowerBound",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTheoremFourTwoBoundaryOpenLowerBound.lean",
       "source_sha256": "e9b2f4cf732869c622aac83e87b4244c438fdf92d68ac99fc9c4a6ca7021a1f0",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVConvexCombinationRate",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVUniformStaticRepresentationPath",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoInteriorOpenLowerBound"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVConvexCombinationRate",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVUniformStaticRepresentationPath",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoInteriorOpenLowerBound"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoInteriorOpenLowerBound": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVTheoremFourTwoInteriorOpenLowerBound.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoInteriorOpenLowerBound",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVTheoremFourTwoInteriorOpenLowerBound.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoInteriorOpenLowerBound",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTheoremFourTwoInteriorOpenLowerBound.lean",
       "source_sha256": "60f1a45bcf8ba5591142aa1b5c078cf48cef339f15dc097c927ac2df30217526",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteEmpiricalTypeInitialAtomLargeDeviation",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourOneOpenLowerBound"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteEmpiricalTypeInitialAtomLargeDeviation",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourOneOpenLowerBound"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoLargeDeviationRepresentation": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVTheoremFourTwoLargeDeviationRepresentation.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoLargeDeviationRepresentation",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVTheoremFourTwoLargeDeviationRepresentation.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoLargeDeviationRepresentation",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTheoremFourTwoLargeDeviationRepresentation.lean",
       "source_sha256": "4c6941ff1be37ca8d6b7f9784437872e4be85f307c7f3fbbc0e7215e721755a4",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovJumpHybridBVJointClosedUpperBound",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoOpenLowerBound"
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVJointClosedUpperBound",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoOpenLowerBound"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoOpenLowerBound": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVTheoremFourTwoOpenLowerBound.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoOpenLowerBound",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVTheoremFourTwoOpenLowerBound.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoOpenLowerBound",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTheoremFourTwoOpenLowerBound.lean",
       "source_sha256": "011812f4972cacb141a2ed39faceac94e4a6d61c557d0e6f27cf688a2a494ffc",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTheoremFourTwoBoundaryOpenLowerBound",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVCompleteRateCompactness"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoBoundaryOpenLowerBound",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVCompleteRateCompactness"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTruncatedTargetDynamicRateRecovery": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVTruncatedTargetDynamicRateRecovery.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTruncatedTargetDynamicRateRecovery",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVTruncatedTargetDynamicRateRecovery.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetDynamicRateRecovery",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTruncatedTargetDynamicRateRecovery.lean",
       "source_sha256": "5b6c05fb9dd3dff2f11770507d1e3df1d7bd8969d8b893efbfd638b44ae4f2b3",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVFiniteChannelDual",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTruncatedTargetFlowRecovery"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetFlowRecovery"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTruncatedTargetFlowRecovery": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVTruncatedTargetFlowRecovery.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTruncatedTargetFlowRecovery",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVTruncatedTargetFlowRecovery.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetFlowRecovery",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTruncatedTargetFlowRecovery.lean",
       "source_sha256": "a4ccebfdadf41a4acaf7fa217319e14e3e8e55276ed2bcd3adbaddb6467ce314",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRateCoercivity",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTruncatedTargetRate"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateCoercivity",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetRate"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTruncatedTargetRate": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVTruncatedTargetRate.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVTruncatedTargetRate",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVTruncatedTargetRate.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetRate",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTruncatedTargetRate.lean",
       "source_sha256": "c60ae3b89adb429a2cc6d904556f20e81a4013ceca0a6e46bd7e974dc0d59c24",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRepresentationDomain",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalHybridL1Concentration"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVUniformStaticRepresentationPath": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVUniformStaticRepresentationPath.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVUniformStaticRepresentationPath",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVUniformStaticRepresentationPath.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVUniformStaticRepresentationPath",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVUniformStaticRepresentationPath.lean",
       "source_sha256": "32f124345d6f19e0d414d32a878ca6eb1935076212fad9b931d3bf5b7d1910cc",
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVConstantTranslation",
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVLinearCombination",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerExtendedPoissonDuality",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVRepresentationDomain"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVValueConstraintClosure": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVValueConstraintClosure.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVValueConstraintClosure",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVValueConstraintClosure.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVValueConstraintClosure",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVValueConstraintClosure.lean",
       "source_sha256": "f26291e68c6858329f69fe45b7a9f46d8e102fbb8ee2de64385b50850f3dcffe",
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVL1ConstraintClosure",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVBoundaryTrace"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVBoundaryTrace"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVZeroRateEvolution": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/RengerHybridBVZeroRateEvolution.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVZeroRateEvolution",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/RengerHybridBVZeroRateEvolution.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVZeroRateEvolution",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVZeroRateEvolution.lean",
       "source_sha256": "d460d091fdbc4fac08673cb9c660df562ad4b18edddb296cc169c3bf34a9d81c",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVForwardUniqueness",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateMarkovMeanHybridBVRepresentationPath",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVReferenceEvolutionPath"
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVForwardUniqueness",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovMeanHybridBVRepresentationPath",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPath"
       ]
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.TimeDependentMarkovJumpReplicaRadonNikodym": {
       "owner": "ldp",
       "source_path": "omega-flow/lean/packages/mathlib_extensions/MathlibExtensions/InformationTheory/RelativeEntropy/TimeDependentMarkovJumpReplicaRadonNikodym.lean",
-      "target_module": "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.TimeDependentMarkovJumpReplicaRadonNikodym",
-      "target_path": "FiniteMarkovProcesses/InformationTheory/RelativeEntropy/TimeDependentMarkovJumpReplicaRadonNikodym.lean",
+      "target_module": "FiniteMarkovProcesses.RelativeEntropy.TimeDependentMarkovJumpReplicaRadonNikodym",
+      "target_path": "FiniteMarkovProcesses/RelativeEntropy/TimeDependentMarkovJumpReplicaRadonNikodym.lean",
       "source_sha256": "357a31c891574ac4f8c4884057d3df11d1dff166a642f0638652e0cfdee25a03",
       "imports": [
         "FiniteMarkovProcesses.MeasureTheory.Measure.PiWithDensity",
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.FiniteStateTimeDependentMarkovJumpRadonNikodym",
+        "FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpRadonNikodym",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovDeterministicInitialReplication"
       ]
     },
@@ -2820,7 +2820,7 @@
       "target_path": "FiniteMarkovProcesses/Probability/FiniteStateMarkovJumpConservationInitialDensity.lean",
       "source_sha256": "9f93e4bc69527af5109d34e074fdd9bd21a30d25213bc6c77b3dc7329fa9e296",
       "imports": [
-        "FiniteMarkovProcesses.InformationTheory.RelativeEntropy.RengerHybridBVConservationInitialDensity",
+        "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVConservationInitialDensity",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialHybridBVObservation",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpRandomEmpiricalTypeHybridBVObservation"
       ]
@@ -3554,5 +3554,12 @@
         "Mathlib.Analysis.Complex.Exponential"
       ]
     }
-  }
+  },
+  "transformations": [
+    "MathlibExtensions prefix becomes FiniteMarkovProcesses",
+    "OmegaFlow.PathSpace prefix becomes FiniteMarkovProcesses.PathSpace",
+    "Relative-entropy module paths shortened to FiniteMarkovProcesses.RelativeEntropy; logical declaration namespace retained",
+    "External ProductDiscrimination uses public MeasureDiscrimination definitions",
+    "Whitespace and module documentation may be reformatted without proof-token changes"
+  ]
 }
