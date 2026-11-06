@@ -141,6 +141,25 @@ def imported_modules(source):
     return modules
 
 
+
+def lint_source(source):
+    """Keep optional module/prelude commands before imports, preserving comments and strings."""
+    linter = 'import Mathlib.Tactic.Linter.Lint\n'
+    code, end = uncomment(source), 0
+    for command in ['module', 'prelude']:
+        header = re.match(r'\s*' + command + r'\b', code[end:])
+        if not header:
+            continue
+        end += header.end()
+        line_end = code.find('\n', end)
+        line_end = len(code) if line_end < 0 else line_end
+        assert not code[end:line_end].strip(), 'Unsupported ' + command + ' header'
+    if end:
+        # Insert at the token boundary rather than a comment's internal newline.
+        return source[:end] + '\n' + linter + source[end:]
+    return linter + source
+
+
 def clear_authored_artifacts(root, source_files):
     """Force authored recompilation without deleting or traversing dependency caches."""
     library = root / '.lake' / 'build' / 'lib' / 'lean'
@@ -352,7 +371,6 @@ def main():
     if args.resume:
         assert evidence.is_dir(), 'Resume evidence directory does not exist'
         previous = json.loads((evidence / 'qualification.json').read_text())
-        assert previous.get('identity'), 'Prior evidence has no qualified input identity'
     else:
         evidence.mkdir(parents=True, exist_ok=False)
     record = {'status': 'running', 'stages': [], 'source_sha256': {}, 'axioms': {},
@@ -360,6 +378,8 @@ def main():
     runner = EvidenceRunner(root, evidence, record)
     # Do not overwrite existing evidence before deciding whether its identity matches.
     try:
+        assert previous is None or previous.get('identity'), \
+            'Prior evidence has no qualified input identity'
         actual_sources = {str(path.relative_to(root)) for path in root.rglob('*.lean')
                           if not {'.lake', '.git', 'verification-artifacts'} &
                           set(path.relative_to(root).parts) and not path.is_relative_to(evidence)}
@@ -452,8 +472,8 @@ def main():
         for relative in source_files:
             path = evidence / 'lint-sources' / relative
             path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_text('import Mathlib.Tactic.Linter.Lint\n' +
-                            (root / relative).read_text() + '\n#lint docBlame docBlameThm\n')
+            path.write_text(lint_source((root / relative).read_text()) +
+                            '\n#lint docBlame docBlameThm\n')
             runner.run('lint-' + relative.replace('/', '-'),
                        ['lake', 'env', 'lean', '-j2', '--json',
                         '--root=' + str(evidence / 'lint-sources'), str(path)],
