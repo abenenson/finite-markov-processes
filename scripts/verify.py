@@ -256,6 +256,18 @@ def allowed_import(module, roots):
         module == root or module.startswith(root + '.') for root in roots)
 
 
+def check_no_assumption_commands(source):
+    """Reject assumption commands while allowing a scalar named constant in products."""
+    code = uncomment(source)
+    # A multiplication operator cannot be a declaration identifier. Retain the
+    # broad rejection for all other constant forms, including quoted names and
+    # multiline headers, without mistaking `constant * expression` for a command.
+    pattern = (r'^\s*(?:@\[[^\]]*\]\s*)*'
+               r'(?:(?:private|protected|unsafe|noncomputable|public)\s+)*'
+               r'(?:axiom\b|constant\b(?!\s*\*))')
+    assert not re.search(pattern, code, re.M), 'New axiom or constant declaration'
+
+
 IDENTIFIER = r"[\w][\w.']*"
 LINE_EXCEPTION_REASONS = {
     'Unchanged source identifier with its required local indentation and delimiters; '
@@ -430,10 +442,7 @@ def main():
             code = uncomment(source)
             record['source_sha256'][relative] = sha256(path.read_bytes())
             assert not re.search(r'\b(?:sorry|admit|sorryAx)\b', code), relative
-            assert not re.search(
-                r'^\s*(?:@\[[^\]]*\]\s*)*'
-                r'(?:(?:private|protected|unsafe|noncomputable)\s+)*(?:axiom|constant)\b',
-                code, re.M), relative
+            check_no_assumption_commands(source)
             check_line_lengths(source, relative, exceptions.get(relative, []))
             assert source.count('Copyright (c)') == 1 and '/-!' in source, relative
             for module in imported_modules(source):
