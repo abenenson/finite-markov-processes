@@ -588,7 +588,19 @@
         "Mathlib.MeasureTheory.Measure.WithDensityFinite",
         "FiniteMarkovProcesses.MeasureTheory.Measure.MapWithDensity",
         "FiniteMarkovProcesses.Probability.FiniteJumpHistory"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "documentation_metadata",
+          "description": "Document rate fields and generated generator extensionality lemmas without changing their types."
+        },
+        {
+          "kind": "signature_generalization",
+          "declaration": "FiniteMarkovProcesses.Probability.finiteStateMarkovJumpDensityENNReal_embedJumpTimes",
+          "description": "Remove its unused MeasurableSpace State instance binder; retain the same conclusion and rfl proof."
+        }
+      ],
+      "emitted_sha256": "1e93a6414f987384e8984e9ec6d34d9d587ecefdcdf36645e3d46bc123081db7"
     },
     "MathlibExtensions.Probability.FiniteStateMarkovJumpPrefixLaw": {
       "owner": "ctmc",
@@ -719,7 +731,14 @@
       "imports": [
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizationParityStoppedLaw",
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedHistoryDensity"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "documentation",
+          "description": "Document five parity identities without changing mathematical declarations or proof bodies."
+        }
+      ],
+      "emitted_sha256": "022fab0d2d22375f3667068bec7cfea193c9958b946cfb006511a60950352965"
     },
     "MathlibExtensions.Probability.FiniteStateMarkovUniformizationParityLift": {
       "owner": "ctmc",
@@ -1015,7 +1034,18 @@
       "source_sha256": "9e5a76935713b7286bc7f1e4230b5afe1392c9433022b7538167d05ead14e5c5",
       "imports": [
         "FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpStopping"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "declarations": [
+            "FiniteMarkovProcesses.Probability.timedStateTrajectoryMeasure_allWaitingTimesShort_eq_zero",
+            "FiniteMarkovProcesses.Probability.ae_hasPositiveWaitingTimes_timedStateTrajectoryMeasure"
+          ],
+          "description": "Remove two unused IsProbabilityMeasure seed instance parameters; retain all seed bounds, contraction assumptions, conclusions and proof bodies. Physical-law normalization hypotheses are unchanged."
+        }
+      ],
+      "emitted_sha256": "26418a4e782442fa18316bcdf8ab9ca8afc375ce36a2ac8658819bf45ac9709c"
     },
     "MathlibExtensions.Probability.WeightedOrderedJumpTimesIntegral": {
       "owner": "ctmc",
@@ -3560,6 +3590,7 @@
     "OmegaFlow.PathSpace prefix becomes FiniteMarkovProcesses.PathSpace",
     "Relative-entropy module paths shortened to FiniteMarkovProcesses.RelativeEntropy; logical declaration namespace retained",
     "External ProductDiscrimination uses public MeasureDiscrimination definitions",
-    "Whitespace and module documentation may be reformatted without proof-token changes"
+    "Whitespace and module documentation may be reformatted without proof-token changes",
+    "Any signature adaptations are listed explicitly on their source module record."
   ]
 }
