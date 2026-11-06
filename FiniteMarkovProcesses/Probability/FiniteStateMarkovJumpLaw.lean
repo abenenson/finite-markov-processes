@@ -47,8 +47,16 @@ universe u
 The diagonal is zero because escape rates are recorded separately. -/
 @[ext]
 structure FiniteStateMarkovGenerator (State : Type u) where
+  /-- Nonnegative rate of a directed jump from the first state to the second. -/
   rate : State → State → ℝ≥0
+  /-- Self-transitions have zero physical jump rate. -/
   rate_self : ∀ state, rate state state = 0
+
+/-- Equality of the directed rate functions determines equality of finite-state generators. -/
+add_decl_doc FiniteStateMarkovGenerator.ext
+
+/-- Two finite-state generators are equal exactly when their directed rate functions agree. -/
+add_decl_doc FiniteStateMarkovGenerator.ext_iff
 
 namespace FiniteStateMarkovGenerator
 
@@ -158,10 +166,10 @@ theorem measurable_finiteStateMarkovJumpDensityENNReal
     Measurable (finiteStateMarkovJumpDensityENNReal initial generator T) :=
   (measurable_finiteStateMarkovJumpDensity initial generator T).ennreal_ofReal
 
-/-- The density on a fixed embedded state-word slice is literally the fixed-word density. -/
+/-- The density on a fixed embedded state-word slice is literally the fixed-word density.
+This identity does not require a measurable structure on the states. -/
 @[simp]
 theorem finiteStateMarkovJumpDensityENNReal_embedJumpTimes
-    [MeasurableSpace State]
     (initial : PMF State) (generator : FiniteStateMarkovGenerator State)
     (T : ℝ) {n : ℕ} (states : Fin (n + 1) → State) (times : Fin n → ℝ) :
     finiteStateMarkovJumpDensityENNReal initial generator T
