@@ -297,6 +297,26 @@ class PrimeAndLineExceptionControls(unittest.TestCase):
                          ["Example'.continuousTestIntegral_add" + suffix
                           for suffix in ['', "'", "''"]])
 
+    def test_multiline_names_and_prime_suffixes_are_audited(self):
+        source = ("namespace Example\nnoncomputable section\n"
+                  "@[simp] theorem\n  /- a comment between command and name -/\n"
+                  "  longTheorem' : True := by trivial\n"
+                  "noncomputable def\n\nlongDefinition : Nat := 1\n"
+                  "private theorem\n  hidden : True := by trivial\n"
+                  "instance\n  : Inhabited Nat := inferInstance\n"
+                  "end\nend Example\n")
+        self.assertEqual(verify.declarations(source),
+                         ["Example.longTheorem'", 'Example.longDefinition'])
+
+    def test_named_inductive_types_are_audited_without_generated_constructors(self):
+        source = ("namespace Example\ninductive Phase where\n"
+                  "  | initial\n  | terminal\n"
+                  "inductive\n  Direction where\n  | left\n  | right\n"
+                  "private inductive Hidden where\n  | secret\n"
+                  "opaque opaqueValue' : Nat := 1\nend Example\n")
+        self.assertEqual(verify.declarations(source),
+                         ['Example.Phase', 'Example.Direction', "Example.opaqueValue'"])
+
     def test_prime_axiom_reports_have_exact_coverage(self):
         names = ['Example.add', "Example.add'", "Example.add''"]
         output = ("'Example.add' depends on axioms: [propext]\n"

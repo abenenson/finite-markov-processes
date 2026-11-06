@@ -61,9 +61,12 @@ def uncomment(source):
 
 
 def declarations(source):
-    """Enumerate explicit public names; anonymous and generated declarations are separate."""
+    """Enumerate explicit named public top-level declarations, excluding generated declarations."""
     stack, names = [], []
-    for line in uncomment(source).splitlines():
+    lines = uncomment(source).splitlines()
+    modifiers = r'((?:(?:private|protected|noncomputable|unsafe)\s+)*)'
+    command = r'(?:theorem|lemma|def|abbrev|structure|class|instance|inductive|opaque)'
+    for index, line in enumerate(lines):
         if line != line.lstrip():
             continue
         line = re.sub(r'^@\[[^\]]*\]\s*', '', line)
@@ -78,9 +81,11 @@ def declarations(source):
             assert stack, line
             stack.pop()
             continue
-        match = re.match(
-            r'((?:(?:private|protected|noncomputable|unsafe)\s+)*)'
-            r"(?:theorem|lemma|def|abbrev|structure|class|instance)\s+([\w.']+)", line)
+        pattern = modifiers + command + r"\s+([\w.']+)"
+        match = re.match(pattern, line)
+        if not match and re.fullmatch(modifiers + command + r'\s*', line):
+            # Long public names may occupy the next line, with comments or blank lines between.
+            match = re.match(pattern, '\n'.join([line] + lines[index + 1:]))
         if match and 'private' not in match[1].split():
             prefix = [name for kind, name in stack if kind == 'namespace']
             names.append('.'.join(prefix + [match[2]]))
