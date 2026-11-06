@@ -3,8 +3,8 @@
 Finite-state jump processes and large deviations in Lean 4, built on Mathlib.
 
 The library develops finite-horizon history laws from generators and connects
-their explicit densities with normalized generative constructions. The planned
-upper layers formalize finite-alphabet Sanov bounds, density/flux path large
+their explicit densities with normalized generative constructions. Its upper
+layers formalize finite-alphabet Sanov bounds, density/flux path large
 deviations, zero-action evolution, and quantitative particle confidence.
 
 This is an extraction under verification. Source preparation and a successful
@@ -32,6 +32,27 @@ The core includes:
 The hypotheses are part of the API: common support, integrability, stationarity,
 and chart identification are retained where needed. See
 [the CTMC guide](docs/CTMC.md) and [checked examples](FiniteMarkovProcessesExamples/CTMC.lean).
+
+## Large deviations and effective evolution
+
+Focused entry points keep the mathematical layers explicit:
+
+| Import | Results and important premises |
+| --- | --- |
+| `FiniteMarkovProcesses.Sanov` | Finite-alphabet closed upper/open lower bounds and a good KL rate; the reference density is strictly positive, while empirical targets may lie on the boundary. |
+| `FiniteMarkovProcesses.ProbabilityVectorInterop` | Coordinate-preserving equivalence and homeomorphism with the public probability-vector API, including equality of canonical PMFs. |
+| `FiniteMarkovProcesses.PathLargeDeviations` | Renger density/flux path bounds for specified initial regimes; the general initial-law theorem assumes an initial LDP and boundary continuity. |
+| `FiniteMarkovProcesses.EffectiveEvolution` | Complete-rate zeros are exactly Markov mean evolutions from the supplied initial zero set; observable particle confidence bounds remain separate probabilistic results. |
+
+General initial mixtures have independent jump dynamics conditional on the
+initial configuration. The invariant-IID corollary uses actual IID initialized
+histories. The supplied initial cost determines the zero family; uniqueness of
+its initial zero is an additional condition.
+
+See [the theorem and premise map](docs/theorem-map.md),
+[the path large-deviation guide](docs/path-large-deviations.md),
+[the Sanov guide](docs/sanov.md), and
+[probability-vector interoperability](docs/probability-vector-interop.md).
 
 ## Dependencies and verification
 
