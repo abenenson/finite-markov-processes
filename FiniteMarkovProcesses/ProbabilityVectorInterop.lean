@@ -36,7 +36,7 @@ def toProbabilityVector (density : FiniteStateProbabilityDensity State) :
 /-- Regard a public probability vector as a typed empirical density with the same coordinates. -/
 def ofProbabilityVector (law : FiniteMarkovKernels.ProbabilityVector State) :
     FiniteStateProbabilityDensity State where
-  weight state := ⟨law state, law.nonneg state⟩
+  weight state := NNReal.mk (law state) (law.nonneg state)
   sum_weight := by
     apply NNReal.eq
     rw [NNReal.coe_sum]
@@ -102,14 +102,12 @@ def probabilityVectorHomeomorph :
   continuous_invFun := continuous_ofProbabilityVector
 
 /-- A coordinate vanishes in one representation exactly when it vanishes in the other. -/
-@[simp]
 theorem toProbabilityVector_apply_eq_zero_iff
     (density : FiniteStateProbabilityDensity State) (state : State) :
     density.toProbabilityVector state = 0 ↔ density.weight state = 0 := by
   simp only [toProbabilityVector_apply, NNReal.coe_eq_zero]
 
 /-- Positive support coordinates agree in the two simplex representations. -/
-@[simp]
 theorem toProbabilityVector_apply_pos_iff
     (density : FiniteStateProbabilityDensity State) (state : State) :
     0 < density.toProbabilityVector state ↔ 0 < density.weight state := by
