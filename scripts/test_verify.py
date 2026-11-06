@@ -50,6 +50,22 @@ class VerificationControls(unittest.TestCase):
         verify.check_diagnostics(json.dumps({'severity': 'information', 'data': 'checked'}),
                                  json_mode=True)
 
+    def test_plain_multiline_lean_types_are_not_json_diagnostics(self):
+        output = (
+            'FiniteMarkovProcesses.Probability.empiricalBound.{u}\n'
+            '  {State : Type u} [Fintype State] [DecidableEq State]\n'
+            '  { law : State → Real }\n'
+            '  (reference : FiniteStateProbabilityDensity State) :\n'
+            '  ∀ density, 0 ≤ relativeEntropy reference density\n'
+            'Build completed successfully.\n')
+        verify.check_diagnostics(output)
+        verify.check_diagnostics(json.dumps({'severity': 'information', 'data': output}),
+                                 json_mode=True)
+        with self.assertRaises(AssertionError):
+            verify.check_diagnostics(output, json_mode=True)
+        with self.assertRaises(AssertionError):
+            verify.check_diagnostics('{State : Type u} [Fintype State]', json_mode=True)
+
     def test_native_and_plain_diagnostic_rejection(self):
         for text in ['PANIC at kernel', 'panic: kernel', 'error: fixture',
                      'file.lean:3:2: warning: fixture']:
@@ -66,8 +82,15 @@ class VerificationControls(unittest.TestCase):
                     {'severity': 'information'}, []]:
             with self.subTest(obj=obj), self.assertRaises(AssertionError):
                 verify.check_diagnostics(json.dumps(obj), json_mode=True)
-        with self.assertRaises(AssertionError):
-            verify.check_diagnostics('{"severity":"error"')
+        for malformed in ['{"severity":"error"', '{ "severity": "information",', '{']:
+            for json_mode in [False, True]:
+                with self.subTest(malformed=malformed, json_mode=json_mode), \
+                     self.assertRaises(AssertionError):
+                    verify.check_diagnostics(malformed, json_mode=json_mode)
+        for obj in [{'severity': 'warning', 'data': 'fixture'},
+                    {'severity': 'error', 'data': 'fixture'}, {}, {'error': 'unknown'}]:
+            with self.subTest(plain_json=obj), self.assertRaises(AssertionError):
+                verify.check_diagnostics(json.dumps(obj))
         with self.assertRaises(AssertionError):
             verify.check_diagnostics('unstructured output', json_mode=True)
 
