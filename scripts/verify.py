@@ -106,7 +106,10 @@ def check_diagnostics(output, *, json_mode=False):
         if not line:
             continue
         check_text(line)
-        if not json_mode and not line.startswith('{'):
+        # Plain Lean type output can start with an implicit binder such as `{State : Type u}`.
+        # JSON objects begin with a quoted key (or an empty/unfinished object); JSON mode stays
+        # strict for every nonempty line.
+        if not json_mode and not re.match(r'^\{\s*(?:"|}|$)', line):
             continue
         try:
             message = json.loads(line)
