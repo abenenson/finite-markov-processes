@@ -10,8 +10,8 @@ import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpStopping
 
 This module proves a geometric criterion for finite-horizon nonexplosion. If the
 probability of extending an all-short timed prefix contracts by a uniform factor below one, and
-the seed obeys the same bound, then the normalized Ionescu--Tulcea trajectory assigns zero mass to
-the event that every wait is short.
+the seed measure obeys the same bound, then the Ionescu--Tulcea trajectory mixture assigns zero
+mass to the event that every wait is short.
 
 The theorem depends only on timed-state trajectory kernels. It is independent of any Markov jump
 generator and can be shared by physical Gillespie and virtual uniformization constructions.
@@ -39,13 +39,14 @@ noncomputable def timedStateTrajectoryMeasure
     Measure (ℕ → State × ℝ) :=
   Kernel.traj (X := fun _ ↦ State × ℝ) step 0 ∘ₘ seed
 
-/-- A uniform one-step contraction of all-short prefix probabilities forces the infinite
-all-short-waits event to have probability zero. -/
+/-- A uniform one-step contraction of all-short prefix probabilities and the stated seed bound
+force the infinite all-short-waits event to have measure zero. The seed is any measure satisfying
+the bound. -/
 theorem timedStateTrajectoryMeasure_allWaitingTimesShort_eq_zero
     {State : Type u} [MeasurableSpace State]
     (step : (n : ℕ) → Kernel ((i : Finset.Iic n) → State × ℝ) (State × ℝ))
     [hStepMarkov : ∀ n, IsMarkovKernel (step n)]
-    (seed : Measure ((i : Finset.Iic 0) → State × ℝ)) [IsProbabilityMeasure seed]
+    (seed : Measure ((i : Finset.Iic 0) → State × ℝ))
     (blockLength : ℝ) (contraction : ℝ≥0∞) (hContraction : contraction < 1)
     (hStep : ∀ n history,
       Kernel.partialTraj (X := fun _ ↦ State × ℝ)
@@ -231,12 +232,12 @@ theorem timedStateTrajectoryMeasure_allWaitingTimesShort_eq_zero
 
 /-- If the seed has a positive wait almost surely and every one-step extension preserves positive
 prefix waits almost surely, then every wait on the mixed infinite trajectory is positive almost
-surely. -/
+surely. This holds for an arbitrary seed measure. -/
 theorem ae_hasPositiveWaitingTimes_timedStateTrajectoryMeasure
     {State : Type u} [MeasurableSpace State]
     (step : (n : ℕ) → Kernel ((i : Finset.Iic n) → State × ℝ) (State × ℝ))
     [∀ n, IsMarkovKernel (step n)]
-    (seed : Measure ((i : Finset.Iic 0) → State × ℝ)) [IsProbabilityMeasure seed]
+    (seed : Measure ((i : Finset.Iic 0) → State × ℝ))
     (hStep : ∀ n history,
       FiniteStateMarkovJumpTrajectory.HasPositivePrefixWaitingTimes n history →
         ∀ᵐ extended ∂Kernel.partialTraj (X := fun _ ↦ State × ℝ)

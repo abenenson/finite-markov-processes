@@ -41,11 +41,13 @@ def finiteStateUniformizationParityAt : ℕ → Bool
   | 0 => false
   | n + 1 => !finiteStateUniformizationParityAt n
 
+/-- The parity flag starts at `false` before any common-clock event. -/
 @[simp]
 theorem finiteStateUniformizationParityAt_zero :
     finiteStateUniformizationParityAt 0 = false :=
   rfl
 
+/-- Every common-clock event flips the parity flag. -/
 @[simp]
 theorem finiteStateUniformizationParityAt_succ (n : ℕ) :
     finiteStateUniformizationParityAt (n + 1) =
@@ -58,6 +60,7 @@ def finiteStateUniformizationParityWord {n : ℕ}
   fun index ↦ (states index, finiteStateUniformizationParityAt index)
 
 omit [Fintype State] [DecidableEq State] in
+/-- Projecting the parity lift onto its state coordinate recovers the original state word. -/
 @[simp]
 theorem finiteStateUniformizationParityWord_fst {n : ℕ}
     (states : Fin (n + 1) → State) (index : Fin (n + 1)) :
@@ -65,6 +68,7 @@ theorem finiteStateUniformizationParityWord_fst {n : ℕ}
   rfl
 
 omit [Fintype State] [DecidableEq State] in
+/-- The lifted word starts at its original initial state with parity `false`. -/
 @[simp]
 theorem finiteStateUniformizationParityWord_zero {n : ℕ}
     (states : Fin (n + 1) → State) :
@@ -72,6 +76,7 @@ theorem finiteStateUniformizationParityWord_zero {n : ℕ}
   simp [finiteStateUniformizationParityWord]
 
 omit [Fintype State] [DecidableEq State] in
+/-- Each lifted edge advances to the next state and flips the parity flag. -/
 theorem finiteStateUniformizationParityWord_succ {n : ℕ}
     (states : Fin (n + 1) → State) (index : Fin n) :
     finiteStateUniformizationParityWord states index.succ =
