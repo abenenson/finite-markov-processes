@@ -7,9 +7,12 @@ their explicit densities with normalized generative constructions. Its upper
 layers formalize finite-alphabet Sanov bounds, density/flux path large
 deviations, zero-action evolution, and quantitative particle confidence.
 
-This is an extraction under verification. Source preparation and a successful
-build are separate milestones; the qualification reports record which exact
-sources have passed builds, full source lint, and transitive axiom checks.
+The CTMC core is qualified: **69 source files**, all **16 source linters**, and
+**964 named transitive axiom audits** passed on the pinned toolchain.
+[Hosted verification](https://github.com/abenenson/finite-markov-processes/actions/runs/42307270548)
+and [permanent source-hash evidence](docs/qualification/v0.1.0/qualification.json)
+identify the exact checked inputs. The upper-layer extension remains under
+verification until its complete build, lint, and axiom checks pass.
 
 ## Continuous-time jump processes
 
@@ -70,7 +73,7 @@ and product-measure transport uses
 [`measure-discrimination`](https://github.com/abenenson/measure-discrimination).
 
 ```sh
-lake exe cache get
+MATHLIB_NO_CACHE_ON_UPDATE=1 python3 scripts/fetch_mathlib_cache.py
 python3 -m unittest discover -s scripts -p 'test_*.py'
 python3 scripts/verify.py
 ```

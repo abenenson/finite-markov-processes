@@ -1,0 +1,25 @@
+{
+  "workflow_run": 42307270548,
+  "workflow_url": "https://github.com/abenenson/finite-markov-processes/actions/runs/42307270548",
+  "commit": "6b5a4bc8e6fa40869221ec71c91ad43f8efb1a06",
+  "branch": "abenenson/2026-11/ctmc-qualification",
+  "artifact_id": 13547640777,
+  "artifact_sha256": "2731d09e6634e50906a87d6fdaf7f4ada13b8260c24bcd1fe36907ee93a99047",
+  "qualification_file": "/workspace/verification-open-source/sprint-20261106/evidence/ctmc-qualification-42307270548/20261106T224922318019Z/qualification.json",
+  "status": "hosted qualification passed; root owns final acceptance",
+  "source_hashes_match_commit": true,
+  "verification_input_hashes_match_commit": true,
+  "source_count": 69,
+  "exact_build_status": "passed",
+  "lint_files_passed": 69,
+  "linters_per_file": 16,
+  "named_axiom_reports": 964,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "exact_clean_dependency_pins": 11,
+  "all_71_stage_log_hashes_verified": true,
+  "local_lean_run": false
+}
