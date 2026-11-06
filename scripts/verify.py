@@ -496,15 +496,23 @@ def main():
             assert '-- All linting checks passed!' in clean
             assert 'with 16 linters' in clean
 
+        record['lint_failures'] = []
         for relative in source_files:
             path = evidence / 'lint-sources' / relative
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(lint_source((root / relative).read_text()) +
                             '\n#lint docBlame docBlameThm\n')
-            runner.run('lint-' + relative.replace('/', '-'),
-                       ['lake', 'env', 'lean', '-j2', '--json',
-                        '--root=' + str(evidence / 'lint-sources'), str(path)],
-                       validate=lint_passed)
+            try:
+                runner.run('lint-' + relative.replace('/', '-'),
+                           ['lake', 'env', 'lean', '-j2', '--json',
+                            '--root=' + str(evidence / 'lint-sources'), str(path)],
+                           validate=lint_passed)
+            except AssertionError as error:
+                record['lint_failures'].append({'source': relative, 'failure': str(error)})
+                runner.save()
+                print('LINT FAILED:', relative, flush=True)
+        assert not record['lint_failures'], 'Full-source lint failed for: ' + ', '.join(
+            failure['source'] for failure in record['lint_failures'])
         probe = '\n'.join('import ' + name for name in config['audit_imports']) + '\n'
         probe += '\n'.join('#print axioms ' + name for name in names) + '\n'
         (evidence / 'axioms.lean').write_text(probe)
