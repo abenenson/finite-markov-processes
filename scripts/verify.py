@@ -155,8 +155,30 @@ def lint_source(source):
         line_end = len(code) if line_end < 0 else line_end
         assert not code[end:line_end].strip(), 'Unsupported ' + command + ' header'
     if end:
-        # Insert at the token boundary rather than a comment's internal newline.
-        return source[:end] + '\n' + linter + source[end:]
+        # Keep trailing comments attached to their command, including Lean header pragmas.
+        # A newline inside a block comment is not a safe insertion boundary.
+        index, depth = end, 0
+        while index < len(source):
+            pair = source[index:index + 2]
+            if pair == '/-':
+                depth += 1
+                index += 2
+            elif depth and pair == '-/':
+                depth -= 1
+                index += 2
+            elif not depth and pair == '--':
+                newline = source.find('\n', index)
+                index = len(source) if newline < 0 else newline
+            elif not depth and source[index] == '\n':
+                index += 1
+                break
+            else:
+                assert depth or source[index].isspace(), 'Unsupported header suffix'
+                index += 1
+        prefix = source[:index]
+        if not prefix.endswith('\n'):
+            prefix += '\n'
+        return prefix + linter + source[index:]
     return linter + source
 
 
