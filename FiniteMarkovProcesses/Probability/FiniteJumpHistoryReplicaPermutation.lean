@@ -141,7 +141,7 @@ theorem empiricalContinuityDensityAtTime_reindexing
   rw [empiricalInitialDensity_reindexing]
   simp_rw [empiricalSpecificDirectionalFlowAtTime_reindexing]
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- The tagged initial empirical value is invariant under replica reindexing. -/
 theorem empiricalDensityDirectionalFlowInitialL1Value_reindexing
     (successorIndex : ℕ)
