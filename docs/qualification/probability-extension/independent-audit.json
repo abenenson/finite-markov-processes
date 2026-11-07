@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "commit": "2df669123131387a65764b3624b15e23cb62075d",
+  "run_id": 42326974132,
+  "job_id": 128264408334,
+  "archive_sha256": "c675938f819e0edd4afe238110287fa8cda6a44421649ea01576408049aab006",
+  "qualification_status": "passed",
+  "failed_stages": [],
+  "source_hashes_checked": 297,
+  "input_hashes_checked": 5,
+  "dependency_pins_checked": 11,
+  "stages_checked": 299,
+  "fresh_authored_modules_built": 297,
+  "full_lint_sources": 297,
+  "full_linter_count": 16,
+  "reused_stages": 0,
+  "explicit_axiom_names": 3595,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "compiler_version": "Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)"
+}
