@@ -368,7 +368,6 @@ theorem finiteStateTimeDependentMarkovJumpLogAction_sameInitial_eq
 physical history the complete action is bounded by the jump count times that bound plus the
 reference escape bound times the horizon.  The common initial law contributes exactly zero. -/
 theorem finiteStateTimeDependentMarkovJumpLogAction_le_count_mul_add_escapeBound
-    [MeasurableSpace State]
     (initial : PMF State)
     (rates referenceRates : FiniteStateTimeDependentMarkovRate State)
     {duration : ℝ} (hDuration : 0 ≤ duration) (jumpLogBound : ℝ)
@@ -423,7 +422,6 @@ theorem finiteStateTimeDependentMarkovJumpLogAction_le_count_mul_add_escapeBound
 /-- An absolute bound on every used jump log ratio gives an absolute complete-action bound by
 physical jump count plus the two declared escape budgets. -/
 theorem abs_finiteStateTimeDependentMarkovJumpLogAction_le_count_mul_add_escapeBounds
-    [MeasurableSpace State]
     (initial : PMF State)
     (rates referenceRates : FiniteStateTimeDependentMarkovRate State)
     {duration : ℝ} (hDuration : 0 ≤ duration) (jumpLogAbsoluteBound : ℝ)
