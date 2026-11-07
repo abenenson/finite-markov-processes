@@ -206,10 +206,16 @@ source-specific older LDP gap.
 
 The 193 path/evolution modules and five quantitative-bound modules were extracted after checking
 every source SHA256 against `source-plan.json` and independently against the pinned Git blobs.
-Their imports match the planned rewritten graph with no unresolved planned local dependency. Proof text differs only by the declared namespace/module rewrites and line
-wrapping, including the public `MeasureDiscrimination.ProductDiscrimination` dependency.
-Public mathematical comments replace source-specific terminology and construction chronology.
-No new theorem premise, axiom, or proof placeholder was introduced. This static provenance check
-is not elaboration. Exact-source compilation, full source lint, and transitive axiom audits
-remain pending fresh validation; this document makes no completed verification or
-release-readiness claim.
+Their imports match the planned rewritten graph with no unresolved planned local dependency,
+including the public `MeasureDiscrimination.ProductDiscrimination` dependency.
+The source plan records namespace/import rewrites, documentation and style changes, and
+generalizations that remove unused typeclass parameters. Mathematical conclusions and
+substantive hypotheses are preserved. No new theorem premise, axiom, or proof placeholder
+was introduced.
+
+The complete extracted library passed fresh exact-source builds for all 297 authored files,
+all 16 source linters per file, and 3,595 named transitive axiom audits. The axiom union is
+exactly `Classical.choice`, `Quot.sound`, and `propext`. The
+[permanent qualification record](qualification/probability-extension/summary.json) binds
+these results to the exact source revision, compiler, dependency pins, and independently
+audited hosted evidence.

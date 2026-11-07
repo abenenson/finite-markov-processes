@@ -6,9 +6,10 @@ is specified. Module links identify the authoritative Lean statements; the table
 retain the material mathematical assumptions. The extraction pins source commit
 `recorded-source-baseline` in `source-plan.json`.
 
-**Candidate status:** Not accepted. Source hashes and rewritten import closure checked statically;
-exact-source elaboration, full source lint, and transitive axiom audits are pending fresh
-validation. Historical upstream-source checks are not verification of this extraction.
+**Verification status:** The extracted library passed fresh exact-source builds for all
+297 authored files, all 16 source linters per file, and 3,595 named transitive axiom audits.
+The [qualification record](qualification/probability-extension/summary.json) identifies
+the checked revision, source hashes, pinned inputs, hosted run, and independent evidence audit.
 
 ## What is proved and what is supplied
 
@@ -207,5 +208,6 @@ data structures are contracts. `rengerTheoremFourOneAsTheoremFourTwoInitialData`
 `rengerInvariantIIDInitialLargeDeviationData` package their separately proved initial results.
 The corollary's `stationary_unique` proof remains required by its input record, although the
 assembled bounds use the supplied positive stationary law and do not consume that uniqueness
-field separately. This audit concerns statements and proof dependencies; fresh extraction
-compilation, lint, and axiom verification remain pending.
+field separately. This audit concerns statements and proof dependencies. The extracted
+sources also passed the exact-source compilation, full source lint, and transitive axiom
+checks recorded in the [qualification evidence](qualification/probability-extension/summary.json).

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "qualified_commit": "f6208bac9b3c8e5ab6519fa47aafa96a051a5579",
+  "run_id": 42326974132,
+  "run_url": "https://github.com/abenenson/finite-markov-processes/actions/runs/42326974132",
+  "artifact_id": 13555588956,
+  "artifact_zip_sha256": "c675938f819e0edd4afe238110287fa8cda6a44421649ea01576408049aab006",
+  "qualification_file": "qualification.json",
+  "qualification_sha256": "07baf75835b71c87600131c4e108353af293179b46d49630af366c0a891c3fe7",
+  "independent_audit_file": "independent-audit.json",
+  "independent_audit_sha256": "0ed25af2a09ab87acd08c1d49f237071abca5d5c88eb5574afa421c0c6c9d10a",
+  "authored_sources": 297,
+  "linters_per_source": 16,
+  "named_axiom_reports": 3595,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "compiler": "Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "exact_dependency_pins": 11,
+  "fresh_authored_builds": 297,
+  "verified_stages": 299,
+  "reused_stages": 0,
+  "audit_scope": "Explicit named public top-level declarations; anonymous and generated declarations are not individually enumerated"
+}

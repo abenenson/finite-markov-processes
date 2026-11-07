@@ -7,12 +7,14 @@ their explicit densities with normalized generative constructions. Its upper
 layers formalize finite-alphabet Sanov bounds, density/flux path large
 deviations, zero-action evolution, and quantitative particle confidence.
 
-The CTMC core is qualified: **69 source files**, all **16 source linters**, and
-**964 named transitive axiom audits** passed on the pinned toolchain.
-[Hosted verification](https://github.com/abenenson/finite-markov-processes/actions/runs/42307270548)
-and [permanent source-hash evidence](docs/qualification/v0.1.0/qualification.json)
-identify the exact checked inputs. The upper-layer extension remains under
-verification until its complete build, lint, and axiom checks pass.
+The complete library is qualified: **297 source files**, all **16 source linters**
+per file, and **3,595 named transitive axiom audits** passed on the pinned toolchain.
+[Hosted verification](https://github.com/abenenson/finite-markov-processes/actions/runs/42326974132)
+and [permanent qualification evidence](docs/qualification/probability-extension/summary.json)
+identify the exact checked revision, source hashes, compiler, and dependency pins.
+An independent audit matched every build, lint, and axiom stage to those inputs.
+The earlier [CTMC v0.1.0 qualification](docs/qualification/v0.1.0/qualification.json)
+covers its original 69 files and 964 named declarations.
 
 ## Continuous-time jump processes
 
