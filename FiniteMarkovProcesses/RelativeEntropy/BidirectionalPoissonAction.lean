@@ -28,11 +28,21 @@ physical time reverse or as a frenetic path action.
 
 namespace FiniteMarkovProcesses.InformationTheory
 
-/-- Integrated clockwise and counterclockwise Poisson intensities over one experiment. -/
+/-- Integrated clockwise and counterclockwise Poisson intensities over one experiment.
+Their strict positivity is expressed separately by `BidirectionalPoissonRates.Positive`. -/
 @[ext]
 structure BidirectionalPoissonRates where
+  /-- Clockwise Poisson intensity integrated over the experiment. -/
   clockwise : ℝ
+  /-- Counterclockwise Poisson intensity integrated over the experiment. -/
   counterclockwise : ℝ
+
+/-- Equality of both directed intensities determines equality of bidirectional rate pairs. -/
+add_decl_doc BidirectionalPoissonRates.ext
+
+/-- Two bidirectional rate pairs are equal exactly when their clockwise and counterclockwise
+intensities agree. -/
+add_decl_doc BidirectionalPoissonRates.ext_iff
 
 namespace BidirectionalPoissonRates
 
