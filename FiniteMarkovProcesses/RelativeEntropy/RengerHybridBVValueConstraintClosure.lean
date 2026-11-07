@@ -94,7 +94,7 @@ theorem RengerDirectionalFlowHybridBVAdmissible.valueConstraints
   terminalCumulativeFlowNonnegative := admissible.terminalCumulativeFlowNonnegative
 
 private theorem finiteCoordinateL1Value_coordinate_tendsto
-    {Coordinate : Type*} [Fintype Coordinate]
+    {Coordinate : Type*}
     {values : ℕ → FiniteCoordinateL1Value Coordinate}
     {limit : FiniteCoordinateL1Value Coordinate}
     (hTendsto : Tendsto values atTop (nhds limit)) (coordinate : Coordinate) :
