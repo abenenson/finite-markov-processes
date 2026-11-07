@@ -1569,7 +1569,39 @@
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalStepL1Path",
         "Mathlib.Order.Interval.Set.Union"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "description": "Omit redundant section instances exposed by generalizing raw PiLp values and pointwise action bounds. Only the listed declarations are generalized; conclusions, proof bodies and documentation are unchanged. Actual finite-coordinate sums, Lp/norm constructions, physical-law measurability and normalization assumptions remain in force where used.",
+          "declarations": [
+            "FiniteMarkovProcesses.finiteIntervalSampleIncrement_apply_mk",
+            "FiniteMarkovProcesses.sum_finiteIntervalSampleIncrement_to",
+            "FiniteMarkovProcesses.sum_finiteIntervalSampleIncrement_le"
+          ],
+          "omitted_section_instances": [
+            {
+              "declaration": "FiniteMarkovProcesses.finiteIntervalSampleIncrement_apply_mk",
+              "removed_section_instance": "[Fintype Coordinate]",
+              "visibility": "private",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.sum_finiteIntervalSampleIncrement_to",
+              "removed_section_instance": "[Fintype Coordinate]",
+              "visibility": "private",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.sum_finiteIntervalSampleIncrement_le",
+              "removed_section_instance": "[Fintype Coordinate]",
+              "visibility": "public",
+              "evidence": "Root-reviewed propagation from two generalized private telescoping helpers; only finite sample-index sums occur."
+            }
+          ]
+        }
+      ],
+      "emitted_sha256": "0eaac1c9e81c6e3dc067994fee17acf41e578101f61a793e486088fbe548aff3"
     },
     "MathlibExtensions.Analysis.BoundedVariation.FiniteIntervalStepDerivative": {
       "owner": "ldp",
@@ -1593,7 +1625,25 @@
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalStepDerivative",
         "Mathlib.MeasureTheory.Function.LpSpace.Indicator"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "description": "Omit redundant section instances exposed by generalizing raw PiLp values and pointwise action bounds. Only the listed declarations are generalized; conclusions, proof bodies and documentation are unchanged. Actual finite-coordinate sums, Lp/norm constructions, physical-law measurability and normalization assumptions remain in force where used.",
+          "declarations": [
+            "FiniteMarkovProcesses.finiteCoordinateL1BasisVector_apply"
+          ],
+          "omitted_section_instances": [
+            {
+              "declaration": "FiniteMarkovProcesses.finiteCoordinateL1BasisVector_apply",
+              "removed_section_instance": "[Fintype Coordinate]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            }
+          ]
+        }
+      ],
+      "emitted_sha256": "3c7e983484c56e795e937da68ec274d8a49cc27eab8c7030c7887d051de1a657"
     },
     "MathlibExtensions.Analysis.BoundedVariation.FiniteOpenIntervalContinuousTestDense": {
       "owner": "ldp",
@@ -2006,7 +2056,32 @@
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVConstantTranslation",
         "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDualEvaluation"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "description": "Omit redundant section instances exposed by generalizing raw PiLp values and pointwise action bounds. Only the listed declarations are generalized; conclusions, proof bodies and documentation are unchanged. Actual finite-coordinate sums, Lp/norm constructions, physical-law measurability and normalization assumptions remain in force where used.",
+          "declarations": [
+            "FiniteMarkovProcesses.InformationTheory.rengerDirectionalFlowHybridBVCumulativeFlowTranslationVector_density",
+            "FiniteMarkovProcesses.InformationTheory.rengerDirectionalFlowHybridBVCumulativeFlowTranslationVector_flow"
+          ],
+          "omitted_section_instances": [
+            {
+              "declaration": "FiniteMarkovProcesses.InformationTheory.rengerDirectionalFlowHybridBVCumulativeFlowTranslationVector_density",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.InformationTheory.rengerDirectionalFlowHybridBVCumulativeFlowTranslationVector_flow",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            }
+          ]
+        }
+      ],
+      "emitted_sha256": "642ac0ac69b5d39a78bf5f2273620c05ecd11a6436ae2a9ceff2a216d194e202"
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVDualRepresentation": {
       "owner": "ldp",
@@ -2397,7 +2472,39 @@
         "FiniteMarkovProcesses.Probability.FiniteJumpHistoryReplicaJumpCount",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCountMoment",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalTestConcentration"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "description": "Omit redundant section instances exposed by generalizing raw PiLp values and pointwise action bounds. Only the listed declarations are generalized; conclusions, proof bodies and documentation are unchanged. Actual finite-coordinate sums, Lp/norm constructions, physical-law measurability and normalization assumptions remain in force where used.",
+          "declarations": [
+            "FiniteMarkovProcesses.InformationTheory.rengerDirectionalFlowHybridBVCanonicalPositiveTargetJumpLogAction_le",
+            "FiniteMarkovProcesses.InformationTheory.abs_rengerDirectionalFlowHybridBVCanonicalPositiveTargetJumpLogAction_le",
+            "FiniteMarkovProcesses.InformationTheory.rengerDirectionalFlowHybridBVCanonicalPositiveTargetReplicaJumpLogAction_le"
+          ],
+          "omitted_section_instances": [
+            {
+              "declaration": "FiniteMarkovProcesses.InformationTheory.rengerDirectionalFlowHybridBVCanonicalPositiveTargetJumpLogAction_le",
+              "removed_section_instance": "[MeasurableSingletonClass State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.InformationTheory.abs_rengerDirectionalFlowHybridBVCanonicalPositiveTargetJumpLogAction_le",
+              "removed_section_instance": "[MeasurableSingletonClass State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.InformationTheory.rengerDirectionalFlowHybridBVCanonicalPositiveTargetReplicaJumpLogAction_le",
+              "removed_section_instance": "[MeasurableSingletonClass State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            }
+          ]
+        }
+      ],
+      "emitted_sha256": "29c8aa3a0124ac795825bf9f41679591b3de10b6989098c37071fced2abaaaa5"
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTargetForwardEquation": {
       "owner": "ldp",
@@ -2523,7 +2630,25 @@
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVLinearCombination",
         "FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality",
         "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "description": "Omit redundant section instances exposed by generalizing raw PiLp values and pointwise action bounds. Only the listed declarations are generalized; conclusions, proof bodies and documentation are unchanged. Actual finite-coordinate sums, Lp/norm constructions, physical-law measurability and normalization assumptions remain in force where used.",
+          "declarations": [
+            "FiniteMarkovProcesses.InformationTheory.rengerDirectionalFlowHybridBVUniformDensityVector_density"
+          ],
+          "omitted_section_instances": [
+            {
+              "declaration": "FiniteMarkovProcesses.InformationTheory.rengerDirectionalFlowHybridBVUniformDensityVector_density",
+              "removed_section_instance": "[DecidableEq State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            }
+          ]
+        }
+      ],
+      "emitted_sha256": "76f9bb373ad52f7b4e8c7a43ad912838a11e1f584254f459fa584fb8b3815830"
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVValueConstraintClosure": {
       "owner": "ldp",
@@ -2758,7 +2883,53 @@
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalStepL1Path",
         "FiniteMarkovProcesses.Probability.FiniteJumpHistoryHybridBVObservation"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "description": "Omit redundant section instances exposed by generalizing raw PiLp values and pointwise action bounds. Only the listed declarations are generalized; conclusions, proof bodies and documentation are unchanged. Actual finite-coordinate sums, Lp/norm constructions, physical-law measurability and normalization assumptions remain in force where used.",
+          "declarations": [
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowInitialL1Value_density",
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowInitialL1Value_flow",
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowEventIncrementL1Value_apply",
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowEventStepL1ValueAtTime_apply",
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowEventStepL1ValueAtTime_flow"
+          ],
+          "omitted_section_instances": [
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowInitialL1Value_density",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowInitialL1Value_flow",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowEventIncrementL1Value_apply",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowEventStepL1ValueAtTime_apply",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowEventStepL1ValueAtTime_flow",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Root-reviewed propagation from generalized coordinate projections; only finite replica/event-index sums occur."
+            }
+          ]
+        }
+      ],
+      "emitted_sha256": "8b202ef6669472120c54388aefcebbbd78aa7441fe64f97054691131c437bc6a"
     },
     "MathlibExtensions.Probability.FiniteJumpHistoryExplicitHybridBVObservationMeasurability": {
       "owner": "ldp",
@@ -2768,7 +2939,32 @@
       "source_sha256": "ecd330d11376998b8715e24a4a74cf6f70fce2974d673fd4b30a4a8c128f5d21",
       "imports": [
         "FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservation"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "description": "Omit redundant section instances exposed by generalizing raw PiLp values and pointwise action bounds. Only the listed declarations are generalized; conclusions, proof bodies and documentation are unchanged. Actual finite-coordinate sums, Lp/norm constructions, physical-law measurability and normalization assumptions remain in force where used.",
+          "declarations": [
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.continuous_empiricalDensityDirectionalFlowEventIncrementL1Value_fixedCount",
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.continuous_empiricalDensityDirectionalFlowInitialL1Value"
+          ],
+          "omitted_section_instances": [
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.continuous_empiricalDensityDirectionalFlowEventIncrementL1Value_fixedCount",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.continuous_empiricalDensityDirectionalFlowInitialL1Value",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            }
+          ]
+        }
+      ],
+      "emitted_sha256": "787a0bbe6b74d85ce4662aab6925faa725e571f2a11155da01f784f850a9c941"
     },
     "MathlibExtensions.Probability.FiniteJumpHistoryHybridBVObservation": {
       "owner": "ldp",
@@ -2779,7 +2975,32 @@
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath",
         "FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowEndpointConvention"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "description": "Omit redundant section instances exposed by generalizing raw PiLp values and pointwise action bounds. Only the listed declarations are generalized; conclusions, proof bodies and documentation are unchanged. Actual finite-coordinate sums, Lp/norm constructions, physical-law measurability and normalization assumptions remain in force where used.",
+          "declarations": [
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowL1ValueAtTime_density",
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowL1ValueAtTime_flow"
+          ],
+          "omitted_section_instances": [
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowL1ValueAtTime_density",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowL1ValueAtTime_flow",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            }
+          ]
+        }
+      ],
+      "emitted_sha256": "7d872cc87f0b7ed672e26b7de0021f72ddfbab92c2d5f1e5e726675faa5659be"
     },
     "MathlibExtensions.Probability.FiniteJumpHistoryHybridBVObservationVariation": {
       "owner": "ldp",
@@ -2889,7 +3110,25 @@
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovRoundedInitialMeanConvergence",
         "FiniteMarkovProcesses.Probability.PoissonCountExactSecondMoment",
         "FiniteMarkovProcesses.Probability.FiniteIIDIntegratedL1Concentration"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "description": "Omit redundant section instances exposed by generalizing raw PiLp values and pointwise action bounds. Only the listed declarations are generalized; conclusions, proof bodies and documentation are unchanged. Actual finite-coordinate sums, Lp/norm constructions, physical-law measurability and normalization assumptions remain in force where used.",
+          "declarations": [
+            "FiniteMarkovProcesses.Probability.empiricalHybridCoordinate_eq_average"
+          ],
+          "omitted_section_instances": [
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.empiricalHybridCoordinate_eq_average",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
+            }
+          ]
+        }
+      ],
+      "emitted_sha256": "bca93f92b4bd72d84112dd09ef26221494cf8b61eed0d96177358b144a1c3eae"
     },
     "MathlibExtensions.Probability.FiniteStateMarkovJumpConservationInitialDensity": {
       "owner": "ldp",
