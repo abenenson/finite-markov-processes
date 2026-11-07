@@ -124,7 +124,7 @@ def empiricalDensityDirectionalFlowInitialL1Value
       | Sum.inl state => empiricalInitialDensity successorIndex histories state
       | Sum.inr _edge => 0
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- Initial density-coordinate recovery. -/
 @[simp]
 theorem empiricalDensityDirectionalFlowInitialL1Value_density
@@ -136,7 +136,7 @@ theorem empiricalDensityDirectionalFlowInitialL1Value_density
         empiricalInitialDensity successorIndex histories state := by
   simp [empiricalDensityDirectionalFlowInitialL1Value]
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- Initial ordered-flow coordinates vanish. -/
 @[simp]
 theorem empiricalDensityDirectionalFlowInitialL1Value_flow
@@ -256,7 +256,7 @@ def empiricalDensityDirectionalFlowEventIncrementL1Value
     fun coordinate => empiricalDensityDirectionalFlowEventIncrement
       successorIndex history index coordinate
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- Coordinate recovery from one tagged microscopic event increment. -/
 @[simp]
 theorem empiricalDensityDirectionalFlowEventIncrementL1Value_apply
@@ -341,7 +341,7 @@ def empiricalContinuityDensityDirectionalFlowL1ValueAtTime
       | Sum.inr edge => empiricalSpecificDirectionalFlowAtTime
           successorIndex histories time edge.val.1 edge.val.2
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- Coordinate formula for the literal event-step reconstruction. -/
 theorem empiricalDensityDirectionalFlowEventStepL1ValueAtTime_apply
     (successorIndex : ℕ)
@@ -371,7 +371,7 @@ theorem empiricalDensityDirectionalFlowEventStepL1ValueAtTime_apply
   rw [Pi.add_apply, PiLp.continuousLinearEquiv_apply]
   simp only [Finset.sum_apply]
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- One ordered-flow coordinate of the event-step reconstruction is the exact empirical
 cumulative one-way flow. -/
 theorem empiricalDensityDirectionalFlowEventStepL1ValueAtTime_flow

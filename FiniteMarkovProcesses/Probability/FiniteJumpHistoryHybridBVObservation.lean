@@ -192,7 +192,7 @@ def empiricalDensityDirectionalFlowL1ValueAtTime
       | Sum.inr edge => empiricalSpecificDirectionalFlowAtTime
           successorIndex histories time edge.val.1 edge.val.2
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- Coordinate recovery for empirical density. -/
 @[simp]
 theorem empiricalDensityDirectionalFlowL1ValueAtTime_density
@@ -204,7 +204,7 @@ theorem empiricalDensityDirectionalFlowL1ValueAtTime_density
         empiricalDensityAtTime successorIndex histories time state := by
   simp [empiricalDensityDirectionalFlowL1ValueAtTime]
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- Coordinate recovery for one ordered empirical flow. -/
 @[simp]
 theorem empiricalDensityDirectionalFlowL1ValueAtTime_flow

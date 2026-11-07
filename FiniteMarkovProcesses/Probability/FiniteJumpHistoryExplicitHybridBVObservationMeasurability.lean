@@ -131,7 +131,7 @@ theorem continuous_finiteJumpHistory_initialState :
   intro eventCount
   exact (continuous_apply (0 : Fin (eventCount + 1))).comp continuous_fst
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- One normalized microscopic event increment varies continuously on a fixed-count history
 slice.  Its state-word dependence is locally constant and it is independent of event times. -/
 theorem continuous_empiricalDensityDirectionalFlowEventIncrementL1Value_fixedCount
@@ -226,7 +226,7 @@ theorem continuous_empiricalDensityDirectionalFlowEventL1Path
   exact (continuous_singleHistoryDensityDirectionalFlowEventL1Path
     successorIndex duration).comp (continuous_apply replica)
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- The tagged initial empirical density, with zero initial directional flow, depends
 continuously on the complete replica family. -/
 theorem continuous_empiricalDensityDirectionalFlowInitialL1Value
