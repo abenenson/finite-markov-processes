@@ -269,7 +269,7 @@ theorem empiricalDensityDirectionalFlowEventIncrementL1Value_apply
           successorIndex history index coordinate := by
   simp [empiricalDensityDirectionalFlowEventIncrementL1Value]
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- Multiplying the tagged event increment by a unit scalar step is exactly the coordinatewise
 weighted event step. -/
 theorem scalarRightEventStep_smul_empiricalDensityDirectionalFlowEventIncrementL1Value
@@ -686,7 +686,7 @@ def empiricalDensityDirectionalFlowCoordinateDerivativeWitness
     simp only [eventPath, Fintype.sum_sigma, Pi.add_apply]
   exact hPath.symm ▸ totalWitness
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- The scalar witness retains the literal event-step representative pointwise, not merely in
 the open-interval almost-everywhere class. -/
 @[simp]
@@ -845,7 +845,7 @@ theorem empiricalDensityDirectionalFlowExplicitHybridBVPath_derivative
           successorIndex histories duration coordinate).derivative := by
   simp [empiricalDensityDirectionalFlowExplicitHybridBVPath]
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- Each constructive coordinate derivative is the finite sum of physically restricted weighted
 Dirac atoms carried by the microscopic events. -/
 theorem empiricalDensityDirectionalFlowCoordinateDerivativeWitness_derivative

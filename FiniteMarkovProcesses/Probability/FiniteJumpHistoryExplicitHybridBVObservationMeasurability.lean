@@ -303,7 +303,7 @@ def singleHistoryDensityDirectionalFlowFullDerivative
     (fun index => empiricalDensityDirectionalFlowEventIncrement
       successorIndex history index coordinate)
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- A single history's full finite atomic derivative is continuous across the unbounded count
 carrier. -/
 theorem continuous_singleHistoryDensityDirectionalFlowFullDerivative
@@ -343,7 +343,7 @@ def empiricalDensityDirectionalFlowFullDerivative
     ∑ replica, (singleHistoryDensityDirectionalFlowFullDerivative
       successorIndex coordinate (histories replica)).toSignedMeasure
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- The full finite atomic derivative of a replica family is continuous in the complete source
 histories. -/
 theorem continuous_empiricalDensityDirectionalFlowFullDerivative
