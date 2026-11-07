@@ -54,6 +54,7 @@ noncomputable def scaledFiniteOpenIntervalVanishingContinuousTest
     rw [test.property hTime]
     simp⟩
 
+/-- Evaluating a scaled relative continuous test multiplies its value by the same scalar. -/
 @[simp]
 theorem scaledFiniteOpenIntervalVanishingContinuousTest_apply
     {duration scale time : ℝ} (test : FiniteOpenIntervalVanishingContinuousTest duration) :
