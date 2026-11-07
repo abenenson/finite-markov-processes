@@ -88,7 +88,7 @@ theorem integral_finiteJumpHistoryHybridCoordinate_eq_mean
       exact finiteStateTimeDependentMarkovMeanCumulativeDirectionalFlowAt_eq_meanHybridBVValueAtTime
         initial rates duration hTime.1.le edge
 
-omit [MeasurableSpace State] [MeasurableSingletonClass State] in
+omit [Fintype State] [MeasurableSpace State] [MeasurableSingletonClass State] in
 /-- Microscopic averaging recovers the existing empirical coordinate, not a new observation. -/
 theorem empiricalHybridCoordinate_eq_average
     (successorIndex : ℕ) (histories : PositiveFiniteJumpHistoryReplicas State successorIndex)

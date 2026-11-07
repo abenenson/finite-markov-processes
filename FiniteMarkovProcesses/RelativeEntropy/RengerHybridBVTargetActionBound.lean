@@ -253,6 +253,7 @@ theorem abs_rengerDirectionalFlowHybridBVCanonicalPositiveTargetJumpLogRatioWeig
               generator index| := le_abs_self _
         _ ≤ _ := le_add_of_nonneg_right (abs_nonneg _)
 
+omit [MeasurableSingletonClass State] in
 /-- On an ordered positive-density history, the canonical target's complete physical action is
 bounded by physical jump count times the explicit log-ratio bound plus reference escape mass. -/
 theorem rengerDirectionalFlowHybridBVCanonicalPositiveTargetJumpLogAction_le
@@ -284,6 +285,7 @@ theorem rengerDirectionalFlowHybridBVCanonicalPositiveTargetJumpLogAction_le
         generator path.1 index time source target hTargetRate)
     history hOrdered hPositive
 
+omit [MeasurableSingletonClass State] in
 /-- On an ordered positive-density history, the canonical target action has an explicit absolute
 count-plus-escape bound. -/
 theorem abs_rengerDirectionalFlowHybridBVCanonicalPositiveTargetJumpLogAction_le
@@ -554,6 +556,7 @@ noncomputable def rengerDirectionalFlowHybridBVCanonicalPositiveTargetReplicaJum
       generator path.1 index)
     generator.toTimeDependentMarkovRate duration
 
+omit [MeasurableSingletonClass State] in
 /-- On ordered positive-density replica histories, total jump count controls the summed complete
 canonical target action with an explicit linear particle correction. -/
 theorem rengerDirectionalFlowHybridBVCanonicalPositiveTargetReplicaJumpLogAction_le
