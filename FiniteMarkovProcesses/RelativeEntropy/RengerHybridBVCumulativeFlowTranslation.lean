@@ -52,6 +52,7 @@ noncomputable def rengerDirectionalFlowHybridBVTranslateCumulativeFlow
   path.constantTranslate
     (rengerDirectionalFlowHybridBVCumulativeFlowTranslationVector offset)
 
+omit [Fintype State] in
 /-- The cumulative-flow translation vector vanishes on density coordinates. -/
 @[simp]
 theorem rengerDirectionalFlowHybridBVCumulativeFlowTranslationVector_density
@@ -61,6 +62,7 @@ theorem rengerDirectionalFlowHybridBVCumulativeFlowTranslationVector_density
       (Sum.inl state) = 0 := by
   simp [rengerDirectionalFlowHybridBVCumulativeFlowTranslationVector]
 
+omit [Fintype State] in
 /-- The cumulative-flow translation vector evaluates to the supplied offset on flow
 coordinates. -/
 @[simp]

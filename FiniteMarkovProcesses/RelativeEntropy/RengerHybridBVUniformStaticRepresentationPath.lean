@@ -43,6 +43,7 @@ noncomputable def rengerDirectionalFlowHybridBVUniformDensityVector :
         (fun state => (PMF.uniformOfFintype State state).toReal)
         (fun _transition => 0) coordinate)
 
+omit [DecidableEq State] in
 /-- The uniform vector evaluates to the uniform PMF on density coordinates. -/
 @[simp]
 theorem rengerDirectionalFlowHybridBVUniformDensityVector_density (state : State) :

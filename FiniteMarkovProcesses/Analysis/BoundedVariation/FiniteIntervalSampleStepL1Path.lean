@@ -46,7 +46,7 @@ private def finiteIntervalSampleValueAtNat
     (index : ℕ) : FiniteCoordinateL1Value Coordinate :=
   if hIndex : index < finalSampleIndex + 1 then value ⟨index, hIndex⟩ else 0
 
-omit [DecidableEq Coordinate] in
+omit [Fintype Coordinate] [DecidableEq Coordinate] in
 private theorem finiteIntervalSampleIncrement_apply_mk
     (finalSampleIndex : ℕ)
     (value : Fin (finalSampleIndex + 1) → FiniteCoordinateL1Value Coordinate)
@@ -61,7 +61,7 @@ private theorem finiteIntervalSampleIncrement_apply_mk
       have hPrevious : previous < finalSampleIndex + 1 := by omega
       simp [finiteIntervalSampleIncrement, finiteIntervalSampleValueAtNat, hIndex, hPrevious]
 
-omit [DecidableEq Coordinate] in
+omit [Fintype Coordinate] [DecidableEq Coordinate] in
 private theorem sum_finiteIntervalSampleIncrement_to
     (finalSampleIndex : ℕ)
     (value : Fin (finalSampleIndex + 1) → FiniteCoordinateL1Value Coordinate)
@@ -75,7 +75,7 @@ private theorem sum_finiteIntervalSampleIncrement_to
     (finiteIntervalSampleValueAtNat finalSampleIndex value) sampleIndex]
   simp [finiteIntervalSampleValueAtNat, hSampleIndex]
 
-omit [DecidableEq Coordinate] in
+omit [Fintype Coordinate] [DecidableEq Coordinate] in
 /-- The initial value and all successive increments through one sample telescope to that sample. -/
 theorem sum_finiteIntervalSampleIncrement_le
     (finalSampleIndex : ℕ)
