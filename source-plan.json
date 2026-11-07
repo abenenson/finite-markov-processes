@@ -1085,7 +1085,14 @@
       "source_sha256": "e2c0ed36beadcb9ae22ef41fcfff8a68affed286a63c3cb5dc4e6782e1cd0dfb",
       "imports": [
         "FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "documentation_metadata",
+          "description": "Document the two rate fields and generated ext/ext_iff lemmas; rate types and separate positivity hypotheses are unchanged."
+        }
+      ],
+      "emitted_sha256": "176782f96e1fe4af14d991d08ee061fdd9aa69a1821a0de3b54ef8b30002a66a"
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.BidirectionalPoissonCurrentContraction": {
       "owner": "sanov",
@@ -1520,7 +1527,15 @@
         "Mathlib.MeasureTheory.Measure.Lebesgue.Basic",
         "Mathlib.MeasureTheory.Measure.SeparableMeasure",
         "Mathlib.Topology.EMetricSpace.BoundedVariation"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "declaration": "FiniteMarkovProcesses.FiniteCoordinateL1Value",
+          "description": "Remove the unused Fintype Coordinate binder from the PiLp value alias; its body is unchanged. Genuine finite-coordinate L1 constructions and estimates retain their finiteness assumptions."
+        }
+      ],
+      "emitted_sha256": "aa4c3f208a124b2624657142668da15e7783cce5267101124c17d1f4c4974575"
     },
     "MathlibExtensions.Analysis.BoundedVariation.FiniteIntervalL1PathWeightedCoordinateIntegral": {
       "owner": "ldp",
@@ -1535,7 +1550,15 @@
         "Mathlib.MeasureTheory.Function.LpSpace.Indicator",
         "Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap",
         "Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "declaration": "FiniteMarkovProcesses.finiteIntervalL1PathWeightedCoordinateIntegral_constant",
+          "description": "Remove its unused DecidableEq Coordinate instance binder; retain the same conclusion, duration and integrability premises, and proof body."
+        }
+      ],
+      "emitted_sha256": "8dd91b6cd9162be240371948cae2b9c24b5a99968f0a717fde0150178f7c82aa"
     },
     "MathlibExtensions.Analysis.BoundedVariation.FiniteIntervalSampleStepL1Path": {
       "owner": "ldp",
@@ -1814,7 +1837,18 @@
       "imports": [
         "Mathlib.Analysis.SpecialFunctions.Log.Basic",
         "FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovReducedHistoryLaw"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "declarations": [
+            "FiniteMarkovProcesses.InformationTheory.finiteStateTimeDependentMarkovJumpLogAction_le_count_mul_add_escapeBound",
+            "FiniteMarkovProcesses.InformationTheory.abs_finiteStateTimeDependentMarkovJumpLogAction_le_count_mul_add_escapeBounds"
+          ],
+          "description": "Remove only their two explicitly declared unused MeasurableSingletonClass State binders. MeasurableSpace, all other premises, conclusions and proof bodies are unchanged; physical-law measurability and normalization requirements elsewhere are retained."
+        }
+      ],
+      "emitted_sha256": "b6f1974714fa9eb7cd42c9c03c7e54f89d64ab0cf598531a9eb677836a610e35"
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateTimeDependentMarkovJumpActionExpectation": {
       "owner": "ldp",
@@ -1850,7 +1884,14 @@
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteOpenIntervalContinuousTestDense",
         "FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDualEvaluation",
         "FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "documentation",
+          "description": "Document evaluation of the scaled continuous test; statement and proof are unchanged."
+        }
+      ],
+      "emitted_sha256": "78f2cd7accc4f2637ef2112ff8a37c1dbffe2141997d8e8f8b959a6e7e5d817a"
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerDirectionalFlowZeroRate": {
       "owner": "ldp",
