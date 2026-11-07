@@ -190,6 +190,7 @@ def finiteCoordinateL1BasisVector
   (PiLp.continuousLinearEquiv 1 ℝ (fun _ : Coordinate => ℝ)).symm
     (Pi.single coordinate 1)
 
+omit [Fintype Coordinate] in
 /-- Evaluation of a finite `l1` unit vector. -/
 @[simp]
 theorem finiteCoordinateL1BasisVector_apply
