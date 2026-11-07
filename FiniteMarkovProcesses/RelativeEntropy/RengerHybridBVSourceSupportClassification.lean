@@ -32,7 +32,7 @@ variable {State : Type u} [Fintype State] [DecidableEq State]
   {duration : ℝ}
 
 private theorem finiteCoordinateL1Value_coordinate_continuousWithinAt
-    {Coordinate : Type*} [Fintype Coordinate]
+    {Coordinate : Type*}
     {Domain : Type*} [TopologicalSpace Domain]
     {values : Domain → FiniteCoordinateL1Value Coordinate}
     {set : Set Domain} {point : Domain}
@@ -44,7 +44,7 @@ private theorem finiteCoordinateL1Value_coordinate_continuousWithinAt
   simpa only [Function.comp_def, PiLp.proj_apply] using! hProjection
 
 private theorem finiteCoordinateL1Value_coordinate_tendsto
-    {Coordinate : Type*} [Fintype Coordinate]
+    {Coordinate : Type*}
     {Source : Type*} {sourceFilter : Filter Source}
     {values : Source → FiniteCoordinateL1Value Coordinate}
     {limit : FiniteCoordinateL1Value Coordinate}
