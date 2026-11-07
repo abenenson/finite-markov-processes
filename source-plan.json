@@ -1895,10 +1895,14 @@
             "FiniteMarkovProcesses.InformationTheory.finiteStateTimeDependentMarkovJumpLogAction_le_count_mul_add_escapeBound",
             "FiniteMarkovProcesses.InformationTheory.abs_finiteStateTimeDependentMarkovJumpLogAction_le_count_mul_add_escapeBounds"
           ],
-          "description": "Remove only their two explicitly declared unused MeasurableSingletonClass State binders. MeasurableSpace, all other premises, conclusions and proof bodies are unchanged; physical-law measurability and normalization requirements elsewhere are retained."
+          "description": "Remove unused MeasurableSingletonClass State and MeasurableSpace State parameters from only these two pointwise log-action bounds. All rate, horizon, orderedness, positive-density and other premises, conclusions and proof source are unchanged. Physical-law measurability and normalization hypotheses elsewhere remain in force.",
+          "removed_instance_parameters": [
+            "[MeasurableSingletonClass State]",
+            "[MeasurableSpace State]"
+          ]
         }
       ],
-      "emitted_sha256": "b6f1974714fa9eb7cd42c9c03c7e54f89d64ab0cf598531a9eb677836a610e35"
+      "emitted_sha256": "a00a68f73bf3dbce8556f6cb00c0177273c02022ce424d62f6f3c63af03761a5"
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.FiniteStateTimeDependentMarkovJumpActionExpectation": {
       "owner": "ldp",
@@ -2155,7 +2159,32 @@
       "source_sha256": "60a30df49c40e62cfaec66b0aa2ef832c80274629601d2f95b33554ef02f1598",
       "imports": [
         "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVValueConstraintClosure"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "visibility": "private",
+          "declarations": [
+            "FiniteMarkovProcesses.InformationTheory.finiteCoordinateL1Value_coordinate_tendsto",
+            "FiniteMarkovProcesses.InformationTheory.finiteCoordinateL1Value_coordinate_continuousWithinAt"
+          ],
+          "private_identities": [
+            {
+              "module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVKinematicClosure",
+              "local_private_name": "finiteCoordinateL1Value_coordinate_tendsto",
+              "namespace": "FiniteMarkovProcesses.InformationTheory"
+            },
+            {
+              "module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVKinematicClosure",
+              "local_private_name": "finiteCoordinateL1Value_coordinate_continuousWithinAt",
+              "namespace": "FiniteMarkovProcesses.InformationTheory"
+            }
+          ],
+          "removed_explicit_instance": "[Fintype Coordinate]",
+          "description": "Raw PiLp coordinate evaluation preserves convergence and within-set continuity without finite enumeration. Only the listed private helpers lose this unused explicit binder; proof source, conclusions, documentation, privacy and surrounding actual finite-State/L1/hybrid-path hypotheses are unchanged."
+        }
+      ],
+      "emitted_sha256": "0c6b205def24e080368ee675c75ef42b91a8155b8550d35c7ef2ce9aa028c485"
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVOrderedFlowMeasureClosure": {
       "owner": "ldp",
@@ -2446,7 +2475,26 @@
       "imports": [
         "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVKinematicClosure",
         "FiniteMarkovProcesses.MeasureTheory.VectorMeasure.FiniteIntervalVagueSignedMeasureBoundaryCutoff"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "visibility": "private",
+          "declarations": [
+            "FiniteMarkovProcesses.InformationTheory.finiteCoordinateL1Value_coordinate_tendsto"
+          ],
+          "private_identities": [
+            {
+              "module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceKinematicSupport",
+              "local_private_name": "finiteCoordinateL1Value_coordinate_tendsto",
+              "namespace": "FiniteMarkovProcesses.InformationTheory"
+            }
+          ],
+          "removed_explicit_instance": "[Fintype Coordinate]",
+          "description": "Raw PiLp coordinate evaluation preserves convergence and within-set continuity without finite enumeration. Only the listed private helpers lose this unused explicit binder; proof source, conclusions, documentation, privacy and surrounding actual finite-State/L1/hybrid-path hypotheses are unchanged."
+        }
+      ],
+      "emitted_sha256": "802fec4c9a02818fb1b3c5fb7a05ddb419e2cdb0c642738d74b37f894426adbb"
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVSourceSupportClassification": {
       "owner": "ldp",
@@ -2458,7 +2506,32 @@
         "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVExtendedDualSupport",
         "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceKinematicSupport",
         "FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "visibility": "private",
+          "declarations": [
+            "FiniteMarkovProcesses.InformationTheory.finiteCoordinateL1Value_coordinate_continuousWithinAt",
+            "FiniteMarkovProcesses.InformationTheory.finiteCoordinateL1Value_coordinate_tendsto"
+          ],
+          "private_identities": [
+            {
+              "module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceSupportClassification",
+              "local_private_name": "finiteCoordinateL1Value_coordinate_continuousWithinAt",
+              "namespace": "FiniteMarkovProcesses.InformationTheory"
+            },
+            {
+              "module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceSupportClassification",
+              "local_private_name": "finiteCoordinateL1Value_coordinate_tendsto",
+              "namespace": "FiniteMarkovProcesses.InformationTheory"
+            }
+          ],
+          "removed_explicit_instance": "[Fintype Coordinate]",
+          "description": "Raw PiLp coordinate evaluation preserves convergence and within-set continuity without finite enumeration. Only the listed private helpers lose this unused explicit binder; proof source, conclusions, documentation, privacy and surrounding actual finite-State/L1/hybrid-path hypotheses are unchanged."
+        }
+      ],
+      "emitted_sha256": "5e6a6ebac87bcbb2a6e5e8c85f89350393fbb7c2b80c1f5794616390c66c5074"
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTargetActionBound": {
       "owner": "ldp",
@@ -2502,9 +2575,20 @@
               "evidence": "Lean unusedSectionVars diagnostic at c4d5122"
             }
           ]
+        },
+        {
+          "kind": "signature_generalization",
+          "declarations": [
+            "FiniteMarkovProcesses.InformationTheory.rengerDirectionalFlowHybridBVCanonicalPositiveTargetJumpLogAction_le",
+            "FiniteMarkovProcesses.InformationTheory.abs_rengerDirectionalFlowHybridBVCanonicalPositiveTargetJumpLogAction_le",
+            "FiniteMarkovProcesses.InformationTheory.rengerDirectionalFlowHybridBVCanonicalPositiveTargetReplicaJumpLogAction_le"
+          ],
+          "description": "The three pure pointwise wrappers omit the now-redundant MeasurableSpace State section instance after their numerical bound is generalized. Conclusions, proof source and all physical-law measurability, normalization, support and domination requirements on actual law/MemLp callers are unchanged.",
+          "removed_section_instance": "[MeasurableSpace State]",
+          "evidence": "Direct-caller inspection: these three wrappers plus one genuine physical-law MemLp caller; the latter retains measurability."
         }
       ],
-      "emitted_sha256": "29c8aa3a0124ac795825bf9f41679591b3de10b6989098c37071fced2abaaaa5"
+      "emitted_sha256": "6142c2b19d0f3927c0da4a5828646716dd43ae52858cdf346f2508dae7d8ddbf"
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVTargetForwardEquation": {
       "owner": "ldp",
@@ -2659,7 +2743,26 @@
       "imports": [
         "FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVL1ConstraintClosure",
         "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVBoundaryTrace"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "visibility": "private",
+          "declarations": [
+            "FiniteMarkovProcesses.InformationTheory.finiteCoordinateL1Value_coordinate_tendsto"
+          ],
+          "private_identities": [
+            {
+              "module": "FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVValueConstraintClosure",
+              "local_private_name": "finiteCoordinateL1Value_coordinate_tendsto",
+              "namespace": "FiniteMarkovProcesses.InformationTheory"
+            }
+          ],
+          "removed_explicit_instance": "[Fintype Coordinate]",
+          "description": "Raw PiLp coordinate evaluation preserves convergence and within-set continuity without finite enumeration. Only the listed private helpers lose this unused explicit binder; proof source, conclusions, documentation, privacy and surrounding actual finite-State/L1/hybrid-path hypotheses are unchanged."
+        }
+      ],
+      "emitted_sha256": "58ecf96ca6d8c5d117875eff8de4a581c07fe3cfe5f6c7fb42d5d01aa32aaba2"
     },
     "MathlibExtensions.InformationTheory.RelativeEntropy.RengerHybridBVZeroRateEvolution": {
       "owner": "ldp",
