@@ -3,6 +3,7 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
+import Mathlib.MeasureTheory.MeasurableSpace.Instances
 import FiniteMarkovProcesses.Sanov
 
 /-!
@@ -10,7 +11,8 @@ import FiniteMarkovProcesses.Sanov
 
 A fair reference satisfies the explicit interior hypothesis. A sample consisting entirely of
 `true` has a boundary empirical density, and its type still satisfies the finite-sample lower
-bound. Positive sample size does not require every state to occur.
+bound. Positive sample size does not require every state to occur. The examples use Mathlib's
+canonical Boolean measurable space, in which every subset is measurable.
 -/
 
 namespace FiniteMarkovProcessesExamples.Sanov
@@ -19,9 +21,6 @@ open FiniteMarkovProcesses.InformationTheory FiniteMarkovProcesses.Probability
 open scoped BigOperators ENNReal NNReal
 
 noncomputable section
-
-local instance : MeasurableSpace Bool := ⊤
-local instance : MeasurableSingletonClass Bool := ⟨fun _ => trivial⟩
 
 /-- Uniform binary reference distribution. -/
 def fairBinary : FiniteStateProbabilityDensity Bool where
