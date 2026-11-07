@@ -148,7 +148,6 @@ theorem integral_compactTest_mul_scalarRightEventStep_finiteOpenIntervalVolume
 
 /-- Weighted coordinate evaluation of a constant finite-coordinate `L1` path. -/
 theorem finiteIntervalL1PathWeightedCoordinateIntegral_constant
-    [DecidableEq Coordinate]
     (test : C_c(ℝ, ℝ)) (coordinate : Coordinate)
     (value : FiniteCoordinateL1Value Coordinate) (hDuration : 0 ≤ duration) :
     finiteIntervalL1PathWeightedCoordinateIntegral test coordinate

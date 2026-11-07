@@ -45,7 +45,7 @@ instance instFactOneNeTopENNReal : Fact ((1 : ENNReal) ≠ ∞) :=
   ⟨ENNReal.one_ne_top⟩
 
 /-- A finite real coordinate family carrying the exact finite `l1` norm. -/
-abbrev FiniteCoordinateL1Value (Coordinate : Type u) [Fintype Coordinate] :=
+abbrev FiniteCoordinateL1Value (Coordinate : Type u) :=
   PiLp 1 fun _ : Coordinate => ℝ
 
 /-- Lebesgue measure restricted to the open physical interval `(0,T)`.  Boundary traces are not
