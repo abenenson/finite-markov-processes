@@ -2925,9 +2925,38 @@
               "evidence": "Root-reviewed propagation from generalized coordinate projections; only finite replica/event-index sums occur."
             }
           ]
+        },
+        {
+          "kind": "signature_generalization",
+          "declarations": [
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.scalarRightEventStep_smul_empiricalDensityDirectionalFlowEventIncrementL1Value",
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowCoordinateDerivativeWitness_modification",
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowCoordinateDerivativeWitness_derivative"
+          ],
+          "description": "Omit the listed redundant Fintype State section instances from raw scalar/vector observations and their pointwise or continuity forwarding lemmas. Proof source, conclusions and documentation are unchanged; finite-state sums, strong-L1/hybrid-path norms and substantive measurability hypotheses remain where used.",
+          "omitted_section_instances": [
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.scalarRightEventStep_smul_empiricalDensityDirectionalFlowEventIncrementL1Value",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at f8b4350"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowCoordinateDerivativeWitness_modification",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at f8b4350"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowCoordinateDerivativeWitness_derivative",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at f8b4350"
+            }
+          ]
         }
       ],
-      "emitted_sha256": "8b202ef6669472120c54388aefcebbbd78aa7441fe64f97054691131c437bc6a"
+      "emitted_sha256": "afc097502701ca994e95c4ae16e956b8eb572a174a9d4fd3304d084301811f88"
     },
     "MathlibExtensions.Probability.FiniteJumpHistoryExplicitHybridBVObservationMeasurability": {
       "owner": "ldp",
@@ -2960,9 +2989,31 @@
               "evidence": "Lean unusedSectionVars diagnostic at c6f8ac1"
             }
           ]
+        },
+        {
+          "kind": "signature_generalization",
+          "declarations": [
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.continuous_singleHistoryDensityDirectionalFlowFullDerivative",
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.continuous_empiricalDensityDirectionalFlowFullDerivative"
+          ],
+          "description": "Omit the listed redundant Fintype State section instances from raw scalar/vector observations and their pointwise or continuity forwarding lemmas. Proof source, conclusions and documentation are unchanged; finite-state sums, strong-L1/hybrid-path norms and substantive measurability hypotheses remain where used.",
+          "omitted_section_instances": [
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.continuous_singleHistoryDensityDirectionalFlowFullDerivative",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at f8b4350"
+            },
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.continuous_empiricalDensityDirectionalFlowFullDerivative",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Statically reviewed forwarding of single-history continuity through continuous test integrals and a finite replica-index sum."
+            }
+          ]
         }
       ],
-      "emitted_sha256": "787a0bbe6b74d85ce4662aab6925faa725e571f2a11155da01f784f850a9c941"
+      "emitted_sha256": "758c7cc3eb16b77f24a26ddfc601c1a661d95ccbe1a9831ff6d68416388a4a2d"
     },
     "MathlibExtensions.Probability.FiniteJumpHistoryHybridBVObservation": {
       "owner": "ldp",
@@ -3030,7 +3081,25 @@
       "source_sha256": "3d78a62b088a01a4d6c1a982aa08ba7070de5951e50cc523b2c1e032a67eecf9",
       "imports": [
         "FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservationMeasurability"
-      ]
+      ],
+      "adaptations": [
+        {
+          "kind": "signature_generalization",
+          "declarations": [
+            "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowInitialL1Value_reindexing"
+          ],
+          "description": "Omit the listed redundant Fintype State section instances from raw scalar/vector observations and their pointwise or continuity forwarding lemmas. Proof source, conclusions and documentation are unchanged; finite-state sums, strong-L1/hybrid-path norms and substantive measurability hypotheses remain where used.",
+          "omitted_section_instances": [
+            {
+              "declaration": "FiniteMarkovProcesses.Probability.PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowInitialL1Value_reindexing",
+              "removed_section_instance": "[Fintype State]",
+              "visibility": "public",
+              "evidence": "Lean unusedSectionVars diagnostic at f8b4350"
+            }
+          ]
+        }
+      ],
+      "emitted_sha256": "270b067ce15552cb09c60c31679be7652e72e10298eddcc2817edee1314bef30"
     },
     "MathlibExtensions.Probability.FiniteJumpHistoryTimeObservation": {
       "owner": "ldp",
