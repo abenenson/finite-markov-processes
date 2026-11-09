@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "baseline_commit": "6d4918377a62ea9a3e096e8543b2582da8899fd9",
+  "verification_environment": "Standalone Linux worker; source and configuration hashes matched to the candidate checkout before commit.",
+  "qualified_identity": "inputs.json",
+  "qualified_identity_sha256": "fc54c03a19108ff9c168edf4c09f56470014fccd4ecfe4ff495782ede660385b",
+  "stage_evidence": "stage-evidence.json",
+  "stage_evidence_sha256": "7bf9a9aa1af88730dba951fa8250b49aa956123a9566860557443cb95d780d2c",
+  "retained_raw_qualification_sha256": "7eea6a9bd1b2bf53d0f54f82b299aa0002d19d94f7bbdd5ceb2ee45c7a957f61",
+  "authored_sources": 297,
+  "fresh_authored_builds": 297,
+  "linters_per_source": 16,
+  "named_axiom_reports": 3606,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "compiler": "Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "exact_dependency_pins": 11,
+  "verified_stages": 299,
+  "verified_stage_log_hashes": 299,
+  "reused_stages": 0,
+  "script_unit_tests": 49,
+  "audit_scope": "Explicit named public top-level declarations; anonymous and generated declarations are not individually enumerated.",
+  "review_followups": [
+    "Replace stale pending-qualification status.",
+    "Construct rounded fair initial configurations and their convergence, then instantiate the original two-state path law and both LDP bounds.",
+    "Construct the stationary affine flip chart, prove its full rate identity, and compute the complete-trajectory KL Hessian.",
+    "Populate the GitHub About description."
+  ],
+  "visibility_change": "None; repository remains private.",
+  "verification_date_utc": "2026-11-09",
+  "evidence_availability": "Raw qualification and stage logs are retained with the review; this public receipt records exact inputs and stage-log hashes."
+}

@@ -8,11 +8,13 @@ layers formalize finite-alphabet Sanov bounds, density/flux path large
 deviations, zero-action evolution, and quantitative particle confidence.
 
 The complete library is qualified: **297 source files**, all **16 source linters**
-per file, and **3,595 named transitive axiom audits** passed on the pinned toolchain.
-[Hosted verification](https://github.com/abenenson/finite-markov-processes/actions/runs/42326974132)
-and [permanent qualification evidence](docs/qualification/probability-extension/summary.json)
-identify the exact checked revision, source hashes, compiler, and dependency pins.
-An independent audit matched every build, lint, and axiom stage to those inputs.
+per file, and **3,606 named transitive axiom audits** passed on the pinned toolchain.
+The [latest qualification evidence](docs/qualification/review-followups/summary.json)
+identifies the checked source hashes, compiler, dependency pins, and fresh build,
+lint, and axiom stages, including the concrete path-LDP and trajectory-Fisher examples.
+The earlier [hosted verification](https://github.com/abenenson/finite-markov-processes/actions/runs/42326974132)
+and [historical evidence](docs/qualification/probability-extension/summary.json)
+cover the library before those examples were added.
 The earlier [CTMC v0.1.0 qualification](docs/qualification/v0.1.0/qualification.json)
 covers its original 69 files and 964 named declarations.
 

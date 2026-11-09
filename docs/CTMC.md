@@ -35,6 +35,13 @@ duration two. The example proves common support and supplies both normalization 
 applies the general time-dependent normalization theorem. All theorem assumptions are visible in
 the Lean declarations.
 
+The same example module constructs `flipStationary` and `flipTrajectoryChart` for the fair,
+unit-rate two-state chain. Both physical directed channels have affine rate `1 + parameter`
+on `|parameter| < 1`. The example proves common support and the full stationary-rate identity,
+then derives `flipTrajectoryChart_klHessian`: complete-history KL has second reference
+derivative equal to the observation duration. No chart-identification premise is left to the
+caller; the nonzero channel tangents give a nonzero Hessian at positive duration.
+
 ## Classical attribution and extraction
 
 The continuous-time Markov-chain construction, exponential holding times, uniformization,

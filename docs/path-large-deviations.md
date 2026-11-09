@@ -1,6 +1,8 @@
 # Path large deviations and effective evolution
 
-**Status:** Extraction candidate; acceptance awaits fresh build, lint, and axiom checks.
+**Status:** Qualified on the pinned toolchain: fresh builds of all 297 authored files,
+all 16 source linters per file, and named transitive axiom audits passed. See the
+[permanent qualification evidence](qualification/review-followups/summary.json).
 
 This library extracts generic finite-state mathematics from source commit
 `recorded-source-baseline`. Its action and theorem labels retain the
@@ -16,6 +18,13 @@ and the original-IID exponential confidence estimate. Import
 `FiniteMarkovProcesses.QuantitativeBounds` for dynamic-rate stability and probability-bound tools.
 [The theorem map](theorem-map.md) names the declarations and separates assumptions from
 proved outputs. [The examples](../FiniteMarkovProcessesExamples/PathLargeDeviations.lean) exercise the public APIs.
+
+The concrete `fairInitialData` example constructs deterministic rounded binary configurations
+whose empirical densities converge to the fair law, proving exact count realization and every
+initial-data field. `fairFlipRepresentation` applies Theorem 4.1 to the unit-rate flip process
+over duration one; `fairFlip_closedUpperBound` and `fairFlip_openLowerBound` project its literal
+LDP bounds. `fairFlip_microscopicLaw` checks that the source is the original deterministic
+positive-replica law. None of these examples assumes an initial LDP or empirical convergence.
 
 ## Generator, carrier, and rate
 
@@ -214,8 +223,8 @@ substantive hypotheses are preserved. No new theorem premise, axiom, or proof pl
 was introduced.
 
 The complete extracted library passed fresh exact-source builds for all 297 authored files,
-all 16 source linters per file, and 3,595 named transitive axiom audits. The axiom union is
+all 16 source linters per file, and 3,606 named transitive axiom audits. The axiom union is
 exactly `Classical.choice`, `Quot.sound`, and `propext`. The
-[permanent qualification record](qualification/probability-extension/summary.json) binds
-these results to the exact source revision, compiler, dependency pins, and independently
-audited hosted evidence.
+[permanent qualification record](qualification/review-followups/summary.json) binds
+these results to the exact source hashes, compiler, dependency pins, and retained
+build, lint, and axiom evidence.
