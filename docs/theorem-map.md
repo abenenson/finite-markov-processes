@@ -3,13 +3,14 @@
 This map is a review guide to the extracted generic mathematics, not a new theorem.
 Names below are in `FiniteMarkovProcesses.InformationTheory` unless a different namespace
 is specified. Module links identify the authoritative Lean statements; the table summaries
-retain the material mathematical assumptions. The extraction pins source commit
-`recorded-source-baseline` in `source-plan.json`.
+retain the material mathematical assumptions. The public source inventory and dependency
+origins are recorded in `source-plan.json`.
 
-**Verification status:** The extracted library passed fresh exact-source builds for all
+**Historical verification:** The library passed exact-source builds for all
 297 authored files, all 16 source linters per file, and 3,595 named transitive axiom audits.
 The [qualification record](qualification/probability-extension/summary.json) identifies
 the checked revision, source hashes, pinned inputs, hosted run, and independent evidence audit.
+Source documentation has since changed; fresh CI must qualify the current source bytes.
 
 ## What is proved and what is supplied
 

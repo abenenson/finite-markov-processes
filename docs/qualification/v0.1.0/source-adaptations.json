@@ -4,8 +4,6 @@
   "owner": "ctmc",
   "changes": [
     {
-      "source_path": "MathlibExtensions/Probability/FiniteStateMarkovJumpLaw.lean",
-      "original_source_sha256": "58de70bdcc90bb6e97f482a25090d9d709ed3a5f5d3aff052caf2c626b3322f2",
       "target_path": "FiniteMarkovProcesses/Probability/FiniteStateMarkovJumpLaw.lean",
       "qualified_emitted_sha256": "1e93a6414f987384e8984e9ec6d34d9d587ecefdcdf36645e3d46bc123081db7",
       "documentation_changes": [
@@ -21,8 +19,6 @@
       ]
     },
     {
-      "source_path": "MathlibExtensions/Probability/FiniteStateMarkovUniformizationParityDensity.lean",
-      "original_source_sha256": "ab374f839eb1f70e627ba9a515a47996dd0b955b37f79eed95cc57aa9d1e5c24",
       "target_path": "FiniteMarkovProcesses/Probability/FiniteStateMarkovUniformizationParityDensity.lean",
       "qualified_emitted_sha256": "022fab0d2d22375f3667068bec7cfea193c9958b946cfb006511a60950352965",
       "documentation_changes": [
@@ -31,8 +27,6 @@
       "signature_generalizations": []
     },
     {
-      "source_path": "MathlibExtensions/Probability/TimedStateTrajectoryGeometricCrossing.lean",
-      "original_source_sha256": "9e5a76935713b7286bc7f1e4230b5afe1392c9433022b7538167d05ead14e5c5",
       "target_path": "FiniteMarkovProcesses/Probability/TimedStateTrajectoryGeometricCrossing.lean",
       "qualified_emitted_sha256": "26418a4e782442fa18316bcdf8ab9ca8afc375ce36a2ac8658819bf45ac9709c",
       "documentation_changes": [
@@ -52,5 +46,5 @@
       ]
     }
   ],
-  "scope_note": "Additional adaptations after initial namespace/path/comment extraction. Generalized signatures are explicitly distinguished from documentation-only changes; global provenance ownership remains with root."
+  "scope_note": "Historical public-source adaptations at the qualified revision. Generalized signatures are distinguished from documentation-only changes."
 }

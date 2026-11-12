@@ -7,11 +7,12 @@ their explicit densities with normalized generative constructions. Its upper
 layers formalize finite-alphabet Sanov bounds, density/flux path large
 deviations, zero-action evolution, and quantitative particle confidence.
 
-The complete library is qualified: **297 source files**, all **16 source linters**
-per file, and **3,606 named transitive axiom audits** passed on the pinned toolchain.
-The [latest qualification evidence](docs/qualification/review-followups/summary.json)
-identifies the checked source hashes, compiler, dependency pins, and fresh build,
-lint, and axiom stages, including the concrete path-LDP and trajectory-Fisher examples.
+The [historical qualification evidence](docs/qualification/review-followups/summary.json)
+records **297 source files**, all **16 source linters** per file, and **3,606 named
+transitive axiom audits** on the pinned toolchain, including the concrete path-LDP
+and trajectory-Fisher examples. It identifies the exact checked source hashes,
+compiler, dependency pins, and build, lint, and axiom stages. Source documentation
+has since changed; fresh CI must qualify the current source bytes.
 The earlier [hosted verification](https://github.com/abenenson/finite-markov-processes/actions/runs/42326974132)
 and [historical evidence](docs/qualification/probability-extension/summary.json)
 cover the library before those examples were added.
@@ -101,6 +102,5 @@ development follows Renger's density/flux results; the finite Sanov development
 uses the method of types. No mathematical priority claim is made.
 
 The package contains generic mathematics. It does not assert empirical validity
-for a physical model. [The extraction plan](source-plan.json) records the exact
-source revision, original module paths and hashes, public dependencies, and
-module ownership. [Apache-2.0](LICENSE); see [NOTICE](NOTICE).
+for a physical model. [The source inventory](source-plan.json) records public source paths,
+dependency origins, and documented signature adaptations. [Apache-2.0](LICENSE); see [NOTICE](NOTICE).

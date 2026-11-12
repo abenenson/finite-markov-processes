@@ -56,11 +56,7 @@ and sufficiency,” *Annals of Mathematical Statistics* **22** (1951), 79–86; 
 (1925), 700–725. The integral fluctuation statement here is the normalized likelihood-ratio
 identity under the stated common-support hypotheses.
 
-The 65 modules are extracted from `the standalone mathematical library` at commit
-`recorded-source-baseline`. `source-plan.json` records each exact source path,
-source SHA-256, target module, and ownership. Extraction replaces `MathlibExtensions` by
-`FiniteMarkovProcesses` in qualified namespaces and imports, and shortens the relative-entropy
-module prefix to `FiniteMarkovProcesses.RelativeEntropy`; mathematical statements and proofs
-are preserved. The CTMC module closure imports only Mathlib. The unified package also pins the
+The public source inventory and documented signature adaptations are recorded in
+`source-plan.json`. The CTMC module closure imports only Mathlib. The unified package also pins the
 public `finite-markov-kernels` and `measure-discrimination` dependencies for its other mathematical
 surfaces.

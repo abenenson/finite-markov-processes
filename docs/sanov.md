@@ -5,9 +5,7 @@ large-deviation bounds for independent samples on any finite alphabet. The resul
 is classical; see I. N. Sanov, “On the probability of large deviations of random
 variables,” *Matematicheskii Sbornik* **42(84)** (1957), 11–44. The implementation
 and extracted proofs are by Adam Benenson.
-The source is `the standalone mathematical library` at
-`recorded-source-baseline`; `source-plan.json` records the exact
-original paths and SHA-256 checksums.
+The public source inventory is recorded in `source-plan.json`.
 
 For a finite alphabet `State`, `FiniteStateProbabilityDensity State` is the closed
 probability simplex: its nonnegative coordinates sum to one. It has the

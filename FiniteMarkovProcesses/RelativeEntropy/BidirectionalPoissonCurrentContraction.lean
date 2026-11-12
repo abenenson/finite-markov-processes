@@ -14,10 +14,8 @@ a prescribed net current.  The minimizing directional pair is fixed by the curre
 reference reactivity.  An exact Pythagorean identity proves unique minimization on the whole
 positive current fibre.
 
-The results are finite normalized-law mathematics.  Common scaling is exact extensivity of the
-complete-law KL, not a large-deviation principle.  No result identifies the contracted action
-with historical Least Informational Action, a fixed-fibre variational law, or a physical field
-action.
+The results concern finite normalized probability laws.  Common scaling gives exact extensivity
+of the complete-law KL.  These identities alone do not establish a large-deviation principle.
 
 ## Main results
 

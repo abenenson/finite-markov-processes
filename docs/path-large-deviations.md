@@ -1,11 +1,12 @@
 # Path large deviations and effective evolution
 
-**Status:** Qualified on the pinned toolchain: fresh builds of all 297 authored files,
-all 16 source linters per file, and named transitive axiom audits passed. See the
-[permanent qualification evidence](qualification/review-followups/summary.json).
+**Historical verification:** Builds of all 297 authored files, all 16 source linters
+per file, and named transitive axiom audits passed on the pinned toolchain. See the
+[qualification evidence](qualification/review-followups/summary.json) for the exact
+checked source identity. Source documentation has since changed; fresh CI must
+qualify the current source bytes.
 
-This library extracts generic finite-state mathematics from source commit
-`recorded-source-baseline`. Its action and theorem labels retain the
+This library formalizes finite-state mathematics. Its action and theorem labels retain the
 classical attribution to D. R. Michiel Renger, *Flux large deviations of independent and
 reacting particle systems, with implications for macroscopic fluctuation theory*,
 Journal of Statistical Physics 172 (2018), 1261–1326,
@@ -213,14 +214,10 @@ source-specific older LDP gap.
 
 ## Validation status
 
-The 193 path/evolution modules and five quantitative-bound modules were extracted after checking
-every source SHA256 against `source-plan.json` and independently against the pinned Git blobs.
-Their imports match the planned rewritten graph with no unresolved planned local dependency,
-including the public `MeasureDiscrimination.ProductDiscrimination` dependency.
-The source plan records namespace/import rewrites, documentation and style changes, and
-generalizations that remove unused typeclass parameters. Mathematical conclusions and
-substantive hypotheses are preserved. No new theorem premise, axiom, or proof placeholder
-was introduced.
+The public source inventory records module paths, pinned public dependencies, and
+documented generalizations that remove unused typeclass parameters. The historical
+qualification receipts identify the exact source bytes checked at their recorded revisions.
+The documentation update preserves all mathematical declarations and proof tokens.
 
 The complete extracted library passed fresh exact-source builds for all 297 authored files,
 all 16 source linters per file, and 3,606 named transitive axiom audits. The axiom union is

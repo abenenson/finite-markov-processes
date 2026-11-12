@@ -1,6 +1,5 @@
 Finite Markov Processes
 Copyright 2026 Adam Benenson
 
-Extracted from the generic mathematical foundations of the mathematical library.
-See source-plan.json for exact origin paths, revision, and source hashes.
+See source-plan.json for the public source inventory and dependency origins.
 Classical results retain their mathematical attribution in module documentation.
