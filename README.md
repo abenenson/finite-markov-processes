@@ -1,5 +1,7 @@
 # Finite Markov Processes
 
+[![Lean verification](https://github.com/abenenson/finite-markov-processes/actions/workflows/lean.yml/badge.svg?branch=main)](https://github.com/abenenson/finite-markov-processes/actions/workflows/lean.yml)
+
 Finite-state jump processes and large deviations in Lean 4, built on Mathlib.
 
 The library develops finite-horizon history laws from generators and connects
