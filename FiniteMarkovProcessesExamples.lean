@@ -7,5 +7,6 @@ import FiniteMarkovProcessesExamples.CTMC
 import FiniteMarkovProcessesExamples.Sanov
 import FiniteMarkovProcessesExamples.ProbabilityVectorInterop
 import FiniteMarkovProcessesExamples.PathLargeDeviations
+import FiniteMarkovProcessesExamples.FiniteSampleConfidence
 
 /-! # Checked examples for finite-state Markov processes -/

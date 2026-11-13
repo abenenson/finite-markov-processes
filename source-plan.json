@@ -75,6 +75,7 @@
     "FiniteMarkovProcesses/Probability/FiniteJumpHistoryTimeObservation.lean",
     "FiniteMarkovProcesses/Probability/FiniteMultinomialEmpiricalMode.lean",
     "FiniteMarkovProcesses/Probability/FinitePiCurryVolume.lean",
+    "FiniteMarkovProcesses/Probability/FiniteSampleConfidence.lean",
     "FiniteMarkovProcesses/Probability/FiniteStateMarkovExponentialTimeTilt.lean",
     "FiniteMarkovProcesses/Probability/FiniteStateMarkovExponentialTimeTiltHistoryDensity.lean",
     "FiniteMarkovProcesses/Probability/FiniteStateMarkovForwardUniqueness.lean",
@@ -297,6 +298,7 @@
     "FiniteMarkovProcesses/Sanov.lean",
     "FiniteMarkovProcessesExamples.lean",
     "FiniteMarkovProcessesExamples/CTMC.lean",
+    "FiniteMarkovProcessesExamples/FiniteSampleConfidence.lean",
     "FiniteMarkovProcessesExamples/PathLargeDeviations.lean",
     "FiniteMarkovProcessesExamples/ProbabilityVectorInterop.lean",
     "FiniteMarkovProcessesExamples/Sanov.lean"

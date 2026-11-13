@@ -53,7 +53,7 @@ Focused entry points keep the mathematical layers explicit:
 | `FiniteMarkovProcesses.ProbabilityVectorInterop` | Coordinate-preserving equivalence and homeomorphism with the public probability-vector API, including equality of canonical PMFs. |
 | `FiniteMarkovProcesses.PathLargeDeviations` | Renger density/flux path bounds for specified initial regimes; the general initial-law theorem assumes an initial LDP and boundary continuity. |
 | `FiniteMarkovProcesses.EffectiveEvolution` | Complete-rate zeros are exactly Markov mean evolutions from the supplied initial zero set; all-N strong-L1 particle bounds remain separate probabilistic results. |
-| `FiniteMarkovProcesses.QuantitativeBounds` | Dynamic-rate stability with explicit initial-density error, rate-gap coercivity, and eventual LDP concentration. |
+| `FiniteMarkovProcesses.QuantitativeBounds` | Dynamic-rate stability with explicit initial-density error, rate-gap coercivity, eventual LDP concentration, and executable rational budgets for supplied finite-sample envelopes. |
 
 General initial mixtures have independent jump dynamics conditional on the
 initial configuration. The invariant-IID corollary uses actual IID initialized
