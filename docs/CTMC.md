@@ -1,7 +1,7 @@
 # Finite-state continuous-time Markov processes
 
-Import `FiniteMarkovProcesses.CTMC`. Its 65 extracted modules contain no the library definitions.
-They cover finite-state jump processes on a finite nonnegative observation horizon, with an
+Import `FiniteMarkovProcesses.CTMC` for finite-state jump processes on a finite nonnegative
+observation horizon, with an
 unbounded finite event count. The physical history law records the initial state, all actual
 jumps, and the final dwell. Self-events of a uniformized construction are removed measurably.
 Probability declarations use the namespace `FiniteMarkovProcesses.Probability`; action, KL, and
@@ -41,6 +41,13 @@ on `|parameter| < 1`. The example proves common support and the full stationary-
 then derives `flipTrajectoryChart_klHessian`: complete-history KL has second reference
 derivative equal to the observation duration. No chart-identification premise is left to the
 caller; the nonzero channel tangents give a nonzero Hessian at positive duration.
+
+`FiniteJumpHistory.isCadlag_stateAtTime` connects the occupied-state observation to Mathlib's
+`IsCadlag` predicate. It works for every finite history in any topological state space. Events
+at the observation time are included in its value and excluded from its left limit; after the
+last event the final state is retained. No topology on a space of paths is introduced.
+`FiniteMarkovProcessesExamples.FiniteJumpHistoryCadlag` checks distinct initial and terminal
+states, zero events, simultaneous events, and the count semantics of raw unordered time vectors.
 
 ## Classical attribution and extraction
 
