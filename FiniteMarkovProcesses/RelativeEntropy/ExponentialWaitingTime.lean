@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.InformationTheory.KullbackLeibler.Basic
-import Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap
-import Mathlib.MeasureTheory.Integral.IntegralEqImproper
-import Mathlib.Probability.Distributions.Exponential
+module
+public import Mathlib.InformationTheory.KullbackLeibler.Basic
+public import Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap
+public import Mathlib.MeasureTheory.Integral.IntegralEqImproper
+public import Mathlib.Probability.Distributions.Exponential
 
 /-!
 # Information identities for exponential waiting times
@@ -24,6 +25,8 @@ the canonical information quantity until finiteness has been established.
 - `expMeasure_injective`: identifiability of a positive exponential rate from its law.
 - `klDiv_expMeasure_scale`: invariance under common positive rescaling of both rates.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.InformationTheory.KullbackLeibler.KLFun
+module
+public import Mathlib.InformationTheory.KullbackLeibler.KLFun
 
 /-!
 # Poisson rate discrimination and activity selection
@@ -25,6 +26,8 @@ identified as a thermodynamic time reverse.
 - `poissonOperationalCompatibility_iff`: full-fibre affine compatibility classifier.
 - `contactIntensity_clockChange`: covariance of integrated intensity under a clock change.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

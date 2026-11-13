@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
 
 /-!
 # Constant translations of finite-interval hybrid BV paths
@@ -19,6 +20,8 @@ construction is useful for testing whether a derivative-only functional sees bou
 - `FiniteIntervalHybridBVPath.constantTranslate_derivative`: the derivative is unchanged;
 - `FiniteIntervalHybridBVPath.constantTranslate_initialTrace`: the initial trace is translated.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

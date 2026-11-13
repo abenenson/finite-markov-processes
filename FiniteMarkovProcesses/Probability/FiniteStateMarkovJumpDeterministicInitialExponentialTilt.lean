@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.Probability.FiniteStateMarkovExponentialTimeTiltHistoryDensity
-import
+public import
   FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialReplication
-import Mathlib.Probability.Independence.Integration
+public import Mathlib.Probability.Independence.Integration
 
 /-!
 # Heterogeneous deterministic-initial exponential tilts
@@ -16,6 +17,8 @@ This module tensors the source-neutral one-history exponential time-tilt estimat
 finite heterogeneous product of deterministic-initial Markov jump histories.  The transition
 exponent is arbitrary subject to the existing continuous bounded-rate contract.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

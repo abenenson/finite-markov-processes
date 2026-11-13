@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoOpenLowerBound
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovInvariantIIDInitialLDP
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpIIDHybridBVObservationTransport
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpIIDHybridBVObservationTransport
 
 /-!
 # Renger Corollary 4.16 hybrid-BV open lower bound
@@ -22,6 +23,8 @@ The invariant relative-entropy initial rate is identified definitionally from th
 proved invariant-IID initial LDP.  No uniqueness premise or stationary source is promoted back to
 the generic Theorem 4.2 regime.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

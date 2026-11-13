@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Analysis.Asymptotics.ExpGrowth
-import FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation
-import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityExponentialBound
-import FiniteMarkovProcesses.Probability.FiniteStateProbabilityDensityEmpiricalApproximation
+module
+public import Mathlib.Analysis.Asymptotics.ExpGrowth
+public import FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation
+public import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityExponentialBound
+public import FiniteMarkovProcesses.Probability.FiniteStateProbabilityDensityEmpiricalApproximation
 
 /-!
 # Finite IID empirical-density large deviations
@@ -24,6 +25,8 @@ deterministic rounded type approaching every point of the closed simplex.
 - `finiteIIDEmpiricalProbabilityDensityLaw_openLowerBound`.
 - `finiteStateProbabilityDensityRelativeEntropy_isGoodRateFunction`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

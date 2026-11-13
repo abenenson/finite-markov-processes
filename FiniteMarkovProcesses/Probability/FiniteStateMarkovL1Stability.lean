@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.MeasureTheory.Integral.IntervalIntegral.AbsolutelyContinuousAbsoluteValue
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Dissipation
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Dissipation
 
 /-!
 # Finite-state endpoint L1 stability
@@ -14,6 +15,8 @@ This module integrates a finite family of almost-everywhere coordinate derivativ
 absolute-value Kato bridge.  A pointwise sign-paired derivative bound therefore controls the exact
 change in endpoint `L1` norm with no Gronwall constant.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

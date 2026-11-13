@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovReducedHistoryLaw
-import FiniteMarkovProcesses.Probability.PoissonCountSecondMomentBound
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovReducedHistoryLaw
+public import FiniteMarkovProcesses.Probability.PoissonCountSecondMomentBound
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
 
 /-!
 # Count moments for bounded time-dependent Markov jump histories
@@ -21,6 +22,8 @@ of the initial PMF and the time profile of the rates.
 - `memLp_two_jumpCount_finiteStateTimeDependentMarkovReducedHistoryMeasure`.
 - `variance_jumpCount_finiteStateTimeDependentMarkovReducedHistoryMeasure_le`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

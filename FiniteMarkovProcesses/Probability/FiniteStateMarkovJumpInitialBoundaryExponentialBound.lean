@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialExponentialTilt
 
 /-!
@@ -14,6 +15,8 @@ then vanishes after a prescribed initial boundary layer.  It is intentionally no
 `C₀((0,T))` macroscopic dual test: its purpose is to control the source events that the published
 boundary-blind derivative topology cannot detect.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

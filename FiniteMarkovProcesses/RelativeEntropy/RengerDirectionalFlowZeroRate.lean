@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate
+module
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate
 
 /-!
 # Zero sets of complete hybrid-BV directional-flow rates
@@ -29,6 +30,8 @@ https://doi.org/10.1007/s10955-018-2083-0.
 This module classifies the zero set of that functional on the specified hybrid carrier;
 it does not prove a large-deviation principle or identify an initial cost independently.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

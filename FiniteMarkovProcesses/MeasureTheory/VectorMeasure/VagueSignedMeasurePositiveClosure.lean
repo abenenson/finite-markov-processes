@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureTopology
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation
-import Mathlib.MeasureTheory.Integral.RieszMarkovKakutani.Real
+module
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureTopology
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation
+public import Mathlib.MeasureTheory.Integral.RieszMarkovKakutani.Real
 
 /-!
 # Positive-cone closure for vaguely convergent signed measures
@@ -26,6 +27,8 @@ omitted boundary before invoking it.
 * `VagueSignedMeasure.zero_le_toSignedMeasure_of_tendsto_of_zero_le` proves sequential or netwise
   closure of the positive cone in the genuine vague topology.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

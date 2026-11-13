@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.InformationTheory.KullbackLeibler.Basic
-import Mathlib.Probability.ProbabilityMassFunction.Integrals
+module
+public import Mathlib.InformationTheory.KullbackLeibler.Basic
+public import Mathlib.Probability.ProbabilityMassFunction.Integrals
 
 /-!
 # Relative entropy of countable probability mass functions
@@ -20,6 +21,8 @@ bridge from countable probability calculations to Mathlib's measure-level KL div
 - `llr_pmfToMeasure`: log-likelihood ratio of countable PMF measures.
 - `toReal_klDiv_pmfToMeasure`: integral representation of their KL divergence.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

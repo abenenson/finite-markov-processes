@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVJointUpperBound
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpRengerEmpiricalInitialSource
 
 /-!
@@ -17,6 +18,8 @@ This module upgrades the compact joint upper bound to closed targets.  The first
 particle-speed exponential tightness inherited through the path coordinate from the exact mixed
 compact-containment estimate.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

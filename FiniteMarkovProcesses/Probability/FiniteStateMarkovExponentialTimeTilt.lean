@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovUniformization
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovUniformization
 
 /-!
 # Exponential time tilts of finite-state Markov jump generators
@@ -21,6 +22,8 @@ the time-dependent virtual-law normalization and self-event deletion developed s
 - `FiniteStateMarkovGenerator.exponentialTimeTilt`: the induced bounded time-dependent rates.
 - `FiniteStateMarkovGenerator.exponentialTimeTilt_rate_toReal`: exact real-valued tilted rate.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

@@ -3,13 +3,15 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.MeasureTheory.Measure.Sum
-import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventDeletion
-import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertionCode
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedHistoryExpectation
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedSelfEventInsertionDensity
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedSelfEventResummation
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizationParityDensity
+module
+public import FiniteMarkovProcesses.MeasureTheory.Measure.Sum
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventDeletion
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertionCode
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedHistoryExpectation
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedSelfEventInsertionDensity
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedSelfEventResummation
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizationParityDensity
 
 /-!
 # Density identification under deletion of uniformized self-events
@@ -37,6 +39,8 @@ ordered-simplex masses resum the unused common-clock rate into physical survival
 - `finiteStateUniformizedReducedHistoryMeasure_eq_physical_of_nonnegative`: the normalized
   stopped-law pushforward is exactly the canonical physical law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

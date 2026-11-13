@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
-import Mathlib.Probability.Moments.Basic
-import Mathlib.Probability.ProbabilityMassFunction.Integrals
+module
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+public import Mathlib.Probability.Moments.Basic
+public import Mathlib.Probability.ProbabilityMassFunction.Integrals
 
 /-!
 # Exponential moments and tails of Poisson counts
@@ -20,6 +21,8 @@ free positive exponent needed for Chernoff optimization or a fixed-exponent coar
 - `integral_exp_mul_poissonCount`: exact exponential moment.
 - `poissonMeasure_gt_le_exponential`: positive-exponent upper-tail bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

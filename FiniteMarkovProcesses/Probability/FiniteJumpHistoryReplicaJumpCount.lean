@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistory
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistory
 
 /-!
 # Total jump count of a finite replica family
@@ -18,6 +19,8 @@ normalizing by replica number; particle-speed normalizations belong in the consu
 - `measurable_finiteJumpHistoryReplicaTotalJumpCount`: measurability of that statistic.
 - `coe_finiteJumpHistoryReplicaTotalJumpCount`: its exact real-valued finite-sum form.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

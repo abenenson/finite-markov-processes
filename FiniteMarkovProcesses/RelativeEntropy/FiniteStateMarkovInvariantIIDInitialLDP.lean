@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary
-import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityLargeDeviation
+module
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary
+public import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityLargeDeviation
 
 /-!
 # Invariant-IID initial LDP for finite-state Markov jumps
@@ -23,6 +24,8 @@ No dynamic path-space large-deviation bound is asserted here.
 - `rengerInvariantInitialCost_eq_finiteStateProbabilityDensityRelativeEntropy`.
 - `rengerInvariantIIDInitialLargeDeviationData`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

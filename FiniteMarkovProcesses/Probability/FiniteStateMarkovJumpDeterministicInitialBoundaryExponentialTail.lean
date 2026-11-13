@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpInitialBoundaryExponentialBound
 
 /-!
@@ -14,6 +15,8 @@ replica source.  The resulting particle-speed tail is the source-side control ne
 nonzero cumulative-flow data at time zero, which the relative macroscopic dual topology cannot
 detect by itself.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

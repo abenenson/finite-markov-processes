@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Probability.Kernel.Composition.MeasureComp
-import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalTypeLaw
-import
+module
+public import Mathlib.Probability.Kernel.Composition.MeasureComp
+public import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalTypeLaw
+public import
   FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialHybridBVObservation
 
 /-!
@@ -27,6 +28,8 @@ No large-deviation estimate or asymptotic disintegration theorem is asserted her
 - `finiteStateMarkovJumpRandomEmpiricalTypePositiveReplicaFamilyLaw_eq_sum_smul`: exact finite
   atomic disintegration.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

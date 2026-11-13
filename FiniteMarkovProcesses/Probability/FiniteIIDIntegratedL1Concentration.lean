@@ -3,12 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Probability.Moments.Variance
-import Mathlib.MeasureTheory.Function.LpSeminorm.Prod
-import Mathlib.MeasureTheory.Function.L2Space
-import Mathlib.MeasureTheory.Integral.Prod
-import Mathlib.Algebra.Order.BigOperators.Ring.Finset
-import Mathlib.Analysis.SpecialFunctions.Sqrt
+module
+public import Mathlib.Probability.Moments.Variance
+public import Mathlib.MeasureTheory.Function.LpSeminorm.Prod
+public import Mathlib.MeasureTheory.Function.L2Space
+public import Mathlib.MeasureTheory.Integral.Prod
+public import Mathlib.Algebra.Order.BigOperators.Ring.Finset
+public import Mathlib.Analysis.SpecialFunctions.Sqrt
 
 /-!
 # Finite-particle concentration of integrated IID coordinate deviations
@@ -22,6 +23,8 @@ The observations, their true means, and joint second-moment premises are retaine
 * `integral_sq_finiteIIDCoordinateDeviation_le`: fixed-time variance control.
 * `measure_finiteIIDIntegratedL1Deviation_ge_le`: an all-particle-count polynomial tail bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

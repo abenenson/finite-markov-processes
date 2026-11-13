@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpRadonNikodym
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean
 
 /-!
@@ -28,6 +29,8 @@ neighborhood lower estimate or take the regularization limit.
 - `rnDeriv_rengerDirectionalFlowHybridBVCanonicalPositiveTargetJumpDensityMeasure`:
   exact regularized-source RN density.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

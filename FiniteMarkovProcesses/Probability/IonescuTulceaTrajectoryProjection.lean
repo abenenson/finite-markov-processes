@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Probability.Kernel.Composition.IntegralCompProd
-import Mathlib.Probability.Kernel.Composition.Lemmas
-import Mathlib.Probability.Kernel.IonescuTulcea.Traj
+module
+public import Mathlib.Probability.Kernel.Composition.IntegralCompProd
+public import Mathlib.Probability.Kernel.Composition.Lemmas
+public import Mathlib.Probability.Kernel.IonescuTulcea.Traj
 
 /-!
 # Projections of Ionescu--Tulcea trajectories
@@ -25,6 +26,8 @@ These results isolate measure-theoretic infrastructure from any particular Marko
 - `map_ionescuTulceaTrajectoryMeasure`: coordinatewise one-step transport determines the full
   infinite trajectory pushforward.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

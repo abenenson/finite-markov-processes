@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedRewardExpectation
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedRewardExpectation
 
 /-!
 # Complete-word expectations for finite-state uniformized chains
@@ -23,6 +24,8 @@ does not identify virtual self-events with physical jumps.
 - `finiteStateUniformizedWordTransitionRewardExpectation_stationary`: stationary word rewards
   grow exactly linearly in the event count.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

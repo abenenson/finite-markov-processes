@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointWordWeight
-import FiniteMarkovProcesses.Probability.OrderedJumpTimesLastDisintegration
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointWordWeight
+public import FiniteMarkovProcesses.Probability.OrderedJumpTimesLastDisintegration
 
 /-!
 # Ordered-time endpoint coefficients for time-dependent uniformized chains
@@ -21,6 +22,8 @@ assumed here.
 - `finiteStateTimeDependentMarkovUniformizedEndpointCoefficient`.
 - `finiteStateTimeDependentMarkovUniformizedEndpointCoefficient_succ`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

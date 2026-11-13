@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Probability.Moments.Variance
-import FiniteMarkovProcesses.Probability.PoissonCountExponentialTail
+module
+public import Mathlib.Probability.Moments.Variance
+public import FiniteMarkovProcesses.Probability.PoissonCountExponentialTail
 
 /-!
 # A uniform second-moment bound for Poisson counts
@@ -19,6 +20,8 @@ heterogeneous-replica concentration, not sharp Poisson variance evaluation.
 - `integral_sq_poissonCount_le`.
 - `variance_poissonCount_le`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

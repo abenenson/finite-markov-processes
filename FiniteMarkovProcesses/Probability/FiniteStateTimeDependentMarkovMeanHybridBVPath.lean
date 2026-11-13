@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalIntegralDerivative
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservation
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovForwardDerivative
-import Mathlib.MeasureTheory.Function.LocallyIntegrable
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalIntegralDerivative
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservation
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovForwardDerivative
+public import Mathlib.MeasureTheory.Function.LocallyIntegrable
 
 /-!
 # Mean hybrid-BV path of a finite-state time-dependent Markov law
@@ -15,6 +16,8 @@ This module packages the arbitrary-initial-PMF endpoint density and integrated o
 intensities as one genuine hybrid-BV path.  Its signed derivatives are the literal
 physical-time densities, not opaque bounded-variation witnesses.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

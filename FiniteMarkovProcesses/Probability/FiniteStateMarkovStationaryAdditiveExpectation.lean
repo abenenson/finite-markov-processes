@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventReward
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedDeletionDensity
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventReward
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedDeletionDensity
 
 /-!
 # Stationary additive expectations of finite-state Markov histories
@@ -26,6 +27,8 @@ thermodynamic interpretation for either reward.
 - `integral_finiteStateMarkovAdditiveHistoryReward_eq_stationaryRate`: exact physical-history
   expectation of a stationary additive reward.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

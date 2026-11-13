@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean
-import
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetDynamicRateRecovery
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Stability
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovForwardDerivative
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Stability
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovForwardDerivative
 
 /-!
 # Flow-defect stability for a physical regularization of a Renger hybrid target
@@ -19,6 +20,8 @@ state `L1` dissipation; only the second term must vanish with the regularization
 
 No source-to-target convergence or large-deviation lower bound is asserted in this module.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

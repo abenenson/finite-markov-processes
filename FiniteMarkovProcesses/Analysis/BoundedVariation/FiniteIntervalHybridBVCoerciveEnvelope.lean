@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation
-import Mathlib.MeasureTheory.Integral.Average
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation
+public import Mathlib.MeasureTheory.Integral.Average
 
 /-!
 # Coercive envelopes for finite-interval hybrid BV paths
@@ -27,6 +28,8 @@ requires the finite-dimensional BV/Helly compactness and derivative-test converg
 - `finiteIntervalHybridBVUniformL1VariationEnvelope`: the broad admissibility-free `L1` and
   derivative-variation envelope.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

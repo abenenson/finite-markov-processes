@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.PoissonCountExponentialTail
-import Mathlib.Analysis.Complex.Exponential
+module
+public import FiniteMarkovProcesses.Probability.PoissonCountExponentialTail
+public import Mathlib.Analysis.Complex.Exponential
 
 /-!
 # Centered exponential moments under Poisson count domination
@@ -19,6 +20,8 @@ moment without replacing its actual mean by the count intensity.
 * `poissonExponentialRemainder_le_quadratic`: an explicit local quadratic estimate.
 * `mgf_centered_le_exp_sq_of_mem_Icc`: the bounded density-coordinate control.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

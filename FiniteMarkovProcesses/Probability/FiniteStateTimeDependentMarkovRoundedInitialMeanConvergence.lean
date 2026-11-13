@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateProbabilityDensityEmpiricalApproximation
-import
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateProbabilityDensityEmpiricalApproximation
+public import
 FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalHybridOpenSetConcentration
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovInitialMixture
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovInitialMixture
 
 /-!
 # Rounded-initial convergence of finite-state Markov mean paths
@@ -17,6 +18,8 @@ when the empirical initial densities converge, including the canonical rounded c
 
 All rates and the physical horizon remain fixed.  No growing-cutoff estimate enters this layer.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

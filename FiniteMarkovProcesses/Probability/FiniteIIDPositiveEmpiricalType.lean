@@ -3,12 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Data.Finsupp.Multiset
-import Mathlib.Data.Fintype.Fin
-import Mathlib.Data.Nat.Choose.Multinomial
-import Mathlib.GroupTheory.GroupAction.Quotient
-import Mathlib.GroupTheory.Perm.DomMulAct
-import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensity
+module
+public import Mathlib.Data.Finsupp.Multiset
+public import Mathlib.Data.Fintype.Fin
+public import Mathlib.Data.Nat.Choose.Multinomial
+public import Mathlib.GroupTheory.GroupAction.Quotient
+public import Mathlib.GroupTheory.Perm.DomMulAct
+public import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensity
 
 /-!
 # Count types of positive finite IID samples
@@ -30,6 +31,8 @@ No probability estimate or asymptotic large-deviation statement is asserted here
 - `FiniteIIDPositiveEmpiricalType.probabilityDensity`: associated simplex point.
 - `card_finiteIIDPositiveEmpiricalType_le`: polynomial ambient cardinal bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

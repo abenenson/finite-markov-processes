@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalStepL1Path
-import Mathlib.Order.Interval.Set.Union
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalStepL1Path
+public import Mathlib.Order.Interval.Set.Union
 
 /-!
 # Finite-sample step paths on a bounded physical interval
@@ -21,6 +22,8 @@ families used in bounded-variation compactness.
 - `isCompact_finiteIntervalSampleStepL1Path_image_closedBall`: compactness of every bounded
   fixed-time sample family.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

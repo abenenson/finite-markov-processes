@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVJointClosedUpperBound
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoOpenLowerBound
 
 /-!
@@ -15,6 +16,8 @@ This module assembles the exact empirical-initial positive-replica source, total
 observation, complete initial-plus-dynamic rate, closed upper bound, open lower bound, good-rate
 compactness, Borel topology, and theorem-labelled provenance into one literal representation.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

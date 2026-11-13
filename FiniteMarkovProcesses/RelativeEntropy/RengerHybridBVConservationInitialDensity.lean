@@ -3,12 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1PathWeightedCoordinateIntegral
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteJumpHistoryRengerHybridBVSourceSupport
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVKinematicClosure
-import
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVKinematicClosure
+public import
   FiniteMarkovProcesses.MeasureTheory.VectorMeasure.FiniteIntervalVagueSignedMeasureBoundaryCutoff
 
 /-!
@@ -29,6 +30,8 @@ topology.
 * `rengerDirectionalFlowHybridBVConservationInitialDensityCoordinate_eq_initialTrace` identifies
   it with the actual initial trace whenever integrated continuity holds.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

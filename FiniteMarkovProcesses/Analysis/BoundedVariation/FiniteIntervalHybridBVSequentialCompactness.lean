@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCompactness
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCompactness
 
 /-!
 # Sequential compactness for finite-interval hybrid bounded-variation paths
@@ -11,6 +12,8 @@ import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCom
 This module composes the strong-`L1` compactness and finite-mesh derivative-test machinery into
 the sequential HPR compactness upgrade used by dynamic-rate sublevels.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain
-import
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain
+public import
   FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalHybridL1Concentration
 
 /-!
@@ -18,6 +19,8 @@ The construction preserves the target's zero-flow support and never asserts that
 finite-rate target already satisfies the bounded-source contract.  Subsequent regularization must
 prove convergence as the cutoff diverges before using these sources in a Girsanov lower bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

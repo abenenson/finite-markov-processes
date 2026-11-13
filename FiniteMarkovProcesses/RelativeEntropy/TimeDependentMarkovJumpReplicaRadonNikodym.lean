@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.MeasureTheory.Measure.PiWithDensity
-import
+module
+public import FiniteMarkovProcesses.MeasureTheory.Measure.PiWithDensity
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpRadonNikodym
-import
+public import
   FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovDeterministicInitialReplication
 
 /-!
@@ -27,6 +28,8 @@ bound.  It does not assert an LDP or take a particle or regularization limit.
 - `exp_neg_threshold_mul_timeDependentCandidateReplica_event_le_referenceReplica_event`:
   finite-particle event lower estimate under an action cap.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

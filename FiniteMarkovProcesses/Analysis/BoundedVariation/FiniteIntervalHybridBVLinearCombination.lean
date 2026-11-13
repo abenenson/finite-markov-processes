@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
 
 /-!
 # Linear combinations of finite-interval hybrid BV paths
@@ -13,6 +14,8 @@ strong-`L1` representative, every signed Stieltjes derivative, and both recovere
 are combined with the same two real coefficients.  In particular, the construction does not use
 an arbitrary bounded-variation derivative witness.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

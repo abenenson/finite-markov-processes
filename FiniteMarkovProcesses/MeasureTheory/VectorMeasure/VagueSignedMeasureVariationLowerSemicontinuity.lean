@@ -3,7 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureAbsoluteContinuityClosure
+module
+public import
+  FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureAbsoluteContinuityClosure
 
 /-!
 # Lower semicontinuity of signed total variation under vague convergence
@@ -16,6 +18,8 @@ The proof keeps mass escape visible.  Compact inner approximations of the mutual
 Jordan parts are separated by one compactly supported Urysohn test; no setwise convergence or
 compactness of the carrier is assumed.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

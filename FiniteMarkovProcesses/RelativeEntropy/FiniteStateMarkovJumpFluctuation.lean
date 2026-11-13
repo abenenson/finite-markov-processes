@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.InformationTheory.KullbackLeibler.Basic
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpRadonNikodym
+module
+public import Mathlib.InformationTheory.KullbackLeibler.Basic
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpRadonNikodym
 
 /-!
 # Finite-state Markov jump fluctuation identities
@@ -21,6 +22,8 @@ Kullback--Leibler divergence.
 - `integral_exp_neg_finiteStateMarkovJumpLogAction`: real fluctuation identity and integrability.
 - `integral_finiteStateMarkovJumpLogAction_eq_klDiv`: expected action is finite KL.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Probability.Distributions.Uniform
-import FiniteMarkovProcesses.Probability.PoissonContactHistory
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+module
+public import Mathlib.Data.ZMod.Basic
+public import FiniteMarkovProcesses.Probability.FiniteUniformPMF
+public import FiniteMarkovProcesses.Probability.PoissonContactHistory
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
 
 /-!
 # Complete driven Poisson-cycle histories
@@ -29,6 +30,8 @@ directional intensities exactly. This is a generative point-history carrier, not
 - `drivenCycleHistoryMeasure_terminalStateMarginal`: stationary uniform endpoint ensemble.
 -/
 
+@[expose] public section
+
 namespace FiniteMarkovProcesses.Probability
 
 open Function MeasureTheory ProbabilityTheory Set
@@ -40,7 +43,7 @@ abbrev DrivenCycleHistory :=
 
 /-- Uniform probability measure on the three-state cycle. -/
 noncomputable def uniformZModThreeMeasure : Measure (ZMod 3) :=
-  (PMF.uniformOfFintype (ZMod 3)).toMeasure
+  (finiteUniformPMF (ZMod 3)).toMeasure
 
 /-- The original uniform law on the three cycle states has total mass one. -/
 noncomputable instance instIsProbabilityMeasureUniformZModThreeMeasure :
@@ -424,11 +427,11 @@ theorem drivenCycleHistoryMeasure_injective
 /-- Mapping a finite uniform PMF through a bijection preserves it. -/
 theorem map_uniformOfFintype_of_bijective
     {α : Type*} [Fintype α] [Nonempty α] (f : α → α) (hf : Bijective f) :
-    PMF.map f (PMF.uniformOfFintype α) = PMF.uniformOfFintype α := by
+    PMF.map f (finiteUniformPMF α) = finiteUniformPMF α := by
   ext target
   obtain ⟨source, rfl⟩ := hf.2 target
   rw [PMF.map_apply, tsum_eq_single source]
-  · simp [PMF.uniformOfFintype_apply]
+  · simp [finiteUniformPMF_apply]
   · intro other hOther
     simp [hf.1.ne hOther.symm]
 
@@ -458,7 +461,7 @@ theorem drivenCycleStateTranslation_measurePreserving (counts : ℕ × ℕ) :
       uniformZModThreeMeasure uniformZModThreeMeasure := by
   refine ⟨measurable_of_countable _, ?_⟩
   rw [uniformZModThreeMeasure,
-    PMF.toMeasure_map _ (PMF.uniformOfFintype (ZMod 3)) (measurable_of_countable _)]
+    PMF.toMeasure_map _ (finiteUniformPMF (ZMod 3)) (measurable_of_countable _)]
   rw [map_uniformOfFintype_of_bijective _
     (drivenCycleStateTranslation_bijective counts)]
 

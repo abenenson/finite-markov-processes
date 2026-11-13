@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation
-import Mathlib.Data.EReal.Inv
-import Mathlib.MeasureTheory.MeasurableSpace.Instances
-import Mathlib.MeasureTheory.Measure.Dirac.Basic
+module
+public import FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation
+public import Mathlib.Data.EReal.Inv
+public import Mathlib.MeasureTheory.MeasurableSpace.Instances
+public import Mathlib.MeasureTheory.Measure.Dirac.Basic
 
 /-!
 # Exponential concentration from a large-deviation upper bound
@@ -22,6 +23,8 @@ bottom. Altering any finite prefix of normalized laws shows why the conclusion i
 - `finitePrefixEventLaw_scaledLog_limsup_eq_bot`: an exact normalized finite-prefix control.
 - `finitePrefixEventLaw_not_forall_le_exp`: the same laws refute an all-index bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

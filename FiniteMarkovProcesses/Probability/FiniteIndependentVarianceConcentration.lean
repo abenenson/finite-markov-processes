@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Probability.Moments.Variance
+module
+public import Mathlib.Probability.Moments.Variance
 
 /-!
 # Variance concentration for finite independent heterogeneous families
@@ -16,6 +17,8 @@ bound gives the exact finite-family deviation estimate around the sum of the coo
 
 - `measure_sum_deviation_ge_le_of_iIndepFun_of_variance_le`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

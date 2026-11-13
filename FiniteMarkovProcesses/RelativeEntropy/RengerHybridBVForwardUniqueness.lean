@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerDirectionalFlowZeroRate
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTargetForwardEquation
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovForwardUniqueness
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerDirectionalFlowZeroRate
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTargetForwardEquation
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovForwardUniqueness
 
 /-!
 # Fixed-initial uniqueness on the hybrid-BV directional-flow carrier
@@ -28,6 +29,8 @@ The forward-equation argument is classical finite-state Markov uniqueness (Norri
 The additional step here is reconstruction of the cumulative flows and derivative measures
 from the admissible hybrid path. Equality of the density alone would not suffice.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

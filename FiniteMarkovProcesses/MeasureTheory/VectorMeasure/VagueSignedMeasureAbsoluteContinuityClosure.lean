@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.MeasureTheory.VectorMeasure.FiniteIntervalVagueSignedMeasureBoundaryCutoff
 
 /-!
@@ -24,6 +25,8 @@ convergence.
 * `VagueSignedMeasure.absolutelyContinuous_toSignedMeasure_of_tendsto_of_uniformVariation` closes
   absolute continuity under genuine vague convergence and a uniform event modulus.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

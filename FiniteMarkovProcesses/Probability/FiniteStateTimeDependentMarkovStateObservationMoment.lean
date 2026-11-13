@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowObservation
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCountMoment
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowObservation
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCountMoment
 
 /-!
 # State-observation moments for bounded time-dependent Markov histories
@@ -20,6 +21,8 @@ in the initial PMF, rate profile, state, and observation time.
 - `memLp_two_finiteJumpHistoryStateMembershipAtTime`.
 - `variance_finiteJumpHistoryStateMembershipAtTime_le_one`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

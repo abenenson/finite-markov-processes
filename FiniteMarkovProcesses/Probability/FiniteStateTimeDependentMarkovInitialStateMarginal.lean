@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryTimeObservation
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovReducedHistoryLaw
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryTimeObservation
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovReducedHistoryLaw
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
 
 /-!
 # Initial marginal of bounded time-dependent Markov jump laws
@@ -21,6 +22,8 @@ marginal.
 - `map_initialState_finiteStateTimeDependentMarkovUniformizedHistoryMeasure`.
 - `map_initialState_finiteStateTimeDependentMarkovReducedHistoryMeasure`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

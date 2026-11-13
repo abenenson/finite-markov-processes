@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalStepDerivative
-import Mathlib.MeasureTheory.Function.LpSpace.Indicator
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalStepDerivative
+public import Mathlib.MeasureTheory.Function.LpSpace.Indicator
 
 /-!
 # Finite-step paths in L1 on a bounded physical interval
@@ -19,6 +20,8 @@ Lebesgue measure of the symmetric difference of two terminal half-lines is their
 - `continuous_scalarRightEventStepL1Path`: joint strong-`L1` continuity in time and weight;
 - `scalarRightEventStepL1Path_eventuallyEq`: recovery of the raw right-continuous step.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

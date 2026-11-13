@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservation
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservation
 
 /-!
 # Measurability of the explicit finite-history hybrid-BV observation
@@ -18,6 +19,8 @@ measurable.
 No coordinatewise characterization of the Borel sigma algebra of the uncountable vague-test
 product is used.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

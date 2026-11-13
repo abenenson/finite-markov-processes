@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.InformationTheory.KullbackLeibler.Basic
-import Mathlib.MeasureTheory.Measure.LogLikelihoodRatio
+module
+public import Mathlib.InformationTheory.KullbackLeibler.Basic
+public import Mathlib.MeasureTheory.Measure.LogLikelihoodRatio
 
 /-!
 # Log actions represented by two densities on one common base
@@ -29,6 +30,8 @@ and integrability.
 - `CommonBaseDensityAction.lintegral_exp_neg_action`: extended-real fluctuation identity.
 - `CommonBaseDensityAction.integral_action_eq_klDiv`: expected action is finite KL when integrable.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

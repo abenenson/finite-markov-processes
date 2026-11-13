@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVConservationInitialDensity
-import
+public import
   FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialHybridBVObservation
-import
+public import
   FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpRandomEmpiricalTypeHybridBVObservation
 
 /-!
@@ -25,6 +26,8 @@ density.  The result is source-law ownership, not an endpoint-continuity asserti
 * `map_conservationInitialDensity_finiteStateMarkovJumpDeterministicInitialHybridBVObservationLaw`
   identifies the exact pushforward law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

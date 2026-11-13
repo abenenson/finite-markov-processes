@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Order.Filter.AtTopBot.Archimedean
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryEmpiricalDirectionalFlow
+module
+public import Mathlib.Order.Filter.AtTopBot.Archimedean
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryEmpiricalDirectionalFlow
 
 /-!
 # Positive independent-particle Markov jump family
@@ -24,6 +25,8 @@ It does not assert a topology, rate function, or asymptotic upper or lower bound
 - `finiteStateMarkovJumpPositiveReplicaFamilyObservationLaw`: exact pushed-forward observation law.
 - `finiteStateMarkovJumpParticleSpeed_tendsto_atTop`: particle number is the diverging speed.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

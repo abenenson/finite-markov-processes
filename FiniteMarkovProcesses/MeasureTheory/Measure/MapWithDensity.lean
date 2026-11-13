@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.Integral.Lebesgue.Map
-import Mathlib.MeasureTheory.Measure.WithDensity
+module
+public import Mathlib.MeasureTheory.Integral.Lebesgue.Map
+public import Mathlib.MeasureTheory.Measure.WithDensity
 
 /-!
 # Pushforwards of pulled-back measure densities
@@ -17,6 +18,8 @@ measurable map. No injectivity or probability assumption is required.
 - `Measure.map_withDensity_comp`: pushing forward a measure weighted by `g ∘ f` equals weighting
   the pushforward by `g`.
 -/
+
+@[expose] public section
 
 open MeasureTheory
 open scoped ENNReal

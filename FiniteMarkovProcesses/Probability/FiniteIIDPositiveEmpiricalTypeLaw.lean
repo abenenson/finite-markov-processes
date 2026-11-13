@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalType
-import FiniteMarkovProcesses.Probability.FiniteMultinomialEmpiricalMode
+module
+public import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalType
+public import FiniteMarkovProcesses.Probability.FiniteMultinomialEmpiricalMode
 
 /-!
 # Law of a positive finite IID empirical count type
@@ -25,6 +26,8 @@ No exponential estimate or large-deviation limit is asserted here.
 - `finiteIIDPositiveEmpiricalType_ownProbability_ge_polynomial_inv`: exact polynomial lower bound.
 - `map_probabilityDensity_finiteIIDPositiveEmpiricalTypeLaw`: recovery of the simplex law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

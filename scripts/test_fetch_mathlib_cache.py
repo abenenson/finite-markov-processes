@@ -1,7 +1,9 @@
 """Offline controls for cache scope and public dependency coverage."""
+import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import call, patch
 
 import fetch_mathlib_cache as cache
 
@@ -9,7 +11,7 @@ import fetch_mathlib_cache as cache
 class CacheScopeControls(unittest.TestCase):
     def fixture(self, root):
         (root / 'Fixture.lean').write_text(
-            '/- import Mathlib.Hidden -/\nimport\n Mathlib.Data.Bool.Basic\n'
+            '/- import Mathlib.Hidden -/\nmodule\npublic import\n Mathlib.Data.Bool.Basic\n'
             'namespace Fixture\ndef text := "import Mathlib.Hidden"\nend Fixture\n')
         return {'root_module': 'Fixture', 'examples_module': 'FixtureExamples',
                 'source_files': ['Fixture.lean'], 'public_dependencies': {}}
@@ -53,6 +55,46 @@ class CacheScopeControls(unittest.TestCase):
             with self.assertRaisesRegex(AssertionError, 'Missing pinned dependency'):
                 cache.mathlib_imports(root, config)
 
+
+    def main_fixture(self, root):
+        config = self.fixture(root)
+        dependency = {'url': 'https://github.com/leanprover-community/mathlib4',
+                      'rev': 'a' * 40}
+        config['public_dependencies']['mathlib'] = dependency
+        (root / 'verification.json').write_text(json.dumps(config))
+        manifest = {'packages': [dict(name='mathlib', type='git', **dependency)]}
+        (root / 'lake-manifest.json').write_text(json.dumps(manifest))
+        return manifest
+
+    def test_main_uses_only_focused_roots_after_pin_checks(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.main_fixture(root)
+            with patch.object(cache, '__file__', str(root / 'scripts/fetch_mathlib_cache.py')), \
+                 patch.object(cache.subprocess, 'run') as run, \
+                 patch.object(cache.subprocess, 'check_output', return_value='a' * 40):
+                cache.main()
+            self.assertEqual(run.call_args_list, [
+                call(['lake', 'env', 'lean', '--version'], cwd=root, check=True),
+                call(['lake', 'exe', 'cache', 'get', 'Mathlib.Data.Bool.Basic',
+                      'Mathlib.Tactic.Linter.Lint'], cwd=root, check=True)])
+
+    def test_main_refuses_manifest_or_checkout_pin_mismatch(self):
+        for mismatch in ['manifest', 'checkout']:
+            with self.subTest(mismatch=mismatch), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                manifest = self.main_fixture(root)
+                if mismatch == 'manifest':
+                    manifest['packages'][0]['rev'] = 'b' * 40
+                    (root / 'lake-manifest.json').write_text(json.dumps(manifest))
+                with patch.object(cache, '__file__', str(root / 'scripts/fetch_mathlib_cache.py')), \
+                     patch.object(cache.subprocess, 'run') as run, \
+                     patch.object(cache.subprocess, 'check_output', return_value='b' * 40), \
+                     self.assertRaises(AssertionError):
+                    cache.main()
+                self.assertEqual(run.call_args_list,
+                                 [call(['lake', 'env', 'lean', '--version'],
+                                       cwd=root, check=True)])
 
 if __name__ == '__main__':
     unittest.main()

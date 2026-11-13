@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpReversalLaw
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpReversalLaw
 
 /-!
 # Partial-conjugate laws of finite-state Markov jump processes
@@ -28,6 +29,8 @@ generator is asserted without an additional theorem.
 - `finiteStateMarkovPartialConjugateComparisonProbabilityMeasure`: normalized literal reversal
   of the auxiliary law on the same complete-history carrier.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

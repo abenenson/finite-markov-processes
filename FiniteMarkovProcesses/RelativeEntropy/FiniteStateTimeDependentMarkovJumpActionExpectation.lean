@@ -3,12 +3,14 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpAction
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovDirectionalFlowExpectation
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovOccupationExpectation
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovDirectionalFlowExpectation
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovOccupationExpectation
 
 /-!
 # Expected action of bounded time-dependent Markov jump laws
@@ -20,6 +22,8 @@ sectors exactly through its ordered-flow compensator and physical occupation mea
 The expectation identities retain the common initial law and directed-support hypotheses.
 Large-deviation lower bounds are established separately.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

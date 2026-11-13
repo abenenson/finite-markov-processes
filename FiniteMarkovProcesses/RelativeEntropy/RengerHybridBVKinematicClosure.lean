@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVValueConstraintClosure
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVValueConstraintClosure
 
 /-!
 # Kinematic closure for Renger hybrid paths
@@ -24,6 +25,8 @@ Absolute continuity and nonnegativity of the limiting instantaneous flow remain 
 * `rengerDirectionalFlowHybridBVKinematicConstraints_of_tendsto_of_uniformlyBoundedDynamicRate`
   proves their preservation under bounded-rate hybrid convergence.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

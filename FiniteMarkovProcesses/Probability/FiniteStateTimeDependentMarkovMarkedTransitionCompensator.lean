@@ -3,11 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMarkedTransitionErasure
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointCoefficient
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCutSectorResummation
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointEvolution
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+module
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMarkedTransitionErasure
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointCoefficient
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCutSectorResummation
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointEvolution
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
 
 /-!
 # Marked-transition compensator for bounded time-dependent Markov laws
@@ -21,6 +23,8 @@ resummation removes the later horizon.
 
 - `lintegral_finiteStateTimeDependentMarkovUniformizedSliceDensity_markedTransition`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

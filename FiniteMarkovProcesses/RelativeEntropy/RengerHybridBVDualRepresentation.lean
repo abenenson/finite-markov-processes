@@ -3,14 +3,15 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteOpenIntervalContinuousTestDense
-import FiniteMarkovProcesses.MeasureTheory.Integral.OfRealIntegral
-import Mathlib.Analysis.Convex.Jensen
-import Mathlib.Analysis.Convex.SpecificFunctions.Basic
-import Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap
-import Mathlib.MeasureTheory.Integral.Lebesgue.Add
-import Mathlib.Topology.ContinuousMap.BoundedCompactlySupported
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteOpenIntervalContinuousTestDense
+public import FiniteMarkovProcesses.MeasureTheory.Integral.OfRealIntegral
+public import Mathlib.Analysis.Convex.Jensen
+public import Mathlib.Analysis.Convex.SpecificFunctions.Basic
+public import Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap
+public import Mathlib.MeasureTheory.Integral.Lebesgue.Add
+public import Mathlib.Topology.ContinuousMap.BoundedCompactlySupported
 
 /-!
 # Renger hybrid-BV dual representation
@@ -42,6 +43,8 @@ pointwise exponent that treats both singular zero-intensity sectors explicitly.
 * `oneChannelContinuousPoissonDualRate_eq_lintegral_rateCost_of_aemeasurable` supplies the
   almost-everywhere measurable interface needed by hybrid-BV representatives.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

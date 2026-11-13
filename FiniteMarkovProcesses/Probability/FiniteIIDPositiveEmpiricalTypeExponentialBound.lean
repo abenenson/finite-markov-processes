@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensityRelativeEntropy
-import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalTypeLaw
+module
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensityRelativeEntropy
+public import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalTypeLaw
 
 /-!
 # Exponential bounds for positive finite IID empirical types
@@ -24,6 +25,8 @@ No asymptotic limit, open-set bound, or closed-set bound is asserted here.
 - `finiteIIDPositiveEmpiricalTypeProbability_upperBound`.
 - `finiteIIDPositiveEmpiricalTypeProbability_lowerBound`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

@@ -3,9 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMarkedTransitionCompensator
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovTransitionTestMoment
-import FiniteMarkovProcesses.Probability.NatSuccessorIndexSplit
+module
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMarkedTransitionCompensator
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovTransitionTestMoment
+public import FiniteMarkovProcesses.Probability.NatSuccessorIndexSplit
 
 /-!
 # Directional-flow compensator for bounded time-dependent Markov laws
@@ -18,6 +20,8 @@ observable into marked event sectors and then applies the exact before/after res
 
 - `lintegral_directedTransitionCount_uniformizedHistoryMeasure`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

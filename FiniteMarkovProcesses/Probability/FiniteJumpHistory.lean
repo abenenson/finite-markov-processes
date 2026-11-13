@@ -3,16 +3,17 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Data.Fin.Rev
-import Mathlib.Basic.Real.Basic
-import Mathlib.MeasureTheory.Constructions.Pi
-import Mathlib.MeasureTheory.Constructions.Polish.Basic
-import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
-import Mathlib.MeasureTheory.Measure.Haar.Unique
-import Mathlib.MeasureTheory.Measure.Prod
-import Mathlib.Order.Fin.Basic
-import Mathlib.Topology.Metrizable.CompletelyMetrizable
-import Mathlib.Tactic.Linarith
+module
+public import Mathlib.Data.Fin.Rev
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.MeasureTheory.Constructions.Pi
+public import Mathlib.MeasureTheory.Constructions.Polish.Basic
+public import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
+public import Mathlib.MeasureTheory.Measure.Haar.Unique
+public import Mathlib.MeasureTheory.Measure.Prod
+public import Mathlib.Order.Fin.Basic
+public import Mathlib.Topology.Metrizable.CompletelyMetrizable
+public import Mathlib.Tactic.Linarith
 
 /-!
 # Finite physical-jump histories
@@ -50,6 +51,8 @@ contains the no-jump slice and does not impose a time discretization.
 - `FiniteJumpHistory.map_reverse_finiteJumpHistoryBaseMeasure`: the common history base measure
   is invariant under complete time reversal.
 -/
+
+@[expose] public section
 
 open MeasureTheory
 

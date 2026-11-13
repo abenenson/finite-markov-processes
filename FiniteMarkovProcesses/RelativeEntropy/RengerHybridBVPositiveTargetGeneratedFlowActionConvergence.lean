@@ -3,13 +3,14 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetActionExpectation
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanConvergence
-import FiniteMarkovProcesses.MeasureTheory.Integral.OfRealIntegral
-import Mathlib.MeasureTheory.Integral.Lebesgue.Add
-import Mathlib.MeasureTheory.Integral.Lebesgue.DominatedConvergence
+public import FiniteMarkovProcesses.MeasureTheory.Integral.OfRealIntegral
+public import Mathlib.MeasureTheory.Integral.Lebesgue.Add
+public import Mathlib.MeasureTheory.Integral.Lebesgue.DominatedConvergence
 
 /-!
 # Generated-flow action convergence for positive Renger target sources
@@ -19,6 +20,8 @@ argument keeps the physical source density separate from the target density and 
 homogeneity of the extended Poisson cost; no equality of scalar actions is promoted to a carrier
 identification.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

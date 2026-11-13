@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteIIDIntegratedL1Concentration
-import Mathlib.Probability.Moments.Basic
-import Mathlib.Analysis.Convex.Integral
-import Mathlib.Analysis.Convex.SpecificFunctions.Basic
+module
+public import FiniteMarkovProcesses.Probability.FiniteIIDIntegratedL1Concentration
+public import Mathlib.Probability.Moments.Basic
+public import Mathlib.Analysis.Convex.Integral
+public import Mathlib.Analysis.Convex.SpecificFunctions.Basic
 
 /-!
 # Exponential control of integrated IID coordinate deviations
@@ -20,6 +21,8 @@ moments control the absolute deviation, retaining the factor two.
 * `exp_integrated_abs_sum_le`: normalized time and finite-coordinate Jensen inequality.
 * `measure_finiteIIDIntegratedL1Deviation_ge_le_exponential`: finite-sample Chernoff bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

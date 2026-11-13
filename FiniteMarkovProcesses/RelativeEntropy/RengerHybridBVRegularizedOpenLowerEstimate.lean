@@ -3,14 +3,15 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRoundedInitialActionConcentration
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetActionConvergence
-import FiniteMarkovProcesses.Probability.ExponentialFailureMassLogLiminf
-import
+public import FiniteMarkovProcesses.Probability.ExponentialFailureMassLogLiminf
+public import
   FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialHybridBVObservation
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation
 
 /-!
@@ -24,6 +25,8 @@ literal positive particle count.
 This is a finite-regularization, finite-particle theorem.  It does not yet take logarithms, pass to
 a particle limit, remove the positive perturbation, or assert an LDP lower bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

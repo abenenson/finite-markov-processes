@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointCoefficient
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovFutureWordErasure
-import FiniteMarkovProcesses.Probability.OrderedJumpTimesCutDisintegration
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointCoefficient
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovFutureWordErasure
+public import FiniteMarkovProcesses.Probability.OrderedJumpTimesCutDisintegration
 
 /-!
 # Cut-sector marginals of time-dependent uniformized chains
@@ -23,6 +24,8 @@ yet sum the two event-count sectors or identify a complete-history pushforward.
 - `sum_finiteStateTimeDependentMarkovUniformizedSliceDensity_cutState`.
 - `lintegral_finiteStateTimeDependentMarkovUniformizedSliceDensity_cutSector`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

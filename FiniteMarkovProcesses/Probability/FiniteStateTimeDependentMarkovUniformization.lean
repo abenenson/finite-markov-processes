@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformization
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformization
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 
 /-!
 # Uniformization of bounded time-dependent finite-state jump rates
@@ -23,6 +24,8 @@ history laws. These words retain virtual self-events.
 - `sum_finiteStateTimeDependentMarkovContinuationWeight`: every finite time-dependent future-word
   weight has total mass one.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

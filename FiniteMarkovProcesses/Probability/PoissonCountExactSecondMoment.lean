@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
-import FiniteMarkovProcesses.Probability.PoissonCountSecondMomentBound
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanContinuity
-import Mathlib.MeasureTheory.Function.LpSeminorm.Prod
+module
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+public import FiniteMarkovProcesses.Probability.PoissonCountSecondMomentBound
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanContinuity
+public import Mathlib.MeasureTheory.Function.LpSeminorm.Prod
 
 /-!
 # Exact Poisson second moments and physical jump-count bounds
@@ -23,6 +24,8 @@ Joint history/time second-moment integrability retains the complete unbounded hi
 - `variance_finiteStateTimeDependentMarkovDirectedTransitionCountAtTime_le_poissonSecondMoment`.
 - `memLp_two_finiteStateTimeDependentMarkovDirectedTransitionCountAtTime_uncurry`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

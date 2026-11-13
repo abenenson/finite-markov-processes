@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowEndpointConvention
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowEndpointConvention
 
 /-!
 # Hybrid-BV observation of finite jump histories
@@ -21,6 +22,8 @@ coordinates remain separately tagged; no current contraction is used.
 - `PositiveFiniteJumpHistoryReplicas.exists_empiricalDensityDirectionalFlowHybridBVPath`: exact
   lift into the hybrid BV derivative graph.
 -/
+
+@[expose] public section
 
 open MeasureTheory Set
 open FiniteMarkovProcesses.FiniteIntervalBVAlgebra

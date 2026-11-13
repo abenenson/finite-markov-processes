@@ -3,8 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovDirectionalFlowCompensator
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointMean
+module
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovDirectionalFlowCompensator
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointMean
 
 /-!
 # Forward equation for bounded time-dependent finite-state Markov laws
@@ -17,6 +19,8 @@ continuity and the projective endpoint marginal yields the physical forward inte
 
 - `finiteStateTimeDependentMarkovMeanCumulativeDirectionalFlowAt_horizon_eq_toReal_lintegral`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

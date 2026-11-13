@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.FiniteRateChannelFisherResponse
-import
+module
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteRateChannelFisherResponse
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovTrajectoryRelativeEntropy
 
 /-!
@@ -29,6 +30,8 @@ The Fisher Hessian is a local symmetric germ and is not identified with a global
 - `StationaryTrajectoryAffineChart.hasDerivAt_trajectoryKlDivToRealDerivative_zero`: exact
   complete-trajectory Fisher Hessian.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.OrderedJumpTimesVolume
-import
+module
+public import FiniteMarkovProcesses.Probability.OrderedJumpTimesVolume
+public import
 FiniteMarkovProcesses.MeasureTheory.Integral.IntervalIntegral.AbsolutelyContinuousFundamentalTheorem
 
 /-!
@@ -25,6 +26,8 @@ time-dependent virtual self events inside a physical dwell.
 - `tsum_lintegral_weightedOrderedJumpTimes`: exponential resummation over every event count.
 - `tsum_lintegral_weightedOrderedTimesInInterval`: the translated arbitrary-interval form.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

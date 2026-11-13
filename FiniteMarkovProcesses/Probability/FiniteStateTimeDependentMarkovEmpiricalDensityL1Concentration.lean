@@ -3,10 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1Path
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalTestConcentration
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanContinuity
-import Mathlib.MeasureTheory.Integral.Prod
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1Path
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalTestConcentration
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanContinuity
+public import Mathlib.MeasureTheory.Integral.Prod
 
 /-!
 # Strong-L1 concentration of empirical density paths
@@ -22,6 +24,8 @@ strong-`L1` bound without discretizing time or truncating the finite-history car
 - `finiteStateTimeDependentMarkovReplicaDirectionalFlowSumDeviationAtTime`.
 - `integral_integral_finiteStateTimeDependentMarkovReplicaDirectionalFlowSumDeviationAtTime_le`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

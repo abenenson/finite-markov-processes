@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertion
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertion
 
 /-!
 # Injective codes for finite-history self-event insertion
@@ -20,6 +21,8 @@ global encoding injective.
 - `injective_selfEventInsertedStateWordCode`: fixed-word insertion-count encoding is injective.
 - `injective_reducedSelfEventInsertionWordCode`: the global dependent encoding is injective.
 -/
+
+@[expose] public section
 
 open scoped BigOperators
 

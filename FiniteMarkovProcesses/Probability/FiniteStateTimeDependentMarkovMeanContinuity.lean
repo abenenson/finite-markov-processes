@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovOrderedSupport
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovInitialStateMarginal
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovStateObservationMoment
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovTransitionTestMoment
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovOrderedSupport
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovInitialStateMarginal
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovStateObservationMoment
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovTransitionTestMoment
 
 /-!
 # Mean continuity for bounded time-dependent Markov jump laws
@@ -27,6 +28,8 @@ means with integrated rate intensities or solve the forward equation.
 - `finiteStateTimeDependentMarkovMeanCumulativeDirectionalFlowAt_eq_virtual`.
 - `finiteStateTimeDependentMarkovMeanDensityAt_eq_initial_add_incoming_sub_outgoing`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

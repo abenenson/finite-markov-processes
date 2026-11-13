@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointMean
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovSelfEventDeletion
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryTimeObservation
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1Path
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointMean
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovSelfEventDeletion
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryTimeObservation
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1Path
 
 /-!
 # Occupation expectations for bounded time-dependent Markov jump laws
@@ -15,6 +16,8 @@ This module turns the dwell-interval representation of a finite jump history int
 occupation integral and evaluates that integral under the normalized reduced history law.  It is
 source-neutral finite-state probability mathematics.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

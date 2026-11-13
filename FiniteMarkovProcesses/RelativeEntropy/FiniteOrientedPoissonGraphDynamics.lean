@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.FiniteBidirectionalPoissonCurrentContraction
+module
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteBidirectionalPoissonCurrentContraction
 
 /-!
 # Finite oriented Poisson graph dynamics
@@ -30,6 +31,8 @@ independence, a path-space large-deviation principle, or a continuum field limit
 - `FiniteOrientedPoissonGenerator.reverseOrientation_currentAction`: orientation covariance.
 - `sharedVertexGraph_densityVelocity_center_ne_firstEdgeOnly`: adverse shared-density control.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

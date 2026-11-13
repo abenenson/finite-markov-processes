@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate
-import Mathlib.Analysis.Calculus.MeanValue
-import Mathlib.Analysis.SpecialFunctions.ExpDeriv
+module
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate
+public import Mathlib.Analysis.Calculus.MeanValue
+public import Mathlib.Analysis.SpecialFunctions.ExpDeriv
 
 /-!
 # Extended Poisson exponential duality
@@ -24,6 +25,8 @@ against a zero reference makes the dual supremum infinite.
 * `iSup_ofReal_poissonExponentialDualEvaluation_eq_rengerExtendedPoissonRateCost` proves exact
   extended one-channel duality in all four zero/positive sectors.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

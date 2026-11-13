@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.Integral.Bochner.Basic
+module
+public import Mathlib.MeasureTheory.Integral.Bochner.Basic
 
 /-!
 # Positive embeddings of real integrals
@@ -16,6 +17,8 @@ Lebesgue integrals after the positive embedding into `ENNReal`.
 * `MeasureTheory.ofReal_integral_le_lintegral_ofReal` bounds the positive embedding of an
   integrable real function's integral by the integral of its pointwise positive embedding.
 -/
+
+@[expose] public section
 
 namespace MeasureTheory
 

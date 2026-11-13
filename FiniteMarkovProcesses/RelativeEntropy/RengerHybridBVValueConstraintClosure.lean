@@ -3,8 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVL1ConstraintClosure
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVBoundaryTrace
+module
+public import
+  FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVL1ConstraintClosure
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVBoundaryTrace
 
 /-!
 # Value-constraint closure for Renger hybrid paths
@@ -24,6 +26,8 @@ representation, and lower semicontinuity are deliberately outside this module.
 * `rengerDirectionalFlowHybridBVValueConstraints_of_tendsto_of_uniformlyBoundedDynamicRate`
   proves that these constraints survive a bounded-rate hybrid limit.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

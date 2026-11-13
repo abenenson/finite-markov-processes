@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Stability
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Stability
 
 /-!
 # Uniqueness of finite-state constant-generator forward evolution
@@ -26,6 +27,8 @@ Section 2.8, https://www.statslab.cam.ac.uk/~jrn10/Markov/.
 Here the coordinate `L1` sign-dissipation estimate gives uniqueness for absolutely continuous,
 real-valued solutions with an almost-everywhere equation, without probability normalization.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

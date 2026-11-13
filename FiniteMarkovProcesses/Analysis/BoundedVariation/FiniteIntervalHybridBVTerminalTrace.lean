@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVInitialTrace
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVInitialTrace
 
 /-!
 # Terminal traces for hybrid bounded-variation paths
@@ -23,6 +24,8 @@ No global continuity of `FiniteIntervalHybridBVPath.terminalTrace` is asserted.
   `tendsto_terminalTrace_of_tendsto_toL1Path_of_uniformTerminalDerivativeVariation` recovers
   terminal-trace convergence under the exact endpoint no-escape premise.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

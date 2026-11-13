@@ -3,12 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
 FiniteMarkovProcesses.MeasureTheory.Integral.IntervalIntegral.AbsolutelyContinuousFundamentalTheorem
-import Mathlib.Analysis.Calculus.Deriv.Inverse
-import Mathlib.Analysis.Calculus.FDeriv.Norm
-import Mathlib.Basic.Real.Sign
-import Mathlib.Topology.Order.LeftRightNhds
+public import Mathlib.Analysis.Calculus.Deriv.Inverse
+public import Mathlib.Analysis.Calculus.FDeriv.Norm
+public import Mathlib.Basic.Real.Sign
+public import Mathlib.Topology.Order.LeftRightNhds
 
 /-!
 # Absolute values of absolutely continuous real functions
@@ -21,6 +22,8 @@ therefore form a countable exceptional set.
 These results supply a reusable Kato bridge from coordinate derivatives to endpoint `L1`
 estimates.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

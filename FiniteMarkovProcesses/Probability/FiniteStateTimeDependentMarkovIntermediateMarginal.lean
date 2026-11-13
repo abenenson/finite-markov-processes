@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCutSectorResummation
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointMarginal
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovOrderedSupport
-import FiniteMarkovProcesses.Probability.NatSuccessorIndexSplit
-import FiniteMarkovProcesses.Probability.OrderedJumpTimesCutPartition
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCutSectorResummation
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointMarginal
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovOrderedSupport
+public import FiniteMarkovProcesses.Probability.NatSuccessorIndexSplit
+public import FiniteMarkovProcesses.Probability.OrderedJumpTimesCutPartition
 
 /-!
 # Intermediate-time marginal of bounded time-dependent Markov jump laws
@@ -23,6 +24,8 @@ exact observed-count partition, null cut-boundary removal, and total/cut-count r
 - `map_stateAtTime_finiteStateTimeDependentMarkovUniformizedHistoryMeasure`.
 - `map_stateAtTime_finiteStateTimeDependentMarkovReducedHistoryMeasure`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

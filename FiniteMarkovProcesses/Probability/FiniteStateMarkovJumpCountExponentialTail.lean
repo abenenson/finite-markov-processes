@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedDeletionDensity
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedHistoryExpectation
-import FiniteMarkovProcesses.Probability.PoissonCountExponentialTail
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedDeletionDensity
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedHistoryExpectation
+public import FiniteMarkovProcesses.Probability.PoissonCountExponentialTail
 
 /-!
 # Exponential jump-count tails for finite-state Markov histories
@@ -22,6 +23,8 @@ exponential tail bound for the physical jump count.
 - `finiteStateMarkovJumpDensityMeasure_jumpCount_gt_le_poisson`: physical count domination.
 - `finiteStateMarkovJumpDensityMeasure_jumpCount_gt_le_exponential`: explicit Chernoff bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

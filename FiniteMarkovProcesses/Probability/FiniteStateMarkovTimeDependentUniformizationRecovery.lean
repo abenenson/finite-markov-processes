@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedDeletionDensity
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovUniformizedHistoryLaw
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedDeletionDensity
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovUniformizedHistoryLaw
 
 /-!
 # Recovery of homogeneous finite-state jump uniformization
@@ -24,6 +25,8 @@ genuinely time-dependent reduced law; that requires the variable-rate self-event
 - `map_deleteSelfEvents_finiteStateTimeDependentMarkovUniformizedHistoryMeasure_constant`:
   exact physical-law recovery after self-event deletion.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

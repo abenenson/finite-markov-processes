@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.CommonBaseDensityAction
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpAction
+module
+public import FiniteMarkovProcesses.RelativeEntropy.CommonBaseDensityAction
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpAction
 
 /-!
 # Radon--Nikodym derivatives for bounded time-dependent finite-state jump laws
@@ -26,6 +27,8 @@ identities. Large-deviation lower bounds are established separately.
 - `llr_finiteStateTimeDependentMarkovJumpDensityMeasure`: exact physical log likelihood.
 - `lintegral_exp_neg_finiteStateTimeDependentMarkovJumpLogAction`: exact fluctuation identity.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVZeroRateEvolution
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVZeroRateEvolution
 
 /-!
 # Complete-rate zero sets and actual Markov mean evolution
@@ -17,3 +18,5 @@ This deterministic classification retains the full hybrid path and its recovered
 It does not supply a probability estimate. The finite-state forward uniqueness and scalar entropy
 equality arguments are classical; the density/ordered-flux action is due to Renger (2018).
 -/
+
+@[expose] public section

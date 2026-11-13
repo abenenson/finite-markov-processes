@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointEvolution
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovReducedHistoryLaw
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryTimeObservation
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointEvolution
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovReducedHistoryLaw
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryTimeObservation
 
 /-!
 # Endpoint marginal of bounded time-dependent Markov jump laws
@@ -22,6 +23,8 @@ compensator/forward equation remain separate statements.
 - `map_finalState_finiteStateTimeDependentMarkovUniformizedHistoryMeasure`.
 - `map_finalState_finiteStateTimeDependentMarkovReducedHistoryMeasure`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

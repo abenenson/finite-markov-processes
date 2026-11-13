@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpTrajectory
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedStationaryOccupation
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpTrajectory
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedStationaryOccupation
 
 /-!
 # Normalized uniformized finite-state Markov trajectories
@@ -24,6 +25,8 @@ law.
 - `finiteStateUniformizedTapeMeasure`: normalized infinite uniformized tape.
 - `instIsProbabilityMeasureFiniteStateUniformizedTapeMeasure`: exact tape normalization.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

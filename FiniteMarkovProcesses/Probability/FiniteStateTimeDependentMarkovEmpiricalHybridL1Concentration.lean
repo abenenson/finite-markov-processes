@@ -3,11 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservationMeasurability
-import
+module
+public import
+  FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservationMeasurability
+public import
   FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalDensityL1Concentration
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
-import Mathlib.MeasureTheory.SpecificCodomains.WithLp
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+public import Mathlib.MeasureTheory.SpecificCodomains.WithLp
 
 /-!
 # Strong-L1 concentration of empirical density--directional-flow paths
@@ -18,6 +20,8 @@ total hybrid-BV observation.
 
 No time discretization, history-count truncation, or replacement carrier is introduced.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovTimeDependentUniformizationRecovery
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovSelfEventDeletion
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovTimeDependentUniformizationRecovery
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovSelfEventDeletion
 
 /-!
 # Reduced history laws for bounded time-dependent Markov jump rates
@@ -29,6 +30,8 @@ their law of large numbers, or a pathwise change-of-measure identity.
   physical density for every bounded measurable rate family.
 - `finiteStateTimeDependentMarkovReducedHistoryMeasure_constant`: exact homogeneous recovery.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

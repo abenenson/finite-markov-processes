@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCutSectorMarginal
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
-import Mathlib.Probability.Distributions.Poisson.Basic
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCutSectorMarginal
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+public import Mathlib.Probability.Distributions.Poisson.Basic
 
 /-!
 # Resummation of future cut sectors
@@ -21,6 +22,8 @@ complete-history marginal additionally requires the null-boundary cut partition.
 
 - `tsum_lintegral_finiteStateTimeDependentMarkovUniformizedSliceDensity_cutSector`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

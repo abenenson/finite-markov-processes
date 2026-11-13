@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.PathLargeDeviations
-import FiniteMarkovProcesses.EffectiveEvolution
-import FiniteMarkovProcessesExamples.CTMC
-import FiniteMarkovProcessesExamples.Sanov
+module
+public import FiniteMarkovProcesses.PathLargeDeviations
+public import FiniteMarkovProcesses.EffectiveEvolution
+public import FiniteMarkovProcessesExamples.CTMC
+public import FiniteMarkovProcessesExamples.Sanov
 
 /-!
 # Checking the public path APIs
@@ -17,6 +18,8 @@ exact deterministic empirical convergence and positive limiting-density premises
 The concrete fair flip example below constructs that initial data from rounded empirical types
 and projects both LDP bounds without an unproved initial-law or convergence premise.
 -/
+
+@[expose] public section
 
 open FiniteMarkovProcesses.InformationTheory FiniteMarkovProcesses.Probability
 open scoped ENNReal

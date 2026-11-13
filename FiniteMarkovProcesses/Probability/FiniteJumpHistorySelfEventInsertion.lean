@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Algebra.BigOperators.Fin
-import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventDeletion
+module
+public import Mathlib.Algebra.BigOperators.Fin
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventDeletion
 
 /-!
 # Canonical insertion of self-events into finite state words
@@ -36,6 +37,8 @@ It contains no Markov rates or measures; those enter only after the combinatoria
 - `selfEventInsertedStateWord_zero`: preservation of the initial state.
 - `selfEventInsertedStateWord_last`: preservation of the final state.
 -/
+
+@[expose] public section
 
 open scoped BigOperators
 

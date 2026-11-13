@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.Measure.Typeclasses.NullSingletonClass
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryEmpiricalDirectionalFlow
+module
+public import Mathlib.MeasureTheory.Measure.Typeclasses.NullSingletonClass
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryEmpiricalDirectionalFlow
 
 /-!
 # Endpoint conventions for finite-jump directional flow
@@ -24,6 +25,8 @@ bounded-variation topology.
 - `PositiveFiniteJumpHistoryReplicas.empiricalDensityDirectionalFlowPath_endpoint_ae`: the exact
   positive-particle density and ordered one-way-flow paths agree componentwise almost everywhere.
 -/
+
+@[expose] public section
 
 open MeasureTheory
 

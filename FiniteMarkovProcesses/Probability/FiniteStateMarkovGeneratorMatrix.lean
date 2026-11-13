@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpLaw
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpLaw
 
 /-!
 # Matrix convention for finite-state Markov generators
@@ -18,6 +19,8 @@ entries are the jump rates, diagonal entries are negative escape rates, and ever
 - `FiniteStateMarkovGenerator.matrixEntry_of_ne`: off-diagonal matrix entries are jump rates.
 - `FiniteStateMarkovGenerator.sum_matrixEntry`: every matrix row sums to zero.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

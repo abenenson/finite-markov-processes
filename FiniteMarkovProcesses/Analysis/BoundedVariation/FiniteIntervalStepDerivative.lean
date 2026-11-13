@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation
-import Mathlib.MeasureTheory.Measure.Dirac.Def
-import Mathlib.MeasureTheory.Measure.Dirac.Basic
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation
+public import Mathlib.MeasureTheory.Measure.Dirac.Def
+public import Mathlib.MeasureTheory.Measure.Dirac.Basic
 
 /-!
 # Finite-step derivatives on a bounded physical interval
@@ -26,6 +27,8 @@ the microscopic event times.
 - `finiteRestrictedWeightedDiracVagueSignedMeasure_totalVariation_apply_univ_le`: the total
   variation of a finite restricted atomic derivative is bounded by its absolute coefficient sum.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

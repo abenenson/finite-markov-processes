@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovForwardDerivative
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovForwardDerivative
 
 /-!
 # Reference-evolution interior perturbation of a Renger target
@@ -20,6 +21,8 @@ This module constructs the pointwise density and directional-flow perturbation d
 yet package those data as a hybrid-BV path, prove an action limit, or assert a large-deviation
 lower bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

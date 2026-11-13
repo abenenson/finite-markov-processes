@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.PoissonRateHellinger
+module
+public import FiniteMarkovProcesses.RelativeEntropy.PoissonRateHellinger
 
 /-!
 # Square-root coercivity for Poisson rate budgets
@@ -19,6 +20,8 @@ unit-bounded quadratic budget with a strict factor-two margin.
 * `poissonRateRadiusBudget_pos` and `poissonRateRadiusBudget_le_one` give the budget domain.
 * `mul_sqrt_poissonRateRadiusBudget_le` gives the prescribed radius margin.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

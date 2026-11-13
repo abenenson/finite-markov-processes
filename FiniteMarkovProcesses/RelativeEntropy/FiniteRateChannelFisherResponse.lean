@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Analysis.SpecialFunctions.Log.Deriv
-import Mathlib.Tactic
+module
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Analysis.SpecialFunctions.Log.Deriv
+public import Mathlib.Tactic
 
 /-!
 # Fisher response of finite rate channels
@@ -30,6 +31,8 @@ itself, recover a directed global action or a physical protocol.
 - `finiteRateChannelRelativeEntropyRate_reference_secondDerivative_zero`: exact Fisher Hessian.
 - `finiteRateChannelFisherResponse_scale`: rate-unit covariance of the Fisher response.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

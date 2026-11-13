@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateCoercivity
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetRate
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateCoercivity
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetRate
 
 /-!
 # Finite-action recovery of truncated Renger target flow
@@ -16,6 +17,8 @@ physical-time `L1` error for every ordered channel.
 This module remains target-side analysis.  It does not identify a source mean or assert a
 Girsanov formula.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

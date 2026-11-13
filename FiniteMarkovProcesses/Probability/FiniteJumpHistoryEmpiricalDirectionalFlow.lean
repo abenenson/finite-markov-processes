@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowObservation
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpReplication
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowObservation
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpReplication
 
 /-!
 # Empirical density and directional flow of finite jump histories
@@ -28,6 +29,8 @@ two ordered flow coordinates.
 - `PositiveFiniteJumpHistoryReplicas.measurable_empiricalCompleteSufficientStatistic`:
   measurability of the separate exact finite-action statistic.
 -/
+
+@[expose] public section
 
 open MeasureTheory
 open scoped BigOperators

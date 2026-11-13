@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Probability.ProbabilityMassFunction.Constructions
-import Mathlib.MeasureTheory.Constructions.BorelSpace.Basic
-import Mathlib.Topology.Order.Compact
+module
+public import Mathlib.Probability.ProbabilityMassFunction.Constructions
+public import Mathlib.MeasureTheory.Constructions.BorelSpace.Basic
+public import Mathlib.Topology.Order.Compact
 
 /-!
 # Probability densities on a finite state space
@@ -25,6 +26,8 @@ and its measurable space is exactly the corresponding Borel sigma algebra.
 - `FiniteStateProbabilityDensity.InitialRateIsLeftContinuousAtLowerBoundary`: the boundary
   continuity contract used by finite-state initial-rate large deviations.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

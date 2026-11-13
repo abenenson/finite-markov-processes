@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Tactic.NormNum
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryCadlag
+module
+public import Mathlib.Tactic.NormNum
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryCadlag
 
 /-!
 # A one-jump observation with distinct endpoints
@@ -12,6 +13,8 @@ import FiniteMarkovProcesses.Probability.FiniteJumpHistoryCadlag
 The observed real state changes from zero to one at time one half. The value at
 the jump is one, the left limit is zero, and the terminal value stays one.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Examples
 

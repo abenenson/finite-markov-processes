@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.CumulativeWaitTimes
-import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventDeletion
+module
+public import FiniteMarkovProcesses.Probability.CumulativeWaitTimes
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventDeletion
 
 /-!
 # Rewards under finite-history self-event deletion
@@ -20,6 +21,8 @@ adjacent reward differences; every deleted self-event then contributes zero.
 - `FiniteJumpHistory.sum_dwellReward_deleteSelfEventsSlice`: exact occupation-reward invariance
   under canonical self-event deletion.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityLargeDeviation
+module
+public import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityLargeDeviation
 
 /-!
 # Sanov's theorem for a finite alphabet
@@ -13,3 +14,5 @@ large-deviation bounds. The speed is `finiteIIDPositiveSampleSpeed n = n + 1`; t
 `finiteStateProbabilityDensityRelativeEntropy reference` on the closed simplex. The reference
 must satisfy `reference.IsInterior`. See `docs/sanov.md` and `FiniteMarkovProcessesExamples.Sanov`.
 -/
+
+@[expose] public section

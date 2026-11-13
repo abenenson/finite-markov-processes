@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointWordWeight
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointWordWeight
 
 /-!
 # Future-word erasure for time-dependent uniformized chains
@@ -19,6 +20,8 @@ intermediate-time marginalization; time-simplex disintegration is handled separa
 - `sum_finiteStateTimeDependentMarkovUniformizedStateWordWeight_cutState`: exact erasure of all
   later state coordinates.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

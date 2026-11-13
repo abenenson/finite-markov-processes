@@ -3,15 +3,16 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.MeasureTheory.VectorMeasure.FiniteIntervalVagueSignedMeasureBoundaryCutoff
-import
+public import
   FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1PathWeightedCoordinateIntegral
-import
+public import
   FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialBoundaryExponentialTail
-import
+public import
   FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservationMeasurability
-import
+public import
   FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialHybridBVObservation
 
 /-!
@@ -21,6 +22,8 @@ This module constructs a continuous strong-`L1` probe supported next to the init
 boundary and bounds its value on an empirical cumulative-flow coordinate by the weighted number
 of microscopic jumps in that boundary layer.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

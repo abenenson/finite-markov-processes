@@ -3,7 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceFlowConvergence
+module
+public import
+  FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceFlowConvergence
 
 /-!
 # Source-mean path convergence for positive Renger targets
@@ -11,6 +13,8 @@ import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceF
 This module converts ordered source-flow convergence into density-drift, derivative-variation,
 and complete hybrid source-mean path convergence.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialReplication
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovOrderedSupport
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovReducedHistoryLaw
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialReplication
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovOrderedSupport
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovReducedHistoryLaw
 
 /-!
 # Deterministic-initial replicas for time-dependent Markov jump rates
@@ -26,6 +27,8 @@ large-deviation lower bound is asserted here.
 - `finiteStateTimeDependentMarkovDeterministicInitialReplica_coordinate_map`.
 - `finiteStateTimeDependentMarkovDeterministicInitialReplica_constant_toMeasure`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

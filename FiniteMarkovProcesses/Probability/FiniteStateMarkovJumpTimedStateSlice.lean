@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.Integral.Lebesgue.Countable
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpTrajectory
+module
+public import Mathlib.MeasureTheory.Integral.Lebesgue.Countable
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpTrajectory
 
 /-!
 # Fixed-state slices of finite-state jump-process steps
@@ -22,6 +23,8 @@ the induction steps for finite state-word trajectory laws.
 - `finiteStateInitialTimedStateMeasure_stateWaitSet`: exact initial state/wait cylinder mass.
 - `finiteStateTimedStepKernel_stateWaitSet`: exact transition state/wait cylinder mass.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

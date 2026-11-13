@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetOpenSetConcentration
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetActionExpectation
-import Mathlib.MeasureTheory.Measure.Real
+public import Mathlib.MeasureTheory.Measure.Real
 
 /-!
 # Rounded-initial action concentration for Renger target regularizations
@@ -19,6 +20,8 @@ particle speed around that heterogeneous mean.
 
 No regularization limit, change of measure, or open lower bound is asserted here.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

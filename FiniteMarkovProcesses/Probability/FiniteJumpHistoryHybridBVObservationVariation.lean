@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCoerciveEnvelope
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservation
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryReplicaJumpCount
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCoerciveEnvelope
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservation
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryReplicaJumpCount
 
 /-!
 # Derivative variation of empirical finite-jump observations
@@ -26,6 +27,8 @@ support is not imported into the admissibility-free estimate.
   a particle-number-scaled total-count cutoff places the explicit observation in one replica-count-
   independent `L1`--variation envelope.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

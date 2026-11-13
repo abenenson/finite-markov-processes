@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.Integral.CompactlySupported
-import Mathlib.MeasureTheory.Integral.Bochner.Set
-import Mathlib.MeasureTheory.VectorMeasure.Decomposition.Jordan
-import Mathlib.Topology.Maps.Basic
+module
+public import Mathlib.MeasureTheory.Integral.CompactlySupported
+public import Mathlib.MeasureTheory.Integral.Bochner.Set
+public import Mathlib.MeasureTheory.VectorMeasure.Decomposition.Jordan
+public import Mathlib.Topology.Maps.Basic
 
 /-!
 # Vague topology for finite signed measures
@@ -29,6 +30,8 @@ definition does not rely on the Bochner integral's nonintegrable default.
 - `VagueSignedMeasure.instMeasurableSpace`: the measurable structure is definitionally the Borel
   sigma algebra of the vague topology.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

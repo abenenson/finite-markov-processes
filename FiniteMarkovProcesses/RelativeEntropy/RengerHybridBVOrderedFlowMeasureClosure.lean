@@ -3,11 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVKinematicClosure
-import
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVKinematicClosure
+public import
   FiniteMarkovProcesses.MeasureTheory.VectorMeasure.FiniteIntervalVagueSignedMeasureBoundaryCutoff
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureAbsoluteContinuityClosure
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation
+public import
+  FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureAbsoluteContinuityClosure
 
 /-!
 # Ordered-flow measure closure for Renger hybrid paths
@@ -32,6 +34,8 @@ separate result.
 * `rengerDirectionalFlowHybridBVAdmissibleOfTendstoOfUniformlyBoundedDynamicRate` proves full
   sequential closure of the finite-rate representation domain inside a bounded action sublevel.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

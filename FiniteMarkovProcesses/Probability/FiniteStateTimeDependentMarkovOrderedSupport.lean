@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovReducedHistoryLaw
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovReducedHistoryLaw
 
 /-!
 # Ordered support of bounded time-dependent Markov jump laws
@@ -18,6 +19,8 @@ integrate microscopic continuity identities under the perturbed source.
 - `ae_orderedBefore_finiteStateTimeDependentMarkovUniformizedHistoryMeasure`.
 - `ae_orderedBefore_finiteStateTimeDependentMarkovReducedHistoryMeasure`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

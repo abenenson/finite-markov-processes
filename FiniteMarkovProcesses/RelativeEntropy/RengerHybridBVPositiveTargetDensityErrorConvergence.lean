@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetFlowDefectStability
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetFlowDefectStability
 
 /-!
 # Density-error convergence for a physical regularization of a Renger hybrid target
@@ -11,6 +12,8 @@ import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetFlowDef
 This module converts the exact flow-defect stability estimates into strict-subhorizon density
 convergence. It preserves the source-neutral boundary: no large-deviation lower bound is asserted.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

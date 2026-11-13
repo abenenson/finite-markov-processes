@@ -3,8 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVLinearCombination
-import
+module
+public import
+  FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVLinearCombination
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPath
 
 /-!
@@ -15,6 +17,8 @@ law.  The construction is performed on the genuine hybrid derivative graph.  It 
 Renger admissibility field, keeps the initial law fixed, and exposes exact convex formulas for
 the density and ordered-flow derivatives used by the dynamic-action estimate.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

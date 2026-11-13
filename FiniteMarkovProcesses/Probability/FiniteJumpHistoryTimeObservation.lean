@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistory
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistory
 
 /-!
 # Fixed-time observations of finite jump histories
@@ -25,6 +26,8 @@ No continuity equation is used in these definitions.
 - `FiniteJumpHistory.stateAtTime_eq_finalState_of_orderedBefore`: terminal-time recovery on the
   physical ordered carrier.
 -/
+
+@[expose] public section
 
 open MeasureTheory
 

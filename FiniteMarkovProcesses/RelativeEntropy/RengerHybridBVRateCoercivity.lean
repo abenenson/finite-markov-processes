@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCoerciveEnvelope
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation
-import Mathlib.MeasureTheory.Integral.Lebesgue.Add
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCoerciveEnvelope
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation
+public import Mathlib.MeasureTheory.Integral.Lebesgue.Add
 
 /-!
 # Coercivity of the Renger hybrid-BV directional-flow rate
@@ -35,6 +36,8 @@ into a bounded-variation family; no compactness theorem is asserted here.
 - `rengerDirectionalFlowHybridBVFiniteRateSublevel_subset_finiteRateCoerciveSet`: exact reduction
   of finite action sublevels to a bounded coercive set, with no compactness claim.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

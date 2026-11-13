@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedStationaryRewards
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedStationaryRewards
 
 /-!
 # Expected rewards of finite-state uniformized chains
@@ -21,6 +22,8 @@ physical self-event deletion theorem.
 - `uniformizedCumulativeTransitionRewardExpectation`: finite-event reward recursion.
 - `uniformizedCumulativeTransitionRewardExpectation_stationary`: exact stationary linear growth.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

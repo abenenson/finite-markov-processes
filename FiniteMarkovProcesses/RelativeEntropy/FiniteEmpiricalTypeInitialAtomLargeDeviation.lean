@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteEmpiricalTypeInitialAtomSelection
-import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityLargeDeviation
+public import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityLargeDeviation
 
 /-!
 # Diagonal empirical atoms from an initial large-deviation lower bound
@@ -19,6 +20,8 @@ ambient type count.
 The construction is the source/lattice seam needed by random-initial path lower bounds.  It does
 not yet combine the selected atom with a conditional path law or use lower-boundary continuity.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

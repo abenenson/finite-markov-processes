@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCoerciveEnvelope
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCoerciveEnvelope
 
 /-!
 # Initial traces for hybrid bounded-variation paths
@@ -28,6 +29,8 @@ No global continuity of `FiniteIntervalHybridBVPath.initialTrace` is asserted.
   `tendsto_initialTrace_of_tendsto_toL1Path_of_uniformInitialDerivativeVariation` recovers trace
   convergence without asserting global trace continuity.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

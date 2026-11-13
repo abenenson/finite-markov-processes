@@ -46,12 +46,15 @@ def main():
     subprocess.run(['lake', 'env', 'lean', '--version'], cwd=root, check=True)
     manifest = verify.manifest_dependencies(
         json.loads((root / 'lake-manifest.json').read_text())['packages'])
-    expected = config['public_dependencies']['mathlib']
-    assert manifest['mathlib']['rev'] == expected['rev']
-    actual = subprocess.check_output(
-        ['git', '-C', str(root / '.lake/packages/mathlib'), 'rev-parse', 'HEAD'],
-        text=True).strip()
-    assert actual == expected['rev'], 'Mathlib checkout differs from the pinned revision'
+    assert set(manifest) == set(config['public_dependencies']), 'Dependency coverage differs'
+    for name, expected in config['public_dependencies'].items():
+        package = manifest[name]
+        assert package['type'] == 'git' and package['rev'] == expected['rev'], name
+        assert package['url'] == expected['url'], name
+        actual = subprocess.check_output(
+            ['git', '-C', str(root / '.lake/packages' / name), 'rev-parse', 'HEAD'],
+            text=True).strip()
+        assert actual == expected['rev'], 'Checkout differs from the pinned revision: ' + name
     modules = mathlib_imports(root, config)
     print('Fetching Mathlib cache for', len(modules), 'focused import roots', flush=True)
     subprocess.run(['lake', 'exe', 'cache', 'get', *modules], cwd=root, check=True)

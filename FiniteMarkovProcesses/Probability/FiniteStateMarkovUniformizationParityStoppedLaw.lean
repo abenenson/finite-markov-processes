@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizationParityLift
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedStoppedLaw
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizationParityLift
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedStoppedLaw
 
 /-!
 # Stopped-law transport through the uniformization parity lift
@@ -20,6 +21,8 @@ stopped uniformized law, including every retained virtual self-event.
 - `map_finiteStateMarkovStoppedHistoryMeasure_uniformizationParityLift`: exact stopped-law
   pushforward from the lifted physical process to the uniformized process.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

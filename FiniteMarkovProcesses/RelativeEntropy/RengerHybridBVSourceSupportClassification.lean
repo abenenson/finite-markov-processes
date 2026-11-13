@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVExtendedDualSupport
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceKinematicSupport
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVExtendedDualSupport
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceKinematicSupport
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.NonnegativeDensityVariation
 
 /-!
 # Classification of Renger source-kinematic support
@@ -15,6 +16,8 @@ a positive singular ordered-flow derivative, or a positive recovered initial cum
 offset.  The first already has infinite ambient dual cost; the second is the separately controlled
 initial-boundary escape sector.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

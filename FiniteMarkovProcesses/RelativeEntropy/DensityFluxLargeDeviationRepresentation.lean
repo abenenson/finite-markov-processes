@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Analysis.SpecialFunctions.Log.ENNRealLog
-import Mathlib.Order.LiminfLimsup
-import Mathlib.Probability.Independence.Basic
-import FiniteMarkovProcesses.RelativeEntropy.FiniteOrientedPoissonGraphDynamics
+module
+public import Mathlib.Analysis.SpecialFunctions.Log.ENNRealLog
+public import Mathlib.Order.LiminfLimsup
+public import Mathlib.Probability.Independence.Basic
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteOrientedPoissonGraphDynamics
 
 /-!
 # Density--flux large-deviation representation boundary
@@ -39,6 +40,8 @@ principle for a finite graph generator; concrete realizations must supply both b
 - `CompleteHistoryReplicationRealization`: independent-replica and aggregation contract that clock
   scaling alone does not discharge.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpStopping
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpStopping
 
 /-!
 # Geometric crossing for timed-state trajectories
@@ -21,6 +22,8 @@ generator and can be shared by physical Gillespie and virtual uniformization con
 - `timedStateTrajectoryMeasure_allWaitingTimesShort_eq_zero`: geometric extinction of the
   all-short-waits event.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

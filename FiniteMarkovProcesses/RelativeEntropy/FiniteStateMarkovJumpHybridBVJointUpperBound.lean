@@ -3,13 +3,14 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVSourceSupportedUpperBound
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateSublevelCompactness
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpConservationInitialDensity
-import
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateSublevelCompactness
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpConservationInitialDensity
+public import
 FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpRandomEmpiricalTypeHybridBVCompactContainment
-import Mathlib.Topology.ShrinkingLemma
+public import Mathlib.Topology.ShrinkingLemma
 
 /-!
 # Joint initial-density and hybrid-path upper bounds
@@ -23,6 +24,8 @@ dynamic exponential cost.
 No endpoint trace is asserted continuous.  The joint source remains concentrated on the closed
 conservation-recovered initial-density graph.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

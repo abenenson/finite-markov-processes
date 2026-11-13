@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetRate
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Dissipation
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.LebesgueDifferentiationThm
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetRate
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Dissipation
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.LebesgueDifferentiationThm
 
 /-!
 # Forward equation associated with a finite-action Renger hybrid target
@@ -17,6 +18,8 @@ instantaneous incoming-minus-outgoing target flow back to the selected density c
 This is the target-side Volterra equation.  It does not identify the target with the mean of a
 physical jump source.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

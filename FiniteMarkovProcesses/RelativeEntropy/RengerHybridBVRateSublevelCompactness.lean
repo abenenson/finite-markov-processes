@@ -3,11 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVSequentialCompactness
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVOrderedFlowMeasureClosure
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateCoercivity
-import Mathlib.Topology.Sequences
+module
+public import
+  FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVSequentialCompactness
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVOrderedFlowMeasureClosure
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateCoercivity
+public import Mathlib.Topology.Sequences
 
 /-!
 # Compact rate sublevels for the Renger hybrid-BV action
@@ -21,6 +23,8 @@ admissible-limit closure, and scoped dual lower semicontinuity then close the pr
 No first-countability or metrizability instance is asserted for the ambient uncountable-test
 hybrid carrier.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

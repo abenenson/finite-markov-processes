@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteIndependentVarianceConcentration
-import
+module
+public import FiniteMarkovProcesses.Probability.FiniteIndependentVarianceConcentration
+public import
   FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovDeterministicInitialReplication
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovStateObservationMoment
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovTransitionTestMoment
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovStateObservationMoment
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovTransitionTestMoment
 
 /-!
 # Empirical-test concentration for time-dependent Markov jump replicas
@@ -27,6 +28,8 @@ exchangeability assumption is introduced.
 - `finiteStateTimeDependentMarkovDeterministicInitialReplica_stateTestSumDeviation_le`.
 - `finiteStateTimeDependentMarkovDeterministicInitialReplica_transitionTestSumDeviation_le`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

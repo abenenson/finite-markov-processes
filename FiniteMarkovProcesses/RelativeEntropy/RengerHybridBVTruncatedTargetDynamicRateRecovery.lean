@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetFlowRecovery
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetFlowRecovery
 
 /-!
 # Dynamic-rate recovery from truncated Renger target flows
@@ -16,6 +17,8 @@ target density, while only the target flow is truncated.
 This is target-side action recovery.  It does not assert that the truncated chart is the mean of
 a physical jump law or supply a Radon--Nikodym/Girsanov identity.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

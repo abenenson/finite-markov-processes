@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap
-import Mathlib.MeasureTheory.VectorMeasure.Decomposition.Lebesgue
-import Mathlib.Topology.ContinuousMap.BoundedCompactlySupported
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureTopology
+module
+public import Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap
+public import Mathlib.MeasureTheory.VectorMeasure.Decomposition.Lebesgue
+public import Mathlib.Topology.ContinuousMap.BoundedCompactlySupported
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureTopology
 
 /-!
 # Pairing vague signed measures supplied by integrable densities
@@ -15,6 +16,8 @@ This module identifies the Jordan-decomposition test integral of a signed measur
 `Measure.withDensityᵥ` with the ordinary integral of the test times the real density.  It is the
 bridge between vague signed-measure topology and Radon--Nikodym density formulas.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

@@ -3,13 +3,14 @@ Copyright (c) 2025 Yizheng Zhu. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yizheng Zhu
 -/
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Analysis.Calculus.Deriv.Mul
-import Mathlib.MeasureTheory.Covering.Vitali
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.DerivIntegrable
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.LebesgueDifferentiationThm
-import FiniteMarkovProcesses.Order.Interval.Finset.Gaps
+module
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Analysis.Calculus.Deriv.Mul
+public import Mathlib.MeasureTheory.Covering.Vitali
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.DerivIntegrable
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.LebesgueDifferentiationThm
+public import FiniteMarkovProcesses.Order.Interval.Finset.Gaps
 
 /-!
 # Fundamental theorem of calculus for absolutely continuous functions
@@ -22,6 +23,8 @@ update cannot collide with the upstream declarations.
 The principal result is
 `FiniteMarkovProcesses.AbsolutelyContinuousOnInterval.integral_deriv_eq_sub`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

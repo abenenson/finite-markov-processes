@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalCadlagRepresentative
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1DerivativeTopology
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.FiniteIntervalSupportedSignedMeasure
-import Mathlib.MeasureTheory.VectorMeasure.Decomposition.RadonNikodym
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalCadlagRepresentative
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1DerivativeTopology
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.FiniteIntervalSupportedSignedMeasure
+public import Mathlib.MeasureTheory.VectorMeasure.Decomposition.RadonNikodym
 
 /-!
 # Finite-interval hybrid bounded-variation paths
@@ -25,6 +26,8 @@ pointwise or product-topology surrogate.
 - `FiniteIntervalHybridBVPath`: finite-coordinate BV derivative graph carrying the induced
   strong-`L1` plus vague-derivative topology and its Borel sigma algebra.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 
