@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistory
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedWordExpectation
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistory
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedWordExpectation
 
 /-!
 # Complete-word occupation rewards for finite-state uniformized chains
@@ -24,6 +25,8 @@ virtual self-events nor identifies the virtual history law with a physical jump 
 - `finiteStateUniformizedWordDwellRewardExpectation_stationary`: exact pathwise-dwell coefficient
   collapse to duration times the stationary mean.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

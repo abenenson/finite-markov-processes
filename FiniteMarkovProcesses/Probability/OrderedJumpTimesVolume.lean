@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
-import FiniteMarkovProcesses.Probability.FiniteJumpHistory
+module
+public import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistory
 
 /-!
 # Volume of ordered finite event times
@@ -21,6 +22,8 @@ horizon.
 - `volume_orderedJumpTimes`: exact ordered-simplex volume.
 - `volume_orderedTimesInInterval`: exact ordered-simplex volume inside an arbitrary interval.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

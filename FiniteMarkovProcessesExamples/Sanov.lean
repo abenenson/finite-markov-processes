@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.MeasurableSpace.Instances
-import FiniteMarkovProcesses.Sanov
+module
+public import Mathlib.MeasureTheory.MeasurableSpace.Instances
+public import FiniteMarkovProcesses.Sanov
 
 /-!
 # Binary finite-alphabet Sanov examples
@@ -14,6 +15,8 @@ A fair reference satisfies the explicit interior hypothesis. A sample consisting
 bound. Positive sample size does not require every state to occur. The examples use Mathlib's
 canonical Boolean measurable space, in which every subset is measurable.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcessesExamples.Sanov
 

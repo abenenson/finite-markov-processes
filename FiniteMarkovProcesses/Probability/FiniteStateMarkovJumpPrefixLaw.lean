@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Algebra.BigOperators.Fin
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpTimedStateSlice
+module
+public import Mathlib.Algebra.BigOperators.Fin
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpTimedStateSlice
 
 /-!
 # Finite timed-prefix laws for finite-state jump processes
@@ -24,6 +25,8 @@ calculations before transport to cumulative jump-time coordinates.
 - `finiteStateMarkovTimedPrefixWaitingTimes_stateWordSlice`: the complete fixed-word waiting-time
   product measure.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

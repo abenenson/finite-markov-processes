@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpConservationInitialDensity
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpHybridBVCompactContainment
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpConservationInitialDensity
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpHybridBVCompactContainment
 
 /-!
 # Compact containment for random empirical-type hybrid paths
@@ -14,6 +15,8 @@ through exact disintegration over a random empirical initial type.  The result c
 tail of the exact probability-density/hybrid-path joint law without restricting its density
 coordinate.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

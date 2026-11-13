@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Order.Interval.Finset.Fin
-import Mathlib.Tactic.Linarith
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryTimeObservation
+module
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Order.Interval.Finset.Fin
+public import Mathlib.Tactic.Linarith
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryTimeObservation
 
 /-!
 # Directional-flow observations of finite jump histories
@@ -25,6 +26,8 @@ The two directions are never contracted to a net current in this module.
 - `FiniteJumpHistory.stateMembershipIndicator_stateAtTime_eq_initial_add_incoming_sub_outgoing`:
   non-tautological microscopic continuity on an ordered history.
 -/
+
+@[expose] public section
 
 open MeasureTheory
 

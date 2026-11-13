@@ -3,9 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCoerciveEnvelope
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVLinearCombination
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureWithDensityPairing
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCoerciveEnvelope
+public import
+  FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVLinearCombination
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureWithDensityPairing
 
 /-!
 # Hybrid convergence from vanishing difference variation
@@ -14,6 +16,8 @@ Two hybrid-BV paths with the same initial trace are close in strong `L1` and aga
 interior derivative test whenever the complete derivative variation of their literal difference
 is small.  This supplies a reusable convergence criterion on the exact hybrid topology.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

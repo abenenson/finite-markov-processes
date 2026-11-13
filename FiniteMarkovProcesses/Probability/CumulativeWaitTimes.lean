@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Data.Fin.SuccPred
-import Mathlib.LinearAlgebra.Matrix.Block
-import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
-import FiniteMarkovProcesses.Probability.FiniteJumpHistory
+module
+public import Mathlib.Data.Fin.SuccPred
+public import Mathlib.LinearAlgebra.Matrix.Block
+public import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistory
 
 /-!
 # Cumulative waiting-time coordinates
@@ -29,6 +30,8 @@ finite-dimensional Lebesgue measure exactly.
 - `FiniteJumpHistory.dwellTimeVector_cumulativeWaitTimes_last`: the terminal dwell is the remaining
   horizon.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

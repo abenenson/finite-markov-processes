@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovUniformization
-import Mathlib.Basic.Real.Sign
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovUniformization
+public import Mathlib.Basic.Real.Sign
 
 /-!
 # Finite-state Markov L1 dissipation
@@ -16,6 +17,8 @@ contributions cancel identically.
 This is the algebraic cancellation engine for total-variation stability of measurable-rate
 finite-state forward equations.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

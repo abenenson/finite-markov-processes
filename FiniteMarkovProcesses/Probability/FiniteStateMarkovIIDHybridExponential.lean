@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovIIDHybridFiniteSample
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpCountExponentialTail
-import FiniteMarkovProcesses.Probability.PoissonDominatedCenteredExponential
-import FiniteMarkovProcesses.Probability.FiniteIIDIntegratedL1Exponential
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovIIDHybridFiniteSample
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpCountExponentialTail
+public import FiniteMarkovProcesses.Probability.PoissonDominatedCenteredExponential
+public import FiniteMarkovProcesses.Probability.FiniteIIDIntegratedL1Exponential
 
 /-!
 # Exponential confidence for the original IID Markov hybrid observation
@@ -22,6 +23,8 @@ unconditional mean, with the physical time interval unchanged.
 * `finiteJumpHistoryHybridCoordinate_centered_mgf_le`: common local coordinate estimate.
 * `measure_iid_totalHybridBVObservation_deviation_le_exponential`: actual path-event bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

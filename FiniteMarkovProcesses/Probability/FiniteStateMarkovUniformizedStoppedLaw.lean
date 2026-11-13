@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpStoppedLaw
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedTrajectory
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpStoppedLaw
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedTrajectory
 
 /-!
 # Stopped laws of finite-state uniformized trajectories
@@ -24,6 +25,8 @@ without choosing a stopping value on trajectories that fail to cross the horizon
 - `finiteStateUniformizedStoppedHistoryProbabilityMeasure`: probability promotion after explicit
   almost-sure crossing.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

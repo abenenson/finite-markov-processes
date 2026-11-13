@@ -3,9 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservationMeasurability
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpEmpiricalInitialDensity
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpPositiveReplicaFamily
+module
+public import
+  FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservationMeasurability
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpEmpiricalInitialDensity
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpPositiveReplicaFamily
 
 /-!
 # Full-carrier hybrid-BV observation of positive Markov-jump replicas
@@ -25,6 +27,8 @@ new source path or a modification of the physical law.
 - `finiteStateMarkovJumpPositiveReplicaFamilyHybridBVObservationLaw_eq_map_replicaLaw`: the common
   sigma-carrier law reduces exactly to the fixed particle-count product law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

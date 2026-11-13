@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanContinuity
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanContinuity
 
 /-!
 # Initial-law mixtures of time-dependent finite-state Markov sources
@@ -11,6 +12,8 @@ import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanConti
 The normalized virtual and reduced history laws depend linearly on their finite initial PMF.
 This module exposes that source property as an exact finite mixture of pure-initial laws.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1Path
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureTopology
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1Path
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureTopology
 
 /-!
 # Strong-L1 plus open-interval vague-derivative path topology
@@ -34,6 +35,8 @@ topology.
   open-interval-vague convergence characterization.
 - `FiniteIntervalL1DerivativePath.measurableSpace_eq_borel`: definitional Borel compatibility.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

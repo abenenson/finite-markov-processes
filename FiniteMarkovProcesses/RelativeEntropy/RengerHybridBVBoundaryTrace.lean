@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVTerminalTrace
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVEventCoercivity
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVTerminalTrace
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVEventCoercivity
 
 /-!
 # Boundary traces for Renger hybrid paths
@@ -26,6 +27,8 @@ semicontinuity, or large-deviation bound is asserted here.
 * `rengerDirectionalFlowHybridBVTendstoTerminalTraceOfTendstoToL1PathOfUniformlyBoundedDynamicRate`
   supplies the exact terminal counterpart.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

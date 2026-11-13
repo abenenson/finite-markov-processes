@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.OrderedJumpTimesVolume
+module
+public import FiniteMarkovProcesses.Probability.OrderedJumpTimesVolume
 
 /-!
 # Volumes of ordered self-event insertion fibres
@@ -22,6 +23,8 @@ history after self-event deletion. It is independent of any Markov generator or 
 - `measurableSet_orderedSelfEventInsertions`: measurability of the complete insertion fibre.
 - `volume_orderedSelfEventInsertions`: exact product of dwell-power/factorial volumes.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

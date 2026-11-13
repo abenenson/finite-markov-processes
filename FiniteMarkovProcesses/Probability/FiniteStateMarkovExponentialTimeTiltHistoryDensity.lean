@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovExponentialTimeTilt
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedDeletionDensity
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovSelfEventDeletion
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovExponentialTimeTilt
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedDeletionDensity
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovSelfEventDeletion
 
 /-!
 # Reduced-history density under an exponential time tilt
@@ -29,6 +30,8 @@ Large-deviation limits are established in the separate hybrid-BV representation 
 - `lintegral_finiteStateMarkovExponentialTimeTiltHistoryExponential_le_one`: microscopic
   exponential supermartingale bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

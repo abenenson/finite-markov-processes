@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Topology.Algebra.InfiniteSum.ENNReal
+module
+public import Mathlib.Topology.Algebra.InfiniteSum.ENNReal
 
 /-!
 # Splitting a natural total at a successor-bounded index
@@ -17,6 +18,8 @@ reindexes a total-count sum with a finite inner sum into an unrestricted before/
 - `natSuccessorIndexSplitEquiv`.
 - `ENNReal.tsum_nat_sum_finSucc_eq_tsum_tsum_split`.
 -/
+
+@[expose] public section
 
 /-- Split a total natural count at one index between zero and the total, inclusive. -/
 def natSuccessorIndexSplitEquiv :

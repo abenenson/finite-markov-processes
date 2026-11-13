@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourOneLargeDeviationRepresentation
-import
+public import
 FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVCorollaryFourSixteenLargeDeviationRepresentation
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovIIDHybridExponential
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovIIDHybridExponential
 
 /-!
 # Finite-state Markov path large deviations
@@ -22,3 +23,5 @@ norm of the total hybrid observation around its unconditional generated mean.
 
 See `docs/path-large-deviations.md` and `docs/theorem-map.md` for assumptions and conventions.
 -/
+
+@[expose] public section

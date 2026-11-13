@@ -3,12 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1DerivativeTopology
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalStepL1Path
-import Mathlib.MeasureTheory.Function.Holder
-import Mathlib.MeasureTheory.Function.LpSpace.Indicator
-import Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1DerivativeTopology
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalStepL1Path
+public import Mathlib.MeasureTheory.Function.Holder
+public import Mathlib.MeasureTheory.Function.LpSpace.Indicator
+public import Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 
 /-!
 # Weighted coordinate integrals of finite-interval L1 paths
@@ -18,6 +19,8 @@ continuous real test as a continuous linear functional on the genuine almost-eve
 It is the strong-`L1` half of the continuous dual evaluations used in finite-interval hybrid-BV
 rate functionals.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

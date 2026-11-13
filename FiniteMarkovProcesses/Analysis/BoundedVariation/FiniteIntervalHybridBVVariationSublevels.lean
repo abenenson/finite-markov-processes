@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCoerciveEnvelope
-import
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCoerciveEnvelope
+public import
   FiniteMarkovProcesses.MeasureTheory.VectorMeasure.FiniteIntervalVagueSignedMeasureBoundaryCutoff
-import
+public import
   FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureVariationLowerSemicontinuity
 
 /-!
@@ -22,6 +23,8 @@ The resulting coordinatewise theorem composes over the finite derivative family.
 the broad admissibility-free derivative-variation budget is closed under genuine hybrid
 convergence; no absolute continuity, continuity equation, or boundary trace enters the proof.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

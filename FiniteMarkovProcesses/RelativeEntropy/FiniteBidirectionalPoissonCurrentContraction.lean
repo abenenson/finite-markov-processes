@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonCurrentContraction
+module
+public import FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonCurrentContraction
 
 /-!
 # Finite-sector bidirectional Poisson current contraction
@@ -26,6 +27,8 @@ particle source.  Those structures require a separately typed finite-graph reali
 - `finiteBidirectionalPoissonCurrentAction_commonScale`: exact finite-sector extensivity.
 - `finiteBidirectionalPoissonCurrentAction_fluctuationSymmetry`: summed time-odd sector.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

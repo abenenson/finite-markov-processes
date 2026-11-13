@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedSliceExpectation
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedSliceExpectation
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
 
 /-!
 # Measure-level expectations of finite-state uniformized histories
@@ -29,6 +30,8 @@ virtual self-events.
 - `integral_finiteStateMarkovAdditiveHistoryReward_densityMeasure`: unbounded density integral as
   the certified count-slice series.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

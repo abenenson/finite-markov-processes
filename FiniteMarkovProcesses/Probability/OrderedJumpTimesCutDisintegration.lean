@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.OrderedJumpTimesVolume
+module
+public import FiniteMarkovProcesses.Probability.OrderedJumpTimesVolume
 
 /-!
 # Cut-time disintegration of ordered event times
@@ -23,6 +24,8 @@ marked-event compensator identities.  It does not assert a stochastic independen
 - `orderedJumpTimesCutSector`: the corresponding two-block ordered sector.
 - `lintegral_orderedJumpTimesCutSector`: exact Tonelli disintegration on that sector.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

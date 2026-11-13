@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensity
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpInitialStateMarginal
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpPositiveReplicaFamily
+module
+public import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensity
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpInitialStateMarginal
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpPositiveReplicaFamily
 
 /-!
 # Empirical initial density of a positive Markov-jump replica family
@@ -25,6 +26,8 @@ No large-deviation bound or hybrid-path initial-trace identification is asserted
 - `finiteStateMarkovJumpPositiveReplicaFamilyInitialDensityLaw_eq_finiteIID`: exact identification
   with the generic IID empirical-density law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

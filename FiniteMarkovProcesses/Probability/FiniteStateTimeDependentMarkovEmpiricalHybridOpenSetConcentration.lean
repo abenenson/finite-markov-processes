@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
 FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalHybridTopologyConcentration
 
 /-!
@@ -13,6 +14,8 @@ This module turns the explicit finite-replica derivative-test estimates into asy
 concentration for the measurable total hybrid observation.  It then composes those estimates
 with strong-`L1` concentration and the finite-cylinder description of the hybrid topology.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteEmpiricalTypeInitialAtomLargeDeviation
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourOneOpenLowerBound
 
 /-!
@@ -20,6 +21,8 @@ The result covers finite-rate candidates whose recovered initial density is coor
 Lower-boundary candidates still require the theorem's separately supplied left-continuity premise
 and an interior path approximation; that premise is not silently used here.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

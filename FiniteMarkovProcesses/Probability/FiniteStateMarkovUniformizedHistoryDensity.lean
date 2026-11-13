@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedReducedLaw
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedSelfEventResummation
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedReducedLaw
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedSelfEventResummation
 
 /-!
 # Finite-history density of a uniformized Markov trajectory
@@ -26,6 +27,8 @@ normalized stopped uniformized law until their slice-by-slice identification is 
   decomposition.
 - `FiniteStateUniformizedStoppedLawHasHistoryDensity`: named stopped-law density obligation.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

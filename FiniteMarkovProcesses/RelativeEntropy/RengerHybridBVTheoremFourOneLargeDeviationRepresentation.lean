@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoLargeDeviationRepresentation
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourOneOpenLowerBound
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialPermutation
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialPermutation
 
 /-!
 # Renger Theorem 4.1 hybrid-BV large-deviation representation
@@ -18,6 +19,8 @@ the coordinate-positive limiting density.  That derived initial contract transpo
 upper bound from the common count-type machinery; the independently proved deterministic lower
 bound and the original labelled configurations remain visible in the final representation.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

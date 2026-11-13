@@ -3,10 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVEnvelopeCompactness
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryHybridBVObservationVariation
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialCountMoment
-import
+module
+public import
+  FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVEnvelopeCompactness
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryHybridBVObservationVariation
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialCountMoment
+public import
   FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialHybridBVObservation
 
 /-!
@@ -22,6 +24,8 @@ The resulting estimate is uniform in the deterministic initial configuration and
 particle-number speed.  It is compact containment only, not a conditional closed-set upper bound
 or a path large-deviation principle.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

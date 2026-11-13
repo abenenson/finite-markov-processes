@@ -173,6 +173,7 @@
     "FiniteMarkovProcesses/Probability/FiniteStateTimeDependentMarkovTransitionTestMoment.lean",
     "FiniteMarkovProcesses/Probability/FiniteStateTimeDependentMarkovUniformization.lean",
     "FiniteMarkovProcesses/Probability/FiniteStateTimeDependentMarkovUniformizedHistoryLaw.lean",
+    "FiniteMarkovProcesses/Probability/FiniteUniformPMF.lean",
     "FiniteMarkovProcesses/Probability/IonescuTulceaTrajectoryProjection.lean",
     "FiniteMarkovProcesses/Probability/NatSuccessorIndexSplit.lean",
     "FiniteMarkovProcesses/Probability/OrderedJumpTimesCutDisintegration.lean",
@@ -657,16 +658,16 @@
     "MeasureTheory.SignedMeasure.ofReal_abs_apply_le_totalVariation",
     "MeasureTheory.SignedMeasure.totalVariation_toSignedMeasure",
     "MeasureTheory.SignedMeasure.totalVariation_smul_apply_univ",
-    "MeasureTheory.SignedMeasure.totalVariation_withDensityᵥ_eq_withDensity_ofReal_abs",
-    "MeasureTheory.SignedMeasure.totalVariation_withDensityᵥ_apply_univ_eq_lintegral_ofReal_abs",
-    "MeasureTheory.SignedMeasure.totalVariation_withDensityᵥ_apply_eq_setLIntegral_ofReal_abs",
-    "MeasureTheory.SignedMeasure.zero_le_withDensityᵥ_of_ae_nonnegative",
+    "MeasureTheory.SignedMeasure.totalVariation_withDensity\u1d65_eq_withDensity_ofReal_abs",
+    "MeasureTheory.SignedMeasure.totalVariation_withDensity\u1d65_apply_univ_eq_lintegral_ofReal_abs",
+    "MeasureTheory.SignedMeasure.totalVariation_withDensity\u1d65_apply_eq_setLIntegral_ofReal_abs",
+    "MeasureTheory.SignedMeasure.zero_le_withDensity\u1d65_of_ae_nonnegative",
     "MeasureTheory.SignedMeasure.rnDeriv_nonnegative_of_zero_le",
     "MeasureTheory.SignedMeasure.rnDeriv_fintypeSum",
     "MeasureTheory.SignedMeasure.totalVariation_fintypeSum_apply_univ_le",
-    "MeasureTheory.SignedMeasure.totalVariation_withDensityᵥ_eq_withDensity_of_ae_nonnegative",
-    "MeasureTheory.SignedMeasure.totalVariation_withDensityᵥ_apply_univ",
-    "MeasureTheory.SignedMeasure.totalVariation_withDensityᵥ_apply_eq_setLIntegral",
+    "MeasureTheory.SignedMeasure.totalVariation_withDensity\u1d65_eq_withDensity_of_ae_nonnegative",
+    "MeasureTheory.SignedMeasure.totalVariation_withDensity\u1d65_apply_univ",
+    "MeasureTheory.SignedMeasure.totalVariation_withDensity\u1d65_apply_eq_setLIntegral",
     "FiniteMarkovProcesses.VagueSignedMeasure.absolutelyContinuous_toSignedMeasure_of_tendsto_of_uniformVariation",
     "FiniteMarkovProcesses.VagueSignedMeasure.zero_le_toSignedMeasure_of_continuousTestIntegral_nonnegative",
     "FiniteMarkovProcesses.VagueSignedMeasure.continuousTestIntegral_eq_integral_totalVariation_of_zero_le",
@@ -2460,6 +2461,8 @@
     "FiniteMarkovProcesses.Probability.finiteStateTimeDependentMarkovUniformizedHistoryMeasure_univ",
     "FiniteMarkovProcesses.Probability.finiteStateTimeDependentMarkovUniformizedHistoryProbabilityMeasure",
     "FiniteMarkovProcesses.Probability.finiteStateTimeDependentMarkovUniformizedHistoryProbabilityMeasure_toMeasure",
+    "FiniteMarkovProcesses.Probability.finiteUniformPMF",
+    "FiniteMarkovProcesses.Probability.finiteUniformPMF_apply",
     "FiniteMarkovProcesses.Probability.Measure.eq_of_map_frestrictLe_eq",
     "FiniteMarkovProcesses.Probability.Measure.map_compProd_of_map_kernel",
     "FiniteMarkovProcesses.Probability.finiteTrajectoryCoordinateMap",
@@ -3950,47 +3953,47 @@
   "public_dependencies": {
     "Cli": {
       "url": "https://github.com/leanprover/lean4-cli",
-      "rev": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+      "rev": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
     },
     "LeanSearchClient": {
       "url": "https://github.com/leanprover-community/LeanSearchClient",
-      "rev": "ddf04cf3949fa556442341e87d47f9f6e6074707"
+      "rev": "d6b4c7be5be75ec4917c873ac50c756dc1436372"
     },
     "Qq": {
       "url": "https://github.com/leanprover-community/quote4",
-      "rev": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259"
+      "rev": "dce0ad79c486cb1fb504af04f953c3466b0c6db8"
     },
     "aesop": {
       "url": "https://github.com/leanprover-community/aesop",
-      "rev": "355695d523e41d0554926416cba2a2b3544fbbc9"
+      "rev": "4a174c490d8707121c4a9290800489f105d85e07"
     },
     "batteries": {
       "url": "https://github.com/leanprover-community/batteries",
-      "rev": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2"
+      "rev": "66e469188fe07963e5cf666c7d4433f45b8131c5"
     },
     "finite-markov-kernels": {
       "url": "https://github.com/abenenson/finite-markov-kernels",
-      "rev": "6f3c409965c1a9d23f870ec4f9f2de9b5b79a0f3"
+      "rev": "e37ed564fcc193ace7c48a94cf8f7090c2a31390"
     },
     "importGraph": {
       "url": "https://github.com/leanprover-community/import-graph",
-      "rev": "e928b72544873815af278d38681b31c0293588e3"
+      "rev": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93"
     },
     "mathlib": {
       "url": "https://github.com/leanprover-community/mathlib4",
-      "rev": "d13f23b723b8a846827a245b89c10fc7d3f11612"
+      "rev": "56a005855ea17e0b0958f73ec801ae140b0a1679"
     },
     "measure-discrimination": {
       "url": "https://github.com/abenenson/measure-discrimination",
-      "rev": "a975df146d5dae2e60338eaad5e4e612828c8805"
+      "rev": "723fcf3128700035d6a23d2891970491ac03f392"
     },
     "plausible": {
       "url": "https://github.com/leanprover-community/plausible",
-      "rev": "118aa17ee84656b8bd727fef7c458ee8c833385c"
+      "rev": "dfa4f38190d07c37e315953e08b90fe2d95b3c24"
     },
     "proofwidgets": {
       "url": "https://github.com/leanprover-community/ProofWidgets4",
-      "rev": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5"
+      "rev": "df72b022e558978a1c50264cfc4d7fec86fa8e04"
     }
   },
   "dependency_modules": {
@@ -4004,676 +4007,676 @@
   "long_identifier_line_exceptions": {
     "FiniteMarkovProcesses/RelativeEntropy/FiniteStateMarkovJumpHybridBVJointUpperBound.lean": [
       {
-        "line": 538,
+        "line": 541,
         "sha256": "e8c892527b16e9c07b4cf0b1e22456b1c907b95ec7a547721d80d7deab0f1362",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 579,
+        "line": 582,
         "sha256": "6af6f487c6b0b8fa88163648fedcbc5af71df737553ddf927e049280872f0598",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 806,
+        "line": 809,
         "sha256": "769584c55671c4b4ccb022055328ec28aae82923976fa73ce8eacfca82b90cd6",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetActionThreshold.lean": [
       {
-        "line": 150,
+        "line": 153,
         "sha256": "c87758e87283e144364965ceb685a98e14940cb43bf6833b4d29db33b10c5a03",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 227,
+        "line": 230,
         "sha256": "581ca9171dbd6428d7adcf58ac39fcf069973bb96a274471d9a9cb3a1ee163ac",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 398,
+        "line": 401,
         "sha256": "32ebffb7c97ed05ab47c49216aad17dd13313ea7dbbdfdde843c145dd13afeef",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 408,
+        "line": 411,
         "sha256": "9734fb4730a2484c68613a15cc31888b4fe6abec29705b9d8f6ab1d3eedd6340",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetDensityErrorConvergence.lean": [
       {
-        "line": 137,
+        "line": 140,
         "sha256": "04c5abfcee413d0fb4038b498a9f7f41bde26337713b8f2f584d8b91dbf12d3f",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetGeneratedFlowActionConvergence.lean": [
       {
-        "line": 388,
+        "line": 391,
         "sha256": "5b6461d8f35a2b74fc302cbd2ac36dcb45df1018d255cfdc4eb55455fbbc1e1b",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetOpenSetConcentration.lean": [
       {
-        "line": 45,
+        "line": 48,
         "sha256": "2eb20de30da55a02dab76a7111f56436a68b8352b39ea70f2db33589afac2421",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 84,
+        "line": 87,
         "sha256": "08ae96f368030e075bb3385f9544638a74d83e98b19a558daccde82eea4d9ff7",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 91,
+        "line": 94,
         "sha256": "34b2dc30a0b867de2fd252edda3c8c468b0d634eea01fabd69134b33f006c37b",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 121,
+        "line": 124,
         "sha256": "84f189a5f2592e718a5392cba70a774a51a4c375bf711e5093c4b6d73c01c064",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 124,
+        "line": 127,
         "sha256": "b1e4ce5001c123822f7924e82800c333f904faaa45c0a0be5244fd7fe983c034",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 131,
+        "line": 134,
         "sha256": "7925fc53daa2fdb8020bb42844231333fa365b0a8bf1dc8165b7aa2c56f9263b",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 146,
+        "line": 149,
         "sha256": "aa9fc79dbca9101b5563c7b7544fe275af228a45ed33fd9d92193af40ba14789",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 180,
+        "line": 183,
         "sha256": "08ae96f368030e075bb3385f9544638a74d83e98b19a558daccde82eea4d9ff7",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 200,
+        "line": 203,
         "sha256": "bdf91b187eea472ab97681158826b2541f579716b64709496989ea54d69014ca",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 207,
+        "line": 210,
         "sha256": "75d50ffcacf2ccdcdd492fd2f4c6fe8e03f0b45414e97148a513d0df2a0d5722",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetSourceFlowConvergence.lean": [
       {
-        "line": 163,
+        "line": 166,
         "sha256": "4d1f473fac68ebe0ebfd08aa52477b345d9665511a8033fbb7eb05915c9d99f8",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 494,
+        "line": 497,
         "sha256": "b0cf0f0a3ffc2810f65aa9efa2df0c30ab20a2dc75a905a107e0b98444dad976",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 546,
+        "line": 549,
         "sha256": "8780a69ed616a00a3eedf74d5af3043feae4cc9c8633c3836ddeb3ad8d9dd4db",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 598,
+        "line": 601,
         "sha256": "60db7c3a7fde4f9f23e4f7f4426981093193e6190727cf18cdeb5be2920cf22d",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 632,
+        "line": 635,
         "sha256": "39f68b5a038f07925fa516941ebe35647b9c49ea192a36bad7d468b991f8f84f",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 656,
+        "line": 659,
         "sha256": "509241c738004c165e0c38f936dc205863f13300a55f4f33d19a129028fc39be",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 679,
+        "line": 682,
         "sha256": "ea3b61d9625cac0a407de1504617e4f19ee7807ee47a3425e711095050651cef",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVPositiveTargetSourceMeanPathConvergence.lean": [
       {
-        "line": 182,
+        "line": 186,
         "sha256": "4c199031d60982799dc1288fb4709da2598ae3d85574058ebb58389d7f7267f3",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 214,
+        "line": 218,
         "sha256": "d9b011935c555847db6a8291a1486e75c52db568f2f1dab18ee4c30efb797648",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 237,
+        "line": 241,
         "sha256": "f41a58d9a95e3435091691f0fb9574e9b79a1bbbf3778dec20261217898b8077",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 342,
+        "line": 346,
         "sha256": "d82bf1b0504b17b8a2e7c1c26b78f982c5bc65f877e6c4ba4a7a82c2a12ddbb8",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 386,
+        "line": 390,
         "sha256": "e7ce4b6c70dedc34de6804305188ffc32d343e9b449d67153e08cc1a69ad9e3f",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 454,
+        "line": 458,
         "sha256": "19a1f2aac1b2004d38e17d57e94dda67cdc0b82ff8653a7a9643df5a9c3104a3",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 462,
+        "line": 466,
         "sha256": "c2d05c4c5d453a1994aa8501aeb54bae6bc240a6d77899df12c94a1345a1f652",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVRegularizedOpenLowerEstimate.lean": [
       {
-        "line": 48,
+        "line": 51,
         "sha256": "a5bccd4b96e98160a01335dcffed1b581d172fac386270b50610720ee269efbd",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 125,
+        "line": 128,
         "sha256": "74b723bae14029aa26de164b81ecfd814bd67a7079917891ccfa3c3c98405486",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 176,
+        "line": 179,
         "sha256": "540043b669e27d9ad64e8e66dfd646bdaa47267c30c7e7d3b78656ce9cd704a8",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 214,
+        "line": 217,
         "sha256": "08ae96f368030e075bb3385f9544638a74d83e98b19a558daccde82eea4d9ff7",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 252,
+        "line": 255,
         "sha256": "08ae96f368030e075bb3385f9544638a74d83e98b19a558daccde82eea4d9ff7",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 279,
+        "line": 282,
         "sha256": "142f0000e99233502d77c626a4e61be97818467b267cc5eeeeb3f82bea91b965",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 286,
+        "line": 289,
         "sha256": "83ce803b09b6ff3fad4409bae317e7244e95f0b7e0edcc48282dd734d010672a",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 298,
+        "line": 301,
         "sha256": "aab1bc4d3cba7ba2ede1eda528190813ced616158cd3384dd4b6a059d0fc416c",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 301,
+        "line": 304,
         "sha256": "c32a8d7481757791baabca6ef31b07390c1cadafde6090ccb95bf00072d1597a",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 320,
+        "line": 323,
         "sha256": "9c14e53909c24f646c336dff942f7467c79cb9de5570f181f88cb0415463872f",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 334,
+        "line": 337,
         "sha256": "91f68fbc042d3247c18598e1512ac90343bd884270bd41c063392cf41fa2877b",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 371,
+        "line": 374,
         "sha256": "d2f54e8b51bd6d0303a765ba5f4f5368453fabd572b3f205e8c9b5a5e51e0278",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 377,
+        "line": 380,
         "sha256": "5123673a1558c86bb39be027b17b7725220512aecf2c50d781b5f8615f015b65",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 475,
+        "line": 478,
         "sha256": "348eced1f11b0b0d6f0d437f6214ced5eae3e3750d87e0aff355124658026055",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 516,
+        "line": 519,
         "sha256": "653ec681bed45d5eb503f1ce709398626a377eea106ff34798fccf983dbec56d",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 555,
+        "line": 558,
         "sha256": "3088acdabee07cad1b25d87d32be6ff1484926d79942990df80a56212aba64eb",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 626,
+        "line": 629,
         "sha256": "34b2dc30a0b867de2fd252edda3c8c468b0d634eea01fabd69134b33f006c37b",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 655,
+        "line": 658,
         "sha256": "84f189a5f2592e718a5392cba70a774a51a4c375bf711e5093c4b6d73c01c064",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 678,
+        "line": 681,
         "sha256": "1451faaa88a27002702dfe921ec08fb443da7eaf3690bd008dca55bfe6cf1756",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 717,
+        "line": 720,
         "sha256": "73abd865e309bf3796da3dbdeba0e083a30764884b7ce1c859e87f17303e23cd",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 794,
+        "line": 797,
         "sha256": "76394ff5825e958dfe8e178415faea7ba83c8ec32a5d31b8bf3f89979a401e8b",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 828,
+        "line": 831,
         "sha256": "937c2a93c75b09b95e0b53dc2596c0d275c5411f976ec5ac96e64a45bfdf6d95",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 856,
+        "line": 859,
         "sha256": "71e13a7c7be2c2f1d2b07f1a4e36eef441b86976447ece1cab02231d993b16fb",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVRoundedInitialActionConcentration.lean": [
       {
-        "line": 42,
+        "line": 45,
         "sha256": "48166a24d5689b94499a17b9d63b7506fa70b0a3ce59cbbcc1b50df6d923b0d7",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 124,
+        "line": 127,
         "sha256": "5fb07d6b9166038b32aca5d06aaccf7d42032977b2233829dc4028aa07ef2b01",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 149,
+        "line": 152,
         "sha256": "c1f93bea7ccc6e25ae8103ffba8e87806ad50eee4029f100e127fd95082b9127",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 186,
+        "line": 189,
         "sha256": "e630ac0abd18024bd52e0777798746889a18374668e05da95a820e5423b703bd",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 252,
+        "line": 255,
         "sha256": "34fc7c58b05c9621f78b4e137a90321e8093b9cfebe600e799b44320e3310598",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 283,
+        "line": 286,
         "sha256": "79392ddf2246274037880482508e09afcc2ce191c79f050b2bbd16af24115b3b",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 312,
+        "line": 315,
         "sha256": "f058a932a28c19587772488e45c38c650ddda1f8f45a5e394a8a213367e9382c",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTheoremFourOneOpenLowerBound.lean": [
       {
-        "line": 48,
+        "line": 51,
         "sha256": "bb18d188e45c160ba8e7d9b0b1e2ec0b10935833b8acefb8781720e188d69977",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 158,
+        "line": 161,
         "sha256": "71e13a7c7be2c2f1d2b07f1a4e36eef441b86976447ece1cab02231d993b16fb",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 209,
+        "line": 212,
         "sha256": "de04c00a50ff8fffe9556e9f08d6bd761d4dd84b59165249c5f88672f31e6a80",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTheoremFourTwoBoundaryOpenLowerBound.lean": [
       {
-        "line": 124,
+        "line": 127,
         "sha256": "22c996be0f07ada79bdf6edce233115fe376994a2b67e3bc09f3db3b8c681786",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 171,
+        "line": 174,
         "sha256": "476da312f7ef88e9bc7c2394a23037fe0a148b1e49003fda6976a2c43ff52094",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 288,
+        "line": 291,
         "sha256": "bd4c07bd8ae1c0fe4bdfadf639c0c54fbde058072bdae46c15a3f63bab260ac9",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 360,
+        "line": 363,
         "sha256": "8e4034ee1fc406991450d7c20086a8443607721ab86e15b16d91f75f361ef38e",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 456,
+        "line": 459,
         "sha256": "486efdc72283aff969a8629e4b6f8236f9cfbe8095d21e990656c08a345bcdb3",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 459,
+        "line": 462,
         "sha256": "8e4034ee1fc406991450d7c20086a8443607721ab86e15b16d91f75f361ef38e",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTheoremFourTwoInteriorOpenLowerBound.lean": [
       {
-        "line": 43,
+        "line": 46,
         "sha256": "183b3a425ea4ce2c5ec5af0fdb1c20ff91c4cfedffcc6a9b27768972d2c1a988",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 107,
+        "line": 110,
         "sha256": "71e13a7c7be2c2f1d2b07f1a4e36eef441b86976447ece1cab02231d993b16fb",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 117,
+        "line": 120,
         "sha256": "9115ad30f99a76de0b22a5d09f1170c54b95c5c6cef5a2f108edb0b074c8f9c4",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 172,
+        "line": 175,
         "sha256": "8754de18c5198bcc0653795d3526b7473d408cc36bdc51083ba184558158a413",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/RelativeEntropy/RengerHybridBVTruncatedTargetFlowRecovery.lean": [
       {
-        "line": 59,
+        "line": 62,
         "sha256": "59fc9b6cdb2bb3ca24bf08484852f0190cb9dda43cf8092f8f2c6d095a2129c8",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/Probability/FiniteStateMarkovJumpIIDHybridBVObservationTransport.lean": [
       {
-        "line": 28,
+        "line": 30,
         "sha256": "86c63427c1850c5e330b30d2de340ca9968f48bcd80edc7a8e431a83232379e5",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 30,
+        "line": 32,
         "sha256": "a7c105ce0aad5b3f500580a312172e829edb26d0f108639719052efb96ec923e",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 70,
+        "line": 74,
         "sha256": "30d799782af88ce5bd0f7c9bc2e21e11db31a90620c172ebc76c06e75f84895d",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 108,
+        "line": 112,
         "sha256": "0734b2038df476f285ee6ff4ae67fa7df1f45fd1525d568bcd684901d1497c07",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 121,
+        "line": 125,
         "sha256": "3efcc4fb4e71023e34211d1e56bc72f28b1694c395d9feffc3a26a3e8937ea2e",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 151,
+        "line": 155,
         "sha256": "8ab99e65e84236ebba903eb78b5506b957371f46dafd188a562f85ab8967ef94",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/Probability/FiniteStateTimeDependentMarkovEmpiricalHybridL1Concentration.lean": [
       {
-        "line": 354,
+        "line": 358,
         "sha256": "ada9b52fc09d37041d7e60b0102b509baf3531191c170984a83f5e0eae3fde66",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 578,
+        "line": 582,
         "sha256": "dc8c5ea4c9201cd1783dff5957bca626023566d5b41d56681b7fa210299cb065",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 616,
+        "line": 620,
         "sha256": "74b723bae14029aa26de164b81ecfd814bd67a7079917891ccfa3c3c98405486",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 636,
+        "line": 640,
         "sha256": "b0e3b0271abcf1c33ac665d41232f171b2c0ef8c270795c4dfc1caef310a7288",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 639,
+        "line": 643,
         "sha256": "ca0042fb171ac02b2f176cec269e361ff129aa51a07dacc9fe3d38ece51e1d12",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 674,
+        "line": 678,
         "sha256": "c0776706b9dc6e0fed9cdb97cf056842dfca67da951cb5cef3c8836630306b1b",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/Probability/FiniteStateTimeDependentMarkovEmpiricalHybridOpenSetConcentration.lean": [
       {
-        "line": 32,
+        "line": 35,
         "sha256": "b82de5b68f5210e114ef183e7af2823b2db4d09244dd7a2c565fe0a9d67dc0d3",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 110,
+        "line": 113,
         "sha256": "8c1b26eb3aabc89b31702cd6c59f6897139ea62be06836c601f55707a907d9f8",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 150,
+        "line": 153,
         "sha256": "6a703cb417ea2531d296598a581a707f8523d1ebd60dcaa7f000550b54fc5c8e",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 152,
+        "line": 155,
         "sha256": "01feda28cc12dca910a72e73f902a85374da3cd0629f4eba8436b95a8d9a2933",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 209,
+        "line": 212,
         "sha256": "fae645dcfe4e2e3d46274540e08ea27b03ae85892184276ade843b200559dc10",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 214,
+        "line": 217,
         "sha256": "acfde1185c6ed3405b784c1b29726226f3cf67c4479c1a4fc53d50dfc60d95e9",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 225,
+        "line": 228,
         "sha256": "147863525c45047902323192daf548159b1f1c88e086779cf42e0813dcf3b1e7",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 247,
+        "line": 250,
         "sha256": "e16758ff90fe6b060365a4395f26fb071dc7308a389a42adcb5c23ff767dda37",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 251,
+        "line": 254,
         "sha256": "9318305329baedb6ea8db3648ffbbdcda9865f7463d6bd01317091045c34820e",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 253,
+        "line": 256,
         "sha256": "db899464996bb6e8f20647cf4b069d92559134af23953fd3147113e9b768279a",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 260,
+        "line": 263,
         "sha256": "a528cad3df16432f510da1ba2d60ce87f218c20725abfc31df163b085b1781bf",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 274,
+        "line": 277,
         "sha256": "920e7da23301bb66beb7235b073a73cb9c863a9470ab8c8bc5c67569938a090b",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 282,
+        "line": 285,
         "sha256": "bec82155e999ad566c755820225acb5b79eedd7962169e21af71442338cd20f9",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 308,
+        "line": 311,
         "sha256": "900d10f225cdd77b085e747a0aa802d5fe1e6da22d6b0ca854501d4d61e34023",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 311,
+        "line": 314,
         "sha256": "9d15d3dcd3b131b6660553f47456c2846365e506b0ca32419112a170542e196a",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 324,
+        "line": 327,
         "sha256": "6c010c13d49e4a371bbda6b0633acfda6e02f44771f845e9e3bc48e303309c9e",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 369,
+        "line": 372,
         "sha256": "53fc38761e097ab4b862d2b3c834b3d39db6da35506864b2aea0fb1aacd9bb11",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/Probability/FiniteStateTimeDependentMarkovEmpiricalHybridTopologyConcentration.lean": [
       {
-        "line": 529,
+        "line": 533,
         "sha256": "f491eb474e344968ce062e18d64450c0c51b9a81a916cd8ea890f81a869bcb5b",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 564,
+        "line": 568,
         "sha256": "b2c400a1e96e40a91ae306ced26930390bbc0452d34d8b43377999db17adb6ec",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 581,
+        "line": 585,
         "sha256": "e5c311f2be8dbe9c5cef37c08b29d5a7c3eca85c73087e94d38eb0ca670897c8",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 672,
+        "line": 676,
         "sha256": "795db033e3e44b7fa1d01fa801f2edb33e11558288f321ba19f91c548d46f9f2",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 749,
+        "line": 753,
         "sha256": "e446eb237a244a8a9fa95ac652f931ee21d876893b5143041162600fe595882d",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }
     ],
     "FiniteMarkovProcesses/Probability/FiniteStateTimeDependentMarkovRoundedInitialMeanConvergence.lean": [
       {
-        "line": 368,
+        "line": 371,
         "sha256": "0030577187b2a034a5ffeae03194c21e815a410774aaf2095c3ee53889d06b94",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 483,
+        "line": 486,
         "sha256": "685c5a852bc7a41a9f92f814a4b8c992a78a02bd8f600a2ea433bcc75c3720bc",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 498,
+        "line": 501,
         "sha256": "b931735ea69e81c861d99a5ef870168d521d2ae2275d5ea67630a0b41462f030",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 511,
+        "line": 514,
         "sha256": "ac5756e9b00803beea6218718bb667e90f64626cd164a279a25885ea4dcb6bd3",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 551,
+        "line": 554,
         "sha256": "e13ec4ea1d34565e6cf053a9d91da0c19af25ffcbc2651aa0bc34a73841cf8ef",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 554,
+        "line": 557,
         "sha256": "7b2fe67f5c3e62104f82a58d4deceeceb2b8c6cfa910bba618a1a2d73897ccba",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 562,
+        "line": 565,
         "sha256": "e8cef69518d0d0801793b4ad0cb61d0887694b56be9e0a00dcb07c7e368d54b4",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 596,
+        "line": 599,
         "sha256": "d07988f963c020bf6106e3bfabeb4108de66e0904c4b806b5a5ef20146e44cda",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 602,
+        "line": 605,
         "sha256": "8566f343e5736a809581d31042d6086d97d3a11b64461833367da5e7fab58a30",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 607,
+        "line": 610,
         "sha256": "bd35fc735b643b007c57f1fbd069fdc50c8f8c8f245e1d1850f80fcad6669de2",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 615,
+        "line": 618,
         "sha256": "e1143b55b492846c2e073174fd20194130c178f121e9cd4b2f5853149f599d7a",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 646,
+        "line": 649,
         "sha256": "336cc9885e40c7a68b6d378b4a43c0d01900adfda4f9aba652fd98d043131fb2",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 652,
+        "line": 655,
         "sha256": "a22c73d49e68826ef2268576cf6dbd926c15ebec718265693ce14f7d58b5e72c",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 656,
+        "line": 659,
         "sha256": "4758f5eefa7095dd7c22c944c26fa80f858c6af19b0df00931066318a6204679",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 676,
+        "line": 679,
         "sha256": "b1e4ce5001c123822f7924e82800c333f904faaa45c0a0be5244fd7fe983c034",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 686,
+        "line": 689,
         "sha256": "94d9a7b1e0c45a9a3a11f58217fcd2ec9da36c7b39204901be54bd2a8304774e",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       },
       {
-        "line": 709,
+        "line": 712,
         "sha256": "7925fc53daa2fdb8020bb42844231333fa365b0a8bf1dc8165b7aa2c56f9263b",
         "reason": "Unchanged source identifier with its required local indentation and delimiters; splitting its name changes the public API."
       }

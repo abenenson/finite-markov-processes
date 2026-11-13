@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedRewardExpectation
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedRewardExpectation
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
 
 /-!
 # Poissonized stationary rewards of finite-state Markov chains
@@ -24,6 +25,8 @@ with the canonical physical finite-jump law.
 - `integral_uniformizedCumulativeTransitionRewardExpectation_stationary`: exact physical-rate
   expectation after Poissonization.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

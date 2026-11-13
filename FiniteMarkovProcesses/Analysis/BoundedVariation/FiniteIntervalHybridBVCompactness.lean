@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCoerciveEnvelope
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalSampleStepL1Path
-import Mathlib.MeasureTheory.Function.ConvergenceInMeasure
-import Mathlib.Order.SuccPred.IntervalSucc
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVCoerciveEnvelope
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalSampleStepL1Path
+public import Mathlib.MeasureTheory.Function.ConvergenceInMeasure
+public import Mathlib.Order.SuccPred.IntervalSucc
 
 /-!
 # Compactness of finite-interval hybrid bounded-variation envelopes
@@ -15,6 +16,8 @@ This module gives the constructive finite-mesh approximation used in the HPR com
 It deliberately starts from the broad quantitative envelope: neither absolute continuity, a
 continuity equation, nor boundary traces enter the approximation.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

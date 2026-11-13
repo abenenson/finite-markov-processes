@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertionCode
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertionCode
 
 /-!
 # Canonical run-length decoder for finite state words
@@ -17,6 +18,8 @@ The resulting decoder is the missing surjectivity direction complementary to the
 injective insertion code.  No measure or jump-law claim is made before the expanded-word identity
 is proved.
 -/
+
+@[expose] public section
 
 open scoped BigOperators
 

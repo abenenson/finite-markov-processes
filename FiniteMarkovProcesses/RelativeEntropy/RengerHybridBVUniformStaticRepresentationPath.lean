@@ -3,12 +3,14 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVConstantTranslation
-import
+public import
   FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVLinearCombination
-import FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain
+public import FiniteMarkovProcesses.Probability.FiniteUniformPMF
+public import FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain
 
 /-!
 # Uniform static Renger representation path
@@ -18,6 +20,8 @@ directional flow.  It is built on the existing hybrid carrier by zeroing any rep
 and translating only its density coordinates.  The construction supplies a coordinate-positive,
 finite-action interior anchor without introducing a new microscopic source.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 
@@ -40,7 +44,7 @@ noncomputable def rengerDirectionalFlowHybridBVUniformDensityVector :
   (PiLp.continuousLinearEquiv 1 ℝ
     (fun _ : EmpiricalDensityDirectionalFlowCoordinate State => ℝ)).symm
       (fun coordinate => Sum.elim
-        (fun state => (PMF.uniformOfFintype State state).toReal)
+        (fun state => (finiteUniformPMF State state).toReal)
         (fun _transition => 0) coordinate)
 
 omit [DecidableEq State] in
@@ -48,7 +52,7 @@ omit [DecidableEq State] in
 @[simp]
 theorem rengerDirectionalFlowHybridBVUniformDensityVector_density (state : State) :
     rengerDirectionalFlowHybridBVUniformDensityVector (State := State) (Sum.inl state) =
-      (PMF.uniformOfFintype State state).toReal := by
+      (finiteUniformPMF State state).toReal := by
   simp [rengerDirectionalFlowHybridBVUniformDensityVector]
 
 /-- The uniform vector vanishes on cumulative-flow coordinates. -/
@@ -62,11 +66,11 @@ theorem rengerDirectionalFlowHybridBVUniformDensityVector_flow
 omit [DecidableEq State] in
 /-- The real uniform density coordinates sum to one. -/
 theorem sum_rengerDirectionalFlowHybridBVUniformDensityVector_density :
-    ∑ state : State, (PMF.uniformOfFintype State state).toReal = 1 := by
+    ∑ state : State, (finiteUniformPMF State state).toReal = 1 := by
   rw [← ENNReal.toReal_sum
-    (fun state _hState => (PMF.uniformOfFintype State).apply_ne_top state)]
-  rw [show ∑ state : State, PMF.uniformOfFintype State state = 1 by
-    simpa only [tsum_fintype] using (PMF.uniformOfFintype State).tsum_coe]
+    (fun state _hState => (finiteUniformPMF State).apply_ne_top state)]
+  rw [show ∑ state : State, finiteUniformPMF State state = 1 by
+    simpa only [tsum_fintype] using (finiteUniformPMF State).tsum_coe]
   simp
 
 /-- Static uniform density and zero cumulative flow on the exact hybrid carrier. -/
@@ -82,7 +86,7 @@ theorem rengerDirectionalFlowHybridBVUniformStaticPath_densityValue
     {time : ℝ} (hTime : time ∈ Ico 0 duration) (state : State) :
     rengerDirectionalFlowHybridBVDensityValue
         (rengerDirectionalFlowHybridBVUniformStaticPath path) time state =
-      (PMF.uniformOfFintype State state).toReal := by
+      (finiteUniformPMF State state).toReal := by
   unfold rengerDirectionalFlowHybridBVDensityValue
     rengerDirectionalFlowHybridBVUniformStaticPath
   rw [FiniteIntervalHybridBVPath.constantTranslate_cadlagRepresentative_eq _ _ hTime,
@@ -129,7 +133,7 @@ theorem rengerDirectionalFlowHybridBVUniformStaticPath_initialDensity
     (path : RengerDirectionalFlowHybridBVPath State duration)
     (hDuration : 0 < duration) (state : State) :
     (rengerDirectionalFlowHybridBVUniformStaticPath path).initialTrace (Sum.inl state) =
-      (PMF.uniformOfFintype State state).toReal := by
+      (finiteUniformPMF State state).toReal := by
   unfold rengerDirectionalFlowHybridBVUniformStaticPath
   rw [FiniteIntervalHybridBVPath.constantTranslate_initialTrace _ _ hDuration,
     FiniteIntervalHybridBVPath.linearCombination_initialTrace _ _ _ _ hDuration]
@@ -153,7 +157,7 @@ theorem rengerDirectionalFlowHybridBVUniformStaticPath_terminalDensity
     (hDuration : 0 < duration) (state : State) :
     (rengerDirectionalFlowHybridBVUniformStaticPath path).terminalTrace hDuration
         (Sum.inl state) =
-      (PMF.uniformOfFintype State state).toReal := by
+      (finiteUniformPMF State state).toReal := by
   unfold rengerDirectionalFlowHybridBVUniformStaticPath
   rw [FiniteIntervalHybridBVPath.constantTranslate_terminalTrace _ _ hDuration,
     FiniteIntervalHybridBVPath.linearCombination_terminalTrace _ _ _ _ hDuration]
@@ -252,7 +256,7 @@ theorem rengerDirectionalFlowHybridBVUniformStaticRepresentationPath_initialDens
   change 0 < Real.toNNReal
     ((rengerDirectionalFlowHybridBVUniformStaticPath path.1).initialTrace (Sum.inl state))
   rw [rengerDirectionalFlowHybridBVUniformStaticPath_initialDensity path.1 hDuration state]
-  simpa [PMF.uniformOfFintype_apply] using (Fintype.card_pos : 0 < Fintype.card State)
+  simpa [finiteUniformPMF_apply] using (Fintype.card_pos : 0 < Fintype.card State)
 
 /-- The nonnegative density coordinate of the static path is the uniform PMF coordinate. -/
 theorem rengerDirectionalFlowHybridBVUniformStaticPath_densityAt
@@ -260,7 +264,7 @@ theorem rengerDirectionalFlowHybridBVUniformStaticPath_densityAt
     {time : ℝ} (hTime : time ∈ Ico 0 duration) (state : State) :
     rengerDirectionalFlowHybridBVDensityAt
         (rengerDirectionalFlowHybridBVUniformStaticPath path) time state =
-      (PMF.uniformOfFintype State state).toNNReal := by
+      (finiteUniformPMF State state).toNNReal := by
   unfold rengerDirectionalFlowHybridBVDensityAt
   rw [rengerDirectionalFlowHybridBVUniformStaticPath_densityValue path hTime state]
   exact ENNReal.toNNReal_toReal_eq _
@@ -288,7 +292,7 @@ theorem rengerDirectionalFlowHybridBVUniformStaticPath_localRate
         (rengerDirectionalFlowHybridBVFlowDerivativeAt
           (rengerDirectionalFlowHybridBVUniformStaticPath path) time) =
       ∑ transition : FiniteStateOrderedOffDiagonalTransition State,
-        ((PMF.uniformOfFintype State transition.val.1).toNNReal : ENNReal) *
+        ((finiteUniformPMF State transition.val.1).toNNReal : ENNReal) *
           generator.rate transition.val.1 transition.val.2 := by
   unfold rengerDirectionalFlowLocalRateRaw
   apply Finset.sum_congr rfl
@@ -314,7 +318,7 @@ theorem rengerDirectionalFlowHybridBVUniformStaticRepresentationPath_dynamicRate
           (rengerDirectionalFlowHybridBVFlowDerivativeAt
             (rengerDirectionalFlowHybridBVUniformStaticRepresentationPath path).1 time) =
         ∑ transition : FiniteStateOrderedOffDiagonalTransition State,
-          ((PMF.uniformOfFintype State transition.val.1).toNNReal : ENNReal) *
+          ((finiteUniformPMF State transition.val.1).toNNReal : ENNReal) *
             generator.rate transition.val.1 transition.val.2 := by
     filter_upwards [ae_restrict_mem measurableSet_Ioo] with time hTime
     exact rengerDirectionalFlowHybridBVUniformStaticPath_localRate

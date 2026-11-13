@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVForwardUniqueness
-import
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVForwardUniqueness
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovMeanHybridBVRepresentationPath
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPath
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPath
 
 /-!
 # Complete-rate zero paths are actual finite-state mean evolutions
@@ -32,6 +33,8 @@ forward uniqueness are classical. This module assembles them with the existing M
 path and hybrid reconstruction: the arbitrary supplied initial cost determines the zero family.
 The zero-set theorem is deterministic; it does not itself assert concentration of random paths.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

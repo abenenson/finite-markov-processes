@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateStability
-import FiniteMarkovProcesses.RelativeEntropy.LargeDeviationConcentration
-import FiniteMarkovProcesses.RelativeEntropy.PoissonRateBudgetCoercivity
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovIIDHybridExponential
-import FiniteMarkovProcesses.Probability.FiniteSampleConfidence
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateStability
+public import FiniteMarkovProcesses.RelativeEntropy.LargeDeviationConcentration
+public import FiniteMarkovProcesses.RelativeEntropy.PoissonRateBudgetCoercivity
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovIIDHybridExponential
+public import FiniteMarkovProcesses.Probability.FiniteSampleConfidence
 
 /-!
 # Quantitative stability and particle probability bounds
@@ -26,3 +27,5 @@ The scalar entropy/Hellinger, finite-state contraction, and Chernoff arguments a
 the density/ordered-flow action is due to Renger (2018). See the theorem map and path guide for
 exact hypotheses and the distinctions between these conclusions.
 -/
+
+@[expose] public section

@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformization
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformization
 
 /-!
 # Stationary rewards of finite-state uniformized chains
@@ -24,6 +25,8 @@ They do not identify the virtual-event carrier with the physical jump-history la
 - `uniformizationRate_mul_uniformizedStationaryTransitionReward`: exact conversion from one-event
   rewards to physical per-time directed-rate rewards.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

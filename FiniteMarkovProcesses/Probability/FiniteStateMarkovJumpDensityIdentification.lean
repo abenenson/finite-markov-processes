@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.MeasureTheory.Measure.PiWithDensity
-import FiniteMarkovProcesses.Probability.CumulativeWaitTimes
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpStoppedLaw
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpTapeMarginal
+module
+public import FiniteMarkovProcesses.MeasureTheory.Measure.PiWithDensity
+public import FiniteMarkovProcesses.Probability.CumulativeWaitTimes
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpStoppedLaw
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpTapeMarginal
 
 /-!
 # Identifying generative and density laws for finite-state jump processes
@@ -43,6 +44,8 @@ not assign a fictitious Lebesgue density to an absorbing holding law.
 - `finiteStateMarkovJumpDensityIsNormalized_of_nonnegative`: constructive normalization of the
   physical density at every nonnegative finite horizon.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

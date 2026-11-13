@@ -3,12 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Probability.Independence.Integration
-import
+module
+public import Mathlib.Probability.Independence.Integration
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVExponentialMoment
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual
-import
+public import
   FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialHybridBVObservation
 
 /-!
@@ -30,6 +31,8 @@ The configuration entries need not be identical.
 - `finiteStateMarkovJumpDeterministicInitialHybridBVDualEvaluation_ge_le_exponential`: the
   corresponding particle-speed fixed-test event bound on the macroscopic law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

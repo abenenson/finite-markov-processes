@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRegularizedOpenLowerEstimate
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVCompleteRateCompactness
 
 /-!
@@ -24,6 +25,8 @@ literal large-deviation lower-bound contract on the theorem's own hybrid carrier
 This is only the open lower half of the deterministic-initial path LDP.  The closed upper bound,
 exponential tightness/goodness, and the separately mixed initial regimes remain independent.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowObservation
-import FiniteMarkovProcesses.Probability.OrderedJumpTimesCutDisintegration
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowObservation
+public import FiniteMarkovProcesses.Probability.OrderedJumpTimesCutDisintegration
 
 /-!
 # Partition of ordered event times at a physical cut
@@ -27,6 +28,8 @@ later measure theorem may discard them only after proving they are null.
 - `orderedJumpTimesCutSector_subset_orderedTimesInInterval`.
 - `mem_orderedJumpTimesCutSector_iff`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

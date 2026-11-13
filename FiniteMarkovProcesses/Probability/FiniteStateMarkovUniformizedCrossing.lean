@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedStoppedLaw
-import FiniteMarkovProcesses.Probability.TimedStateTrajectoryGeometricCrossing
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedStoppedLaw
+public import FiniteMarkovProcesses.Probability.TimedStateTrajectoryGeometricCrossing
 
 /-!
 # Finite-horizon crossing of uniformized finite-state trajectories
@@ -24,6 +25,8 @@ The histories at this stage retain virtual self-events.
   surely.
 - `ae_crossesJumpHorizon_finiteStateUniformizedTapeMeasure`: exact finite-horizon crossing.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

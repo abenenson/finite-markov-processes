@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointCoefficient
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEndpointCoefficient
 
 /-!
 # Endpoint evolution for time-dependent uniformized chains
@@ -22,6 +23,8 @@ equation, compensator, or path large-deviation result is asserted here.
 - `finiteStateTimeDependentMarkovUniformizedEndpointCoefficient_ne_top`.
 - `sum_finiteStateTimeDependentMarkovUniformizedEndpointCoefficientReal`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

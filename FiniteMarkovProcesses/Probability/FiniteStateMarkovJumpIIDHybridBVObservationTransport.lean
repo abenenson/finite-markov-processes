@@ -3,9 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovInitialMixture
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpRandomEmpiricalTypeHybridBVObservation
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialPermutation
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovInitialMixture
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpRandomEmpiricalTypeHybridBVObservation
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialPermutation
 
 /-!
 # IID initial-state transport to the empirical-type hybrid-BV source
@@ -30,6 +32,8 @@ permutation orbit.
   `finiteStateMarkovJumpPositiveReplicaFamilyHybridBVObservationLaw_eq_sum_initialConfiguration_smul_deterministic`.
 - `finiteStateMarkovJumpIIDHybridBVObservationLaw_eq_randomEmpiricalTypeHybridBVObservationLaw`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

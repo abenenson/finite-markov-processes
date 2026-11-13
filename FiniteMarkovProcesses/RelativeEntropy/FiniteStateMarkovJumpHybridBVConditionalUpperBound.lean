@@ -3,12 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation
-import
+module
+public import FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVExponentialBound
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVExtendedDualSupport
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpHybridBVCompactContainment
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpHybridBVCompactContainment
 
 /-!
 # Conditional upper bounds for finite-state hybrid-BV jump observations
@@ -19,6 +20,8 @@ result is deliberately stated first against the ambient dual rate; specializatio
 published dynamic rate requires a separately licensed source-support or representation-domain
 theorem.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

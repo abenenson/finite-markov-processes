@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Analysis.Normed.Lp.PiLp
-import Mathlib.MeasureTheory.Function.LpSpace.Basic
-import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
-import Mathlib.MeasureTheory.Measure.SeparableMeasure
-import Mathlib.Topology.EMetricSpace.BoundedVariation
+module
+public import Mathlib.Analysis.Normed.Lp.PiLp
+public import Mathlib.MeasureTheory.Function.LpSpace.Basic
+public import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
+public import Mathlib.MeasureTheory.Measure.SeparableMeasure
+public import Mathlib.Topology.EMetricSpace.BoundedVariation
 
 /-!
 # Finite-coordinate L1 paths and essential bounded variation
@@ -30,6 +31,8 @@ predicate from later choices of a cadlag representative and boundary traces.
 - `FiniteIntervalL1Path.hasBoundedVariation_iff_exists_representative`: exact representative
   characterization of quotient-level bounded variation.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

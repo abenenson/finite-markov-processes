@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalStepL1Path
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryHybridBVObservation
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalStepL1Path
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryHybridBVObservation
 
 /-!
 # Explicit hybrid-BV observation of finite jump histories
@@ -29,6 +30,8 @@ finite sum of physically restricted weighted Dirac measures.
   reconstructed density;
 - `empiricalDensityDirectionalFlowExplicitHybridBVPath`: the explicit graph-valued observation.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

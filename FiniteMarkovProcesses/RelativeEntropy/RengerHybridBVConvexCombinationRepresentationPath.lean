@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVLinearCombination
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMean
 
 /-!
 # Convex combinations in the Renger representation domain
@@ -14,6 +15,8 @@ The exact finite-rate hybrid-BV representation domain is convex.  This module pa
 source-neutral path combination, its hybrid-topology convergence, pointwise coordinate formulas,
 and preservation of every admissibility and boundary field.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

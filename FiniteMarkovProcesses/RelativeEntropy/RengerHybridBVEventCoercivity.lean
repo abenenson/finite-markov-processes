@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateCoercivity
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateCoercivity
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain
 
 /-!
 # Event coercivity from the Renger hybrid-BV directional-flow rate
@@ -17,6 +18,8 @@ The observation carrier remains the total hybrid-BV space.  Finite-rate and zero
 hypotheses enter only through the named representation domain; no globally continuous endpoint
 trace or independently invented boundary penalty is asserted.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1DerivativeTopology
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasurePositiveClosure
-import Mathlib.Order.Filter.AtTopBot.Basic
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1DerivativeTopology
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasurePositiveClosure
+public import Mathlib.Order.Filter.AtTopBot.Basic
 
 /-!
 # Boundary cutoffs for finite-interval vague signed measures
@@ -30,6 +31,8 @@ uniformly negligible.
 * `VagueSignedMeasure.tendsto_of_relative_continuousTestIntegral_of_boundaryVariation` upgrades
   relative convergence to full vague convergence under uniform boundary control.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDensityIdentification
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedTrajectory
-import FiniteMarkovProcesses.Probability.IonescuTulceaTrajectoryProjection
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDensityIdentification
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedTrajectory
+public import FiniteMarkovProcesses.Probability.IonescuTulceaTrajectoryProjection
 
 /-!
 # Parity lift of a uniformized finite-state Markov chain
@@ -31,6 +32,8 @@ holding laws. Deleting virtual self-events is a separate later operation.
 - `map_finiteStateMarkovJumpTapeMeasure_uniformizationParityLift`: forgetting parity sends the
   full lifted Gillespie tape exactly to the uniformized tape.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

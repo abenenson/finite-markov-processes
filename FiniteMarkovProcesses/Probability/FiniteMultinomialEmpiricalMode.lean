@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Data.Nat.Choose.Multinomial
-import Mathlib.Basic.Real.Basic
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Positivity
-import Mathlib.Tactic.Ring
+module
+public import Mathlib.Data.Nat.Choose.Multinomial
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Positivity
+public import Mathlib.Tactic.Ring
 
 /-!
 # Mode of a finite multinomial law at its empirical parameter
@@ -28,6 +29,8 @@ argument or asymptotic factorial estimate is needed.
 - `multinomialEmpiricalProbabilityReal_eq_factorialNormalizedNaturalPower`: exact factorization.
 - `multinomialEmpiricalProbabilityReal_le_self`: the empirical count vector is a mode.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

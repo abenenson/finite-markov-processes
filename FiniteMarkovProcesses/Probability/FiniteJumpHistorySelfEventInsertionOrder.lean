@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertion
-import FiniteMarkovProcesses.Probability.OrderedSelfEventInsertionVolume
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertion
+public import FiniteMarkovProcesses.Probability.OrderedSelfEventInsertionVolume
 
 /-!
 # Ordering canonically inserted self-event times
@@ -25,6 +26,8 @@ action interpretation.
 - `FiniteJumpHistory.deleteSelfEvents_insertedHistory`: the resulting virtual history deletes
   exactly to the original reduced physical history.
 -/
+
+@[expose] public section
 
 open FiniteMarkovProcesses.Probability
 

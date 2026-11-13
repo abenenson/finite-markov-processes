@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.MeasureTheory.Integral.OfRealIntegral
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedWordExpectation
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovUniformization
-import FiniteMarkovProcesses.Probability.OrderedJumpTimesVolume
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+module
+public import FiniteMarkovProcesses.MeasureTheory.Integral.OfRealIntegral
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedWordExpectation
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovUniformization
+public import FiniteMarkovProcesses.Probability.OrderedJumpTimesVolume
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
 
 /-!
 # Normalized virtual history law for bounded time-dependent jump rates
@@ -28,6 +29,8 @@ It is not yet identified with a reduced physical jump history after deletion of 
 - `finiteStateTimeDependentMarkovUniformizedHistoryMeasure_univ`: exact complete normalization.
 - `finiteStateTimeDependentMarkovUniformizedHistoryProbabilityMeasure`: bundled probability law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureTopology
+module
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureTopology
 
 /-!
 # Signed measures supported on a finite open interval
@@ -19,6 +20,8 @@ interval.
 * `signedMeasure_eq_of_apply_Ioc_eq_of_restrict_openInterval` localizes the required comparisons
   to measures supported on one finite open interval.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedHistoryDensity
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedWordOccupation
-import FiniteMarkovProcesses.Probability.OrderedJumpTimesVolume
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedHistoryDensity
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedWordOccupation
+public import FiniteMarkovProcesses.Probability.OrderedJumpTimesVolume
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
 
 /-!
 # Fixed-count expectations of finite-state uniformized histories
@@ -28,6 +29,8 @@ transport remain separate.
 - `finiteStateMarkovUniformizedCountAdditiveRewardIntegral_stationary`: exact ordered-time
   integral as a Poisson count coefficient.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

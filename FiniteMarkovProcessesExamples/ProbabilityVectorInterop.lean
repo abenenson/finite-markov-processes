@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.ProbabilityVectorInterop
-import FiniteMarkovProcessesExamples.Sanov
+module
+public import FiniteMarkovProcesses.ProbabilityVectorInterop
+public import FiniteMarkovProcessesExamples.Sanov
 
 /-!
 # Empirical densities with public finite Markov kernels
@@ -12,6 +13,8 @@ import FiniteMarkovProcessesExamples.Sanov
 These examples transport a binary reference and empirical samples to the public kernel API.
 Converting the resulting probability vector back preserves its canonical probability law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcessesExamples.ProbabilityVectorInterop
 

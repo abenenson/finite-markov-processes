@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.MeasureTheory.Measure.Sum
-import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertionSurjectivity
-import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertionMeasure
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovUniformizedHistoryLaw
-import FiniteMarkovProcesses.Probability.WeightedOrderedSelfEventInsertionIntegral
+module
+public import FiniteMarkovProcesses.MeasureTheory.Measure.Sum
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertionSurjectivity
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertionMeasure
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovUniformizedHistoryLaw
+public import FiniteMarkovProcesses.Probability.WeightedOrderedSelfEventInsertionIntegral
 
 /-!
 # Self-event insertion fibres for time-dependent finite-state jump rates
@@ -29,6 +30,8 @@ continuity on the physical rates. Complete-history reindexing is in
 - `map_deleteSelfEvents_finiteStateTimeDependentMarkovUniformizedInsertedWordSliceMeasure`:
   exact measure-level deletion for each fixed vector of self-event counts.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

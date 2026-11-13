@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
 
 /-!
 # Strong-L1 constraint closure for hybrid bounded-variation paths
@@ -20,6 +21,8 @@ Derivative-measure constraints and boundary traces are deliberately outside this
 * `exists_subsequence_tendsto_cadlagRepresentative_ae_of_tendsto_toL1Path` recovers pointwise
   almost-everywhere convergence along a strictly monotone subsequence.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

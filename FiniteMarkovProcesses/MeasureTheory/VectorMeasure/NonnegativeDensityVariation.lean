@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.VectorMeasure.Decomposition.RadonNikodym
+module
+public import Mathlib.MeasureTheory.VectorMeasure.Decomposition.RadonNikodym
 
 /-!
 # Total variation of integrable signed densities
@@ -38,6 +39,8 @@ nonnegative specialization is retained as a convenient physical-flow interface.
 - `SignedMeasure.totalVariation_withDensityᵥ_apply_univ`: its total mass is the nonnegative
   Lebesgue integral of the density.
 -/
+
+@[expose] public section
 
 namespace MeasureTheory
 

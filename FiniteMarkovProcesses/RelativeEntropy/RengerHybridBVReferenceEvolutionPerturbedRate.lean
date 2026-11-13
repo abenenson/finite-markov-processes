@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual
-import
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbedPath
 
 /-!
@@ -15,6 +16,8 @@ The unchanged reference evolution has observed directional flow equal to its gen
 flow, hence zero Poisson cost in every ordered channel.  Scalar joint convexity therefore bounds
 the genuine perturbed hybrid-BV action by the target coefficient times the original action.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

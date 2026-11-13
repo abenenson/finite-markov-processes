@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.MeasureTheory.Measure.PiWithDensity
-import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertionOrder
-import FiniteMarkovProcesses.Probability.FinitePiCurryVolume
+module
+public import FiniteMarkovProcesses.MeasureTheory.Measure.PiWithDensity
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertionOrder
+public import FiniteMarkovProcesses.Probability.FinitePiCurryVolume
 
 /-!
 # Measure transport for canonical self-event insertion
@@ -28,6 +29,8 @@ for uniformization deletion.
 - `FiniteJumpHistory.map_snd_volume_restrict_selfEventInsertionCoordinateDomain`: retained-time
   marginal with the exact product of dwell-simplex fibre volumes.
 -/
+
+@[expose] public section
 
 open FiniteMarkovProcesses.Probability MeasureTheory
 open scoped BigOperators ENNReal

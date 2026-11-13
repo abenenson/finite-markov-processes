@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonAction
+module
+public import FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonAction
 
 /-!
 # Force-reactivity coordinates for bidirectional Poisson rates
@@ -22,6 +23,8 @@ independently fixed clock convention.
 - `affinity_eq_iff_exists_positive_commonScale`: equal affinity is exactly common scaling.
 - `equilibriumAffinity_nonidentification`: zero affinity does not identify reactivity or rates.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

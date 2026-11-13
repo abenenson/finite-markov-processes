@@ -3,9 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalType
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialReplication
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpPositiveReplicaHybridBVObservation
+module
+public import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalType
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialReplication
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpPositiveReplicaHybridBVObservation
 
 /-!
 # Hybrid-BV observation of deterministic-initial Markov-jump replicas
@@ -26,6 +28,8 @@ No large-deviation estimate or reduction from configurations to empirical types 
 - `map_initialDensity_finiteStateMarkovJumpDeterministicInitialPositiveReplicaFamilyLaw_eq_dirac`:
   exact empirical initial-density pushforward.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

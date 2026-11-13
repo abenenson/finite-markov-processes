@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovIntermediateMarginal
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanContinuity
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovIntermediateMarginal
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanContinuity
 
 /-!
 # Projective mean of bounded time-dependent Markov jump laws
@@ -16,6 +17,8 @@ observable.
 
 The rate compensator remains a separate result.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

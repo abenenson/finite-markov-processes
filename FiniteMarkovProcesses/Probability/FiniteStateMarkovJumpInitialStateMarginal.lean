@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryTimeObservation
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDensityIdentification
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryTimeObservation
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDensityIdentification
 
 /-!
 # Initial-state marginal of a finite-state Markov jump law
@@ -21,6 +22,8 @@ and the exact stopped-law-to-density-law identification.
 - `finiteStateMarkovJumpDensityMeasureInitialStateMarginal`: the canonical complete-history
   density measure has the supplied initial-state marginal.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

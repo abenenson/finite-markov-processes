@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanHybridBVPath
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanHybridBVPath
 
 /-!
 # Finite-state Markov mean as an admissible hybrid-BV representation path
@@ -22,6 +23,8 @@ used here.
 
 - `finiteStateMarkovMeanHybridBVRepresentationPath`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpRengerEmpiricalInitialSource
 
 /-!
@@ -18,6 +19,8 @@ ambient type count times the selected atom.
 The selection is finite-sample and source-neutral.  It does not assert an asymptotic atom lower
 bound, choose an off-lattice density, or identify a path large-deviation rate.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

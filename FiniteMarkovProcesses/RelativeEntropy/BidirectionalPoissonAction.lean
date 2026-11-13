@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination
+module
+public import FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination
 
 /-!
 # Bidirectional Poisson action and activity selection
@@ -25,6 +26,8 @@ physical time reverse or as a frenetic path action.
 - `bidirectionalPoissonEntropyActionMinimizer_iff`: diagonal physical-action minimizers.
 - `no_fullFibre_affineEntropyActionIdentity`: driven selection cannot equal entropy action alone.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDensityIdentification
-import Mathlib.Algebra.BigOperators.Group.Finset.Defs
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDensityIdentification
+public import Mathlib.Algebra.BigOperators.Group.Finset.Defs
 
 /-!
 # Reversal laws of finite-state Markov jump processes
@@ -26,6 +27,8 @@ on the completely reversed state word and event-time vector.
 - `ae_physicalAt_finiteStateMarkovJumpReversalDensityMeasure`: reversal remains on the exact
   physical history carrier.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceKinematicSupport
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservation
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceKinematicSupport
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservation
 
 /-!
 # Finite jump histories lie in Renger source-kinematic support
@@ -13,6 +14,8 @@ The explicit empirical density--directional-flow observation has positive atomic
 derivatives, exact microscopic continuity, and the open-interval simplex constraints.  It is not
 finite-rate admissible when a jump occurs because those derivatives are singular.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

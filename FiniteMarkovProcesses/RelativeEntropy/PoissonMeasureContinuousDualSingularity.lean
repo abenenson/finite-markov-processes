@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteOpenIntervalContinuousTestDense
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDualEvaluation
-import FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality
+public import FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality
 
 /-!
 # Continuous Poisson duality for singular finite measures
@@ -19,6 +20,8 @@ with the carried and reference errors controlled separately.
 
 The declarations are source-neutral and do not assert a path large-deviation principle.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

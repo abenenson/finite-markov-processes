@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovInitialStateMarginal
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovInitialStateMarginal
 
 /-!
 # Endpoint word weights for time-dependent uniformized chains
@@ -20,6 +21,8 @@ No time integration, compensator, or path large-deviation claim is made here.
 - `finiteStateTimeDependentMarkovUniformizedStateWordWeight_snoc`.
 - `finiteStateTimeDependentMarkovUniformizedEndpointWordWeight_succ`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

@@ -3,11 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDualEvaluation
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVTilt
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovExponentialTimeTiltHistoryDensity
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservationMeasurability
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVTilt
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovExponentialTimeTiltHistoryDensity
+public import
+  FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservationMeasurability
 
 /-!
 # Microscopic exponential moments for hybrid-BV jump tests
@@ -31,6 +33,8 @@ with the macroscopic hybrid-BV dual evaluation is a separate representation theo
   identification of the complete macroscopic dual evaluation with the replica-average
   microscopic exponential-tilt score.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

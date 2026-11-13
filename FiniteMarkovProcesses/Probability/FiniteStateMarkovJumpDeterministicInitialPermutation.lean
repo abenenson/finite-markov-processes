@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryReplicaPermutation
-import
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryReplicaPermutation
+public import
   FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialHybridBVObservation
 
 /-!
@@ -27,6 +28,8 @@ No large-deviation estimate or asymptotic exchangeability claim enters here.
 - `finiteStateMarkovJumpDeterministicInitialHybridBVObservationLaw_eq_of_empiricalType_eq`:
   representative-independent same-count-type law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

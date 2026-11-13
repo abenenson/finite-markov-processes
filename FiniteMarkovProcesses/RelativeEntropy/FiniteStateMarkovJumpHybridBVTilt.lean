@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Topology.ContinuousMap.BoundedCompactlySupported
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovExponentialTimeTilt
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovUniformizedHistoryLaw
+module
+public import Mathlib.Topology.ContinuousMap.BoundedCompactlySupported
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovExponentialTimeTilt
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovUniformizedHistoryLaw
 
 /-!
 # Exponential jump-rate tilt induced by a hybrid-BV dual test
@@ -26,6 +27,8 @@ physical law or assert the martingale identity.
 - `rengerDirectionalFlowDualTestUniformizedHistoryProbabilityMeasure`: its normalized virtual
   finite-history law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventDeletion
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedCrossing
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventDeletion
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedCrossing
 
 /-!
 # Reduced stopped laws of finite-state uniformized trajectories
@@ -22,6 +23,8 @@ and density calculation that turns deleted virtual events into physical escape s
 - `finiteStateUniformizedReducedHistoryMeasure_univ`: exact normalization.
 - `FiniteStateUniformizedDeletionIdentifiesPhysicalLaw`: named remaining pushforward identity.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.Measure.Sum
+module
+public import Mathlib.MeasureTheory.Measure.Sum
 
 /-!
 # Reindexing sums of measures
@@ -18,6 +19,8 @@ Identities for dependent, product, and injectively embedded sums of measures.
   measure sum.
 - `measureSum_comp_eq_of_bijective`: a bijective reindexing preserves the complete measure sum.
 -/
+
+@[expose] public section
 
 open MeasureTheory
 open scoped ENNReal

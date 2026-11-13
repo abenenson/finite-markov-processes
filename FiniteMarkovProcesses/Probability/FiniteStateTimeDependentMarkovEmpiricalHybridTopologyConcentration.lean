@@ -3,11 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovDirectionalFlowExpectation
-import
+module
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovDirectionalFlowExpectation
+public import
   FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalHybridL1Concentration
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanHybridBVPath
-import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureWithDensityPairing
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanHybridBVPath
+public import FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasureWithDensityPairing
 
 /-!
 # Hybrid-topology concentration of empirical Markov jump paths
@@ -19,6 +21,8 @@ It then assembles those finite-coordinate controls with strong-`L1` concentratio
 No metric is imposed on the complete derivative-test family.  Arbitrary neighborhoods enter only
 through their finite-cylinder reduction.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

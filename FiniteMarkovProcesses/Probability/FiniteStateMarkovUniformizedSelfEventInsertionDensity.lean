@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertionMeasure
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedHistoryExpectation
-import FiniteMarkovProcesses.Probability.WeightedOrderedSelfEventInsertionIntegral
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistorySelfEventInsertionMeasure
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedHistoryExpectation
+public import FiniteMarkovProcesses.Probability.WeightedOrderedSelfEventInsertionIntegral
 
 /-!
 # Uniformized densities on canonical self-event insertion fibres
@@ -24,6 +25,8 @@ ordered-time measure through self-event deletion.
 - `map_deleteSelfEvents_finiteStateMarkovUniformizedInsertedWordFibreMeasure`: all count vectors
   over one reduced physical word resum exactly to its canonical physical CTMC slice.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

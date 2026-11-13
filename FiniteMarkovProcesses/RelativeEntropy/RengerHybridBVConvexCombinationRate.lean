@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVConvexCombinationRepresentationPath
-import FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual
+public import FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual
 
 /-!
 # Dynamic-action convexity on the Renger representation domain
@@ -15,6 +16,8 @@ Extended Poisson joint convexity lifts through every ordered channel and the phy
 integral.  Consequently the exact dynamic hybrid-BV action is convex on its representation
 domain, including all zero-rate boundary sectors.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

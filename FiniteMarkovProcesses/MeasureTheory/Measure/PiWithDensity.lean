@@ -3,9 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.Constructions.Pi
-import Mathlib.MeasureTheory.Measure.WithDensity
-import FiniteMarkovProcesses.MeasureTheory.Measure.MapWithDensity
+module
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.MeasureTheory.Constructions.Pi
+public import Mathlib.MeasureTheory.Measure.WithDensity
+public import FiniteMarkovProcesses.MeasureTheory.Measure.MapWithDensity
 
 /-!
 # Densities of finite product measures
@@ -26,6 +28,8 @@ head--tail equivalence and iterates the binary product-density identity.
 - `Measure.map_snd_restrict_terminalIci`: integrating a terminal threshold produces its survival
   density on the retained coordinates.
 -/
+
+@[expose] public section
 
 open MeasureTheory
 open scoped ENNReal

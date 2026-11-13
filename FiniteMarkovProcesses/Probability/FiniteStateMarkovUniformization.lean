@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovPartialConjugateLaw
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovPartialConjugateLaw
 
 /-!
 # Uniformized finite-state Markov transition chains
@@ -25,6 +26,8 @@ canonical physical-jump density before transferring any action claim.
 - `FiniteStateMarkovStationaryDistribution.uniformizedTransition_stationary`: stationarity of
   the physical weights under one uniformized transition.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

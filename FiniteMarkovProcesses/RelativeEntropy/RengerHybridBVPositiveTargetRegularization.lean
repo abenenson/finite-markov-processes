@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetRate
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTruncatedTargetRate
 
 /-!
 # Positive reference-supported regularization of a Renger hybrid target
@@ -16,6 +17,8 @@ reference edge while remaining zero on every forbidden edge.
 No convergence of the induced mean path, Girsanov identity, or large-deviation lower bound is
 asserted here.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.Constructions.Pi
-import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
-import Mathlib.MeasureTheory.Measure.Prod
+module
+public import Mathlib.MeasureTheory.Constructions.Pi
+public import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
+public import Mathlib.MeasureTheory.Measure.Prod
 
 /-!
 # Lebesgue volume under finite dependent currying
@@ -19,6 +20,8 @@ currying equivalence preserves Lebesgue volume exactly.
 - `volume_measurePreserving_piCurry_real`: dependent currying of finitely many finite real
   coordinate blocks has unit Jacobian.
 -/
+
+@[expose] public section
 
 open MeasureTheory
 

@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.OrderedJumpTimesVolume
+module
+public import FiniteMarkovProcesses.Probability.OrderedJumpTimesVolume
 
 /-!
 # Last-coordinate disintegration of ordered jump-time integrals
@@ -17,6 +18,8 @@ choosing its last event time and then integrating the preceding `n` ordered time
 - `orderedJumpTimesLastJoin`.
 - `lintegral_orderedJumpTimes_succ`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

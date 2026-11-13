@@ -9,12 +9,17 @@ their explicit densities with normalized generative constructions. Its upper
 layers formalize finite-alphabet Sanov bounds, density/flux path large
 deviations, zero-action evolution, and quantitative particle confidence.
 
+The [local Lean 4.35 qualification](docs/qualification/mathlib-4.35/summary.json)
+records **302 source files**, all **16 source linters** per file, and **3,631 named
+transitive axiom audits**. It binds candidate-relative source and verifier hashes
+to the exact public dependency pins. Hosted verification is recorded separately.
+
 The [historical qualification evidence](docs/qualification/review-followups/summary.json)
 records **297 source files**, all **16 source linters** per file, and **3,606 named
 transitive axiom audits** on the pinned toolchain, including the concrete path-LDP
 and trajectory-Fisher examples. It identifies the exact checked source hashes,
-compiler, dependency pins, and build, lint, and axiom stages. Source documentation
-has since changed; fresh CI must qualify the current source bytes.
+compiler, dependency pins, and build, lint, and axiom stages on Lean 4.34.1.
+The supported toolchain and sources have since changed.
 The earlier [hosted verification](https://github.com/abenenson/finite-markov-processes/actions/runs/42326974132)
 and [historical evidence](docs/qualification/probability-extension/summary.json)
 cover the library before those examples were added.
@@ -72,8 +77,8 @@ See [the theorem and premise map](docs/theorem-map.md),
 
 ## Dependencies and verification
 
-The supported pair is Lean **4.34.1** and Mathlib
-**`d13f23b723b8a846827a245b89c10fc7d3f11612`**. Public dependencies use exact
+The supported pair is Lean **4.35.0** and Mathlib
+**`56a005855ea17e0b0958f73ec801ae140b0a1679`**. Public dependencies use exact
 commit pins. The finite-simplex interface composes with
 [`finite-markov-kernels`](https://github.com/abenenson/finite-markov-kernels),
 and product-measure transport uses

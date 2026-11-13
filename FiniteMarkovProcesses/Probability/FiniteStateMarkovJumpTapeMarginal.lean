@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Probability.Kernel.Composition.Lemmas
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpPrefixLaw
+module
+public import Mathlib.Probability.Kernel.Composition.Lemmas
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpPrefixLaw
 
 /-!
 # Finite marginals of the normalized jump-process tape
@@ -23,6 +24,8 @@ the recursive `finiteStateMarkovTimedPrefixMeasure`.
 - `finiteStateMarkovJumpTapePrefixMeasure_eq_timedPrefixMeasure`: the infinite tape and recursive
   finite-prefix constructions have literally equal finite-dimensional laws.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

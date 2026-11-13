@@ -3,10 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Dissipation
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovDirectionalFlowExpectation
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovForwardEquation
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.LebesgueDifferentiationThm
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Dissipation
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovDirectionalFlowExpectation
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovForwardEquation
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.LebesgueDifferentiationThm
 
 /-!
 # Almost-everywhere derivative of finite-state time-dependent Markov endpoint probabilities
@@ -15,6 +17,8 @@ The existing integral forward equation is consolidated into one integrable
 incoming-minus-outgoing drift.  Lebesgue differentiation then identifies that drift as the
 almost-everywhere derivative of every physical endpoint-probability coordinate.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

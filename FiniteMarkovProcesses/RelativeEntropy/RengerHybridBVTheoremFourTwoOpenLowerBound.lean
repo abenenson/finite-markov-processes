@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoBoundaryOpenLowerBound
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVCompleteRateCompactness
 
 /-!
@@ -21,6 +22,8 @@ This is the lower half of the theorem's path LDP.  It does not identify the inva
 Corollary 4.16 source, prove the closed upper bound, or infer any carrier equivalence beyond the
 exact hybrid-BV observation already constructed.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

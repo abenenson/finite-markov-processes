@@ -3,12 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Probability.ProbabilityMassFunction.Basic
-import Mathlib.MeasureTheory.Measure.ProbabilityMeasure
-import Mathlib.MeasureTheory.Measure.WithDensity
-import Mathlib.MeasureTheory.Measure.WithDensityFinite
-import FiniteMarkovProcesses.MeasureTheory.Measure.MapWithDensity
-import FiniteMarkovProcesses.Probability.FiniteJumpHistory
+module
+public import Mathlib.Probability.ProbabilityMassFunction.Basic
+public import Mathlib.MeasureTheory.Measure.ProbabilityMeasure
+public import Mathlib.MeasureTheory.Measure.WithDensity
+public import Mathlib.MeasureTheory.Measure.WithDensityFinite
+public import FiniteMarkovProcesses.MeasureTheory.Measure.MapWithDensity
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistory
 
 /-!
 # Finite-state Markov jump densities
@@ -35,6 +36,8 @@ mass must be proved equal to one before it can be promoted to `ProbabilityMeasur
 - `ae_physicalAt_finiteStateMarkovJumpDensityMeasure`: the CTMC density law is concentrated on
   the exact ordered reduced carrier.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

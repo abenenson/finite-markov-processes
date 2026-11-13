@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Analysis.SpecificLimits.Basic
-import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalType
+module
+public import Mathlib.Analysis.SpecificLimits.Basic
+public import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalType
 
 /-!
 # Approximation of a finite probability density by empirical types
@@ -21,6 +22,8 @@ preserves total mass exactly at every size, including for boundary densities.
 - `finiteStateProbabilityDensityRoundedPositiveEmpiricalType_probabilityDensity_tendsto`:
   convergence in the ordinary finite-simplex topology.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

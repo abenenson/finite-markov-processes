@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpLaw
+module
+public import Mathlib.Analysis.SpecialFunctions.Log.Basic
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpLaw
 
 /-!
 # Finite-state Markov jump log actions
@@ -26,6 +27,8 @@ later modules; no symbolic density is promoted here.
 - `finiteStateMarkovInitialLogRatio`, `finiteStateMarkovTransitionLogRatio`, and
   `finiteStateMarkovEscapeRateDifference`: reusable weights of its three sectors.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

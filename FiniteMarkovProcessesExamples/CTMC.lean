@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.CTMC
+module
+public import FiniteMarkovProcesses.CTMC
 
 /-!
 # Finite-state jump-process examples
@@ -13,6 +14,8 @@ the integral fluctuation identity. A stationary two-state affine chart also disc
 generator-to-channel identification premise and computes the trajectory Fisher Hessian.
 The measurable state-space structure remains explicit.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcessesExamples.CTMC
 

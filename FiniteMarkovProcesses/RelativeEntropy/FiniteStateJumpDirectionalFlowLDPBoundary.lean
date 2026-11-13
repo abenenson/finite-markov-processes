@@ -3,17 +3,19 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1DerivativeTopology
-import FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensity
-import FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination
-import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityLargeDeviation
-import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalTypeLaw
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowEndpointConvention
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovGeneratorMatrix
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDensityIdentification
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpPositiveReplicaHybridBVObservation
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovPartialConjugateLaw
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1DerivativeTopology
+public import FiniteMarkovProcesses.RelativeEntropy.DensityFluxLargeDeviationRepresentation
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensity
+public import FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination
+public import FiniteMarkovProcesses.Probability.FiniteIIDEmpiricalProbabilityDensityLargeDeviation
+public import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalTypeLaw
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowEndpointConvention
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovGeneratorMatrix
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDensityIdentification
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpPositiveReplicaHybridBVObservation
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovPartialConjugateLaw
 
 /-!
 # Finite-state directional-flow LDP boundary for independent jump particles
@@ -44,6 +46,8 @@ representations.
 - `finiteStateMarkovJumpInvariantIIDMacroscopicObservation_eq_before`: exact endpoint bridge for
   every quotient map respecting componentwise almost-everywhere equality.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

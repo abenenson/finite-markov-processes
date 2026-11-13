@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.Measure.LogLikelihoodRatio
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpAction
+module
+public import Mathlib.MeasureTheory.Measure.LogLikelihoodRatio
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpAction
 
 /-!
 # Radon--Nikodym derivatives of finite-state Markov jump measures
@@ -23,6 +24,8 @@ identities remain gated by normalization.
   exponential of the complete physical action.
 - `llr_finiteStateMarkovJumpDensityMeasure`: real log-likelihood action on the candidate law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

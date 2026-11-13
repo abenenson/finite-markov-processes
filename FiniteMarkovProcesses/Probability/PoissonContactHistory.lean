@@ -3,14 +3,15 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
-import Mathlib.Analysis.Fourier.AddCircle
-import Mathlib.Data.Fin.Rev
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.Periodic
-import Mathlib.MeasureTheory.Measure.Haar.Unique
-import Mathlib.Probability.Distributions.Poisson.Basic
-import Mathlib.Probability.Distributions.Uniform
-import Mathlib.Probability.ProductMeasure
+module
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+public import Mathlib.Analysis.Fourier.AddCircle
+public import Mathlib.Data.Fin.Rev
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Periodic
+public import Mathlib.MeasureTheory.Measure.Haar.Unique
+public import Mathlib.Probability.Distributions.Poisson.Basic
+public import FiniteMarkovProcesses.Probability.FiniteUniformPMF
+public import Mathlib.Probability.ProductMeasure
 
 /-!
 # Complete fixed-horizon Poisson contact histories
@@ -35,6 +36,8 @@ complete history law. This carrier is a generative point history, not a càdlàg
 - `poissonContactHistoryReversal_measurePreserving`: complete-law reversal invariance.
 -/
 
+@[expose] public section
+
 namespace FiniteMarkovProcesses.Probability
 
 open MeasureTheory ProbabilityTheory Set
@@ -47,7 +50,7 @@ abbrev PoissonContactHistory := ℕ × Fin 2 × (ℕ → UnitAddCircle)
 
 /-- Uniform law on the two possible initial substrate states. -/
 noncomputable def uniformFinTwoMeasure : Measure (Fin 2) :=
-  (PMF.uniformOfFintype (Fin 2)).toMeasure
+  (finiteUniformPMF (Fin 2)).toMeasure
 
 /-- The original uniform law on the two initial substrate states has total mass one. -/
 noncomputable instance instIsProbabilityMeasureUniformFinTwoMeasure :
@@ -447,11 +450,11 @@ theorem poissonContactHistoryReversal_involutive :
 theorem map_finRev_uniformFinTwoMeasure :
     Measure.map Fin.rev uniformFinTwoMeasure = uniformFinTwoMeasure := by
   rw [uniformFinTwoMeasure,
-    PMF.toMeasure_map Fin.rev (PMF.uniformOfFintype (Fin 2)) (by fun_prop)]
+    PMF.toMeasure_map Fin.rev (finiteUniformPMF (Fin 2)) (by fun_prop)]
   congr 1
   ext state
   fin_cases state <;>
-    simp [PMF.map_apply, PMF.uniformOfFintype_apply, tsum_fintype]
+    simp [PMF.map_apply, finiteUniformPMF_apply, tsum_fintype]
 
 /-- Parity transport preserves the uniform initial-state law at every count. -/
 theorem terminalContactState_measurePreserving (contactCount : ℕ) :

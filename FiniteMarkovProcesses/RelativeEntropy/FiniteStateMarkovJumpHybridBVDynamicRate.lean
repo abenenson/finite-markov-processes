@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryHybridBVObservation
+module
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateJumpDirectionalFlowLDPBoundary
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryHybridBVObservation
 
 /-!
 # Hybrid-BV dynamic directional-flow rate for finite-state jump processes
@@ -31,6 +32,8 @@ No compact-sublevel or large-deviation theorem is asserted here.
   zero initial and boundary sectors.
 - `rengerDirectionalFlowHybridBVDynamicRate`: the continuity-gated dynamic action.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

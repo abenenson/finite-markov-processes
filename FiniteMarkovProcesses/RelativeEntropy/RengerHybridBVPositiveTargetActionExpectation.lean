@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateTimeDependentMarkovJumpActionExpectation
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTargetActionBound
-import Mathlib.InformationTheory.KullbackLeibler.Basic
+public import Mathlib.InformationTheory.KullbackLeibler.Basic
 
 /-!
 # Expected action of a positive Renger target regularization
@@ -20,6 +21,8 @@ substituted for a coordinate-specific law.
 This module identifies the exact finite-regularization expectation.  It does not yet assert its
 regularization limit or an open-neighborhood large-deviation lower bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

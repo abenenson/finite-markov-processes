@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoLargeDeviationRepresentation
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVCorollaryFourSixteenOpenLowerBound
 
 /-!
@@ -17,6 +18,8 @@ bounds, and corollary-labelled provenance.  The exact observation transport to t
 Theorem 4.2 source is used only to inherit the closed upper bound; the IID microscopic law,
 unique-invariant-law hypothesis, and independently transported open lower bound remain distinct.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

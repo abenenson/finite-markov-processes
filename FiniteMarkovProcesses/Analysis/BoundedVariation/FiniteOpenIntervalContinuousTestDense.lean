@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.MeasureTheory.VectorMeasure.FiniteIntervalVagueSignedMeasureBoundaryCutoff
-import Mathlib.MeasureTheory.Function.ContinuousMapDense
-import Mathlib.MeasureTheory.Integral.DominatedConvergence
+public import Mathlib.MeasureTheory.Function.ContinuousMapDense
+public import Mathlib.MeasureTheory.Integral.DominatedConvergence
 
 /-!
 # Density of finite-open-interval continuous tests
@@ -26,6 +27,8 @@ applies the canonical shrinking boundary cutoff.
 * `MeasureTheory.Integrable.exists_finiteOpenIntervalVanishingContinuousTest_integral_norm_sub_lt`
   gives the relative-test `L1` approximation theorem.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

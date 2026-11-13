@@ -461,7 +461,7 @@ def main():
         version = version_result.stdout.strip()
         assert version_result.returncode == 0, 'Compiler version command failed'
         check_diagnostics(version)
-        assert toolchain == 'leanprover/lean4:v4.34.1' and 'version 4.34.1,' in version
+        assert toolchain == 'leanprover/lean4:v4.35.0' and 'version 4.35.0,' in version
         record['compiler_version'] = version
         manifest = json.loads((root / 'lake-manifest.json').read_text())
         dependencies = manifest_dependencies(manifest['packages'])

@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpInitialStateMarginal
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpReplication
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpInitialStateMarginal
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpReplication
 
 /-!
 # Deterministic-initial independent Markov-jump replicas
@@ -28,6 +29,8 @@ It does not assert a path large-deviation bound or identify a macroscopic rate.
 - `ae_initialState_eq_configuration_finiteStateMarkovJumpDeterministicInitialReplica`: exact
   almost-sure recovery of the supplied initial configuration.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

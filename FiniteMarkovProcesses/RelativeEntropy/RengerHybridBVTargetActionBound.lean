@@ -3,13 +3,15 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.TimeDependentMarkovJumpReplicaRadonNikodym
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetGirsanov
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryReplicaJumpCount
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCountMoment
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalTestConcentration
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryReplicaJumpCount
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCountMoment
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalTestConcentration
 
 /-!
 # Canonical Renger target pathwise action bounds
@@ -28,6 +30,8 @@ an open-set lower bound, or a regularization limit.
 - `rengerDirectionalFlowHybridBVCanonicalPositiveTargetJumpLogAction_le`: one-history action cap.
 - `rengerDirectionalFlowHybridBVCanonicalPositiveTargetReplicaJumpLogAction_le`: replica cap.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.MeasurableSpace.CountablyGenerated
-import Mathlib.MeasureTheory.Measure.FiniteMeasurePi
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensity
+module
+public import Mathlib.MeasureTheory.MeasurableSpace.CountablyGenerated
+public import Mathlib.MeasureTheory.Measure.FiniteMeasurePi
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensity
 
 /-!
 # Empirical probability density of a positive finite IID sample
@@ -21,6 +22,8 @@ probability infrastructure; no Markov-jump, Renger, or large-deviation claim ent
 - `finiteIIDPositiveSampleLaw`: exact positive finite IID product law.
 - `finiteIIDEmpiricalProbabilityDensityLaw`: empirical-density pushforward law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

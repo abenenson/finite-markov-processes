@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Analysis.SpecialFunctions.Log.ENNRealLogExp
-import Mathlib.Order.LiminfLimsup
+module
+public import Mathlib.Analysis.SpecialFunctions.Log.ENNRealLogExp
+public import Mathlib.Order.LiminfLimsup
 
 /-!
 # Logarithmic liminf from an exponential estimate with vanishing failure mass
@@ -13,6 +14,8 @@ An event probability bounded below by an exponential particle-speed factor times
 vanishing failure mass has logarithmic liminf at least the negative exponential rate.  The proof
 keeps probabilities and their logarithms extended-valued, so zero probability remains visible.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

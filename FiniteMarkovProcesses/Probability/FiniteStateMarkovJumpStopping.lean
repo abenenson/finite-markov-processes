@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpTrajectory
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpTrajectory
 
 /-!
 # Stopping timed-state trajectories at a finite horizon
@@ -24,6 +25,8 @@ explicit premise. A subsequent theorem must prove that premise almost surely und
 - `finiteStateMarkovStoppedHistory`: physical history cut at the first crossing.
 - `finiteStateMarkovStoppedHistory_orderedBefore`: exact ordered-simplex membership.
 -/
+
+@[expose] public section
 
 open MeasureTheory
 open scoped BigOperators

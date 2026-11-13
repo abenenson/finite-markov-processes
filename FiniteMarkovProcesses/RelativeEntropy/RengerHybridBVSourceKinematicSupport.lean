@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVKinematicClosure
-import
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVKinematicClosure
+public import
   FiniteMarkovProcesses.MeasureTheory.VectorMeasure.FiniteIntervalVagueSignedMeasureBoundaryCutoff
 
 /-!
@@ -24,6 +25,8 @@ topology and must be controlled probabilistically.
 * `rengerDirectionalFlowHybridBVSourceKinematicSupport_of_tendsto` proves sequential closure in
   the published hybrid topology without assuming finite dynamic action.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

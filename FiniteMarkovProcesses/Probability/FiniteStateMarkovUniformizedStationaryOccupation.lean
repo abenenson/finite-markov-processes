@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovPoissonizedRewardExpectation
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+module
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovPoissonizedRewardExpectation
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
 
 /-!
 # Stationary occupation under finite-state uniformization
@@ -26,6 +27,8 @@ pathwise complete-dwell observable.
 - `intervalIntegral_uniformizedPoissonStateRewardExpectation_stationary`: exact integrated
   stationary occupation reward.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

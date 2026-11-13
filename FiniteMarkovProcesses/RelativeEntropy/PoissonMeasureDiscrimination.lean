@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.CountablePMF
-import FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination
-import FiniteMarkovProcesses.Probability.PoissonContactHistory
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+module
+public import FiniteMarkovProcesses.RelativeEntropy.CountablePMF
+public import FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination
+public import FiniteMarkovProcesses.Probability.PoissonContactHistory
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
 
 /-!
 # Relative entropy and mean of Poisson count laws
@@ -24,6 +25,8 @@ the complete Poisson-contact history law through its exact count marginal.
 - `toReal_klDiv_poissonMeasure_eq_rateDiscrimination`: equality with the scalar classifier.
 - `integral_poissonContactHistory_contactCount`: expected count on the complete history law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

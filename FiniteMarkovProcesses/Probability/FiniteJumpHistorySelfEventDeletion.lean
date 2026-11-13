@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Data.Finset.Sort
-import FiniteMarkovProcesses.Probability.FiniteJumpHistory
+module
+public import Mathlib.Data.Finset.Sort
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistory
 
 /-!
 # Deleting virtual self-events from finite jump histories
@@ -28,6 +29,8 @@ pushforward identity is asserted here.
 - `FiniteJumpHistory.finalState_deleteSelfEventsSlice`: preservation of the terminal state.
 - `FiniteJumpHistory.measurable_deleteSelfEvents`: measurability on the common history carrier.
 -/
+
+@[expose] public section
 
 open MeasureTheory
 

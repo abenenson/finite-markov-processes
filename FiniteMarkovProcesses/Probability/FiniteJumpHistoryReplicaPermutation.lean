@@ -3,7 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservationMeasurability
+module
+public import
+  FiniteMarkovProcesses.Probability.FiniteJumpHistoryExplicitHybridBVObservationMeasurability
 
 /-!
 # Replica permutation invariance of empirical jump-history observations
@@ -23,6 +25,8 @@ No probability law, Markov generator, or large-deviation estimate enters here.
 - `empiricalDensityDirectionalFlowTotalHybridBVObservation_reindexing`: total observation
   invariance.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

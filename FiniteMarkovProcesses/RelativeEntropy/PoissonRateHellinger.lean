@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality
-import Mathlib.Algebra.Order.BigOperators.Ring.Finset
-import Mathlib.Analysis.SpecialFunctions.Sqrt
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerExtendedPoissonDuality
+public import Mathlib.Algebra.Order.BigOperators.Ring.Finset
+public import Mathlib.Analysis.SpecialFunctions.Sqrt
 
 /-!
 # Hellinger control by extended Poisson rate cost
@@ -21,6 +22,8 @@ A finite normalized-vector consequence supplies a conservative initial-law estim
 * `sum_abs_sub_le_two_mul_sqrt_of_rengerExtendedPoissonRateCost_le` controls normalized vectors.
 * `le_poissonRateBudgetModulus_of_sq_le` solves the scalar residual budget inequality.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

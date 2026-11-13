@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensity
-import FiniteMarkovKernels.PMFAdapter
+module
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensity
+public import FiniteMarkovKernels.PMFAdapter
 
 /-!
 # Probability simplex interoperability
@@ -15,6 +16,8 @@ inverses, preserve support and strict positivity, and produce the same probabili
 Both public types already carry their coordinatewise topology, so their equivalence is also a
 homeomorphism without introducing any additional topology instance.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory.FiniteStateProbabilityDensity
 

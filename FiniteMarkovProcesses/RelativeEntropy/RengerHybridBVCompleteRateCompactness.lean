@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovInvariantIIDInitialLDP
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateSublevelCompactness
+module
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVCompleteRate
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovInvariantIIDInitialLDP
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateSublevelCompactness
 
 /-!
 # Compact complete-rate sublevels for the Renger hybrid-BV action
@@ -15,6 +16,8 @@ rate.  The separately recovered initial trace becomes continuous after restricti
 dynamic-rate sublevel, so the initial plus dynamic complete action is lower semicontinuous there.
 Its finite sublevels are consequently closed subsets of compact dynamic sublevels.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

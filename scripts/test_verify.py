@@ -19,7 +19,7 @@ def fixture_repository(root):
     """Create a minimal, isolated repository for mocked end-to-end verifier controls."""
     (root / 'scripts').mkdir(parents=True)
     (root / 'scripts/verify.py').write_bytes(SCRIPT.read_bytes())
-    (root / 'lean-toolchain').write_text('leanprover/lean4:v4.34.1\n')
+    (root / 'lean-toolchain').write_text('leanprover/lean4:v4.35.0\n')
     (root / 'lakefile.lean').write_text('import Lake\n')
     (root / 'lake-manifest.json').write_text(json.dumps({'packages': []}))
     config = {'root_module': 'Fixture', 'examples_module': 'FixtureExamples',
@@ -201,7 +201,7 @@ class VerificationControls(unittest.TestCase):
 
             def fake_run(command, **kwargs):
                 if command == ['lake', 'env', 'lean', '--version']:
-                    output = 'Lean (version 4.34.1, fixture)'
+                    output = 'Lean (version 4.35.0, fixture)'
                 elif 'build' in command:
                     self.assertFalse(
                         stale.exists(), 'Exact build consumed a cached author artifact')
@@ -229,7 +229,7 @@ class VerificationControls(unittest.TestCase):
     def test_zero_exit_exact_build_error_rejected_end_to_end(self):
         def fake_run(command, **kwargs):
             if command == ['lake', 'env', 'lean', '--version']:
-                output = 'Lean (version 4.34.1, fixture)'
+                output = 'Lean (version 4.35.0, fixture)'
             else:
                 self.assertIn('build', command)
                 output = json.dumps({'severity': 'error', 'data': 'synthetic exact-build failure'})
@@ -408,7 +408,7 @@ class ResumeControls(unittest.TestCase):
     @staticmethod
     def success(command, **kwargs):
         if command == ['lake', 'env', 'lean', '--version']:
-            output = 'Lean (version 4.34.1, fixture)'
+            output = 'Lean (version 4.35.0, fixture)'
         elif 'build' in command:
             output = 'Build completed successfully.'
         elif command[-1].endswith('axioms.lean'):
@@ -614,7 +614,7 @@ class ResumeControls(unittest.TestCase):
 
             def changed_version(command, **kwargs):
                 self.assertEqual(command, ['lake', 'env', 'lean', '--version'])
-                return SimpleNamespace(returncode=0, stdout='Lean (version 4.34.1, changed)')
+                return SimpleNamespace(returncode=0, stdout='Lean (version 4.35.0, changed)')
 
             with self.assertRaisesRegex(AssertionError, 'Resume identity differs'):
                 self.invocation(root, evidence, changed_version, resume=True)

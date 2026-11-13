@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovReducedHistoryLaw
+module
+public import Mathlib.Analysis.SpecialFunctions.Log.Basic
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovReducedHistoryLaw
 
 /-!
 # Bounded time-dependent finite-state Markov jump log actions
@@ -24,6 +25,8 @@ results.
 - `finiteStateTimeDependentMarkovJumpLogAction`: measurable complete-history action.
 - `finiteStateTimeDependentMarkovJumpLogAction_le_count_mul_add_escapeBound`: pathwise action cap.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

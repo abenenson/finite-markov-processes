@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalTypeExponentialBound
+module
+public import FiniteMarkovProcesses.Probability.FiniteIIDPositiveEmpiricalTypeExponentialBound
 
 /-!
 # Finite-event exponential bounds for empirical probability densities
@@ -23,6 +24,8 @@ No asymptotic limit or large-deviation principle is asserted here.
 - `finiteIIDEmpiricalProbabilityDensityLaw_lowerBound_of_type_mem`: one-type exponential lower
   bound for any event containing its normalized density.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

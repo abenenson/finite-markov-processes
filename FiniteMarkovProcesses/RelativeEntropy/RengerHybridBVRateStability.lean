@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFlowStability
-import FiniteMarkovProcesses.RelativeEntropy.PoissonRateHellinger
-import Mathlib.Algebra.QuadraticDiscriminant
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFlowStability
+public import FiniteMarkovProcesses.RelativeEntropy.PoissonRateHellinger
+public import Mathlib.Algebra.QuadraticDiscriminant
 
 /-!
 # Quantitative finite-rate stability on the existing hybrid-BV carrier
@@ -24,6 +25,8 @@ row escape bound. No bound on a competitor's flow, or additional integrability, 
 - The `initial_add_rateModulus` bounds retain actual initial error and control density,
   cumulative ordered flow, terminal left traces, carried derivative variation, and strong L1.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

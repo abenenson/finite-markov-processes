@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
-import Mathlib.MeasureTheory.Integral.DominatedConvergence
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalHybridBVPath
+public import Mathlib.MeasureTheory.Integral.DominatedConvergence
 
 /-!
 # Finite-interval integral derivatives
@@ -13,6 +14,8 @@ An integrable real density on the physical-time measure generates a continuous i
 primitive, a finite signed Stieltjes derivative, and a bounded-variation path.  This is the
 absolutely-continuous counterpart of the finite event-step witnesses.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

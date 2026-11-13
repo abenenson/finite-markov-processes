@@ -3,10 +3,11 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1Path
-import Mathlib.MeasureTheory.Measure.Stieltjes
-import Mathlib.Order.Monotone.Extension
-import Mathlib.Topology.EMetricSpace.VariationOnFromTo
+module
+public import FiniteMarkovProcesses.Analysis.BoundedVariation.FiniteIntervalL1Path
+public import Mathlib.MeasureTheory.Measure.Stieltjes
+public import Mathlib.Order.Monotone.Extension
+public import Mathlib.Topology.EMetricSpace.VariationOnFromTo
 
 /-!
 # Cadlag representatives of finite-interval bounded-variation paths
@@ -30,6 +31,8 @@ original representative away from a countable set.
 - `FiniteIntervalL1Path.exists_cadlagRepresentative`: every essentially BV finite-coordinate
   `L1` path has such a representative.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses
 

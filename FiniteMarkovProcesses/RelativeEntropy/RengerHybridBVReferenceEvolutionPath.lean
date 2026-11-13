@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVReferenceEvolutionPerturbation
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanHybridBVPath
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovMeanHybridBVPath
 
 /-!
 # Hybrid-BV path of the unchanged reference evolution
@@ -14,6 +15,8 @@ The target-derived initial PMF is evolved under the unchanged homogeneous refere
 packaged as a genuine admissible Renger representation path.  Every density, cumulative-flow,
 derivative, and boundary field is inherited from the source-neutral arbitrary-PMF mean path.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

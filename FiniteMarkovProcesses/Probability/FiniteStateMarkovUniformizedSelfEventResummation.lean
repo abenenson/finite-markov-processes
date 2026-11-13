@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Analysis.Normed.Algebra.Exponential
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformization
+module
+public import Mathlib.Analysis.Normed.Algebra.Exponential
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformization
 
 /-!
 # Resumming virtual self-events in finite-state uniformization
@@ -29,6 +30,8 @@ factor inserted event-time simplices across all physical dwells and sum the corr
 - `finiteStateMarkovUniformizedSelfEventFibreWeight_resums_to_jumpSliceDensity`: the complete
   fixed-physical-history fibre coefficient is the canonical physical density.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

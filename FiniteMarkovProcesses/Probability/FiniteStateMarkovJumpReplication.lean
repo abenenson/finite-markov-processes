@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Probability.Independence.Basic
-import Mathlib.MeasureTheory.Measure.FiniteMeasurePi
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpLaw
+module
+public import Mathlib.Probability.Independence.Basic
+public import Mathlib.MeasureTheory.Measure.FiniteMeasurePi
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpLaw
 
 /-!
 # Independent finite-state Markov jump replicas
@@ -26,6 +27,8 @@ This is particle replication, not a rescaling of one path's clock or jump intens
 - `finiteStateMarkovJumpReplicaProbabilityMeasure_coordinate_map`: every coordinate has the exact
   original finite-state Markov jump law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

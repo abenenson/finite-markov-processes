@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVForwardUniqueness
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Stability
+module
+public import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVForwardUniqueness
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovL1Stability
 
 /-!
 # Forced-flow stability on the hybrid-BV directional-flow carrier
@@ -25,6 +26,8 @@ density error is bounded by its actual initial error plus twice the integrated r
 All pointwise conclusions concern physical time `[0,T)`. Terminal traces are left traces;
 the hybrid carrier itself is not given a subtraction or a norm.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

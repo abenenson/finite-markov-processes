@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVPositiveTargetSourceMeanConvergence
-import
+public import
   FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovRoundedInitialMeanConvergence
 
 /-!
@@ -21,6 +22,8 @@ The regularization index is frozen before the particle-number limit.  This modul
 the positive-perturbation limit, perform a likelihood change of measure, or assert an LDP lower
 bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

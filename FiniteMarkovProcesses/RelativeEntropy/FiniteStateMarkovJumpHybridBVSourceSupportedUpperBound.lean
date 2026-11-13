@@ -3,13 +3,14 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteJumpHistoryRengerHybridBVSourceSupport
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVConditionalUpperBound
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVSourceSupportClassification
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpInitialBoundaryHybridBVControl
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpInitialBoundaryHybridBVControl
 
 /-!
 # Source-supported upper bounds for finite-state hybrid-BV jump observations
@@ -18,6 +19,8 @@ This module combines the ambient continuous-test exponential estimate with the e
 source-support classification.  Positive singular interior flow is handled by the ambient dual;
 positive recovered initial flow is handled by the independent initial-layer jump estimate.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

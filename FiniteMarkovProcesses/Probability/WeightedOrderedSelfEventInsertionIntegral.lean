@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.MeasureTheory.Measure.PiWithDensity
-import FiniteMarkovProcesses.Probability.OrderedSelfEventInsertionVolume
-import FiniteMarkovProcesses.Probability.WeightedOrderedJumpTimesIntegral
+module
+public import FiniteMarkovProcesses.MeasureTheory.Measure.PiWithDensity
+public import FiniteMarkovProcesses.Probability.OrderedSelfEventInsertionVolume
+public import FiniteMarkovProcesses.Probability.WeightedOrderedJumpTimesIntegral
 
 /-!
 # Weighted self-event insertion fibres
@@ -20,6 +21,8 @@ fibre integral to the product of the one-dwell weighted ordered-simplex integral
 - `lintegral_weightedOrderedSelfEventInsertions`: exact product of factorial-normalized dwell
   integrals.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

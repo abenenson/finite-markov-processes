@@ -3,8 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalTestConcentration
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovForwardEquation
+module
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalTestConcentration
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovForwardEquation
 
 /-!
 # Signed directional-flow expectations for bounded time-dependent Markov laws
@@ -18,6 +20,8 @@ existing finite-independent replica concentration theorem.
 - `integral_directedTransitionWeightSum_reducedHistoryMeasure_eq`.
 - The heterogeneous-replica weighted-flow deviation theorem.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

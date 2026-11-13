@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteSampleConfidence
+module
+public import FiniteMarkovProcesses.Probability.FiniteSampleConfidence
 
 /-!
 # Rational confidence-budget examples
@@ -14,6 +15,8 @@ an exponential envelope reaches five confidence bits at 96 samples. The large-ra
 exercises the linear branch. Zero-radius computations illustrate why positivity is a hypothesis
 of each guarantee: total rational division still returns a number outside the theorem's domain.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcessesExamples
 

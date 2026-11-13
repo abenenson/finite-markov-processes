@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonAction
-import FiniteMarkovProcesses.RelativeEntropy.PoissonMeasureDiscrimination
-import MeasureDiscrimination.ProductDiscrimination
-import FiniteMarkovProcesses.Probability.DrivenPoissonCycleHistory
-import FiniteMarkovProcesses.Probability.PoissonCountExpectation
+module
+public import FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonAction
+public import FiniteMarkovProcesses.RelativeEntropy.PoissonMeasureDiscrimination
+public import MeasureDiscrimination.ProductDiscrimination
+public import FiniteMarkovProcesses.Probability.DrivenPoissonCycleHistory
+public import FiniteMarkovProcesses.Probability.PoissonCountExpectation
 
 /-!
 # Bidirectional Poisson path-action sectors
@@ -32,6 +33,8 @@ law to identify the action and its expectation.
 - `physicalPoissonCountLogDensity_eq_current_mul_affinity`: physical reversal density.
 - `integral_physicalPoissonCountLogDensity`: mean entropy-action formula.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

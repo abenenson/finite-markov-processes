@@ -3,9 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryReplicaJumpCount
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpCountExponentialTail
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialReplication
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryReplicaJumpCount
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpCountExponentialTail
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovJumpDeterministicInitialReplication
 
 /-!
 # Count moments for deterministic-initial Markov-jump replicas
@@ -24,6 +25,8 @@ bound through the exact heterogeneous product law.
 - `finiteStateMarkovJumpDeterministicInitialReplicaTotalJumpCount_gt_le_exponential`:
   the corresponding particle-speed Chernoff tail.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

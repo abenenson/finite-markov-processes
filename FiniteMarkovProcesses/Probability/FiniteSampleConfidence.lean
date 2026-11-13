@@ -3,14 +3,15 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Data.Rat.Floor
-import Mathlib.Basic.ENNReal.Real
-import Mathlib.Analysis.SpecialFunctions.Exp
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.NormNum
-import Mathlib.Tactic.Positivity
-import Mathlib.Tactic.Ring
+module
+public import Mathlib.Data.Rat.Floor
+public import Mathlib.Basic.ENNReal.Real
+public import Mathlib.Analysis.SpecialFunctions.Exp
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.NormNum
+public import Mathlib.Tactic.Positivity
+public import Mathlib.Tactic.Ring
 
 /-!
 # Executable particle counts from finite-sample envelopes
@@ -28,6 +29,8 @@ the algorithms do not establish an envelope or estimate its constants from data.
 The exponential rate retains both its quadratic and linear branches. The sufficient dyadic
 count uses `2 ≤ exp 1`, avoiding a numerical approximation to a logarithm.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

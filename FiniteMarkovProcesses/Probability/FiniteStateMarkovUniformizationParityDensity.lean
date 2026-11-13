@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizationParityStoppedLaw
-import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedHistoryDensity
+module
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizationParityStoppedLaw
+public import FiniteMarkovProcesses.Probability.FiniteStateMarkovUniformizedHistoryDensity
 
 /-!
 # Density identification through the uniformization parity lift
@@ -26,6 +27,8 @@ has the common-clock density.
 - `finiteStateUniformizedStoppedLawHasHistoryDensity_of_nonnegative`: the named density
   obligation at a nonnegative horizon.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

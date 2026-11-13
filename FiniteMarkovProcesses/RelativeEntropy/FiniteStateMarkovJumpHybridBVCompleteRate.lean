@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate
+module
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateMarkovJumpHybridBVDynamicRate
 
 /-!
 # Complete theorem-specific rates on the hybrid-BV jump carrier
@@ -27,6 +28,8 @@ initial-law large-deviation bounds, hybrid compactness, lower semicontinuity, or
 - `rengerTheoremFourOneHybridBVCompleteRate`, `rengerTheoremFourTwoHybridBVCompleteRate`, and
   `rengerCorollaryFourSixteenHybridBVCompleteRate`: the three theorem-specific rates.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

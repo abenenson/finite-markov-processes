@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonForceReactivity
-import FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonPathAction
+module
+public import FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonForceReactivity
+public import FiniteMarkovProcesses.RelativeEntropy.BidirectionalPoissonPathAction
 
 /-!
 # Bidirectional Poisson current contraction
@@ -28,6 +29,8 @@ of the complete-law KL.  These identities alone do not establish a large-deviati
 - `toReal_klDiv_bidirectionalPoissonHistoryMeasure_commonScale`: exact finite complete-law KL
   extensivity.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

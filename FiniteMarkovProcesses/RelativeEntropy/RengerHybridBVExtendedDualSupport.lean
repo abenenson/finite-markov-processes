@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.PoissonMeasureContinuousDualSingularity
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVFiniteChannelDual
-import
+public import
   FiniteMarkovProcesses.MeasureTheory.VectorMeasure.VagueSignedMeasurePositiveClosure
 
 /-!
@@ -20,6 +21,8 @@ singular directional-flow derivative forces infinite dual cost.
 Boundary traces remain deliberately absent from the dual.  In particular, this module does not
 repair the cumulative-flow-offset obstruction or assert a path large-deviation upper bound.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Topology.Order.Cadlag
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryTimeObservation
+module
+public import Mathlib.Topology.Order.Cadlag
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryTimeObservation
 
 /-!
 # Càdlàg observations of finite jump histories
@@ -17,6 +18,8 @@ These statements use Mathlib's `IsCadlag` predicate and any topology on the stat
 space. They introduce no topology on a space of paths. The state after the last
 event remains the final state; no terminal reset is added.
 -/
+
+@[expose] public section
 
 open Filter Topology
 

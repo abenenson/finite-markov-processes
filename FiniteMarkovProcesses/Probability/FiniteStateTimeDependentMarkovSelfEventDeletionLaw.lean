@@ -3,7 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovSelfEventInsertionFibre
+module
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovSelfEventInsertionFibre
 
 /-!
 # Reduced physical law after time-dependent self-event deletion
@@ -11,6 +13,8 @@ import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovSelfEvent
 This module assembles the fixed-word insertion-fibre identity into the complete reduced physical
 jump-history measure and proves exact deletion of the uniformized history law.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVConvexCombinationRate
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVUniformStaticRepresentationPath
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVTheoremFourTwoInteriorOpenLowerBound
 
 /-!
@@ -18,6 +19,8 @@ weight `1 / (n + 1)`.  These paths converge in the exact hybrid topology, their 
 simplex points approach from the strict interior, the supplied Theorem 4.2 initial-rate boundary
 continuity controls the initial sector, and dynamic-action convexity controls the path sector.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

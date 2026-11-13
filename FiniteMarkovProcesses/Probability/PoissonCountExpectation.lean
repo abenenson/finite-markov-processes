@@ -3,7 +3,8 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.Probability.Distributions.Poisson.Basic
+module
+public import Mathlib.Probability.Distributions.Poisson.Basic
 
 /-!
 # Expectation of a Poisson count
@@ -17,6 +18,8 @@ layer and can be reused without importing a relative-entropy development.
 - `integrable_poissonCount`: every Poisson count has a finite first moment.
 - `integral_poissonCount`: the expected Poisson count equals its intensity.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

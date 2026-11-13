@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensity
-import FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination
+module
+public import FiniteMarkovProcesses.RelativeEntropy.FiniteStateProbabilityDensity
+public import FiniteMarkovProcesses.RelativeEntropy.PoissonRateDiscrimination
 
 /-!
 # Relative entropy of finite-state probability densities
@@ -24,6 +25,8 @@ large-deviation bound.
 - `finiteStateProbabilityDensityRelativeEntropy`: its nonnegative extended-real wrapper.
 - `continuous_finiteStateProbabilityDensityRelativeEntropy`: continuity for positive reference.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

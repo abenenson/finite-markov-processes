@@ -3,8 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowObservation
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCountMoment
+module
+public import FiniteMarkovProcesses.Probability.FiniteJumpHistoryDirectionalFlowObservation
+public import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovCountMoment
 
 /-!
 # Transition-test moments for bounded time-dependent Markov jump histories
@@ -22,6 +23,8 @@ explicit source-uniform variance bound.
 - `memLp_two_finiteJumpHistoryTransitionTestSum`.
 - `variance_finiteJumpHistoryTransitionTestSum_le`.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 

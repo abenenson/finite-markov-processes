@@ -3,11 +3,12 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVDualRepresentation
-import
+public import
   FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRepresentationDomain
-import Mathlib.Basic.ENNReal.BigOperators
+public import Mathlib.Basic.ENNReal.BigOperators
 
 /-!
 # Finite-channel Renger hybrid-BV duality
@@ -27,6 +28,8 @@ on its licensed finite-rate representation domain.
 * `lowerSemicontinuous_rengerDirectionalFlowHybridBVDynamicRate_on_representationDomain`
   transfers lower semicontinuity only to that named domain.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.InformationTheory
 

@@ -3,11 +3,13 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import
+module
+public import
   FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovEmpiricalHybridL1Concentration
-import FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovRoundedInitialMeanConvergence
-import FiniteMarkovProcesses.Probability.PoissonCountExactSecondMoment
-import FiniteMarkovProcesses.Probability.FiniteIIDIntegratedL1Concentration
+public import
+  FiniteMarkovProcesses.Probability.FiniteStateTimeDependentMarkovRoundedInitialMeanConvergence
+public import FiniteMarkovProcesses.Probability.PoissonCountExactSecondMoment
+public import FiniteMarkovProcesses.Probability.FiniteIIDIntegratedL1Concentration
 
 /-!
 # Finite-sample hybrid-path control with the original IID initial randomness
@@ -22,6 +24,8 @@ therefore centers at that mean, without conditioning on an initial configuration
 - `integral_finiteJumpHistoryHybridCoordinate_eq_mean`: exact source-mean identification.
 - `norm_totalHybridBVObservation_sub_iidMean_eq_integral`: the unchanged strong-L1 statistic.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovProcesses.Probability
 
