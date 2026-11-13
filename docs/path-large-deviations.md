@@ -208,16 +208,25 @@ initial cost. A concrete probability application must supply that separation and
 The original-IID Chernoff theorem above is a separate **all-N strong-L1 path-event bound** with
 a supplied admissible tilt. It controls the entire density/cumulative-flow L1 projection, rather
 than only finitely chosen tests. It does not control a norm of the full hybrid carrier,
-instantaneous flow, or derivative total variation. This generic API does not add a radius-only
-optimized envelope, an executable rational confidence-budget function, or a comparison with a
-source-specific older LDP gap.
+instantaneous flow, or derivative total variation. This generic probability API does not add
+a radius-only optimized envelope or a comparison with a source-specific older LDP gap.
+
+`FiniteSampleConfidence` separately computes rational particle budgets from an independently
+proved polynomial or exponential envelope. For `P(event) <= C/(N*r^2)`, positive rational
+radius and failure tolerance give the sufficient count `max(1,ceil(C/(failure*r^2)))`.
+For `P(event) <= 2*exp(-N*c)` with positive rational scale and radius and
+`c=min(r^2/(4*A^2),r/(8*A))`, the count `max(1,ceil((k+1)/c))` guarantees failure at most
+`2^(-k)`. The supplied envelope must retain the actual law, mean, scale, radius and count.
+Removing its factor two uses the separate sufficient margin `N*(c-a)>=1`; for positive `N`
+this requires `a<c`, and positive `a` gives a decaying envelope. These arithmetic results
+do not make the earlier LDP cutoff effective for every exponent below its rate gap.
 
 ## Validation status
 
 The public source inventory records module paths, pinned public dependencies, and
 documented generalizations that remove unused typeclass parameters. The historical
 qualification receipts identify the exact source bytes checked at their recorded revisions.
-The documentation update preserves all mathematical declarations and proof tokens.
+The earlier documentation-only update preserved all mathematical declarations and proof tokens.
 
 The complete extracted library passed fresh exact-source builds for all 297 authored files,
 all 16 source linters per file, and 3,606 named transitive axiom audits. The axiom union is

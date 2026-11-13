@@ -7,6 +7,7 @@ import FiniteMarkovProcesses.RelativeEntropy.RengerHybridBVRateStability
 import FiniteMarkovProcesses.RelativeEntropy.LargeDeviationConcentration
 import FiniteMarkovProcesses.RelativeEntropy.PoissonRateBudgetCoercivity
 import FiniteMarkovProcesses.Probability.FiniteStateMarkovIIDHybridExponential
+import FiniteMarkovProcesses.Probability.FiniteSampleConfidence
 
 /-!
 # Quantitative stability and particle probability bounds
@@ -19,6 +20,7 @@ variation. They do not assume that sampled finite-particle paths have finite act
 A closed-event rate gap and an existing LDP upper bound give an eventual exponential mass bound
 with strict exponent slack. Its cutoff remains existential. Separately, the original-IID
 strong-L1 Chernoff estimate holds for every positive particle count and supplied capped tilt.
+Rational particle budgets turn supplied polynomial or exponential envelopes into confidence bounds.
 
 The scalar entropy/Hellinger, finite-state contraction, and Chernoff arguments are classical;
 the density/ordered-flow action is due to Renger (2018). See the theorem map and path guide for

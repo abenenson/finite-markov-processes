@@ -96,8 +96,9 @@ does not classify positive-cost minimizers in that case.
 
 ## Quantitative bounds: deterministic and eventual
 
-Import `FiniteMarkovProcesses.QuantitativeBounds` for these five generic modules and the
-existing original-IID all-N strong-L1 estimate. The deterministic state context is only finite
+Import `FiniteMarkovProcesses.QuantitativeBounds` for these five generic modules, the
+existing original-IID all-N strong-L1 estimate, and rational confidence-budget arithmetic.
+The deterministic state context is only finite
 decidable state; measurable-state and stationarity hypotheses are not required. Fix `T > 0`,
 `epsilon ≥ 0`, `L ≥ 0`, and a generator with every escape rate at most `L`. The reference `q`
 is an admissible representation path with that generator flow. Write `B=T L`,
@@ -126,8 +127,22 @@ on microscopic empirical paths by these results.
 
 The existing original-IID theorem remains distinct: it proves an **all-N strong-L1 path-event
 Chernoff bound** with a supplied capped tilt, arbitrary initial PMF, and its actual unconditional
-mean. None of the five added modules supplies a generic executable confidence budget, optimizes
-the tilt into a new radius-only envelope, or proves particle derivative-TV concentration.
+mean. The probability theorem uses a supplied tilt; it does not optimize that tilt into a new
+radius-only envelope or prove particle derivative-TV concentration.
+
+The separate [`FiniteSampleConfidence`](../FiniteMarkovProcesses/Probability/FiniteSampleConfidence.lean)
+module provides executable rational budgets for independently proved envelopes. For rational
+`r > 0` and `failure > 0`, `polynomialParticleBudget C r failure` returns
+`max(1,ceil(C/(failure*r^2)))`. Its guarantee requires an event-mass bound
+`P(event) <= C/(N*r^2)` at the same actual sample count `N`.
+
+For rational `A > 0`, `r > 0`, put `c=min(r^2/(4*A^2),r/(8*A))`.
+`exponentialParticleBudget A r k` returns `max(1,ceil((k+1)/c))`; given the separate bound
+`P(event) <= 2*exp(-N*c)`, it proves failure probability at most `2^(-k)` for every count above
+the budget. These algorithms do not derive an envelope, identify its constants, or change
+physical clocks. Count means actual sample count, so a successor-index API uses `N=n+1`.
+The checked [examples](../FiniteMarkovProcessesExamples/FiniteSampleConfidence.lean) include
+both rate branches and show why a zero-radius return value carries no confidence guarantee.
 
 ## Probability bound and endpoint bridge
 
