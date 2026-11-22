@@ -34,6 +34,7 @@ import FiniteMarkovProcesses.CTMC
 
 The core includes:
 
+- Conversion between signed rate matrices and physical jump rates, including absorbing rows.
 - Finite-horizon Gillespie histories, with absorbing states handled explicitly.
 - Equality of the stopped generative law and its counting/Lebesgue density,
   including a proof of normalization for every nonnegative finite horizon.
@@ -47,6 +48,9 @@ The core includes:
 The hypotheses are part of the API: common support, integrability, stationarity,
 and chart identification are retained where needed. See
 [the CTMC guide](docs/CTMC.md) and [checked examples](FiniteMarkovProcessesExamples/CTMC.lean).
+The [signed-generator example](FiniteMarkovProcessesExamples/SignedGeneratorConfidence.lean)
+derives a finite-particle bound under the physical history law and computes a sufficient count
+of 4,480 independent particles for its one-second experiment.
 
 ## Large deviations and effective evolution
 
