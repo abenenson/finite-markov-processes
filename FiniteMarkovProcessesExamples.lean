@@ -10,6 +10,7 @@ public import FiniteMarkovProcessesExamples.Sanov
 public import FiniteMarkovProcessesExamples.ProbabilityVectorInterop
 public import FiniteMarkovProcessesExamples.PathLargeDeviations
 public import FiniteMarkovProcessesExamples.FiniteSampleConfidence
+public import FiniteMarkovProcessesExamples.SignedGeneratorConfidence
 
 /-! # Checked examples for finite-state Markov processes -/
 

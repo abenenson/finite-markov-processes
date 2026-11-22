@@ -303,7 +303,8 @@
     "FiniteMarkovProcessesExamples/FiniteSampleConfidence.lean",
     "FiniteMarkovProcessesExamples/PathLargeDeviations.lean",
     "FiniteMarkovProcessesExamples/ProbabilityVectorInterop.lean",
-    "FiniteMarkovProcessesExamples/Sanov.lean"
+    "FiniteMarkovProcessesExamples/Sanov.lean",
+    "FiniteMarkovProcessesExamples/SignedGeneratorConfidence.lean"
   ],
   "audit_imports": [
     "FiniteMarkovProcesses",
@@ -315,7 +316,8 @@
     "FiniteMarkovProcesses.PathLargeDeviations",
     "FiniteMarkovProcesses.EffectiveEvolution",
     "FiniteMarkovProcessesExamples.PathLargeDeviations",
-    "FiniteMarkovProcesses.QuantitativeBounds"
+    "FiniteMarkovProcesses.QuantitativeBounds",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence"
   ],
   "declarations": [
     "FiniteMarkovProcesses.FiniteIntervalCadlagConstruction.abs_variationOnFromTo_le",
@@ -1390,6 +1392,14 @@
     "FiniteMarkovProcesses.Probability.FiniteStateMarkovGenerator.matrixEntry_self",
     "FiniteMarkovProcesses.Probability.FiniteStateMarkovGenerator.matrixEntry_of_ne",
     "FiniteMarkovProcesses.Probability.FiniteStateMarkovGenerator.sum_matrixEntry",
+    "FiniteMarkovProcesses.Probability.FiniteStateMarkovGenerator.toMatrix",
+    "FiniteMarkovProcesses.Probability.FiniteStateMarkovGenerator.toMatrix_apply",
+    "FiniteMarkovProcesses.Probability.FiniteStateMarkovGenerator.toMatrix_offDiag_nonneg",
+    "FiniteMarkovProcesses.Probability.FiniteStateMarkovGenerator.ofMatrix",
+    "FiniteMarkovProcesses.Probability.FiniteStateMarkovGenerator.rate_ofMatrix_of_ne",
+    "FiniteMarkovProcesses.Probability.FiniteStateMarkovGenerator.toMatrix_ofMatrix",
+    "FiniteMarkovProcesses.Probability.FiniteStateMarkovGenerator.escapeRate_ofMatrix",
+    "FiniteMarkovProcesses.Probability.FiniteStateMarkovGenerator.ofMatrix_toMatrix",
     "FiniteMarkovProcesses.Probability.mgf_centered_physical_count_observable_le",
     "FiniteMarkovProcesses.Probability.finiteJumpHistoryHybridCoordinate_centered_mgf_le",
     "FiniteMarkovProcesses.Probability.measure_iid_totalHybridBVObservation_deviation_le_exponential",
@@ -3948,7 +3958,25 @@
     "FiniteMarkovProcessesExamples.PathLargeDeviations.fairFlip_openLowerBound",
     "FiniteMarkovProcessesExamples.Sanov.fairBinary",
     "FiniteMarkovProcessesExamples.Sanov.fairBinary_isInterior",
-    "FiniteMarkovProcessesExamples.Sanov.allTrueType"
+    "FiniteMarkovProcessesExamples.Sanov.allTrueType",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.signedMatrix",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.signedMatrix_offDiag_nonneg",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.signedMatrix_sum_row",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.generator",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.generator_toMatrix",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.generator_rate_false_true",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.generator_escapeRate_false",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.generator_escapeRate_true",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.rates",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.rates_uniformizationRate",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.initial",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.duration",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.replicaLaw",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.deviationEvent",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.finiteSampleConstant_eq",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.measure_deviation_le_polynomial",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.particleBudget_eq",
+    "FiniteMarkovProcessesExamples.SignedGeneratorConfidence.measure_deviation_at_budget"
   ],
   "public_dependencies": {
     "Cli": {

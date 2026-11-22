@@ -143,6 +143,9 @@ the budget. These algorithms do not derive an envelope, identify its constants, 
 physical clocks. Count means actual sample count, so a successor-index API uses `N=n+1`.
 The checked [examples](../FiniteMarkovProcessesExamples/FiniteSampleConfidence.lean) include
 both rate branches and show why a zero-radius return value carries no confidence guarantee.
+The [signed-generator example](../FiniteMarkovProcessesExamples/SignedGeneratorConfidence.lean)
+derives its polynomial envelope under the actual physical product law and applies the budget
+to obtain a failure tolerance of `1/20` at 4,480 particles.
 
 ## Probability bound and endpoint bridge
 
