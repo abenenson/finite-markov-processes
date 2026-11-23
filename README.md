@@ -115,3 +115,12 @@ uses the method of types. No mathematical priority claim is made.
 The package contains generic mathematics. It does not assert empirical validity
 for a physical model. [The source inventory](source-plan.json) records public source paths,
 dependency origins, and documented signature adaptations. [Apache-2.0](LICENSE); see [NOTICE](NOTICE).
+
+## Releases and related libraries
+
+Start with the [`v0.3.0` release](https://github.com/abenenson/finite-markov-processes/releases/tag/v0.3.0) for the supported toolchain and verification run.
+
+- [finite-markov-kernels](https://github.com/abenenson/finite-markov-kernels) covers finite laws and transition kernels.
+- [measure-discrimination](https://github.com/abenenson/measure-discrimination) covers measurable encodings and likelihoods.
+
+[Browse the Lean library index](https://adambenenson.com/projects/#formal-methods).

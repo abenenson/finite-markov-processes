@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: If you use this software, cite it and include the tag or commit used.
+title: Finite Markov Processes
+type: software
+authors:
+- family-names: Benenson
+  given-names: Adam
+license: Apache-2.0
+repository-code: https://github.com/abenenson/finite-markov-processes
+url: https://github.com/abenenson/finite-markov-processes/releases/tag/v0.3.0
+version: 0.3.0
